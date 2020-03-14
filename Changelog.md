@@ -2,11 +2,6 @@
 
 English
 
-- 03-13-2020
-    
-    - Initial commit
-
-
 - 03-14-2020
     
     - Add `SSDT-DMAC.aml`
@@ -19,4 +14,8 @@ English
     - Improved `SSDT-EC-USBX.aml`
     - Improved `SSDT-GPRW.aml`
     - Improved `SSDT-RMNE.aml`
+
+
+- 03-13-2020
     
+    - Initial commit
