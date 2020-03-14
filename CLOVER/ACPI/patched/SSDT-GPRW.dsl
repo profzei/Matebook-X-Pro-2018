@@ -8,6 +8,10 @@
 // The purpose of this implementation is avoiding "instant wake" by 
 // returning 0 in the second position (sleep state supported) of the return package
 //
+// In config ACPI, GPRW to XPRW
+// Find:        47505257 02
+// Replace:     58505257 02
+//
 #ifndef NO_DEFINITIONBLOCK
 DefinitionBlock ("", "SSDT", 2, "hack", "_GPRW", 0)
 {

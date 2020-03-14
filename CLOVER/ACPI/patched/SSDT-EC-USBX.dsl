@@ -1,8 +1,10 @@
 //
 // Hotpatch for injecting Fake EC device to load AppleBusPowerController and USB power injection
-// Credit to PMheart
+// AppleUsbPower compatibility table for legacy hardware (Search 'PNP0C09' in DSDT)
+// Credit to PMheart, daliansky (OC-little) and jsassu20 (OC-little)
+//
 // Rename OEM vendor to ACDT
-// Try NOT to rename EC0 to EC: these devices are incompatible with macOS and 
+// Try NOT to rename EC0 or H_EC to EC: these devices are incompatible with macOS and 
 // may break at any time. AppleACPIEC kext must NOT load.
 // Reference: https://github.com/acidanthera/OpenCorePkg/blob/master/Docs/AcpiSamples/SSDT-EC-USBX.dsl
 //
