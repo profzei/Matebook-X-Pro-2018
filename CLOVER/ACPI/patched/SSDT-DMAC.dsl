@@ -1,4 +1,5 @@
 //
+// This SSDT adds a DMA controller to the LPCB (Low Pin Count Bus)
 // (Search for 'PNP0200', if it is missing add SSDT-DMAC)
 // Credit to jsassu20 (OC-little)
 //

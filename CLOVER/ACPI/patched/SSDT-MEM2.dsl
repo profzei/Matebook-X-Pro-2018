@@ -1,4 +1,5 @@
 //
+// This SSDT adds a totally defunct MEM2 device: it's here for completeness
 // Add MEM2 device (Search for PNP0C01, if it is missing, add SSDT-MEM2) as macOS expects
 // Credit to jsassu20 (OC-little) and daliansky (Xiaomi Pro)
 //

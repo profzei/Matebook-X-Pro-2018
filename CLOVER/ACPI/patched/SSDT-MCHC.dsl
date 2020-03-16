@@ -1,4 +1,5 @@
 //
+// This SSDT adds the missing Memory (DRAM) Controller to the system
 // Add MCHC device (Search for 'MCHC', if it is missing, add SSDT-MCHC)
 // Credit to jsassu20 (OC-little)
 //

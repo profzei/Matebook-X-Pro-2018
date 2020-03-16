@@ -1,11 +1,13 @@
 //
-// Hotpatch for solving instant wake by hooking GPRW
+// This SSDT provides USB sleep properties. Namely, this fixes 'instant wake' 
+// on sleep while USB devices are plugged in
+// Hotpatch for solving 'instant wake' by hooking GPRW
 // Pair with "Rename Method (GPRW,2,N) to XPRW" rename patch
 // Credit to Rehabman, daliansky (Xiaomi Pro) and thedarkvoid (Dell XPS 9360)
 //
 // In DSDT native GPRW is renamed to XPRW with Clover binpatch
 // As a result, calls to GPRW land here.
-// The purpose of this implementation is avoiding "instant wake" by 
+// The purpose of this implementation is avoiding 'instant wake' by 
 // returning 0 in the second position (sleep state supported) of the return package
 //
 // In config ACPI, GPRW to XPRW

@@ -1,5 +1,5 @@
 //
-// Hotpatch working with NullEthernet.kext
+// SSDT injector working with NullEthernet.kext
 // Add Fake LAN (i.e. a fake Ethernet card) to make the system still allow Mac App Store access 
 // Credit to jsassu20 (OC-little), daliansky (Xiaomi Pro)
 //

@@ -1,4 +1,5 @@
 //
+// This SSDT adds a missing SBUS (Intel System Management Bus) device to the system
 // (Search for '0x001F0004' to see the device name)
 // Credit to jsassu20 (OC-little)
 //

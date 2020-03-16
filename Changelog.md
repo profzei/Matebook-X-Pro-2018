@@ -1,6 +1,13 @@
-# Huawei Matebook X Pro (2018) EFI Changelog
+# Huawei Matebook X Pro (2018) Changelog
 
 English
+
+- 03-15-2020
+	
+	- More detailed comments in `*.dsl` files
+	- Modified `Readme.md`
+	- Modified `Changelog.md` structure
+
 
 - 03-14-2020
     

@@ -1,4 +1,6 @@
 //
+// Adding PNLF device for WhateverGreen.kext
+// This is a modified PNLF version originally taken from rehabman repository
 // Adding PNLF device for IntelBacklight.kext or AppleBacklight.kext + AppleBacklightFixup.kext
 // Credit to rehabman and Zero-zero (Matebook D 2018)
 //
