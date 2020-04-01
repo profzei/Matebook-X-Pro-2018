@@ -5,7 +5,7 @@ English
 - 04-01-2020
     - Add `SSDT-ALS0.aml`
     - Add `SSDT-DeepIdle.aml`
-    - Add `FnKey.aml` for brightness FN Keys
+    - Add `SSDT-FnKey.aml` for brightness FN Keys
     - Add `SSDT-HRT.aml`
     - Add `SSDT-TB3HP.aml`
     - Add `CPUFriend` folder 

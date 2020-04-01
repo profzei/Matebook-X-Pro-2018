@@ -37,7 +37,7 @@ Changelog:   	see [Changelog.md](https://github.com/profzei/Matebook-X-Pro-2018/
 - Default SMBIOS settings of this repo is `MacBookPro14,1`
 
 ##CPUFriend
-- The kexts and SSDT for `i7-8550U` are here.
+- The kexts and SSDT for `i7-8550U` are [here](https://github.com/profzei/Matebook-X-Pro-2018/tree/master/CPUFriend/1.2.0).
 - `CPUFriendDataProvider.kext` is generated for SMBIOS `MacBookPro15,2` because of Kaby Lake R architecture.
 - `CPUFriend.kext` and `CPUFriendDataProvider.kext` need to be put in `CLOVER/kexts/Other`
 - Furthermore, you also need to put `SSDT-XCPM.aml` in `CLOVER/ACPI/patched` for working as normal after awake.
