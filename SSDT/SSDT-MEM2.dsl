@@ -1,5 +1,4 @@
 //
-// This SSDT adds a totally defunct MEM2 device: it's here for completeness
 // Add MEM2 device (Search for PNP0C01, if it is missing, add SSDT-MEM2) as macOS expects
 // Credit to jsassu20 (OC-little) and daliansky (Xiaomi Pro)
 //
@@ -7,11 +6,11 @@
 DefinitionBlock ("", "SSDT", 2, "hack", "MEM2", 0)
 {
 #endif
-    External (_SB_.PCI0.GFX0, DeviceObj)
+    External (_SB_.PCI0.IGPU, DeviceObj)
     
-    Scope (_SB.PCI0.GFX0)
+    Scope (_SB.PCI0.IGPU)
     {
-        Device (MEM2)
+        Device (^^MEM2)
         {
             Name (_HID, EisaId ("PNP0C01")) // _HID: Hardware ID
             Name (_UID, 0x02)
@@ -29,7 +28,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "MEM2", 0)
             
             Method (_CRS, 0, NotSerialized) // _CRS: Current Resource Settings
             {
-                Return (CRS)
+                Return (CRS)  /* \_SB_.MEM2.CRS_ */
             }
         
             Method (_STA, 0, NotSerialized) // _STA: Status

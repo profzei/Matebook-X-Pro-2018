@@ -17,9 +17,10 @@ DefinitionBlock ("", "SSDT", 2, "ACDT", "SsdtEC", 0x00001000)
 #endif
     External (_SB_.PCI0.LPCB, DeviceObj)
     
-    External (_SB_.PCI0.LPCB.EC0, DeviceObj)
+    //External (_SB_.PCI0.LPCB.EC__, DeviceObj) // EC0 to EC
     
-    Scope (\_SB.PCI0.LPCB.EC0)
+    /*
+    Scope (\_SB.PCI0.LPCB.EC) // EC0 to EC
     {
         Method (_STA, 0, NotSerialized) // _STA: Status
         {
@@ -33,7 +34,8 @@ DefinitionBlock ("", "SSDT", 2, "ACDT", "SsdtEC", 0x00001000)
             }
         }    
     }
-
+    */
+    
     Scope (\_SB)
     {
         Device (USBX)

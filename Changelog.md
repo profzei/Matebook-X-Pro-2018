@@ -3,13 +3,16 @@
 English
 
 - 04-01-2020
+    - Add `SSDT-ALS0.aml`
     - Add `SSDT-DeepIdle.aml`
     - Add `FnKey.aml` for brightness FN Keys
     - Add `SSDT-HRT.aml`
+    - Add `SSDT-TB3HP.aml`
     - Add `CPUFriend` folder 
     - Add `SSDT` folder for storing `*.dsl` files
     - Update [conservative] `SSDT-DDGPU.aml` (work in progress)
     - Update `SSDT-EC-USBX.aml` to fix regression to control brightness FN keys
+    - Update `SSDT-MEM2.aml` for patch `GFX0 to IGPU`
     - Update `SSDT-PNLF.aml` to allow brightness dimmer [credit to Chatbox1024]
     - Update [conservative] `SSDT-PTSWAK.aml` (work in progress)
     - Update `SSDT-XCPM.aml` to improve `cf-frequency-data` section for CPU `i7-8550U`

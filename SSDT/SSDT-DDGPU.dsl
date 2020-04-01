@@ -16,6 +16,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "_DDGPU", 0)
         Name (_HID, "RMD10000")  // _HID: Hardware ID
         Method (_INI, 0, NotSerialized)  // _INI: Initialize
         {
+            /*
             If (CondRefOf (\_SB.PCI0.RP01.PXSX._PS3))
             {
                 \_SB.PCI0.RP01.PXSX._DSM (ToUUID ("a486d8f8-0bda-471b-a72b-6042a6b5bee0"), 0x0100, 0x1A, Buffer (0x04)
@@ -29,7 +30,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "_DDGPU", 0)
             {
                 \_SB.PCI0.RP01._OFF ()
             }
-            
+            */
             If (CondRefOf (\_SB.PCI0.RP01.PXSX._OFF))
             {
                 \_SB.PCI0.RP01.PXSX._OFF ()
