@@ -2,10 +2,25 @@
 
 English
 
+- 04-01-2020
+    - Add `SSDT-DeepIdle.aml`
+    - Add `FnKey.aml` for brightness FN Keys
+    - Add `SSDT-HRT.aml`
+    - Add `CPUFriend` folder 
+    - Add `SSDT` folder for storing `*.dsl` files
+    - Update [conservative] `SSDT-DDGPU.aml` (work in progress)
+    - Update `SSDT-EC-USBX.aml` to fix regression to control brightness FN keys
+    - Update `SSDT-PNLF.aml` to allow brightness dimmer [credit to Chatbox1024]
+    - Update [conservative] `SSDT-PTSWAK.aml` (work in progress)
+    - Update `SSDT-XCPM.aml` to improve `cf-frequency-data` section for CPU `i7-8550U`
+    - Update `CPUFriendDataProvider.kext` to control CPU frequency to 0.8 GHz
+    - Update `Readme`
+
+
 - 03-15-2020
 	
 	- More detailed comments in `*.dsl` files
-	- Modified `Readme.md`
+	- Update `Readme.md`
 	- Modified `Changelog.md` structure
 
 
