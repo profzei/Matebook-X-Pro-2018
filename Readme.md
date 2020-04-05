@@ -36,10 +36,29 @@ Changelog:   	see [Changelog.md](https://github.com/profzei/Matebook-X-Pro-2018/
 ## SMBIOS
 - Default SMBIOS settings of this repo is `MacBookPro14,1`
 
-##CPUFriend
+## Power management: CPUFriend
+CPU power management is done by `CPUFriend.kext` while `CPUFriendDataProvider.kext` defines how it should be done. `CPUFriendDataProvider.kext` is generated for a specific CPU and power setting. The one supplied in this repository was made for `i7-8550U` and is optimized for balanced performance.
 - The kexts and SSDT for `i7-8550U` are [here](https://github.com/profzei/Matebook-X-Pro-2018/tree/master/CPUFriend/1.2.0).
 - `CPUFriendDataProvider.kext` is generated for SMBIOS `MacBookPro15,2` because of Kaby Lake R architecture.
 - `CPUFriend.kext` and `CPUFriendDataProvider.kext` need to be put in `CLOVER/kexts/Other`
 - Furthermore, you also need to put `SSDT-XCPM.aml` in `CLOVER/ACPI/patched` for working as normal after awake.
 
+## Power management: Hibernation
+Hibernation (suspend to disk or S4 sleep) is not supported on a Hackintosh: so it's recommended to disable it.
+```
+sudo pmset -a hibernatemode 0
+sudo rm -f /var/vm/sleepimage
+sudo mkdir /var/vm/sleepimage
+```
+Also, it's important to disable the other hibernation related functions.
+```
+sudo pmset -a standby 0
+sudo pmset -a autopoweroff 0
+```
+Disabling additional features prevents random wakeups while the lid is closed. After every update, ALL these settings should be reapplied manually:
+```
+sudo pmset -a powernap 0
+sudo pmset -a proximitywake 0   [optional]
+sudo pmset -b tcpkeepalive 0    [optional]
+```
 
