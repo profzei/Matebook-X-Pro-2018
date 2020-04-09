@@ -24,7 +24,7 @@ This repo is currently compatible with macOS Mojave 10.14.6 (18G87)
 This repository is for personal purposes: it is heavily based on the hard work done by [gnodipac886](https://github.com/gnodipac886/MatebookXPro-hackintosh), but with some significant personal improvements in `CLOVER/ACPI/patched` and `CLOVER/kexts/Other` sections.
 
 
-Changelog:   	see [Changelog.md](https://github.com/profzei/Matebook-X-Pro-2018/blob/master/Changelog.md)
+Changelog:   	see [Changelog.md](Changelog.md)
 
 
 ## Device Firmware
@@ -37,8 +37,8 @@ Changelog:   	see [Changelog.md](https://github.com/profzei/Matebook-X-Pro-2018/
 - Default SMBIOS settings of this repo is `MacBookPro14,1`
 
 ## Power management: CPUFriend
-CPU power management is done by `CPUFriend.kext` while `CPUFriendDataProvider.kext` defines how it should be done. `CPUFriendDataProvider.kext` is generated for a specific CPU and power setting. The one supplied in this repository was made for `i7-8550U` and is optimized for balanced performance.
-- The kexts and SSDT for `i7-8550U` are [here](https://github.com/profzei/Matebook-X-Pro-2018/tree/master/CPUFriend/1.2.0).
+CPU power management can be achieved by using `CPUFriend.kext` while `CPUFriendDataProvider.kext` defines how it should be done. `CPUFriendDataProvider.kext` is generated for a specific CPU and power setting. The one supplied in this repository was made for `i7-8550U` and is optimized for balanced performance.
+- The kexts and SSDT for `i7-8550U` are [here](/CPUFriend/1.2.0).
 - `CPUFriendDataProvider.kext` is generated for SMBIOS `MacBookPro15,2` because of Kaby Lake R architecture.
 - `CPUFriend.kext` and `CPUFriendDataProvider.kext` need to be put in `CLOVER/kexts/Other`
 - Furthermore, you also need to put `SSDT-XCPM.aml` in `CLOVER/ACPI/patched` for working as normal after awake.
@@ -68,18 +68,53 @@ You can verify yuor power settings by typing in terminal `sudo pmset -g live` . 
 
 ## USB port mapping
 
-A proper `SSDT-UIAC.aml` has been created for USB Host Controller (XHCI-Device-ID: `<2f 9d 00 00>`) with only the necessary ports (tested with IOReg) and the correct connector type.
+Proper `SSDT-UIAC.aml` and `SSDT-USBX.aml` are used for USB Host Controller (XHCI-Device-ID: `<2f 9d 00 00>`): these files are configured to map only the necessary ports (tested with IOReg) with the correct connector type and prevent it from shutdown issues.
 
 | Port      | Address               | Physical Location                                         | Internal/External |
-| --------- | --------------------- | --------------------------------------------------------- | ----------------- |
+| :--- | :--- | :--- | :--- |
 | HS01/SS01 | `00000001`/`0000000D` | Left Port type-C (Power Source) - next to 3.5mm jack port | E                 |
 | HS02/SS02 | `00000002`/`0000000E` | Right Port type-A                                         | E                 |
 | HS03      | `00000003`            | Left Port type-C Thunderbolt                              | E                 |
 | HS05      | `00000005`            | Bluetooth USB Port                                        | I                 |
 | HS07      | `00000007`            | Integrated HD Camera module                               | I                 |
 
+## Optional
 
+#### Monitor temperatures and power consumption with [HWMonitor](https://github.com/kzlekk/HWSensors/releases) 
 
+This app is relatively old and no longer supported, but it gets the job done.
+
+#### Make dock animation faster and without delay
+Run these lines in terminal:
+```
+defaults write com.apple.dock autohide-delay -float 0
+defaults write com.apple.dock autohide-time-modifier -float 0.5
+killall Dock
+```
+
+## Update tracker
+
+| Item | Version |
+| :--- | :--- |
+| MacOS | 10.14.6 |
+| Clover | 5103 |
+| Lilu | 1.4.3 |
+| VirtualSMC | 1.1.2 |
+| WhateverGreen | 1.3.8 |
+| AppleALC | 1.4.8 |
+| CodecCommander | 2.7.1 |
+| CPUFriend | 1.2.0 |
+| USBInjectAll | 0.7.3 |
+| VoodooI2C | 2.3 |
+| VoodooI2CHID | 2.3 |
+| VoodooPS2Controller | 2.1.3 |
+| VoodooInput | 1.0.4 |
+| VirtualSMC | 1.1.1 |
+| NullEthernet | 1.0.6 |
+| NoTouchID | 1.0.3 |
+| HibernationFixup | 1.3.1 |
+| NVMeFix | 1.0.1 |
+| IntelBluetoothFirmware | 1.0.3 |
 
 
 
