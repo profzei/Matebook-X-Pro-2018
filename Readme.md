@@ -55,10 +55,34 @@ Also, it's important to disable the other hibernation related functions.
 sudo pmset -a standby 0
 sudo pmset -a autopoweroff 0
 ```
-Disabling additional features prevents random wakeups while the lid is closed. After every update, ALL these settings should be reapplied manually:
+Disabling additional features prevents random wakeups while the lid is closed.
 ```
 sudo pmset -a powernap 0
 sudo pmset -a proximitywake 0   [optional]
 sudo pmset -b tcpkeepalive 0    [optional]
 ```
+After every update, ALL these settings should be reapplied manually.
+
+You can verify yuor power settings by typing in terminal `sudo pmset -g live` . If you ever want to reset these settings: `sudo pmset -a restoredefaults`
+
+
+## USB port mapping
+
+A proper `SSDT-UIAC.aml` has been created for USB Host Controller (XHCI-Device-ID: `<2f 9d 00 00>`) with only the necessary ports (tested with IOReg) and the correct connector type.
+
+| Port      | Address               | Physical Location                                         | Internal/External |
+| --------- | --------------------- | --------------------------------------------------------- | ----------------- |
+| HS01/SS01 | `00000001`/`0000000D` | Left Port type-C (Power Source) - next to 3.5mm jack port | E                 |
+| HS02/SS02 | `00000002`/`0000000E` | Right Port type-A                                         | E                 |
+| HS03      | `00000003`            | Left Port type-C Thunderbolt                              | E                 |
+| HS05      | `00000005`            | Bluetooth USB Port                                        | I                 |
+| HS07      | `00000007`            | Integrated HD Camera module                               | I                 |
+
+
+
+
+
+
+
+
 
