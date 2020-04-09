@@ -2,6 +2,23 @@
 
 English
 
+- 04-09-2020
+    - Update [kext] `Lilu` v. 1.4.3
+    - Update [kext] `WhateverGreen` v. 1.3.8
+    - Update [kext] `AppleALC` v. 1.4.8
+    - Update [kext] `CodecCommander` v. 2.7.2
+    - Update [kext] `USBInjectAll` v. 0.7.3 (Sniki's fork)
+    - Update [kext] `VoodooI2C` v. 2.4, support trackpad in Recovery mode
+    - Update [kext] `VoodooI2CHID` v. 2.4
+    - Update [kext] `VoodooPS2Controller` v. 2.1.3
+    - Update [kext] `VirtualSMC` and related plugins v. 1.1.2
+    - Update [kext] `HibernationFixup` v. 1.3.2
+    - Update [kext] `NVMeFix` v. 1.0.2
+    - Update [kext] `IntelBluetoothFirmware` v. 1.0.3
+    - Update `SSDT-XOSI.aml` according to Sniki's fork
+    - Update `Readme`
+    - Remove [config] "AppleIntelLpssI2C" patches because [alexandred](https://github.com/alexandred/VoodooI2C/commit/c6e3c278cda84a26f400a77f5ea57d819df9e405) solved the race problem
+
 - 04-01-2020
     - Add `SSDT-ALS0.aml`
     - Add `SSDT-DeepIdle.aml`
