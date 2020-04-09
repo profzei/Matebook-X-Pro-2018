@@ -97,24 +97,22 @@ killall Dock
 | Item | Version |
 | :--- | :--- |
 | MacOS | 10.14.6 |
-| Clover | 5103 |
-| Lilu | 1.4.3 |
-| VirtualSMC | 1.1.2 |
-| WhateverGreen | 1.3.8 |
-| AppleALC | 1.4.8 |
-| CodecCommander | 2.7.1 |
-| CPUFriend | 1.2.0 |
-| USBInjectAll | 0.7.3 |
-| VoodooI2C | 2.3 |
-| VoodooI2CHID | 2.3 |
-| VoodooPS2Controller | 2.1.3 |
-| VoodooInput | 1.0.4 |
-| VirtualSMC | 1.1.1 |
+| [Clover](https://github.com/CloverHackyColor/CloverBootloader/releases) | 5103 |
+| [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.4.3 |
+| [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.3.8 |
+| [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.4.8 |
+| [CodecCommander](https://github.com/Sniki/EAPD-Codec-Commander/releases) | 2.7.2 |
+| [CPUFriend](https://github.com/acidanthera/CPUFriend/releases) | 1.2.0 |
+| [USBInjectAll](https://github.com/Sniki/OS-X-USB-Inject-All/releases) | 0.7.3 |
+| [VoodooI2C](https://github.com/acidanthera/VoodooInput/releases) | 2.4 |
+| [VoodooI2CHID](https://github.com/acidanthera/VoodooInput/releases) | 2.4 |
+| [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases) | 2.1.3 |
+| [VirtualSMC](https://github.com/acidanthera/VirtualSMC/releases) | 1.1.2 |
 | NullEthernet | 1.0.6 |
-| NoTouchID | 1.0.3 |
-| HibernationFixup | 1.3.1 |
-| NVMeFix | 1.0.1 |
-| IntelBluetoothFirmware | 1.0.3 |
+| [NoTouchID](https://github.com/al3xtjames/NoTouchID/releases) | 1.0.3 |
+| [HibernationFixup](https://github.com/acidanthera/HibernationFixup/releases) | 1.3.2 |
+| [NVMeFix](https://github.com/acidanthera/NVMeFix/releases) | 1.0.2 |
+| [IntelBluetoothFirmware](https://github.com/zxystd/IntelBluetoothFirmware) | 1.0.3 |
 
 
 
