@@ -6,9 +6,9 @@
 DefinitionBlock ("", "SSDT", 2, "hack", "MEM2", 0)
 {
 #endif
-    External (_SB_.PCI0.IGPU, DeviceObj)
+    External (_SB_.PCI0.GFX0, DeviceObj)
     
-    Scope (_SB.PCI0.IGPU)
+    Scope (_SB.PCI0.GFX0)
     {
         Device (^^MEM2)
         {

@@ -17,19 +17,19 @@
 DefinitionBlock ("", "SSDT", 2, "hack", "_PNLF", 0)
 {
 #endif
-    External (_SB_.PCI0.IGPU, DeviceObj)
+    External (_SB_.PCI0.GFX0, DeviceObj)
     External (RMCF.BKLT, IntObj)
     External (RMCF.FBTP, IntObj)
     External (RMCF.GRAN, IntObj)
     External (RMCF.LEVW, IntObj)
     External (RMCF.LMAX, IntObj)
 
-    Scope (_SB.PCI0.IGPU)
+    Scope (_SB.PCI0.GFX0)
     {
         OperationRegion (RMP3, PCI_Config, Zero, 0x14)
     }
 
-    Device (_SB.PCI0.IGPU.PNLF) // Backlight control
+    Device (_SB.PCI0.GFX0.PNLF) // Backlight control
     {
         Name (_ADR, Zero)  // _ADR: Address
         Name (_HID, EisaId ("APP0002"))  // _HID: Hardware ID
@@ -106,7 +106,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "_PNLF", 0)
             }
 
             // Adjustment required when using AppleBacklight.kext
-            Local0 = ^GDID /* \_SB_.PCI0.IGPU.PNLF.GDID */
+            Local0 = ^GDID /* \_SB_.PCI0.GFX0.PNLF.GDID */
             Local2 = Ones
             If (CondRefOf (\RMCF.LMAX))
             {
