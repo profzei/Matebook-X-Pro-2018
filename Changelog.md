@@ -16,8 +16,13 @@ English
     - Update [kext] `NVMeFix` v. 1.0.2
     - Update [kext] `IntelBluetoothFirmware` v. 1.0.3
     - Update `SSDT-XOSI.aml` according to Sniki's fork
+    - Update `SSDT-MEM2.aml` removing "GFX0 to IGPU"
+    - Update `SSDT-PNLF.aml` removing "GFX0 to IGPU" 
     - Update `Readme`
     - Remove [config] "AppleIntelLpssI2C" patches because [alexandred](https://github.com/alexandred/VoodooI2C/commit/c6e3c278cda84a26f400a77f5ea57d819df9e405) solved the race problem
+    - Remove [config] binary patch "GFX0 to IGPU" to improve graphics stability with WhateverGreen
+    - Remove [config] binary patch "HECI to IMEI" to improve graphics stability with WhateverGreen
+    - Remove [config] binary patch "HDAS to HDEF" to improve graphics stability with WhateverGreen
 
 - 04-01-2020
     - Add `SSDT-ALS0.aml`
