@@ -6,12 +6,12 @@
 DefinitionBlock ("", "SSDT", 2, "ACDT", "BrightFN", 0)
 {
 #endif
-    External (_SB_.PCI0.LPCB.EC0_, DeviceObj)
-    External (_SB_.PCI0.LPCB.EC0_.XQ0A, MethodObj)    // EC0 to EC
-    External (_SB_.PCI0.LPCB.EC0_.XQ0B, MethodObj)    // EC0 to EC
+    External (_SB_.PCI0.LPCB.EC_, DeviceObj)         // EC0 to EC
+    External (_SB_.PCI0.LPCB.EC_.XQ0A, MethodObj)    // EC0 to EC
+    External (_SB_.PCI0.LPCB.EC_.XQ0B, MethodObj)    // EC0 to EC
     External (_SB_.PCI0.LPCB.PS2K, DeviceObj)
 
-    Scope (_SB.PCI0.LPCB.EC0)
+    Scope (_SB.PCI0.LPCB.EC_)
     {
         Method (_Q0A, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
         {
@@ -22,7 +22,7 @@ DefinitionBlock ("", "SSDT", 2, "ACDT", "BrightFN", 0)
             }
             Else
             {
-                \_SB.PCI0.LPCB.EC0.XQ0A ()
+                \_SB.PCI0.LPCB.EC_.XQ0A ()
             }
         }
 
@@ -35,7 +35,7 @@ DefinitionBlock ("", "SSDT", 2, "ACDT", "BrightFN", 0)
             }
             Else
             {
-                \_SB.PCI0.LPCB.EC0.XQ0B ()
+                \_SB.PCI0.LPCB.EC_.XQ0B ()
             }
         }
     }
