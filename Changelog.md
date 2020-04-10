@@ -7,6 +7,7 @@ English
     - Remove `SSDT-EC-USBX.aml` since there is no need for a fake EC device in Mojave laptop configuration
     - Add `SSDT-USBX.aml` to enable USB power properties via USBX device (formerly in `SSDT-EC-USBX.aml`)
     - Update `SSDT-FnKey.aml` applying `EC0 to EC` patch
+    - Revert [kext] `CodecCommander` v. 2.7.1 to [RehabMan old version](https://bitbucket.org/RehabMan/os-x-eapd-codec-commander/downloads/) instead of Sniki's fork for a better compatibility with Mojave
 
 - 04-09-2020
     - Update [kext] `Lilu` v. 1.4.3

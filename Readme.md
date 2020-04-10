@@ -101,7 +101,7 @@ killall Dock
 | [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.4.3 |
 | [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.3.8 |
 | [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.4.8 |
-| [CodecCommander](https://github.com/Sniki/EAPD-Codec-Commander/releases) | 2.7.2 |
+| [CodecCommander](https://github.com/Sniki/EAPD-Codec-Commander/releases) | ~~2.7.2~~ 2.7.1 |
 | [CPUFriend](https://github.com/acidanthera/CPUFriend/releases) | 1.2.0 |
 | [USBInjectAll](https://github.com/Sniki/OS-X-USB-Inject-All/releases) | 0.7.3 |
 | [VoodooI2C](https://github.com/acidanthera/VoodooInput/releases) | 2.4 |
