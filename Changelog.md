@@ -2,6 +2,11 @@
 
 English
 
+- 04-12-2020
+    - Update [config] `Device`-`Properties` section for `AAPL,ig-platform-id`: `00001659` (no more graphical glitches during boot process from 1st to 2nd stage phase)
+    - Update [config] `Device`-`Properties` section for `device-id`: `16590000` (same as above)
+    - Update `Readme` with Graphics section
+
 - 04-10-2020
     - Applied [config] binary patch `EC0 to EC` according to [khronokernel guide](https://github.com/khronokernel/Getting-Started-With-ACPI/blob/master/Laptops/laptop-ec.md)
     - Remove `SSDT-EC-USBX.aml` since there is no need for a fake EC device in Mojave laptop configuration

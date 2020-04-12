@@ -1,10 +1,10 @@
 # Huawei Matebook X Pro (2018 Edition)
 [![release](https://img.shields.io/badge/download-release-blue.svg)](https://github.com/profzei/Matebook-X-Pro-2018/releases) [![wiki](https://img.shields.io/badge/support-wiki-green.svg)](https://github.com/profzei/Matebook-X-Pro-2018/wiki)
 
-macOS on Huawei Matebook X Pro 2018
+#### macOS on Huawei Matebook X Pro 2018
 ![Alt text](https://ivanov-audio.com/wp-content/uploads/2014/01/Hackintosh-Featured-Image.png)
 
-This repo is currently compatible with macOS Mojave 10.14.6 (18G87)
+#### This repo is currently compatible with macOS Mojave 10.14.6 (18G87)
 
 
 ## Configuration
@@ -91,6 +91,9 @@ defaults write com.apple.dock autohide-delay -float 0
 defaults write com.apple.dock autohide-time-modifier -float 0.5
 killall Dock
 ```
+
+#### Graphics section
+Refer to: [here](/Graphics/Graphics.md)
 
 ## Update tracker
 
