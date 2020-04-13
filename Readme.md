@@ -100,7 +100,7 @@ killall Dock
 ```
 
 #### Graphics section
-Refer to: [here](/Graphics/Graphics.md)
+Refer to: [here](/Graphics/)
 
 ## Update tracker
 
