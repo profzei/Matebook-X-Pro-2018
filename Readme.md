@@ -129,16 +129,16 @@ Refer to: [here](/Graphics/)
 - Update `Clover` to r5107+ to support macOS 10.15.4
 - Remove [config] `MSR 0xE2` kernel patch because `Clover` can automatically patch
 ```
-			<dict>
-				<key>Comment</key>
-				<string>MSR 0xE2 _xcpm_idle instant reboot(c) Pike R. Alpha</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>ILniAAAADzA=</data>
-				<key>Replace</key>
-				<data>ILniAAAAkJA=</data>
-			</dict>
+	<dict>
+		<key>Comment</key>
+		<string>MSR 0xE2 _xcpm_idle instant reboot(c) Pike R. Alpha</string>
+		<key>Disabled</key>
+		<false/>
+		<key>Find</key>
+		<data>ILniAAAADzA=</data>
+		<key>Replace</key>
+		<data>ILniAAAAkJA=</data>
+	</dict>
 ```
 - Add [config] `setpowerstate_panic=0` kernel patch for macOS 10.15 according to [Acindathera/AppleALC#513](https://github.com/acidanthera/bugtracker/issues/513#issuecomment-542838126)
 - Add [config] `complete-modeset-framebuffers` property to Intel UHD Graphics 620 device section to improve HDMI
