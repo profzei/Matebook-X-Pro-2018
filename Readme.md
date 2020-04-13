@@ -124,6 +124,57 @@ Refer to: [here](/Graphics/)
 | [NVMeFix](https://github.com/acidanthera/NVMeFix/releases) | 1.0.2 |
 | [IntelBluetoothFirmware](https://github.com/zxystd/IntelBluetoothFirmware) | 1.0.3 |
 
+## Development: Catalina 10.15.4 support
+
+- Update `Clover` to r5107+ to support macOS 10.15.4
+- Add [config] `setpowerstate_panic=0` kernel patch for macOS 10.15 according to [Acindathera/AppleALC#513](https://github.com/acidanthera/bugtracker/issues/513#issuecomment-542838126)
+- Remove [config] `MSR 0xE2` kernel patch because `Clover` can automatically patch
+- Add [config] `complete-modeset-framebuffers` property to Intel UHD Graphics 620 device section to improve HDMI
+- Add [config] `force-online` and `force-online-framebuffers` properties to Intel UHD Graphics 620 device section to fix HDMI on macOS 10.15.4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
