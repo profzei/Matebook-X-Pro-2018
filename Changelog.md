@@ -4,6 +4,8 @@ English
 
 - 04-13-2020
     - Update `Readme` with Development section for Catalina 10.15.4
+    - Remove [config] binary patch `XHC1 to XHC` for USB ports
+    - Change [config] from binary patch `Method(_WAK,1,N) to ZWAK` to `Method(_WAK,1,S) to ZWAK`: "Zero ACPI Error" messages during boot process achieved
 
 - 04-12-2020
     - Remove [config] the `IOGraphicsFamily.kext` `ForceKextsToLoad` patch because `VoodooI2C` v2.4 fix the issue
