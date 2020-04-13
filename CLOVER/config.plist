@@ -83,7 +83,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(_PTS,1,N) to ZPTS, pair with SSDT-PTSWAK.aml</string>
+					<string>change Method(_PTS,1,N) to ZPTS</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -97,16 +97,16 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(_WAK,1,N) to ZWAK, pair with SSDT-PTSWAK.aml</string>
+					<string>change Method(_WAK,1,S) to ZWAK</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
 					<data>
-					X1dBSwE=
+					X1dBSwk=
 					</data>
 					<key>Replace</key>
 					<data>
-					WldBSwE=
+					WldBSwk=
 					</data>
 				</dict>
 				<dict>
@@ -155,7 +155,7 @@
 					<key>Comment</key>
 					<string>Rename XHC1 to XHC (USB)</string>
 					<key>Disabled</key>
-					<false/>
+					<true/>
 					<key>Find</key>
 					<data>
 					WEhDMQ==
