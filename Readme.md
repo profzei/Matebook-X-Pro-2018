@@ -24,8 +24,15 @@
 This repository is for personal purposes: it is heavily based on the hard work done by [gnodipac886](https://github.com/gnodipac886/MatebookXPro-hackintosh), but with some significant personal improvements in `CLOVER/ACPI/patched` and `CLOVER/kexts/Other` sections.
 
 
-Changelog:   	see [Changelog.md](Changelog.md)
+Changelog: see [here](Changelog.md)
 
+## Current Status
+- Discrete graphics card (NVIDIA GeForce MX150) is not working, since macOS doesn't support Optimus technology
+	- Have used `SSDT-DDGPU.aml` to disable it in order to save power.
+- Fingerprint sensor is not working
+	- Have used `SSDT-UIAC.aml` to disable it in order to save power.
+- Intel Wi-Fi (Intel Wireless 8265) is not (yet) working: there is hard work and, therefore, some progress in Intel Wi-Fi support. Hope to see a fully functional `kext` asap.
+	- I bought a USB Wi-Fi dongle: [tp-link](https://www.tp-link.com/it/support/download/tl-wn823n/?utm_medium=select-local#Driver) TL-WN823Nv3 with macOS updated driver support [Wireless-USB-Adapter Driver](https://github.com/chris1111/Wireless-USB-Adapter-Clover/releases) 
 
 ## Device Firmware
 - Bios version: `1.28`
