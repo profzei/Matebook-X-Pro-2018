@@ -143,20 +143,20 @@ Refer to: [here](/Graphics/)
 - Add [config] `setpowerstate_panic=0` kernel patch for macOS 10.15 according to [Acindathera/AppleALC#513](https://github.com/acidanthera/bugtracker/issues/513#issuecomment-542838126)
 ```
 	<key>KernelToPatch</key>
-		<array>
-			<dict>
-				<key>Comment</key>
-				<string>Disable setPowerState panic with setpowerstate_panic=0 boot-args on 10.15 (credit vit9696)</string>
-				<key>Disabled</key>
-				<false/>
-				<key>MatchOS</key>
-				<string>10.15</string>
-				<key>Find</key>
-				<data>Y29tLmFwcGxlAA==</data>
-				<key>Replace</key>
-				<data>bm90LmFwcGxlAA==</data>
-			</dict>
-		</array>
+	<array>
+		<dict>
+			<key>Comment</key>
+			<string>Disable setPowerState panic with setpowerstate_panic=0 boot-args on 10.15 (credit vit9696)</string>
+			<key>Disabled</key>
+			<false/>
+			<key>MatchOS</key>
+			<string>10.15</string>
+			<key>Find</key>
+			<data>Y29tLmFwcGxlAA==</data>
+			<key>Replace</key>
+			<data>bm90LmFwcGxlAA==</data>
+		</dict>
+	</array>
 ```
 - Add [config] `complete-modeset-framebuffers` property to Intel UHD Graphics 620 device section to improve HDMI
 ```
