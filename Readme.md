@@ -56,6 +56,9 @@ Hibernation (suspend to disk or S4 sleep) is not supported on a Hackintosh: so i
 sudo pmset -a hibernatemode 0
 sudo rm -f /var/vm/sleepimage
 sudo mkdir /var/vm/sleepimage
+sudo rm -rf /private/var/vm/sleepimage
+sudo touch /private/var/vm/sleepimage
+sudo chflags uchg /private/var/vm/sleepimage
 ```
 Also, it's important to disable the other hibernation related functions.
 ```
