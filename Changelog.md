@@ -2,6 +2,15 @@
 
 English
 
+- 04-29-2020
+    - Update `Clover` v. 5115
+    - Update `Readme` with Fix AppleID for Catalina
+    - Remove `SSDT-ALS0.aml`: since native `ALSD` Ambient Light Sensore Device works properly there's no need for a fake one
+    - Improved `SSDT-DDGPU.aml` in `SSDT-DDGPU-Optimus.aml`: discrete gpu is disabled with Optimus method (Bumblee method has been also tested but with poor results)
+    - Improved `SSDT-PTSWAK.aml` in `SSDT-PTSWAK-Optimus.aml` to pair with `SSDT-DDGPU-Optimus.aml`
+    - Add `SSDT-BATT-HUAWEI.aml` for a better native support for Huawei Matebook X Pro battery
+    - Add [config] 18 binary patches to pair `SSDT-BATT-HUAWEI.aml` 
+
 - 04-13-2020
     - Update `Readme` with Development section for Catalina 10.15.4
     - Remove [config] binary patch `XHC1 to XHC` for USB ports

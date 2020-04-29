@@ -5,7 +5,7 @@
 ![Alt text](https://ivanov-audio.com/wp-content/uploads/2014/01/Hackintosh-Featured-Image.png)
 
 #### This repo is currently compatible with macOS Mojave 10.14.6 (18G87)
-This is intended to create a "fully" functional (as far as possible) hackintosh for the Huawei Matebook X Pro. There are some well-written guides ([here]()), so it's not a particular issue getting macOS installed onto my MBXP; but the reason why I didn't stop my efforts into resolving each bug, there was because of "minor issues" I ran into. The installation is not perfect yet since it's a continuos work-in-progress, but I'm glad to say that I learned a lot in the meantime.
+This is intended to create a "fully" functional (as far as possible) hackintosh for the Huawei Matebook X Pro. There are some well-written guides ([here](https://dortania.github.io/getting-started/)), so it's not a particular issue getting macOS installed onto my MBXP; but the reason why I didn't stop my efforts into resolving each bug, there was because of "minor issues" I ran into. The installation is not perfect yet since it's a continuos work-in-progress, but I'm glad to say that I learned a lot in the meantime.
 
 
 ## Configuration
@@ -109,7 +109,7 @@ Refer to: [here](/Graphics/)
 | Item | Version |
 | :--- | :--- |
 | MacOS | 10.14.6 |
-| [Clover](https://github.com/CloverHackyColor/CloverBootloader/releases) | 5103 |
+| [Clover](https://github.com/CloverHackyColor/CloverBootloader/releases) | 5115 |
 | [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.4.3 |
 | [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.3.8 |
 | [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.4.8 |
@@ -180,7 +180,18 @@ Refer to: [here](/Graphics/)
 	</dict>
 ```
 
+### Fix AppleID issue on macOS Catalina
 
+- If you encounter the problem with AppleID which cannot login and logout, this problem happened on both Hackintosh and Macintosh.
+- Fix this issue with the following commands:
+```
+sudo -v
+killall -9 accountsd com.apple.iCloudHelper
+defaults delete MobileMeAccounts
+rm -rf ~/Library/Accounts
+killall -9 accountsd com.apple.iCloudHelper
+sudo reboot
+```
 
 
 
