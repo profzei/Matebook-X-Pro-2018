@@ -27,7 +27,7 @@
 			<array>
 				<dict>
 					<key>Comment</key>
-					<string>Rename Method(GPRW,2,N) to XPRW, pair with SSDT-GPRW.aml (Instant Wake)</string>
+					<string>Rename GPRW,2,N to XPRW (Instant Wake)</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -41,7 +41,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change EC0 to EC</string>
+					<string>Rename EC0 to EC</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -55,7 +55,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(_Q0A,0,N) to XQ0A</string>
+					<string>Rename _Q0A,0,N to XQ0A</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -69,7 +69,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(_Q0B,0,N) to XQ0B</string>
+					<string>Rename _Q0B,0,N to XQ0B</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -83,7 +83,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(_PTS,1,N) to ZPTS</string>
+					<string>Rename _PTS,1,N to ZPTS</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -97,7 +97,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(_WAK,1,S) to ZWAK</string>
+					<string>Rename _WAK,1,S to ZWAK</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -111,7 +111,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change _DSM to XSDM</string>
+					<string>Rename _DSM to XSDM</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -125,7 +125,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change _OSI to XOSI</string>
+					<string>Rename _OSI to XOSI</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -177,6 +177,328 @@
 					<key>Replace</key>
 					<data>
 					TFBDQg==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Rename BIF0 to XIF0 (Batt)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					QklGMAg=
+					</data>
+					<key>Replace</key>
+					<data>
+					WElGMAg=
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Rename BIF1 to XIF1 (Batt)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					QklGMQg=
+					</data>
+					<key>Replace</key>
+					<data>
+					WElGMQg=
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Rename BIF2 to XIF2 (Batt)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					QklGMgg=
+					</data>
+					<key>Replace</key>
+					<data>
+					WElGMgg=
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Rename BIF3 to XIF3 (Batt)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					QklGMwg=
+					</data>
+					<key>Replace</key>
+					<data>
+					WElGMwg=
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Rename BIF4 to XIF4 (Batt)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					QklGNAg=
+					</data>
+					<key>Replace</key>
+					<data>
+					WElGNAg=
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Rename BIFA to XIFA (Batt)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					QklGQQg=
+					</data>
+					<key>Replace</key>
+					<data>
+					WElGQQg=
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Rename BCRT to XCRT (Batt)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					QkNSVAg=
+					</data>
+					<key>Replace</key>
+					<data>
+					WENSVAg=
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Rename BRCP to XRCP (Batt)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					QlJDUAg=
+					</data>
+					<key>Replace</key>
+					<data>
+					WFJDUAg=
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Rename BSTS to XSTS (Batt)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					QlNUUwg=
+					</data>
+					<key>Replace</key>
+					<data>
+					WFNUUwg=
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Rename BVOT to XVOT (Batt)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					QlZPVAg=
+					</data>
+					<key>Replace</key>
+					<data>
+					WFZPVAg=
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Rename ECBM to XCBM (Batt)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					RUNCTQk=
+					</data>
+					<key>Replace</key>
+					<data>
+					WENCTQk=
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Rename ECDE to XCDE (Batt)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					RUNERQg=
+					</data>
+					<key>Replace</key>
+					<data>
+					WENERQg=
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Rename _QA8 to XQA8 (Batt)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					X1FBOAA=
+					</data>
+					<key>Replace</key>
+					<data>
+					WFFBOAA=
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Rename _QA9 to XQA9 (Batt)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					X1FBOQA=
+					</data>
+					<key>Replace</key>
+					<data>
+					WFFBOQA=
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Rename ALSD._INI to ALSD.XINI (Batt)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					X0lOSQBwUw==
+					</data>
+					<key>Replace</key>
+					<data>
+					WElOSQBwUw==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Rename ALSD.S3WK to ALSD.X3WK (Batt)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					UzNXSwA=
+					</data>
+					<key>Replace</key>
+					<data>
+					WDNXSwA=
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Rename ALSD.S3PT to ALSD.X3PT (Batt)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					UzNQVAA=
+					</data>
+					<key>Replace</key>
+					<data>
+					WDNQVAA=
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Rename BAT0.FBST to BAT0.XFBS (Batt)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					RkJTVAQ=
+					</data>
+					<key>Replace</key>
+					<data>
+					WEZCUwQ=
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Rename TPWR.ACUR to TPWR.XCUR (Batt)</string>
+					<key>Disabled</key>
+					<true/>
+					<key>Find</key>
+					<data>
+					QUNVUgg=
+					</data>
+					<key>Replace</key>
+					<data>
+					WENVUgg=
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Rename TPWR.AVOL to TPWR.XVOL (Batt)</string>
+					<key>Disabled</key>
+					<true/>
+					<key>Find</key>
+					<data>
+					QVZPTAg=
+					</data>
+					<key>Replace</key>
+					<data>
+					WFZPTAg=
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Rename TPWR.PBSS to TPWR.XBSS (Batt)</string>
+					<key>Disabled</key>
+					<true/>
+					<key>Find</key>
+					<data>
+					UEJTUwA=
+					</data>
+					<key>Replace</key>
+					<data>
+					WEJTUwA=
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Rename TPWR.PMAX to TPWR.XMAX (Batt)</string>
+					<key>Disabled</key>
+					<true/>
+					<key>Find</key>
+					<data>
+					UE1BWAg=
+					</data>
+					<key>Replace</key>
+					<data>
+					WE1BWAg=
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Rename TPWR.PSOC to TPWR.XSOC (Batt)</string>
+					<key>Disabled</key>
+					<true/>
+					<key>Find</key>
+					<data>
+					UFNPQwA=
+					</data>
+					<key>Replace</key>
+					<data>
+					WFNPQwA=
 					</data>
 				</dict>
 			</array>
@@ -380,7 +702,7 @@
 			<true/>
 		</dict>
 		<key>Theme</key>
-		<string>Huawei</string>
+		<string>Xiaomi</string>
 	</dict>
 	<key>Graphics</key>
 	<dict>
