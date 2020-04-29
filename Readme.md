@@ -5,6 +5,7 @@
 ![Alt text](https://ivanov-audio.com/wp-content/uploads/2014/01/Hackintosh-Featured-Image.png)
 
 #### This repo is currently compatible with macOS Mojave 10.14.6 (18G87)
+This is intended to create a "fully" functional (as far as possible) hackintosh for the Huawei Matebook X Pro. There are some well-written guides ([here]()), so it's not a particular issue getting macOS installed onto my MBXP; but the reason why I didn't stop my efforts into resolving each bug, there was because of "minor issues" I ran into. The installation is not perfect yet since it's a continuos work-in-progress, but I'm glad to say that I learned a lot in the meantime.
 
 
 ## Configuration
@@ -54,8 +55,6 @@ CPU power management can be achieved by using `CPUFriend.kext` while `CPUFriendD
 Hibernation (suspend to disk or S4 sleep) is not supported on a Hackintosh: so it's recommended to disable it.
 ```
 sudo pmset -a hibernatemode 0
-sudo rm -f /var/vm/sleepimage
-sudo mkdir /var/vm/sleepimage
 sudo rm -rf /private/var/vm/sleepimage
 sudo touch /private/var/vm/sleepimage
 sudo chflags uchg /private/var/vm/sleepimage
