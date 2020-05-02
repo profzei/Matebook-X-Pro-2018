@@ -2,6 +2,9 @@
 
 English
 
+- 05-02-2020
+	Add `SSDT-RMCF.aml` since `SSDT-PNLF.aml` and `SSDT-PTSWAK.aml` are using Rehabman's approach with `RMCF` device and relative method
+
 - 04-29-2020
     - Update `Clover` v. 5115
     - Update `Readme` with Fix AppleID for Catalina
