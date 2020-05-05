@@ -4,6 +4,7 @@ English
 
 - 05-05-2020
     - Add `config-catalina.plist` for supporting macOS Catalina
+    - Modified [config] Boot arg from `darkwake=1` to `darkwake=4`
 
 - 05-02-2020
 	- Add `SSDT-RMCF.aml` since `SSDT-PNLF.aml` and `SSDT-PTSWAK.aml` are using Rehabman's approach with `RMCF` device and relative method

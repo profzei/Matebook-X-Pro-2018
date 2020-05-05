@@ -124,7 +124,7 @@ Refer to: [here](/Graphics/)
 | [NoTouchID](https://github.com/al3xtjames/NoTouchID/releases) | 1.0.3 |
 | [HibernationFixup](https://github.com/acidanthera/HibernationFixup/releases) | 1.3.2 |
 | [NVMeFix](https://github.com/acidanthera/NVMeFix/releases) | 1.0.2 |
-| [IntelBluetoothFirmware](https://github.com/zxystd/IntelBluetoothFirmware) | 1.0.3 |
+| [IntelBluetoothFirmware](https://github.com/zxystd/IntelBluetoothFirmware/releases) | 1.0.3 |
 
 ## Development: Catalina 10.15.4 support
 
