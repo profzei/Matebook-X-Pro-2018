@@ -536,11 +536,13 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>dart=0 -cdfon lilucpu=9 -igfxmlr darkwake=1 gfxrst=1</string>
+		<string>-v dart=0 -cdfon lilucpu=9 -igfxmlr darkwake=4 gfxrst=1</string>
 		<key>Debug</key>
 		<false/>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
+		<key>HibernationFixup</key>
+		<true/>
 		<key>NoEarlyProgress</key>
 		<false/>
 		<key>RtcHibernateAware</key>
@@ -594,7 +596,7 @@
 			<dict>
 				<key>AAPL,ig-platform-id</key>
 				<data>
-				AAAWWQ==
+				AADAhw==
 				</data>
 				<key>AAPL,slot-name</key>
 				<string>Internal</string>
@@ -607,7 +609,7 @@
 				</data>
 				<key>device-id</key>
 				<data>
-				FlkAAA==
+				wIcAAA==
 				</data>
 				<key>device_type</key>
 				<string>VGA compatible controller</string>
