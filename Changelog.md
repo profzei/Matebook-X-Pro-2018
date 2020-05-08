@@ -2,6 +2,18 @@
 
 English
 
+- 05-08-2020
+    - Update `Clover` v. 5116
+    - Update [kext] `Lilu` v. 1.4.4
+    - Update [kext] `WhateverGreen` v. 1.3.9
+    - Update [kext] `AppleALC` v. 1.4.9
+    - Update [kext] `VoodooI2C` v. 2.4.2
+    - Update [kext] `VoodooI2CHID` v. 2.4.2
+    - Update [kext] `VoodooPS2Controller` v. 2.1.4
+    - Update [kext] `VirtualSMC` and related plugins v. 1.1.3
+    - Update [kext] `HibernationFixup` v. 1.3.3
+
+
 - 05-05-2020
     - Add `config-catalina.plist` for supporting macOS Catalina
     - Modified [config] Boot arg from `darkwake=1` to `darkwake=4`

@@ -109,20 +109,20 @@ Refer to: [here](/Graphics/)
 | Item | Version |
 | :--- | :--- |
 | MacOS | 10.14.6 |
-| [Clover](https://github.com/CloverHackyColor/CloverBootloader/releases) | 5115 |
-| [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.4.3 |
-| [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.3.8 |
-| [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.4.8 |
+| [Clover](https://github.com/CloverHackyColor/CloverBootloader/releases) | 5116 |
+| [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.4.9 |
+| [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.3.9 |
+| [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.4.9 |
 | [CodecCommander](https://github.com/Sniki/EAPD-Codec-Commander/releases) | ~~2.7.2~~ 2.7.1 |
 | [CPUFriend](https://github.com/acidanthera/CPUFriend/releases) | 1.2.0 |
 | [USBInjectAll](https://github.com/Sniki/OS-X-USB-Inject-All/releases) | 0.7.3 |
-| [VoodooI2C](https://github.com/alexandred/VoodooI2C/releases) | 2.4 |
-| [VoodooI2CHID](https://github.com/alexandred/VoodooI2C/releases) | 2.4 |
+| [VoodooI2C](https://github.com/alexandred/VoodooI2C/releases) | 2.4.2 |
+| [VoodooI2CHID](https://github.com/alexandred/VoodooI2C/releases) | 2.4.2 |
 | [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases) | 2.1.3 |
-| [VirtualSMC](https://github.com/acidanthera/VirtualSMC/releases) | 1.1.2 |
+| [VirtualSMC](https://github.com/acidanthera/VirtualSMC/releases) | 1.1.3 |
 | NullEthernet | 1.0.6 |
 | [NoTouchID](https://github.com/al3xtjames/NoTouchID/releases) | 1.0.3 |
-| [HibernationFixup](https://github.com/acidanthera/HibernationFixup/releases) | 1.3.2 |
+| [HibernationFixup](https://github.com/acidanthera/HibernationFixup/releases) | 1.3.3 |
 | [NVMeFix](https://github.com/acidanthera/NVMeFix/releases) | 1.0.2 |
 | [IntelBluetoothFirmware](https://github.com/zxystd/IntelBluetoothFirmware/releases) | 1.0.3 |
 
