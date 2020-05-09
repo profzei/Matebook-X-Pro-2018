@@ -2,7 +2,7 @@
 Recommended framebuffer for Intel(R) UHD Graphics 620 (Kaby Lake Refresh) card:
 ```
 AAPL,ig-platform-id		[Data]		0500C087
-device-id				[Data]		C0870005
+device-id			[Data]		C0870005
 ```
 Software sleep function works flawlessly with the above mentioned settings: during sleep state both CapsLock and Fn leds are off. During wake up phase display wakes up properly (no more split screen issue!). 
 
