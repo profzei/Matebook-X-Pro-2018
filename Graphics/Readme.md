@@ -1,4 +1,27 @@
 ## Graphics settings
+Recommended framebuffer for Intel(R) UHD Graphics 620 (Kaby Lake Refresh) card:
+```
+AAPL,ig-platform-id		[Data]		0500C087
+device-id				[Data]		C0870005
+```
+Software sleep function works flawlessly with the above mentioned settings: during sleep state both CapsLock and Fn leds are off. During wake up phase display wakes up properly (no more split screen issue!). 
+
+KBL connectors `AppleIntelKBLGraphicsFramebuffer.kext`:
+```
+ID: 87C00005, STOLEN: 57 MB, FBMEM: 0 bytes, VRAM: 1536 MB, Flags: 0x00A30702
+TOTAL STOLEN: 58 MB, TOTAL CURSOR: 1 MB (1572864 bytes), MAX STOLEN: 172 MB, MAX OVERALL: 173 MB (181940224 bytes)
+Model name: Intel UHD Graphics 617
+Camellia: CamelliaV3 (3), Freq: 1388 Hz, FreqMax: 1388 Hz
+Mobile: 1, PipeCount: 3, PortCount: 3, FBMemoryCount: 3
+[0] busId: 0x00, pipe: 8, type: 0x00000002, flags: 0x00000098 - ConnectorLVDS
+[1] busId: 0x05, pipe: 9, type: 0x00000400, flags: 0x000003C7 - ConnectorDP
+[2] busId: 0x04, pipe: 10, type: 0x00000400, flags: 0x000003C7 - ConnectorDP
+00000800 02000000 98000000
+01050900 00040000 C7030000
+02040A00 00040000 C7030000
+```
+
+
 Intel(R) UHD Graphics 620 (Kaby Lake Refresh) card configuration:
 ```
 <key>PciRoot(0x0)/Pci(0x2,0x0)</key>
@@ -17,59 +40,33 @@ Intel(R) UHD Graphics 620 (Kaby Lake Refresh) card configuration:
 		ICAgICAgICAgAAAA/gBMUE0xMzlNNDIyQSAgAE4=
 		</data>
 		<key>device-id</key>
-		<data>
-		FlkAAA==
-		</data>
+		<data>FlkAAA==</data>
 		<key>device_type</key>
 		<string>VGA compatible controller</string>
 		<key>disable-external-gpu</key>
-		<data>
-		AQAAAA==
-		</data>
+		<data>AQAAAA==</data>
 		<key>enable-hdmi20</key>
-		<data>
-		AQAAAA==
-		</data>
+		<data>AQAAAA==</data>
 		<key>framebuffer-con1-enable</key>
-		<data>
-		AQAAAA==
-		</data>
+		<data>AQAAAA==</data>
 		<key>framebuffer-con1-flags</key>
-		<data>
-		xwMAAA==
-		</data>
+		<data>xwMAAA==</data>
 		<key>framebuffer-con1-type</key>
-		<data>
-		AAgAAA==
-		</data>
+		<data>AAgAAA==</data>
 		<key>framebuffer-con2-enable</key>
-		<data>
-		AQAAAA==
-		</data>
+		<data>AQAAAA==</data>
 		<key>framebuffer-con2-flags</key>
-		<data>
-		xwMAAA==
-		</data>
+		<data>xwMAAA==</data>
 		<key>framebuffer-con2-type</key>
-		<data>
-		AAgAAA==
-		</data>
+		<data>AAgAAA==</data>
 		<key>framebuffer-fbmem</key>
-		<data>
-		AACQAA==
-		</data>
+		<data>AACQAA==</data>
 		<key>framebuffer-patch-enable</key>
-		<data>
-		AQAAAA==
-		</data>
+		<data>AQAAAA==</data>
 		<key>framebuffer-stolenmem</key>
-		<data>
-		AABgAg==
-		</data>
+		<data>AABgAg==</data>
 		<key>framebuffer-unifiedmem</key>
-		<data>
-		AAAAgA==
-		</data>
+		<data>AAAAgA==</data>
 		<key>hda-gfx</key>
 		<string>onboard-1</string>
 		<key>model</key>
