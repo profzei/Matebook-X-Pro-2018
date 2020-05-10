@@ -1,4 +1,29 @@
 ## Graphics settings
+[Support information](https://www.intel.com/content/www/us/en/support/products/126789/graphics-drivers/graphics-for-8th-generation-intel-processors/intel-uhd-graphics-620.html) for Intel(R) UHD Graphics 620
+
+Specifications
+|                                            | Details                   |
+| :--- | :---|
+| Processor Graphics                         | Intel(R) UHD Graphics 620 |
+| Graphics Base Frequency                    | 300 MHz                   |
+| Graphics Max Dynamic Frequency             | 1.00 - 1.15 GHz           |
+| Graphics Video Max Memory                  | 32 GB                     |
+| Graphics Output                            | eDP / DP / HDMI / DVI     |
+| 4K Support                                 | Yes, at 60 Hz             |
+| Max Resolution (HDMI 1.4)                  | 4096x2304 @ 24 Hz         |
+| Max Resolution (DP)                        | 4096x2304 @ 60 Hz         |
+| Max Resolution (eDP-Integrated Flat Panel) | 4096x2304 @ 60 Hz         |
+| Max Resolution (VGA)                       | N/A                       |
+| DirectX Support                            | 12                        |
+| OpenGL Support                             | 4.5                       |
+| Intel Quick Sync Video                     | Yes                       |
+| Intel InTru 3D Technology                  | Yes                       |
+| Intel Clear Video HD Technology            | Yes                       |
+| Intel Clear Video Technology               | Yes                       |
+| # of Displays Supported                    | 3                         |
+| Device ID                                  | 0x5917                    |
+
+
 Recommended framebuffer for Intel(R) UHD Graphics 620 (Kaby Lake Refresh) card:
 ```
 AAPL,ig-platform-id		[Data]		0500C087
@@ -109,6 +134,9 @@ When HDMI plugged in, macOS would recognize as DP (busID: 0x05), not HDMI (busID
 - All framebuffer values can be insert as `NUMBER` type, except `ig-platform-id`.
 
 ## Display fixes
+
+On macOS > 10.13.6, to enable higher HiDPI resolution ( < 1600x900 ), you need to set DVMT to 64 MB first
+Use [xzhih](https://github.com/xzhih)'s [one-key-hidpi](https://github.com/xzhih/one-key-hidpi) to improve quality of system UI.
 
 #### Display Color Profile
 Copy the `.icm` file to `/Library/ColorSync/Profiles` and select it in `System Preferences -> Display -> Color tab`.
