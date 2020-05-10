@@ -596,20 +596,13 @@
 			<dict>
 				<key>AAPL,ig-platform-id</key>
 				<data>
-				AADAhw==
+				BQDAhw==
 				</data>
 				<key>AAPL,slot-name</key>
 				<string>Internal</string>
-				<key>AAPL00,override-no-connect</key>
-				<data>
-				AP///////wAoiSpCAAAAAAAbAQSQHRR4A95Qo1RMmSYP
-				UFQAAAABAQEBAQEBAQEBAQEBAQEBt5i4oLDQPnAIIAgM
-				JcQQAAAat5i4oLDQQXIIIAgMJcQQAAAaAAAA/gBKREkg
-				ICAgICAgICAgAAAA/gBMUE0xMzlNNDIyQSAgAE4=
-				</data>
 				<key>device-id</key>
 				<data>
-				wIcAAA==
+				wIcABQ==
 				</data>
 				<key>device_type</key>
 				<string>VGA compatible controller</string>
@@ -617,9 +610,33 @@
 				<data>
 				AQAAAA==
 				</data>
+				<key>dpcd-max-link-rate</key>
+				<data>
+				FAAAAA==
+				</data>
+				<key>enable-dpcd-max-link-rate-fix</key>
+				<data>
+				AQAAAA==
+				</data>
 				<key>enable-hdmi20</key>
 				<data>
 				AQAAAA==
+				</data>
+				<key>force-online</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>framebuffer-con0-enable</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>framebuffer-con0-flags</key>
+				<data>
+				mAAAAA==
+				</data>
+				<key>framebuffer-con0-type</key>
+				<data>
+				AgAAAA==
 				</data>
 				<key>framebuffer-con1-enable</key>
 				<data>
@@ -664,7 +681,7 @@
 				<key>hda-gfx</key>
 				<string>onboard-1</string>
 				<key>model</key>
-				<string>Intel UHD Graphics 620</string>
+				<string>Intel(R) UHD Graphics 620</string>
 			</dict>
 		</dict>
 		<key>SetIntelBacklight</key>
@@ -742,6 +759,7 @@
 		<false/>
 		<key>ForceKextsToLoad</key>
 		<array>
+			<string>\System\Library\Extensions\IOGraphicsFamily.kext</string>
 			<string>\System\Library\Extensions\IONetworkingFamily.kext</string>
 		</array>
 		<key>KernelCpu</key>
@@ -819,6 +837,24 @@
 				<key>Replace</key>
 				<data>
 				SBr2wQAPhQ==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>IONVMeFamily: Preferred Block Size 0x10 to 0x02 LiteOn</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				9sEQD4VBAQAA
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>Name</key>
+				<string>IONVMeFamily</string>
+				<key>Replace</key>
+				<data>
+				9sECD4VBAQAA
 				</data>
 			</dict>
 		</array>
