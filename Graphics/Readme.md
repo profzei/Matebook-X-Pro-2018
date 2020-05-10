@@ -1,8 +1,6 @@
 ## Graphics settings
 [Support information](https://www.intel.com/content/www/us/en/support/products/126789/graphics-drivers/graphics-for-8th-generation-intel-processors/intel-uhd-graphics-620.html) for Intel(R) UHD Graphics 620
-
-Specifications
-|                                            | Details                   |
+| Specifications                             | Details                   |
 | :--- | :---|
 | Processor Graphics                         | Intel(R) UHD Graphics 620 |
 | Graphics Base Frequency                    | 300 MHz                   |
