@@ -2,6 +2,23 @@
 
 English
 
+- 05-10-2020
+    - Add `SSDT-TPD0.aml` to enable APIC interrupt mode: it uses VoodooInput bundled inside VoodooI2C (no need for external kext)
+    - Remove `SSDT-SLPB.aml` (it added support for "sleep button")
+    - Remove `SSDT-DeepIdle.aml`: it added support for "deep idle" at software level, but, in some (unknown) way, it breaks it at hardware level with a battery discharge rate of about 2% per hour during sleep state
+    - Modified [config] framebuffer for UHD 620 Graphics card to `C0870005`:
+        - no more glitches during boot transition from 1st to 2nd stage
+        - full support for software sleep state: during sleep state both CapsLock and Fn leds are off; display wakes up properly (no more split screen issue!)
+        - custom patching for each connector (con 0: LVDS, con 1: HDMI, con 2: HDMI): support up to two 4K @ 60 Hz monitors
+        - enabled digital audio with `hda-gfx` property
+        - enabled (standard) semantic patches for BIOS with DVMT Pre-Alloc 32 MB when higher is required (`fbmem`= 9 MB, `stolenmem`= 38 MB)
+        - enabled HDMI in UHD resolution with 60 fps with `-cdfon` boot-arg and `enable-hdmi20` property: this could fix random `gIOScreenLockState3` error during boot phase
+        - added the `disable-external-gpu` property
+        - added `-igfxmlr` boot-arg and `enable-dpcd-max-link-rate-fix` property: this could fix random kernel panic due to a "division-by-zero"
+        - specified a maximum link rate value via the `dpcd-max-link-rate` property for builtin display: `0x06` for RBR, `0x0A` for HBR (typically used for 1080p display), `0x14` for HBR2 (typically used for 4K display) and `0x1E` for HBR3
+    - Improved details in Graphics section
+    - Add [config] new LiteON CA3 patch `IONVMeFamily Preferred Block Size 0x10 -> 0x02` in `KextsToPatch` section [credit to ygy3389]
+
 - 05-08-2020
     - Update `Clover` v. 5116
     - Update [kext] `Lilu` v. 1.4.4
@@ -13,11 +30,10 @@ English
     - Update [kext] `VirtualSMC` and related plugins v. 1.1.3
     - Update [kext] `HibernationFixup` v. 1.3.3
 
-
 - 05-05-2020
     - Add `config-catalina.plist` for supporting macOS Catalina
     - Modified [config] Boot arg from `darkwake=1` to `darkwake=4`
-    - Applied `Security Update 2020-002 Mojave` flawlessy. See [here](https://support.apple.com/en-gb/HT211100)
+    - Applied `Security Update 2020-002 Mojave` flawlessly. See [here](https://support.apple.com/en-gb/HT211100)
 
 - 05-02-2020
 	- Add `SSDT-RMCF.aml` since `SSDT-PNLF.aml` and `SSDT-PTSWAK.aml` are using Rehabman's approach with `RMCF` device and relative method
