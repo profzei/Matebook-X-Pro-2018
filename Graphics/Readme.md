@@ -50,26 +50,29 @@ Intel(R) UHD Graphics 620 (Kaby Lake Refresh) card configuration:
 <key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 	<dict>
 		<key>AAPL,ig-platform-id</key>
-		<data>
-		AAAWWQ==
-		</data>
+		<data>BQDAhw==</data>
 		<key>AAPL,slot-name</key>
 		<string>Internal</string>
-		<key>AAPL00,override-no-connect</key>
-		<data>
-		AP///////wAoiSpCAAAAAAAbAQSQHRR4A95Qo1RMmSYP
-		UFQAAAABAQEBAQEBAQEBAQEBAQEBt5i4oLDQPnAIIAgM
-		JcQQAAAat5i4oLDQQXIIIAgMJcQQAAAaAAAA/gBKREkg
-		ICAgICAgICAgAAAA/gBMUE0xMzlNNDIyQSAgAE4=
-		</data>
 		<key>device-id</key>
-		<data>FlkAAA==</data>
+		<data>wIcABQ==</data>
 		<key>device_type</key>
 		<string>VGA compatible controller</string>
 		<key>disable-external-gpu</key>
 		<data>AQAAAA==</data>
+		<key>dpcd-max-link-rate</key>
+		<data>FAAAAA==</data>
+		<key>enable-dpcd-max-link-rate-fix</key>
+		<data>AQAAAA==</data>
 		<key>enable-hdmi20</key>
 		<data>AQAAAA==</data>
+		<key>force-online</key>
+		<data>AQAAAA==</data>
+		<key>framebuffer-con0-enable</key>
+		<data>AQAAAA==</data>
+		<key>framebuffer-con0-flags</key>
+		<data>mAAAAA==</data>
+		<key>framebuffer-con0-type</key>
+		<data>AgAAAA==</data>
 		<key>framebuffer-con1-enable</key>
 		<data>AQAAAA==</data>
 		<key>framebuffer-con1-flags</key>
