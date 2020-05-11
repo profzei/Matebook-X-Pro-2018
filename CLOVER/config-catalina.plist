@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>#Comment</key>
-	<string>This file is for HUAWEI Matebook X Pro 2018</string>
+	<string>This file is for HUAWEI Matebook X Pro 2018 (Catalina)</string>
 	<key>ACPI</key>
 	<dict>
 		<key>AutoMerge</key>
@@ -566,7 +566,7 @@
 	<key>CPU</key>
 	<dict>
 		<key>HWPEnable</key>
-		<false/>
+		<true/>
 		<key>UseARTFrequency</key>
 		<false/>
 	</dict>
@@ -579,6 +579,13 @@
 		</dict>
 		<key>Properties</key>
 		<dict>
+			<key>PciRoot(0x0)/Pci(0x14,0x0)</key>
+			<dict>
+				<key>acpi-wake-type</key>
+				<data>
+				AQ==
+				</data>
+			</dict>
 			<key>PciRoot(0x0)/Pci(0x1f,0x3)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
@@ -750,7 +757,7 @@
 	<key>KernelAndKextPatches</key>
 	<dict>
 		<key>AppleIntelCPUPM</key>
-		<true/>
+		<false/>
 		<key>AppleRTC</key>
 		<true/>
 		<key>Debug</key>
