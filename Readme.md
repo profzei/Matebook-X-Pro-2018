@@ -52,7 +52,7 @@ CPU power management can be achieved by using `CPUFriend.kext` while `CPUFriendD
 - Furthermore, you also need to put `SSDT-XCPM.aml` in `CLOVER/ACPI/patched` for working as normal after awake.
 
 ## Power management: Hibernation
-Hibernation (suspend to disk or S4 sleep) is not supported on a Hackintosh: so it's recommended to disable it.
+Hibernation (suspend to disk or S4 sleep) is not fully supported on a Hackintosh: so it's recommended to disable it.
 ```
 sudo pmset -a hibernatemode 0
 sudo rm -rf /private/var/vm/sleepimage
@@ -74,9 +74,15 @@ After every update, ALL these settings should be reapplied manually.
 
 You can verify yuor power settings by typing in terminal `sudo pmset -g live` . If you ever want to reset these settings: `sudo pmset -a restoredefaults`
 
+## Power management: sleep discharge fix
+Sleep function works flawlessly (both via software and via clamshell) thanks to the following improvements:
+- "right" choice of framebuffer `C0870005` for Intel(R) UHD 620 Graphics card
+- use of attribute `acpi-wake-type` for the USB Controller `PciRoot(0x0)/Pci(0x14,0x0)`
+- set `HWPEnable` value to true for SpeedShift CPU support
+About power consumption, [HWMonitor](https://github.com/kzlekk/HWSensors/releases) reports for the idle state both before and after sleep phase the same value for "CPU package total" (0.65-0.70 W). Sleep discharge rate is about 1% every 4:30 hours (during night).
+
 
 ## USB port mapping
-
 Proper `SSDT-UIAC.aml` and `SSDT-USBX.aml` are used for USB Host Controller (XHCI-Device-ID: `<2f 9d 00 00>`): these files are configured to map only the necessary ports (tested with IOReg) with the correct connector type and prevent it from shutdown issues.
 
 | Port      | Address               | Physical Location                                         | Internal/External |
@@ -90,7 +96,6 @@ Proper `SSDT-UIAC.aml` and `SSDT-USBX.aml` are used for USB Host Controller (XHC
 ## Optional
 
 #### Monitor temperatures and power consumption with [HWMonitor](https://github.com/kzlekk/HWSensors/releases) 
-
 This app is relatively old and no longer supported, but it gets the job done.
 
 #### Make dock animation faster and without delay
