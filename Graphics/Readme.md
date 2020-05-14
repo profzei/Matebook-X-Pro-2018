@@ -144,7 +144,7 @@ Use [xzhih](https://github.com/xzhih)'s [one-key-hidpi](https://github.com/xzhih
 - select `3000x2000` for resolution config [choice #5]
 - reboot
 
-After reboot, more `HiDPI` resolutions become available like `3000x2000`, `2880x1920`, `2250x1500`, `1920x1280`. The configuration file `DisplayProductID-422a` for our display (JDI422a) can be found for the path `/System/Library/Displays/Contents/Resources/Overrides/` in `DisplayVendorID-2889` folder. If you want to "identify" easier actual "Display profile" in "System Preferences" -> "Display Preferences", do the following steps:
+After reboot, more `HiDPI` resolutions become available like `3000x2000`, `2880x1920`, `2250x1500`, `1920x1280`. The configuration file `DisplayProductID-422a` for our display (JDI422a) can be found in the path `/System/Library/Displays/Contents/Resources/Overrides/` in `DisplayVendorID-2889` folder. If you want to "identify" your actual "Display profile" in "System Preferences" -> "Display Preferences", do the following steps:
 ```
 cd /System/Library/Displays/Contents/Resources/Overrides/DisplayVendorID-2889
 sudo nano DisplayProductID-422a
@@ -154,7 +154,7 @@ paste this code
 <key>DisplayProductName</key>
 <string>Huawei JDI422a Retina Display</string>
 ```
-and press <Ctrl> + <X>, then respond with <Y> (for "Yes") and then press <Enter> to save the file and exit nano editor. Reboot the laptop. For reference see [here](http://x220.mcdonnelltech.com/enable-scaled-resolutions/)
+and press `<Ctrl> + <X>`, then respond with `<Y>` (for "Yes") and then press `<Enter>` to save the file and exit nano editor. Restart the laptop. For reference see [here](http://x220.mcdonnelltech.com/enable-scaled-resolutions/)
 
 
 #### Display Color Profile
