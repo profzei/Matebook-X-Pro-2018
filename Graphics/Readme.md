@@ -135,9 +135,27 @@ When HDMI plugged in, macOS would recognize as DP (busID: 0x05), not HDMI (busID
 - All framebuffer values can be insert as `NUMBER` type, except `ig-platform-id`.
 
 ## Display fixes
+On macOS > 10.13.6, to enable higher HiDPI resolution, you need to set DVMT to 64 MB first: this, in general, means a CFG-unlocked machine.
 
-On macOS > 10.13.6, to enable higher HiDPI resolution ( < 1600x900 ), you need to set DVMT to 64 MB first
-Use [xzhih](https://github.com/xzhih)'s [one-key-hidpi](https://github.com/xzhih/one-key-hidpi) to improve quality of system UI.
+Use [xzhih](https://github.com/xzhih)'s [one-key-hidpi](https://github.com/xzhih/one-key-hidpi) to improve quality of system UI. Script can be run in remote or local mode: I choose local one. My steps are the following:
+- download ZIP archive, decompressing it and double click `hidpi.command` to run
+- select `Enable HIDPI (with EDID)` [choice #2]
+- select `MacBook Pro` [choice #3]
+- select `3000x2000` for resolution config [choice #5]
+- reboot
+
+After reboot, more `HiDPI` resolutions become available like `3000x2000`, `2880x1920`, `2250x1500`, `1920x1280`. The configuration file `DisplayProductID-422a` for our display (JDI422a) can be found for the path `/System/Library/Displays/Contents/Resources/Overrides/` in `DisplayVendorID-2889` folder. If you want to "identify" easier actual "Display profile" in "System Preferences" -> "Display Preferences", do the following steps:
+```
+cd /System/Library/Displays/Contents/Resources/Overrides/DisplayVendorID-2889
+sudo nano DisplayProductID-422a
+```
+paste this code
+```
+<key>DisplayProductName</key>
+<string>Huawei JDI422a Retina Display</string>
+```
+and press <Ctrl> + <X>, then respond with <Y> (for "Yes") and then press <Enter> to save the file and exit nano editor. Reboot the laptop. For reference see [here](http://x220.mcdonnelltech.com/enable-scaled-resolutions/)
+
 
 #### Display Color Profile
 Copy the `.icm` file to `/Library/ColorSync/Profiles` and select it in `System Preferences -> Display -> Color tab`.
