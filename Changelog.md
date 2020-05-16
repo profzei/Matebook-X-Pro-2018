@@ -2,6 +2,23 @@
 
 English
 
+- 05-XX-2020
+	- The way to modify BIOS has been found and successfully applied: CFG-Lock removed and DVMT changed
+		- `CFG Lock` now is set to `disabled` (previous value was `enabled`)
+		- `DVMT Pre-Allocaated` was already set to `64 MB` (which is the maximum value available)
+		- `DVMT Total Gfx Mem` now is set to `MAX` (previous value was `256 MB`)
+		- `Intel(R) SpeedStep` was already set to `enabled`
+		- `Intel(R) Speed Shift` was already set to `enabled`
+	- Set [config] `KernelPM` value to `false`: this parameter affected only post-Haswell CPUs with CFG locked
+	- Remove [config] in section `KernelToPatch` binary patch `MSR 0xE2 -xcpm-idle instant reboot`
+	- Remove [config] `framebuffer-fbmem` and `framebuffer-stolenmem` keys for UHD 620 Graphics card
+	- Remove `SSDT-TPD0.aml` since it refers to touchscreen (`TPD0`)
+	- Add `SSDT-GPI0.aml` and `SSDT-TPL1.aml` for touchpad GPIO interrupt mode: it uses VoodooInput bundled inside VoodooI2C (no need for external kext)
+	- Add [config] 2 binary patches:
+		- `_STA to XSTA for Device GPI0` to pair `SSDT-GPI0.aml`
+		- `_CRS to XCRS for Device TPL1` to pair `SSDT-TPL1.aml` (touchpad)
+	- Add [config] in section `KextToPatch` 2 binary patches respectively `com.apple.driver.AppleIntelLpssI2C` and `com.apple.driver.AppleIntelLpssI2CController` even if these two "old" issues should be fixed with `VoodooI2C` v. 2.4 (GenI2C app in "Diagnose" section still checks the presence of these two patches)
+
 - 05-11-2020
 	- Add [config] attribute `acpi-wake-type` to the USB Controller in Device `PciRoot(0x0)/Pci(0x14,0x0)` to fix sleep when lid is closed (during sleep state both CapsLock and Fn leds are off; display wakes up properly)
 	- Set [config] `AppleIntelCPUPM` value to `false` since this parameter affects only pre-Haswell CPUs
