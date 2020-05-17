@@ -31,7 +31,7 @@ English
     - Remove [config] `KernelLapic` key (its value was set to `false`)
     - Replaced `SSDT-XCPM.aml` with standard (OpenCore project) `SSDT-PLUG-PR.PR00.aml`
     - Implemented in `SSDT-PLUG-PR.PR00.aml` method `_PPC` for "Performance Present Capabilities" [credit to Zero-zer0]
-    - Update [config] `xxx` to let `System Information.app` show more Properties in PCI0 devices
+    - Update [config] `Devices->Properties` to let `System Information.app` show more Properties in PCI0 devices
         - for PCI Bridges `reg-ltrovr` property is injected: `IOPCIFamily.kext` will set latency tolerance offset for each of the latency tolerance devices; this could fix some potential issues
 
 - 05-11-2020
