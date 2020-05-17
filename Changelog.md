@@ -18,6 +18,11 @@ English
 		- `_STA to XSTA for Device GPI0` to pair `SSDT-GPI0.aml`
 		- `_CRS to XCRS for Device TPL1` to pair `SSDT-TPL1.aml` (touchpad)
 	- Add [config] in section `KextToPatch` 2 binary patches respectively `com.apple.driver.AppleIntelLpssI2C` and `com.apple.driver.AppleIntelLpssI2CController` even if these two "old" issues should be fixed with `VoodooI2C` v. 2.4 (GenI2C app in "Diagnose" section still checks the presence of these two patches)
+	- Add [config] `SSDT->NoOemTableId` key and its value is set to `false`
+	- Remove [config] old and unused key `DropTables->#MCFG`
+	- Remove [config] `DSDT->ReuseFFFF` key (its value was set to `false`)
+	- Remove [config] `DSDT->Debug` key (its value was set to `false`)
+	- Remove [config] `DSDT->DropOEM_DSM` key since `Clover` v. 5117 dropped it
 
 - 05-11-2020
 	- Add [config] attribute `acpi-wake-type` to the USB Controller in Device `PciRoot(0x0)/Pci(0x14,0x0)` to fix sleep when lid is closed (during sleep state both CapsLock and Fn leds are off; display wakes up properly)
