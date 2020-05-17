@@ -79,7 +79,7 @@ This repository is for personal purposes: it is heavily based on the hard work d
 - Bios version: `1.28`
 
 ## Bootloader Firmware
-- Default bootloader: Clover `r5103` [Dids release](https://github.com/Dids/clover-builder/releases)
+- Default bootloader: Clover `r5117` [Official release](https://github.com/CloverHackyColor/CloverBootloader/releases) ~~`r5103` [Dids release](https://github.com/Dids/clover-builder/releases)~~
 
 ## SMBIOS
 - Default SMBIOS settings of this repo is `MacBookPro14,1`
@@ -154,7 +154,7 @@ Refer to: [here](/Graphics/)
 | Item | Version |
 | :--- | :--- |
 | MacOS | 10.14.6 |
-| [Clover](https://github.com/CloverHackyColor/CloverBootloader/releases) | 5116 |
+| [Clover](https://github.com/CloverHackyColor/CloverBootloader/releases) | 5117 |
 | [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.4.9 |
 | [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.3.9 |
 | [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.4.9 |
