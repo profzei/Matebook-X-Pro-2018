@@ -23,6 +23,14 @@ English
 	- Remove [config] `DSDT->ReuseFFFF` key (its value was set to `false`)
 	- Remove [config] `DSDT->Debug` key (its value was set to `false`)
 	- Remove [config] `DSDT->DropOEM_DSM` key since `Clover` v. 5117 dropped it
+    - Remove [config] `Boot->Debug` key (its value was set to `false`)
+    - Add [config] `Graphics->EDID->Inject` key to value `yes` since it is checked that the right value is injected
+    - Remove [config] `KernelAndKextPatches->Debug` key (its value was `false`)
+    - Remove [config] `KernelAndKextPatches->DellSMSBIOSPatch` key (its value was `false`)
+    - Remove [config] `KernelCPU` key (its value was set to `false`)
+    - Remove [config] `KernelLapic` key (its value was set to `false`)
+    - Replaced `SSDT-XCPM.aml` with standard (OpenCore project) `SSDT-PLUG-PR.PR00.aml`
+    - Implemented in `SSDT-PLUG-PR.PR00.aml` method `_PPC` for "Performance Present Capabilities" [credit to Zero-zer0]
 
 - 05-11-2020
 	- Add [config] attribute `acpi-wake-type` to the USB Controller in Device `PciRoot(0x0)/Pci(0x14,0x0)` to fix sleep when lid is closed (during sleep state both CapsLock and Fn leds are off; display wakes up properly)
