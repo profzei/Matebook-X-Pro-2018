@@ -18,7 +18,7 @@ This is intended to create a "fully" functional (as far as possible) hackintosh 
 | Hard Disk           | LiteON SSD PCIe NVMe 512 GB [CA3-8D512]          |
 | Integrated Graphics | NVIDIA GeForce MX150 / Intel(R) UHD Graphics 620 |
 | Screen              | JDI 3k Display @ 3000 x 2000 (13.9 inch)         |
-| Sound Card          | Realtek ALC255 ???                               |
+| Sound Card          | Realtek ALC256                                   |
 | Wireless Card       | Intel Dual Band Wireless-AC 8265/8275            |
 | Bluetooth Card      | Intel Bluetooth 8265/8275                        |
 
