@@ -6,7 +6,7 @@ English
     - Update `Clover` v. 5117
 	- The way to modify BIOS has been found and successfully applied: CFG-Lock removed and DVMT changed
 		- `CFG Lock` now is set to `disabled` (previous value was `enabled`)
-		- `DVMT Pre-Allocaated` was already set to `64 MB` (which is the maximum value available)
+		- `DVMT Pre-Allocated` was already set to `64 MB` (which is the maximum value available)
 		- `DVMT Total Gfx Mem` now is set to `MAX` (previous value was `256 MB`)
 		- `Intel(R) SpeedStep` was already set to `enabled`
 		- `Intel(R) Speed Shift` was already set to `enabled`
