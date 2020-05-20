@@ -2,7 +2,8 @@
 
 English
 
-- 05-XX-2020
+- 05-20-2020
+    - Update `Clover` v. 5117
 	- The way to modify BIOS has been found and successfully applied: CFG-Lock removed and DVMT changed
 		- `CFG Lock` now is set to `disabled` (previous value was `enabled`)
 		- `DVMT Pre-Allocaated` was already set to `64 MB` (which is the maximum value available)
@@ -12,7 +13,7 @@ English
 	- Set [config] `KernelPM` value to `false`: this parameter affected only post-Haswell CPUs with CFG locked
 	- Remove [config] in section `KernelToPatch` binary patch `MSR 0xE2 -xcpm-idle instant reboot`
 	- Remove [config] `framebuffer-fbmem` and `framebuffer-stolenmem` keys for UHD 620 Graphics card
-	- Remove `SSDT-TPD0.aml` since it refers to touchscreen (`TPD0`)
+	- Remove (till next update...) `SSDT-TPD0.aml` since it refers to touchscreen (`TPD0`)
 	- Add `SSDT-GPI0.aml` and `SSDT-TPL1.aml` for touchpad GPIO interrupt mode: it uses VoodooInput bundled inside VoodooI2C (no need for external kext)
 	- Add [config] 2 binary patches:
 		- `_STA to XSTA for Device GPI0` to pair `SSDT-GPI0.aml`

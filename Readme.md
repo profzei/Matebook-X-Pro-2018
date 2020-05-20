@@ -27,7 +27,7 @@ This repository is for personal purposes: it is heavily based on the hard work d
 
 ## Changelog
 
-#### 2020 - May - XX
+#### 2020 - May - 20
 <details>
 <summary>Show more</summary>
 
