@@ -2,6 +2,10 @@
 
 English
 
+- 05-22-2020
+    - Update `Clover` v. 5118
+    - Restored `SSDT-PLUG-PR.PR00.aml` to improve `cf-frequency-data` section for CPU `i7-8550U`
+
 - 05-20-2020
     - Update `Clover` v. 5117
 	- The way to modify BIOS has been found and successfully applied: CFG-Lock removed and DVMT changed
