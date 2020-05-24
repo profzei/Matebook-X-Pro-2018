@@ -2,6 +2,13 @@
 
 English
 
+- 05-24-2020
+	- Add [config] LSPCON driver support to enable DisplayPort to HDMI 2.0 output on Intel(R) UHD 620 Graphics card:
+		- Not modified `framebuffer-conX-type` value from `HDMI` to `DP` accordingly to framebuffer `C0870005` specifics for connectors to preserve "digital audio" 
+		- Add the `enable-lspcon-support` property to enable the driver
+		- Add the `framebuffer-conX-has-lspcon` property both for connector 1 and connector 2 (to inform the driver which connector has an onboard LSPCON adapter)
+		- Add the `framebuffer-conX-preferred-lspcon-mode` property both for connector 1 and connector 2 to specify `DP to HDMI 2.0` mode for LSPCON adapter
+
 - 05-22-2020
     - Update `Clover` v. 5118
     - Restored `SSDT-PLUG-PR.PR00.aml` to improve `cf-frequency-data` section for CPU `i7-8550U`
