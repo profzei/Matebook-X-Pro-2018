@@ -838,6 +838,10 @@
 				<data>
 				AQAAAA==
 				</data>
+				<key>enable-lspcon-support</key>
+				<data>
+				AQAAAA==
+				</data>
 				<key>force-online</key>
 				<data>
 				AQAAAA==
@@ -862,6 +866,14 @@
 				<data>
 				xwMAAA==
 				</data>
+				<key>framebuffer-con1-has-lspcon</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>framebuffer-con1-preferred-lspcon-mode</key>
+				<data>
+				AQAAAA==
+				</data>
 				<key>framebuffer-con1-type</key>
 				<data>
 				AAgAAA==
@@ -873,6 +885,14 @@
 				<key>framebuffer-con2-flags</key>
 				<data>
 				xwMAAA==
+				</data>
+				<key>framebuffer-con2-has-lspcon</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>framebuffer-con2-preferred-lspcon-mode</key>
+				<data>
+				AQAAAA==
 				</data>
 				<key>framebuffer-con2-type</key>
 				<data>
