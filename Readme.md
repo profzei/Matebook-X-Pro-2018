@@ -27,41 +27,19 @@ This repository is for personal purposes: it is heavily based on the hard work d
 
 ## Changelog
 
-#### 2020 - May - 20
+#### 2020 - May - 26
 <details>
 <summary>Show more</summary>
 
 #### Current status:
-- The way to modify BIOS has been found and successfully applied: CFG-Lock removed and DVMT changed
-	- `CFG Lock` now is set to `disabled` (previous value was `enabled`)
-	- `DVMT Pre-Allocated` was already set to `64 MB` (which is the maximum value available)
-	- `DVMT Total Gfx Mem` now is set to `MAX` (previous value was `256 MB`)
-	- `Intel(R) SpeedStep` was already set to `enabled`
-	- `Intel(R) Speed Shift` was already set to `enabled`
-- Set [config] `KernelPM` value to `false`: this parameter affected only post-Haswell CPUs with CFG locked
-- Remove [config] in section `KernelToPatch` binary patch `MSR 0xE2 -xcpm-idle instant reboot`
-- Remove [config] `framebuffer-fbmem` and `framebuffer-stolenmem` keys for UHD 620 Graphics card
-- Remove `SSDT-TPD0.aml` since it refers to touchscreen (`TPD0`)
-- Add `SSDT-GPI0.aml` and `SSDT-TPL1.aml` for touchpad GPIO interrupt mode: it uses VoodooInput bundled inside VoodooI2C (no need for external kext)
-- Add [config] 2 binary patches:
-	- `_STA to XSTA for Device GPI0` to pair `SSDT-GPI0.aml`
-	- `_CRS to XCRS for Device TPL1` to pair `SSDT-TPL1.aml` (touchpad)
-- Add [config] in section `KextToPatch` 2 binary patches respectively `com.apple.driver.AppleIntelLpssI2C` and `com.apple.driver.AppleIntelLpssI2CController` even if these two "old" issues should be fixed with `VoodooI2C` v. 2.4 (GenI2C app in "Diagnose" section still checks the presence of these two patches)
-- Add [config] `SSDT->NoOemTableId` key and its value is set to `false`
-- Remove [config] old and unused key `DropTables->#MCFG`
-- Remove [config] `DSDT->ReuseFFFF` key (its value was set to `false`)
-- Remove [config] `DSDT->Debug` key (its value was set to `false`)
-- Remove [config] `DSDT->DropOEM_DSM` key since `Clover` v. 5117 dropped it
-- Remove [config] `Boot->Debug` key (its value was set to `false`)
-- Add [config] `Graphics->EDID->Inject` key to value `yes` since it is checked that the right value is injected
-- Remove [config] `KernelAndKextPatches->Debug` key (its value was `false`)
-- Remove [config] `KernelAndKextPatches->DellSMSBIOSPatch` key (its value was `false`)
-- Remove [config] `KernelCPU` key (its value was set to `false`)
-- Remove [config] `KernelLapic` key (its value was set to `false`)
-- Replaced `SSDT-XCPM.aml` with standard (OpenCore project) `SSDT-PLUG-PR.PR00.aml`
-- Implemented in `SSDT-PLUG-PR.PR00.aml` method `_PPC` for "Performance Present Capabilities" [credit to Zero-zer0]
-- Update [config] `Devices->Properties` to let `System Information.app` show more Properties in PCI0 devices
-    - for PCI Bridges `reg-ltrovr` property is injected: `IOPCIFamily.kext` will set latency tolerance offset for each of the latency tolerance devices (this could fix some potential issues)
+- Update `OcQuirks` [package](https://github.com/ReddestDream/OcQuirks/releases) to revision 22:
+        - Replace `FwRuntimeServices.efi` with `OpenRuntime.efi`
+        - Add `OcQuirks.plist` with some value changed from their defaults:
+            - `EnableWriteUnprotector` value set to `true` (default value was `false`)
+            - `RebuildAppleMemoryMap` value set to `false` (default value was `true`)
+            - `SyncRuntimePermissions` value set to `false` (default value was `true`)
+    - Update `VirtualSMC.efi` efi driver in `CLOVER/driver/UEFI` to match version (1.1.3) of `VirtualSMC.kext` and accompanying plugins
+    - Add `BOOT/BOOTX64.efi` for consistency (both @ r5118) with `CLOVER/CLOVERX64.efi`
 </details>
 
 #### Earlier status
