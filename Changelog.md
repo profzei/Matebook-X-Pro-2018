@@ -3,6 +3,12 @@
 English
 
 - 05-26-2020
+    - Update `OcQuirks` [package](https://github.com/ReddestDream/OcQuirks/releases) to revision 22:
+        - Replace `FwRuntimeServices.efi` with `OpenRuntime.efi`
+        - Add `OcQuirks.plist` with some value changed from their defaults:
+            - `EnableWriteUnprotector` value set to `true` (default value was `false`)
+            - `RebuildAppleMemoryMap` value set to `false` (default value was `true`)
+            - `SyncRuntimePermissions` value set to `false` (default value was `true`)
     - Update `VirtualSMC.efi` efi driver in `CLOVER/driver/UEFI` to match version (1.1.3) of `VirtualSMC.kext` and accompanying plugins
     - Add `BOOT/BOOTX64.efi` for consistency (both @ r5118) with `CLOVER/CLOVERX64.efi`
 
