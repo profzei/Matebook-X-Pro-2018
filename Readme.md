@@ -154,7 +154,7 @@ Refer to: [here](/Graphics/)
 | Item | Version |
 | :--- | :--- |
 | MacOS | 10.14.6 |
-| [Clover](https://github.com/CloverHackyColor/CloverBootloader/releases) | 5117 |
+| [Clover](https://github.com/CloverHackyColor/CloverBootloader/releases) | 5118 |
 | [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.4.4 |
 | [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.3.9 |
 | [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.4.9 |
