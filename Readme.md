@@ -4,7 +4,7 @@
 #### macOS on Huawei Matebook X Pro 2018
 ![Alt text](https://ivanov-audio.com/wp-content/uploads/2014/01/Hackintosh-Featured-Image.png)
 
-#### This repo is currently compatible with macOS Mojave 10.14.6 (18G87) & Catalina 10.15.4 (19E287)
+#### This repo is currently compatible with macOS Catalina 10.15.5 (19E96) & Mojave 10.14.6 (18G87) 
 This is intended to create a "fully" functional (as far as possible) hackintosh for the Huawei Matebook X Pro. There are some well-written guides ([here](https://dortania.github.io/getting-started/)), so it's not a particular issue getting macOS installed onto my MBXP; but the reason why I didn't stop my efforts into resolving each bug, there was because of "minor issues" I ran into. The installation is not perfect yet since it's a continuos work-in-progress, but I'm glad to say that I learned a lot in the meantime.
 
 
@@ -27,19 +27,14 @@ This repository is for personal purposes: it is heavily based on the hard work d
 
 ## Changelog
 
-#### 2020 - May - 26
+#### 2020 - May - 31
 <details>
 <summary>Show more</summary>
 
 #### Current status:
-- Update `OcQuirks` [package](https://github.com/ReddestDream/OcQuirks/releases) to revision 22:
-        - Replace `FwRuntimeServices.efi` with `OpenRuntime.efi`
-        - Add `OcQuirks.plist` with some value changed from their defaults:
-            - `EnableWriteUnprotector` value set to `true` (default value was `false`)
-            - `RebuildAppleMemoryMap` value set to `false` (default value was `true`)
-            - `SyncRuntimePermissions` value set to `false` (default value was `true`)
-    - Update `VirtualSMC.efi` efi driver in `CLOVER/driver/UEFI` to match version (1.1.3) of `VirtualSMC.kext` and accompanying plugins
-    - Add `BOOT/BOOTX64.efi` for consistency (both @ r5118) with `CLOVER/CLOVERX64.efi`
+- Add initial support for `Intel Dual-Band Wireless-AC 8265/8275` card:
+    - in (new) section [Network]() instructions and support for `AppleIntelWiFi.kext`
+    - in (new) section [Network]() instructions and support for a totally automated loader script `IntelKextAutoLoader`
 </details>
 
 #### Earlier status
@@ -50,14 +45,36 @@ This repository is for personal purposes: it is heavily based on the hard work d
 	- Have used `SSDT-DDGPU.aml` to disable it in order to save power.
 - Fingerprint sensor is not working
 	- Have used `SSDT-UIAC.aml` to disable it in order to save power.
-- Intel Wi-Fi (Intel Wireless 8265) is not (yet) working: there is hard work and, therefore, some progress in Intel Wi-Fi support. Hope to see a fully functional `kext` asap.
-	- I bought a USB Wi-Fi dongle: [tp-link](https://www.tp-link.com/it/support/download/tl-wn823n/?utm_medium=select-local#Driver) TL-WN823Nv3 with macOS updated driver support [Wireless-USB-Adapter Driver](https://github.com/chris1111/Wireless-USB-Adapter-Clover/releases) 
+- Intel Wi-Fi (Intel Wireless 8265/8275) is ~~not (yet)~~ working: see in [Network section](/Network) for instructions to load AppleIntelWiFi.kext (still in beta phase) for enabling our Intel Wi-Fi card: it is still in beta phase, but with support for WPA/WPA2 ~~there is hard work and, therefore, some progress in Intel Wi-Fi support. Hope to see a fully functional `kext` asap.~~
+	- Elsewhere I bought a USB Wi-Fi dongle: [tp-link](https://www.tp-link.com/it/support/download/tl-wn823n/?utm_medium=select-local#Driver) TL-WN823Nv3 with macOS updated driver support [Wireless-USB-Adapter Driver](https://github.com/chris1111/Wireless-USB-Adapter-Clover/releases) 
+
+### What's working
+- [x] Intel(R) UHD 620 Graphics card  
+- [x] Intel(R) Wireless-AC 8265/8265 & Intel(R) Bluetooth
+- [x] Audio for Realtek ALC256 card (via AppleALC)
+- [x] Power Management with support for HWP (Intel Speed Shift & Intel SpeedStep)
+- [x] Automatic Backlight control
+- [x] Backlight shortcuts (F1 [brightness level down] - F2 [brightness level up])
+- [x] Volume shortcuts (F4 [mute] - F5 [audio level down] - F6 [audio level up])
+- [x] Sleep and Wake (or Hibernation)
+- [x] Battery support with better memory access
+- [x] Headphone jack [2 in 1]  (via ALCPlugFix)
+- [x] Speaker (4 Channels) & Internal Mic
+- [x] HDMI 2.0 up to two 4K @60 Hz monitors (via LSPCON)
+- [x] TouchPad and native gestures
+- [x] Touchscreen
+- [x] Updated support for LiteON SSD PCIe NVMe 
+- [x] PCI Devices latency support
+- [x] USB Ports (Type-A & Type-C)
+- [x] Thunderbolt Port
+- [x] HD Camera
+- [x] NVRAM
 
 ## Device Firmware
 - Bios version: `1.28`
 
 ## Bootloader Firmware
-- Default bootloader: Clover `r5117` [Official release](https://github.com/CloverHackyColor/CloverBootloader/releases) ~~`r5103` [Dids release](https://github.com/Dids/clover-builder/releases)~~
+- Default bootloader: Clover `r5118` [Official release](https://github.com/CloverHackyColor/CloverBootloader/releases) ~~`r5103` [Dids release](https://github.com/Dids/clover-builder/releases)~~
 
 ## SMBIOS
 - Default SMBIOS settings of this repo is `MacBookPro14,1`

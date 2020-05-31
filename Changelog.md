@@ -2,6 +2,11 @@
 
 English
 
+- 05-31-2020
+    - Add initial support for `Intel Dual-Band Wireless-AC 8265/8275` card:
+        - in (new) section [Network]() instructions and support for `AppleIntelWiFi.kext`
+        - in (new) section [Network]() instructions and support for a totally automated loader script `IntelKextAutoLoader`
+
 - 05-26-2020
     - Update `OcQuirks` [package](https://github.com/ReddestDream/OcQuirks/releases) to revision 22:
         - Replace `FwRuntimeServices.efi` with `OpenRuntime.efi`
