@@ -30,7 +30,7 @@ sudo chmod 4755 IntelKextAutoLoader
 7. Add `IntelKextAutoLoader` script to `System Startup`
 	- Go to `System Preferences` -> `Users & Groups`
 	- Select in your admin account `Login Items` tab
-	- Add (`+` symbol) the shell script `Intel Kext Auto Loader`
+	- Add (`+` symbol) the shell script `IntelKextAutoLoader`
 8. Modify your `/etc/sudoers` file to not require a password for executing this shell script at every login
 	- Edit the sudoers file:
 	```
