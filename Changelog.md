@@ -6,6 +6,7 @@ English
     - Add initial support for `Intel Dual-Band Wireless-AC 8265/8275` card:
         - in (new) section [Network]() instructions and support for `AppleIntelWiFi.kext`
         - in (new) section [Network]() instructions and support for a totally automated loader script `IntelKextAutoLoader`
+    - Add `ALCPlugFix` for a better support to the switch between the headset and the built-in input [ComboJack & Realtek ALC256](https://github.com/profzei/ALCPlugFix)
 
 - 05-26-2020
     - Update `OcQuirks` [package](https://github.com/ReddestDream/OcQuirks/releases) to revision 22:

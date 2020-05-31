@@ -22,7 +22,7 @@ This is intended to create a "fully" functional (as far as possible) hackintosh 
 | Wireless Card       | Intel Dual Band Wireless-AC 8265/8275            |
 | Bluetooth Card      | Intel Bluetooth 8265/8275                        |
 
-This repository is for personal purposes: it is heavily based on the hard work done by [gnodipac886](https://github.com/gnodipac886/MatebookXPro-hackintosh), but with some significant personal improvements in `CLOVER/ACPI/patched` and `CLOVER/kexts/Other` sections.
+This repository is for personal purposes: it was based on the hard work done by [gnodipac886](https://github.com/gnodipac886/MatebookXPro-hackintosh), but with some very significant personal improvements in ALL the sections.
 
 
 ## Changelog
@@ -35,6 +35,7 @@ This repository is for personal purposes: it is heavily based on the hard work d
 - Add initial support for `Intel Dual-Band Wireless-AC 8265/8275` card:
     - in (new) section [Network]() instructions and support for `AppleIntelWiFi.kext`
     - in (new) section [Network]() instructions and support for a totally automated loader script `IntelKextAutoLoader`
+- Add `ALCPlugFix` for a better support to the switch between the headset and the built-in input [ComboJack & Realtek ALC256](https://github.com/profzei/ALCPlugFix)
 </details>
 
 #### Earlier status
@@ -51,9 +52,9 @@ This repository is for personal purposes: it is heavily based on the hard work d
 ### What's working
 - [x] Intel(R) UHD 620 Graphics card  
 - [x] Intel(R) Wireless-AC 8265/8265 & Intel(R) Bluetooth
-- [x] Audio for Realtek ALC256 card (via AppleALC)
+- [x] Audio for Realtek ALC256 card (via AppleALC and layout-id 97)
 - [x] Power Management with support for HWP (Intel Speed Shift & Intel SpeedStep)
-- [x] Automatic Backlight control
+- [x] Automatic Backlight control (with more granular levels)
 - [x] Backlight shortcuts (F1 [brightness level down] - F2 [brightness level up])
 - [x] Volume shortcuts (F4 [mute] - F5 [audio level down] - F6 [audio level up])
 - [x] Sleep and Wake (or Hibernation)
@@ -61,14 +62,15 @@ This repository is for personal purposes: it is heavily based on the hard work d
 - [x] Headphone jack [2 in 1]  (via ALCPlugFix)
 - [x] Speaker (4 Channels) & Internal Mic
 - [x] HDMI 2.0 up to two 4K @60 Hz monitors (via LSPCON)
-- [x] TouchPad and native gestures
+- [x] Native Color Profile for Display JDI 3k
+- [x] TouchPad (via GPIO interrupt mode) and native gestures
 - [x] Touchscreen
 - [x] Updated support for LiteON SSD PCIe NVMe 
-- [x] PCI Devices latency support
-- [x] USB Ports (Type-A & Type-C)
+- [x] PCI Devices latency support and complete description for System Information app
+- [x] USB Ports (Type-A & Type-C) with proper power levels
 - [x] Thunderbolt Port
 - [x] HD Camera
-- [x] NVRAM
+- [x] NVRAM (via [OcQuirks](https://github.com/ReddestDream/OcQuirks/releases))
 
 ## Device Firmware
 - Bios version: `1.28`
