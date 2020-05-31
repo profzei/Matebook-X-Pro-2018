@@ -46,8 +46,8 @@ This repository is for personal purposes: it was based on the hard work done by 
 	- Have used `SSDT-DDGPU.aml` to disable it in order to save power.
 - Fingerprint sensor is not working
 	- Have used `SSDT-UIAC.aml` to disable it in order to save power.
-- Intel Wi-Fi (Intel Wireless 8265/8275) is ~~not (yet)~~ working: see in [Network section](/Network) for instructions to load AppleIntelWiFi.kext (still in beta phase) for enabling our Intel Wi-Fi card: it is still in beta phase, but with support for WPA/WPA2 ~~there is hard work and, therefore, some progress in Intel Wi-Fi support. Hope to see a fully functional `kext` asap.~~
-	- Elsewhere I bought a USB Wi-Fi dongle: [tp-link](https://www.tp-link.com/it/support/download/tl-wn823n/?utm_medium=select-local#Driver) TL-WN823Nv3 with macOS updated driver support [Wireless-USB-Adapter Driver](https://github.com/chris1111/Wireless-USB-Adapter-Clover/releases) 
+- Intel Wi-Fi (Intel Wireless 8265/8275) is ~~not (yet)~~ working: see in [Network section](/Network) for instructions to load `AppleIntelWiFi.kext` (still in beta phase) for enabling our Intel Wi-Fi card: it is still in beta phase, but with support for WPA/WPA2 ~~there is hard work and, therefore, some progress in Intel Wi-Fi support. Hope to see a fully functional `kext` asap.~~
+	- Previously I bought a USB Wi-Fi dongle: [tp-link](https://www.tp-link.com/it/support/download/tl-wn823n/?utm_medium=select-local#Driver) TL-WN823Nv3 with macOS updated driver support [Wireless-USB-Adapter Driver](https://github.com/chris1111/Wireless-USB-Adapter-Clover/releases) 
 
 ### What's working
 - [x] Intel(R) UHD 620 Graphics card  
