@@ -5,7 +5,8 @@ English
 - 06-01-2020
 	- Update [kext] `Lilu` v. 1.4.5
     - Update [kext] `WhateverGreen` v. 1.4.0
-	- Update [kext] `VoodooPS2Controller.kext` v. 2.1.5
+    - Update [kext] `AppleALC` v. 1.5.0
+	- Update [kext] `VoodooPS2Controller` v. 2.1.5
 
 - 05-31-2020
     - Add initial support for `Intel Dual-Band Wireless-AC 8265/8275` card:
