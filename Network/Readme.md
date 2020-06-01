@@ -32,9 +32,9 @@ sudo chmod 4755 IntelKextAutoLoader
 	- Select in your admin account `Login Items` tab
 	- Add (`+` symbol) the shell script `IntelKextAutoLoader`
 8. Modify your `/etc/sudoers` file to not require a password for executing this shell script at every login
-	- Edit the sudoers file:
+	- For editing the sudoers file `/etc/sudoers`, just type the following command in a terminal shell:
 	```
-	sudo visudo /etc/sudoers
+	sudo visudo
 	```
 	- Use arrows keys to go to the end of file (EOF)
 	- Use `i` to insert a line above the line the cursor is located on
