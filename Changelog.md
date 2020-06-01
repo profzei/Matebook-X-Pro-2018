@@ -6,6 +6,7 @@ English
 	- Update [kext] `Lilu` v. 1.4.5
     - Update [kext] `WhateverGreen` v. 1.4.0
     - Update [kext] `AppleALC` v. 1.5.0
+    - Update [kext] `VirtualSMC` and related plugins v. 1.1.4
 	- Update [kext] `VoodooPS2Controller` v. 2.1.5
 
 - 05-31-2020
