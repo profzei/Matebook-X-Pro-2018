@@ -152,8 +152,8 @@ Refer to: [here](/Graphics/)
 | :--- | :--- |
 | MacOS | 10.14.6 |
 | [Clover](https://github.com/CloverHackyColor/CloverBootloader/releases) | 5118 |
-| [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.4.4 |
-| [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.3.9 |
+| [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.4.5 |
+| [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.4.0 |
 | [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.4.9 |
 | [CodecCommander](https://github.com/Sniki/EAPD-Codec-Commander/releases) | ~~2.7.2~~ 2.7.1 |
 | [CPUFriend](https://github.com/acidanthera/CPUFriend/releases) | 1.2.0 |
