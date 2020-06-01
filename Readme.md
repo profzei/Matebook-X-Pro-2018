@@ -27,15 +27,25 @@ This repository is for personal purposes: it was based on the hard work done by 
 
 ## Changelog
 
-#### 2020 - May - 31
+#### 2020 - June - 01
 <details>
 <summary>Show more</summary>
 
 #### Current status:
-- Add initial support for `Intel Dual-Band Wireless-AC 8265/8275` card:
-    - in (new) section [Network]() instructions and support for `AppleIntelWiFi.kext`
-    - in (new) section [Network]() instructions and support for a totally automated loader script `IntelKextAutoLoader`
-- Add `ALCPlugFix` for a better support to the switch between the headset and the built-in input [ComboJack & Realtek ALC256](https://github.com/profzei/ALCPlugFix)
+- 06-01-2020
+	- Update [kext] `Lilu` v. 1.4.5
+    - Update [kext] `WhateverGreen` v. 1.4.0
+    - Update [kext] `AppleALC` v. 1.5.0
+    - Update [kext] `VirtualSMC` and related plugins v. 1.1.4
+    - Regression [kext] for a more stability to `VoodooI2C` v. 2.3
+    - Regression [kext] for a more stability to `VoodooI2CHID` v. 2.3
+	- Update [kext] `VoodooPS2Controller` v. 2.1.5
+
+- 05-31-2020
+    - Add initial support for `Intel Dual-Band Wireless-AC 8265/8275` card:
+        - in (new) section [Network]() instructions and support for `AppleIntelWiFi.kext`
+        - in (new) section [Network]() instructions and support for a totally automated loader script `IntelKextAutoLoader`
+    - Add `ALCPlugFix` for a better support to the switch between the headset and the built-in input [ComboJack & Realtek ALC256](https://github.com/profzei/ALCPlugFix)
 </details>
 
 #### Earlier status
@@ -150,7 +160,7 @@ Refer to: [here](/Graphics/)
 
 | Item | Version |
 | :--- | :--- |
-| MacOS | 10.14.6 |
+| MacOS | 10.15.5 |
 | [Clover](https://github.com/CloverHackyColor/CloverBootloader/releases) | 5118 |
 | [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.4.5 |
 | [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.4.0 |
