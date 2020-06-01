@@ -2,6 +2,9 @@
 
 English
 
+- 06-01-2020
+	- Update [kext] `VoodooPS2Controller.kext` v. 2.1.5
+
 - 05-31-2020
     - Add initial support for `Intel Dual-Band Wireless-AC 8265/8275` card:
         - in (new) section [Network]() instructions and support for `AppleIntelWiFi.kext`

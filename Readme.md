@@ -160,7 +160,7 @@ Refer to: [here](/Graphics/)
 | [USBInjectAll](https://github.com/Sniki/OS-X-USB-Inject-All/releases) | 0.7.3 |
 | [VoodooI2C](https://github.com/alexandred/VoodooI2C/releases) | 2.4.2 |
 | [VoodooI2CHID](https://github.com/alexandred/VoodooI2C/releases) | 2.4.2 |
-| [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases) | 2.1.4 |
+| [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases) | 2.1.5 |
 | [VirtualSMC](https://github.com/acidanthera/VirtualSMC/releases) | 1.1.3 |
 | NullEthernet | 1.0.6 |
 | [NoTouchID](https://github.com/al3xtjames/NoTouchID/releases) | 1.0.3 |
