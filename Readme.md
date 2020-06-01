@@ -158,8 +158,8 @@ Refer to: [here](/Graphics/)
 | [CodecCommander](https://github.com/Sniki/EAPD-Codec-Commander/releases) | ~~2.7.2~~ 2.7.1 |
 | [CPUFriend](https://github.com/acidanthera/CPUFriend/releases) | 1.2.0 |
 | [USBInjectAll](https://github.com/Sniki/OS-X-USB-Inject-All/releases) | 0.7.3 |
-| [VoodooI2C](https://github.com/alexandred/VoodooI2C/releases) | 2.4.2 |
-| [VoodooI2CHID](https://github.com/alexandred/VoodooI2C/releases) | 2.4.2 |
+| [VoodooI2C](https://github.com/alexandred/VoodooI2C/releases) | 2.3 ~~2.4.2~~ |
+| [VoodooI2CHID](https://github.com/alexandred/VoodooI2C/releases) | 2.3 ~~2.4.2~~ |
 | [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases) | 2.1.5 |
 | [VirtualSMC](https://github.com/acidanthera/VirtualSMC/releases) | 1.1.4 |
 | NullEthernet | 1.0.6 |

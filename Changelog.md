@@ -7,6 +7,8 @@ English
     - Update [kext] `WhateverGreen` v. 1.4.0
     - Update [kext] `AppleALC` v. 1.5.0
     - Update [kext] `VirtualSMC` and related plugins v. 1.1.4
+    - Regression [kext] for a more stability to `VoodooI2C` v. 2.3
+    - Regression [kext] for a more stability to `VoodooI2CHID` v. 2.3
 	- Update [kext] `VoodooPS2Controller` v. 2.1.5
 
 - 05-31-2020
