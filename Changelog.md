@@ -2,6 +2,13 @@
 
 English
 
+- 06-23-2020
+	- Support for **OpenCore 0.5.9**
+	- Better Power Management
+	- Better Sleep support
+	- Detailed guide in [Wiki section](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Converting-from-Clover-to-OpenCore) for converting from Clover to OpenCore
+		- [script](https://github.com/profzei/Matebook-X-Pro-2018/raw/master/Wiki/Converting_Clover_to_OpenCore.sh) for automated deletion
+
 - 06-01-2020
 	- Update [kext] `Lilu` v. 1.4.5
     - Update [kext] `WhateverGreen` v. 1.4.0
