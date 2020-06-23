@@ -4,7 +4,7 @@
 #### macOS on Huawei Matebook X Pro 2018
 ![Alt text](https://ivanov-audio.com/wp-content/uploads/2014/01/Hackintosh-Featured-Image.png)
 
-#### This repo is currently compatible with macOS Catalina 10.15.5 (19E96) & Mojave 10.14.6 (18G87) 
+#### This repo is currently compatible with macOS Catalina 10.15.5 Supplemental Update (19F101) and OpenCore 0.5.9
 This is intended to create a "fully" functional (as far as possible) hackintosh for the Huawei Matebook X Pro. There are some well-written guides ([here](https://dortania.github.io/getting-started/)), so it's not a particular issue getting macOS installed onto my MBXP; but the reason why I didn't stop my efforts into resolving each bug, there was because of "minor issues" I ran into. The installation is not perfect yet since it's a continuos work-in-progress, but I'm glad to say that I learned a lot in the meantime.
 
 
@@ -22,7 +22,7 @@ This is intended to create a "fully" functional (as far as possible) hackintosh 
 | Wireless Card       | Intel Dual Band Wireless-AC 8265/8275            |
 | Bluetooth Card      | Intel Bluetooth 8265/8275                        |
 
-This repository is for personal purposes: it was based on the hard work done by [gnodipac886](https://github.com/gnodipac886/MatebookXPro-hackintosh), but with some very significant personal improvements in ALL the sections.
+This repository is for personal purposes: it was initially based on the hard work done by [gnodipac886](https://github.com/gnodipac886/MatebookXPro-hackintosh), but now it can be considered as a different project due to **many and original very significant personal improvements in ALL the sections**.
 
 
 ## Changelog
@@ -94,7 +94,8 @@ This repository is for personal purposes: it was based on the hard work done by 
 - Bios version: `1.28`
 
 ## Bootloader Firmware
-- Default bootloader: Clover `r5118` [Official release](https://github.com/CloverHackyColor/CloverBootloader/releases) ~~`r5103` [Dids release](https://github.com/Dids/clover-builder/releases)~~
+- Default bootloader: `OpenCore 0.5.9` [Official release](https://github.com/acidanthera/OpenCorePkg/releases)
+- Alternative bootloader: Clover `r5118` [Official release](https://github.com/CloverHackyColor/CloverBootloader/releases) ~~`r5103` [Dids release](https://github.com/Dids/clover-builder/releases)~~
 
 ## SMBIOS
 - Default SMBIOS settings of this repo is `MacBookPro14,1`
@@ -169,6 +170,7 @@ Refer to: [here](/Graphics/)
 | Item | Version |
 | :--- | :--- |
 | MacOS | 10.15.5 |
+| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.5.9 |
 | [Clover](https://github.com/CloverHackyColor/CloverBootloader/releases) | 5118 |
 | [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.4.5 |
 | [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.4.0 |
