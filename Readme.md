@@ -27,7 +27,7 @@ This repository is for personal purposes: it was initially based on the hard wor
 
 ## Changelog
 
-#### 2020 - June - 01
+#### 2020 - June - 23
 <details>
 <summary>Show more</summary>
 
