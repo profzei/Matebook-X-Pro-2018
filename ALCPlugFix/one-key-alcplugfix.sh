@@ -40,7 +40,7 @@ function download(){
     mkdir -p one-key-alcplugfix
     cd one-key-alcplugfix
     echo "Downloading audio fix patch..."
-    curl -fsSL https://raw.githubusercontent.com/profzei/ALCPlugFix/alc_fix/ALCPlugFix -O || networkWarn
+    curl -fsSL https://raw.githubusercontent.com/profzei/ALCPlugFix/master/alc_fix/ALCPlugFix -O || networkWarn
     curl -fsSL https://raw.githubusercontent.com/profzei/Matebook-X-Pro-2018/master/ALCPlugFix/good.win.ALCPlugFix.plist -O || networkWarn
     curl -fsSL https://raw.githubusercontent.com/profzei/Matebook-X-Pro-2018/master/ALCPlugFix/hda-verb -O || networkWarn
     echo "Download complete"
