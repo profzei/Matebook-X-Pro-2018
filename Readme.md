@@ -1,8 +1,8 @@
 # Huawei Matebook X Pro (2018 Edition)
 [![release](https://img.shields.io/badge/download-release-blue.svg)](https://github.com/profzei/Matebook-X-Pro-2018/releases) [![wiki](https://img.shields.io/badge/support-wiki-green.svg)](https://github.com/profzei/Matebook-X-Pro-2018/wiki)
 
-#### macOS on Huawei Matebook X Pro 2018
-![Alt text](https://ivanov-audio.com/wp-content/uploads/2014/01/Hackintosh-Featured-Image.png)
+### macOS on Huawei Matebook X Pro 2018
+![Alt text](/Wiki/Images/matebook-x-pro-big-sur.png)
 
 #### This repo is currently compatible with macOS Catalina 10.15.5 Supplemental Update (19F101) and OpenCore 0.5.9
 This is intended to create a "fully" functional (as far as possible) hackintosh for the Huawei Matebook X Pro. There are some well-written guides ([here](https://dortania.github.io/getting-started/)), so it's not a particular issue getting macOS installed onto my MBXP; but the reason why I didn't stop my efforts into resolving each bug, there was because of "minor issues" I ran into. The installation is not perfect yet since it's a continuos work-in-progress, but I'm glad to say that I learned a lot in the meantime.
