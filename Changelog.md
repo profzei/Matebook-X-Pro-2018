@@ -6,9 +6,15 @@ English
 	- Add `SSDT-ALSD` for better support for native Ambient Light Sensor Device
 	- Add `SSDT-DTPG` to be compliant with ACPI rules
 	- Add `SSDT-TPXX` for enabling proper GPI0 pinning for touchpad device and disabling touchscreen for saving power
-	- Update [kext] `VoodooI2C` v. 2.4.3
-	- Update [kext] `VoodooI2CHID` v. 2.4.3
-	- Update [OC] `config.plist`
+	- Update [kext] `VoodooI2C` v. 2.4.3 (smoother behaviour in gestures)
+	- Update [kext] `VoodooI2CHID` v. 2.4.3 (smoother behaviour in gestures)
+	- Update [OC] `config.plist`:
+        - Added `SSDT-ALSD` in `ACPI -> Add` section
+        - Added `SSDT-DTPG` in `ACPI -> Add` section
+        - Added `SSDT-TPXX` in `ACPI -> Add` section
+        - Removed double istance for `VoodooInput` in `Kernel -> Add` section
+        - Removed istance for `VoodooPS2Keyboard` in `Kernel -> Add` section
+        - Removed istance for `VoodooPS2Mouse` in `Kernel -> Add` section
 
 - 06-23-2020
 	- Support for **OpenCore 0.5.9**
