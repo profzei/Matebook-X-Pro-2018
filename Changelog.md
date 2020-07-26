@@ -2,6 +2,14 @@
 
 English
 
+- 07-26-2020
+	- Add `SSDT-ALSD` for better support for native Ambient Light Sensor Device
+	- Add `SSDT-DTPG` to be compliant with ACPI rules
+	- Add `SSDT-TPXX` for enabling proper GPI0 pinning for touchpad device and disabling touchscreen for saving power
+	- Update [kext] `VoodooI2C` v. 2.4.3
+	- Update [kext] `VoodooI2CHID` v. 2.4.3
+	- Update [OC] `config.plist`
+
 - 06-23-2020
 	- Support for **OpenCore 0.5.9**
 	- Update `SSDT-PLUG-PR.PR00`: better Power Management
