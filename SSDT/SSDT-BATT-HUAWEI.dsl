@@ -42,43 +42,43 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
     //External (_SB.PCI0.BAT0.XBIX, MethodObj) // 0 Arguments
     //External (_SB.PCI0.BAT0.XBST, MethodObj) // 0 Arguments
     
-    External (_SB.PCI0.LPCB.EC__, DeviceObj) //EC0 to EC
+    External (_SB.PCI0.LPCB.EC0_, DeviceObj)
     
-    External (_SB.PCI0.LPCB.EC_.ALSD, DeviceObj)
-    External (_SB.PCI0.LPCB.EC_.ALSD.ALRC, MethodObj) // 1 Arguments
-    External (_SB.PCI0.LPCB.EC_.ALSD.ALSC, MethodObj) // 1 Arguments
-    External (_SB.PCI0.LPCB.EC_.ALSD.ALSI, IntObj) // 1 Arguments
-    External (_SB.PCI0.LPCB.EC_.ALSD.GLOV, MethodObj) // 1 Arguments
-    External (_SB.PCI0.LPCB.EC_.ALSD.GUPV, MethodObj) // 1 Arguments
-    External (_SB.PCI0.LPCB.EC_.ALSD.SLLV, IntObj)
-    External (_SB.PCI0.LPCB.EC_.ALSD.SULV, IntObj)
-    External (_SB.PCI0.LPCB.EC_.ALSD.SWAP, MethodObj) // 1 Arguments
-    External (_SB.PCI0.LPCB.EC_.ALSD.XINI, MethodObj) // 0 Arguments
-    External (_SB.PCI0.LPCB.EC_.ALSD.X3WK, MethodObj) // 0 Arguments
-    External (_SB.PCI0.LPCB.EC_.ALSD.X3PT, MethodObj) // 0 Arguments
-    External (_SB.PCI0.LPCB.EC_.ACAP, MethodObj) // 0 Arguments
-    External (_SB.PCI0.LPCB.EC_.BALS, FieldUnitObj)
+    External (_SB.PCI0.LPCB.EC0_.ALSD, DeviceObj)
+    External (_SB.PCI0.LPCB.EC0_.ALSD.ALRC, MethodObj) // 1 Arguments
+    External (_SB.PCI0.LPCB.EC0_.ALSD.ALSC, MethodObj) // 1 Arguments
+    External (_SB.PCI0.LPCB.EC0_.ALSD.ALSI, IntObj) // 1 Arguments
+    External (_SB.PCI0.LPCB.EC0_.ALSD.GLOV, MethodObj) // 1 Arguments
+    External (_SB.PCI0.LPCB.EC0_.ALSD.GUPV, MethodObj) // 1 Arguments
+    External (_SB.PCI0.LPCB.EC0_.ALSD.SLLV, IntObj)
+    External (_SB.PCI0.LPCB.EC0_.ALSD.SULV, IntObj)
+    External (_SB.PCI0.LPCB.EC0_.ALSD.SWAP, MethodObj) // 1 Arguments
+    External (_SB.PCI0.LPCB.EC0_.ALSD.XINI, MethodObj) // 0 Arguments
+    External (_SB.PCI0.LPCB.EC0_.ALSD.X3WK, MethodObj) // 0 Arguments
+    External (_SB.PCI0.LPCB.EC0_.ALSD.X3PT, MethodObj) // 0 Arguments
+    External (_SB.PCI0.LPCB.EC0_.ACAP, MethodObj) // 0 Arguments
+    External (_SB.PCI0.LPCB.EC0_.BALS, FieldUnitObj)
         
-    External (_SB.PCI0.LPCB.EC__.ECAV, MethodObj) // 0 Arguments
-    External (_SB.PCI0.LPCB.EC__.XIF0, MethodObj) //BIF0 to XIF0 0 Arguments
-    External (_SB.PCI0.LPCB.EC__.XIF1, MethodObj) //BIF1 to XIF1 0 Arguments
-    External (_SB.PCI0.LPCB.EC__.XIF2, MethodObj) //BIF2 to XIF2 0 Arguments
-    External (_SB.PCI0.LPCB.EC__.XIF3, MethodObj) //BIF3 to XIF3 0 Arguments
-    External (_SB.PCI0.LPCB.EC__.XIF4, MethodObj) //BIF4 to XIF4 0 Arguments
-    External (_SB.PCI0.LPCB.EC__.XIFA, MethodObj) //BIFA to XIFA 0 Arguments
-    External (_SB.PCI0.LPCB.EC__.XCRT, MethodObj) //BCRT to XCRT 0 Arguments
-    External (_SB.PCI0.LPCB.EC__.XRCP, MethodObj) //BRCP to XRCP 0 Arguments
-    External (_SB.PCI0.LPCB.EC__.XSTS, MethodObj) //BSTS to XSTS 0 Arguments
-    External (_SB.PCI0.LPCB.EC__.XVOT, MethodObj) //BVOT to XVOT 0 Arguments
-    External (_SB.PCI0.LPCB.EC__.XCBM, MethodObj) //ECBM to XCBM 1 Arguments
-    External (_SB.PCI0.LPCB.EC__.XCDE, MethodObj) //ECDE to XCDE 0 Arguments
-    External (_SB.PCI0.LPCB.EC__.XQA8, MethodObj) //_QA8 to XQA8 0 Arguments
-    External (_SB.PCI0.LPCB.EC__.XQA9, MethodObj) //_QA9 to XQA9 0 Arguments
-    External (_SB.PCI0.LPCB.EC__.MUEC, MutexObj)
-    External (_SB.PCI0.LPCB.EC__.RRAM, MethodObj) // 1 Arguments
-    External (_SB.PCI0.LPCB.EC__.ESEM, FieldUnitObj)
-    External (_SB.PCI0.LPCB.EC__.CMD1, FieldUnitObj)
-    External (_SB.PCI0.LPCB.EC__.EDA1, FieldUnitObj)
+    External (_SB.PCI0.LPCB.EC0_.ECAV, MethodObj) // 0 Arguments
+    External (_SB.PCI0.LPCB.EC0_.XIF0, MethodObj) //BIF0 to XIF0 0 Arguments
+    External (_SB.PCI0.LPCB.EC0_.XIF1, MethodObj) //BIF1 to XIF1 0 Arguments
+    External (_SB.PCI0.LPCB.EC0_.XIF2, MethodObj) //BIF2 to XIF2 0 Arguments
+    External (_SB.PCI0.LPCB.EC0_.XIF3, MethodObj) //BIF3 to XIF3 0 Arguments
+    External (_SB.PCI0.LPCB.EC0_.XIF4, MethodObj) //BIF4 to XIF4 0 Arguments
+    External (_SB.PCI0.LPCB.EC0_.XIFA, MethodObj) //BIFA to XIFA 0 Arguments
+    External (_SB.PCI0.LPCB.EC0_.XCRT, MethodObj) //BCRT to XCRT 0 Arguments
+    External (_SB.PCI0.LPCB.EC0_.XRCP, MethodObj) //BRCP to XRCP 0 Arguments
+    External (_SB.PCI0.LPCB.EC0_.XSTS, MethodObj) //BSTS to XSTS 0 Arguments
+    External (_SB.PCI0.LPCB.EC0_.XVOT, MethodObj) //BVOT to XVOT 0 Arguments
+    External (_SB.PCI0.LPCB.EC0_.XCBM, MethodObj) //ECBM to XCBM 1 Arguments
+    External (_SB.PCI0.LPCB.EC0_.XCDE, MethodObj) //ECDE to XCDE 0 Arguments
+    External (_SB.PCI0.LPCB.EC0_.XQA8, MethodObj) //_QA8 to XQA8 0 Arguments
+    External (_SB.PCI0.LPCB.EC0_.XQA9, MethodObj) //_QA9 to XQA9 0 Arguments
+    External (_SB.PCI0.LPCB.EC0_.MUEC, MutexObj)
+    External (_SB.PCI0.LPCB.EC0_.RRAM, MethodObj) // 1 Arguments
+    External (_SB.PCI0.LPCB.EC0_.ESEM, FieldUnitObj)
+    External (_SB.PCI0.LPCB.EC0_.CMD1, FieldUnitObj)
+    External (_SB.PCI0.LPCB.EC0_.EDA1, FieldUnitObj)
     /*
     External (_SB.TPWR, DeviceObj)
     External (_SB.TPWR.PSRC, MethodObj) // 0 Arguments
@@ -121,19 +121,19 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
             {
                 And (Arg1, 0xFFFF, Local1)
                 Store (Zero, Local0)
-                If (^^LPCB.EC_.ACAP ()) // EC0 to EC
+                If (\_SB.PCI0.LPCB.EC0.ACAP ()) // EC0 to EC
                 {
                     Store (One, Local0)
                 }
 
                 If (Local0)
                 {
-                    If (LAnd (CHGS (Zero), LNot (^^LPCB.EC_.ECDE ()))) // EC0 to EC
+                    If (LAnd (CHGS (Zero), LNot (\_SB.PCI0.LPCB.EC0.ECDE ()))) // EC0 to EC
                     {
                         Store (0x02, Local0)
                     }
                     //ElseIf (LAnd (^^LPCB.EC0.ECDE (), And (0x8000, ^^LPCB.EC0.B0CC)))
-                    ElseIf (LAnd (^^LPCB.EC_.ECDE (), And (0x8000, B1B2 (^^LPCB.EC_.BCC0, ^^LPCB.EC_.BCC1)))) // EC0 to EC
+                    ElseIf (LAnd (\_SB.PCI0.LPCB.EC0.ECDE (), And (0x8000, B1B2 (\_SB.PCI0.LPCB.EC0.BCC0, \_SB.PCI0.LPCB.EC0.BCC1)))) // EC0 to EC
                     {
                         Store (One, Local0)
                     }
@@ -160,9 +160,9 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
                 }
 
                 Store (Arg2, Local2)
-                If (LEqual (PUNT, Zero))
+                If (LEqual (\_SB.PCI0.BAT0.PUNT, Zero))
                 {
-                    Multiply (Local1, DVOT, Local1)
+                    Multiply (Local1, \_SB.PCI0.BAT0.DVOT, Local1)
                     Divide (Local1, 0x03E8, Local2, Local1)
                     Multiply (Local2, 0x0A, Local2)
                 }
@@ -170,35 +170,35 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
                 And (Local0, 0x02, Local3)
                 If (LNot (Local3))
                 {
-                    Subtract (LFCC, Local2, Local3)
-                    Divide (LFCC, 0xC8, Local4, Local5)
+                    Subtract (\_SB.PCI0.BAT0.LFCC, Local2, Local3)
+                    Divide (\_SB.PCI0.BAT0.LFCC, 0xC8, Local4, Local5)
                     //If (LOr (LLess (Local3, Local5), LEqual (^^LPCB.EC0.B0PN, 0x64)))
-                    If (LOr (LLess (Local3, Local5), LEqual (B1B2(^^LPCB.EC_.BPN0, ^^LPCB.EC_.BPN1), 0x64))) // EC0 to EC
+                    If (LOr (LLess (Local3, Local5), LEqual (B1B2(\_SB.PCI0.LPCB.EC0.BPN0, \_SB.PCI0.LPCB.EC0.BPN1), 0x64))) // EC0 to EC
                     {
-                        Store (LFCC, Local2)
+                        Store (\_SB.PCI0.BAT0.LFCC, Local2)
                     }
 
-                    Multiply (LFCC, 0x0E, Local4)
+                    Multiply (\_SB.PCI0.BAT0.LFCC, 0x0E, Local4)
                     Divide (Local4, 0x03E8, Local4, Local5)
                     If (LLess (Local2, Local5))
                     {
-                        If (LEqual (CLFG, Zero))
+                        If (LEqual (\_SB.PCI0.BAT0.CLFG, Zero))
                         {
-                            Store (One, CLFG)
+                            Store (One, \_SB.PCI0.BAT0.CLFG)
                         }
                     }
                 }
                 Else
                 {
-                    Divide (LFCC, 0xC8, Local4, Local5)
-                    Subtract (LFCC, Local5, Local4)
+                    Divide (\_SB.PCI0.BAT0.LFCC, 0xC8, Local4, Local5)
+                    Subtract (\_SB.PCI0.BAT0.LFCC, Local5, Local4)
                     If (LGreater (Local2, Local4))
                     {
                         Store (Local4, Local2)
                     }
                 }
 
-                If (LNot (^^LPCB.EC_.ACAP ())) // EC0 to EC
+                If (LNot (\_SB.PCI0.LPCB.EC0.ACAP ())) // EC0 to EC
                 {
                     Divide (Local2, 0x0A, Local3, Local4)
                     If (LLess (Local1, Local4))
@@ -207,10 +207,10 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
                     }
                 }
 
-                Store (Local0, Index (PBST, Zero))
-                Store (Local1, Index (PBST, One))
-                Store (Local2, Index (PBST, 0x02))
-                Store (Arg3, Index (PBST, 0x03))
+                Store (Local0, Index (\_SB.PCI0.BAT0.PBST, Zero))
+                Store (Local1, Index (\_SB.PCI0.BAT0.PBST, One))
+                Store (Local2, Index (\_SB.PCI0.BAT0.PBST, 0x02))
+                Store (Arg3, Index (\_SB.PCI0.BAT0.PBST, 0x03))
             }
             Else
             {
@@ -220,7 +220,7 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
         
     } //End Scope _SB.PCI0.BAT0
     
-    Scope (_SB.PCI0.LPCB.EC) //EC0 to EC
+    Scope (_SB.PCI0.LPCB.EC0) //EC0 to EC
     {
         OperationRegion (XCW1, SystemMemory, 0xFEFF0380, 0x80) //ECW1 to XCW1
         Field (XCW1, ByteAcc, Lock, Preserve)
@@ -272,7 +272,7 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
         {
             If (_OSI ("Darwin"))
             {
-                If (ECAV ())
+                If (\_SB.PCI0.LPCB.EC0.ECAV ())
                 {
                     If (BSLF)
                     {
@@ -297,7 +297,7 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
             }
             Else
             {
-                XIF0 ()
+                Return (\_SB.PCI0.LPCB.EC0.XIF0 ())
             }
         }
         
@@ -306,7 +306,7 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
         {
             If (_OSI ("Darwin"))
             {
-                If (ECAV ())
+                If (\_SB.PCI0.LPCB.EC0.ECAV ())
                 {
                     If (BSLF)
                     {
@@ -327,7 +327,7 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
             }
             Else
             {
-                XIF1 ()
+                Return (\_SB.PCI0.LPCB.EC0.XIF1 ())
             }
         }
         
@@ -336,7 +336,7 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
         {
             If (_OSI ("Darwin"))
             {
-                If (ECAV ())
+                If (\_SB.PCI0.LPCB.EC0.ECAV ())
                 {
                     If (BSLF)
                     {
@@ -356,7 +356,7 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
             }
             Else
             {
-                XIF2 ()
+                Return (\_SB.PCI0.LPCB.EC0.XIF2 ())
             }
         }
         
@@ -365,7 +365,7 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
         {
             If (_OSI ("Darwin"))
             {
-                If (ECAV ())
+                If (\_SB.PCI0.LPCB.EC0.ECAV ())
                 {
                     If (BSLF)
                     {
@@ -390,7 +390,7 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
             }
             Else
             {
-                XIF3 ()
+                Return (\_SB.PCI0.LPCB.EC0.XIF3 ())
             }
         }
         
@@ -399,7 +399,7 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
         {
             If (_OSI ("Darwin"))
             {
-                If (ECAV ())
+                If (\_SB.PCI0.LPCB.EC0.ECAV ())
                 {
                     If (BSLF)
                     {
@@ -418,7 +418,7 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
             }
             Else
             {
-                XIF4 ()
+                Return (\_SB.PCI0.LPCB.EC0.XIF4 ())
             }
         }
         
@@ -427,7 +427,7 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
         {
             If (_OSI ("Darwin"))
             {
-                If (ECAV ())
+                If (\_SB.PCI0.LPCB.EC0.ECAV ())
                 {
                     If (BSLF)
                     {
@@ -446,7 +446,7 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
             }
             Else
             {
-                XIFA ()
+                Return (\_SB.PCI0.LPCB.EC0.XIFA ())
             }
         }
         
@@ -455,7 +455,7 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
         {
             If (_OSI ("Darwin"))
             {
-                If (ECAV ())
+                If (\_SB.PCI0.LPCB.EC0.ECAV ())
                 {
                     If (BSLF)
                     {
@@ -474,7 +474,7 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
             }
             Else
             {
-                XCRT ()
+                Return (\_SB.PCI0.LPCB.EC0.XCRT ())
             }
         }
         
@@ -483,7 +483,7 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
         {
             If (_OSI ("Darwin"))
             {
-                If (ECAV ())
+                If (\_SB.PCI0.LPCB.EC0.ECAV ())
                 {
                     If (BSLF)
                     {
@@ -506,7 +506,7 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
             }
             Else
             {
-                XRCP ()
+                Return (\_SB.PCI0.LPCB.EC0.XRCP ())
             }
         }
 
@@ -515,7 +515,7 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
         {
             If (_OSI ("Darwin"))
             {
-                If (ECAV ())
+                If (\_SB.PCI0.LPCB.EC0.ECAV ())
                 {
                     If (BSLF)
                     {
@@ -534,7 +534,7 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
             }
             Else
             {
-                XSTS ()
+                Return (\_SB.PCI0.LPCB.EC0.XSTS ())
             }
         }
         
@@ -543,7 +543,7 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
         {
             If (_OSI ("Darwin"))
             {
-                If (ECAV ())
+                If (\_SB.PCI0.LPCB.EC0.ECAV ())
                 {
                     If (BSLF)
                     {
@@ -562,7 +562,7 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
             }
             Else
             {
-                XVOT ()
+                Return (\_SB.PCI0.LPCB.EC0.XVOT ())
             }
         }
         
@@ -574,10 +574,10 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
                 Name (BMB1, Buffer (0x40){})
                 If (LOr (LEqual (Arg0, Zero), LEqual (Arg0, One)))
                 {
-                    If (LEqual (Acquire (MUEC, 0xFFFF), Zero))
+                    If (LEqual (Acquire (\_SB.PCI0.LPCB.EC0.MUEC, 0xFFFF), Zero))
                     {
                         Store (0xFA, Local0)
-                        While (LAnd (Local0, And (0x0F, ESEM)))
+                        While (LAnd (Local0, And (0x0F, \_SB.PCI0.LPCB.EC0.ESEM)))
                         {
                             Sleep (0x02)
                             Decrement (Local0)
@@ -585,25 +585,25 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
 
                         If (LEqual (Arg0, Zero))
                         {
-                            Store (0x8A, CMD1)
+                            Store (0x8A, \_SB.PCI0.LPCB.EC0.CMD1)
                         }
 
                         If (LEqual (Arg0, One))
                         {
-                            Store (0x89, CMD1)
+                            Store (0x89, \_SB.PCI0.LPCB.EC0.CMD1)
                         }
 
-                        Store (0x0F, ESEM)
+                        Store (0x0F, \_SB.PCI0.LPCB.EC0.ESEM)
                         Store (0xFA, Local0)
-                        While (LAnd (Local0, CMD1))
+                        While (LAnd (Local0, \_SB.PCI0.LPCB.EC0.CMD1))
                         {
                             Sleep (0x02)
                             Decrement (Local0)
                         }
 
-                        If (LAnd (LEqual (CMD1, Zero), LNotEqual (EDA1, Zero)))
+                        If (LAnd (LEqual (\_SB.PCI0.LPCB.EC0.CMD1, Zero), LNotEqual (\_SB.PCI0.LPCB.EC0.EDA1, Zero)))
                         {
-                            Store (EDA1, Local0)
+                            Store (\_SB.PCI0.LPCB.EC0.EDA1, Local0)
                             Store (RECB (0x40, 0x100), BMB1) //Store (EDAB, BMB1)
                             Name (BMB2, Buffer (Add (Local0, One)){})
                             Store (Zero, Local2)
@@ -613,11 +613,11 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
                                 Increment (Local2)
                             }
 
-                            Release (MUEC)
+                            Release (\_SB.PCI0.LPCB.EC0.MUEC)
                             Return (BMB2)
                         }
 
-                        Release (MUEC)
+                        Release (\_SB.PCI0.LPCB.EC0.MUEC)
                     }
                 }
 
@@ -645,7 +645,7 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
             }
             Else
             {
-                Return (XCBM (Arg0)) //ECBM to XCBM
+                Return (\_SB.PCI0.LPCB.EC0.XCBM (Arg0)) //ECBM to XCBM
             }
         }
         
@@ -661,7 +661,7 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
             }
             Else
             {
-                XCDE ()
+                Return (\_SB.PCI0.LPCB.EC0.XCDE ())
             }
         }        
         
@@ -670,22 +670,22 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
         {
             If (_OSI ("Darwin"))
             {
-                Store (^ALSD.SWAP (B1B2 (ELU1, ELU2)), Local0) //Store (^ALSD.SWAP (ELUX), Local0)
-                Store (^ALSD.ALSC (Local0), Local0)
-                Store (Local0, ^ALSD.ALSI)
-                W16B (CLS1, CLS2, ^ALSD.SWAP (Local0)) //Store (^ALSD.SWAP (Local0), CALS)
-                Store (^ALSD.GUPV (Local0), Local1)
-                Store (^ALSD.GLOV (Local0), Local2)
-                Store (^ALSD.ALRC (Local1), Local1)
-                Store (^ALSD.ALRC (Local2), Local2)
-                W16B (EUL1, EUL2, ^ALSD.SWAP (Local1)) //Store (^ALSD.SWAP (Local1), EULV)
-                W16B (ELL1, ELL2, ^ALSD.SWAP (Local2)) //Store (^ALSD.SWAP (Local2), ELLV)
-                Store (One, BALS)
-                Notify (ALSD, 0x80)
+                Store (\_SB.PCI0.LPCB.EC0.ALSD.SWAP (B1B2 (ELU1, ELU2)), Local0) //Store (^ALSD.SWAP (ELUX), Local0)
+                Store (\_SB.PCI0.LPCB.EC0.ALSD.ALSC (Local0), Local0)
+                Store (Local0, \_SB.PCI0.LPCB.EC0.ALSD.ALSI)
+                W16B (CLS1, CLS2, \_SB.PCI0.LPCB.EC0.ALSD.SWAP (Local0)) //Store (^ALSD.SWAP (Local0), CALS)
+                Store (\_SB.PCI0.LPCB.EC0.ALSD.GUPV (Local0), Local1)
+                Store (\_SB.PCI0.LPCB.EC0.ALSD.GLOV (Local0), Local2)
+                Store (\_SB.PCI0.LPCB.EC0.ALSD.ALRC (Local1), Local1)
+                Store (\_SB.PCI0.LPCB.EC0.ALSD.ALRC (Local2), Local2)
+                W16B (EUL1, EUL2, \_SB.PCI0.LPCB.EC0.ALSD.SWAP (Local1)) //Store (^ALSD.SWAP (Local1), EULV)
+                W16B (ELL1, ELL2, \_SB.PCI0.LPCB.EC0.ALSD.SWAP (Local2)) //Store (^ALSD.SWAP (Local2), ELLV)
+                Store (One, \_SB.PCI0.LPCB.EC0.BALS)
+                Notify (\_SB.PCI0.LPCB.EC0.ALSD, 0x80)
             }
             Else
             {
-                XQA8 ()
+                \_SB.PCI0.LPCB.EC0.XQA8 ()
             }
         }
         
@@ -699,23 +699,23 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
                 ShiftLeft (Local0, 0x08, Local0)
                 Add (Local0, Local1, Local0)
                 Store (Local0, ALSK)
-                Store (^ALSD.SWAP (B1B2 (ELU1, ELU2)), Local0) //Store (^ALSD.SWAP (ELUX), Local0)
-                Store (^ALSD.ALSC (Local0), Local0)
-                Store (Local0, ^ALSD.ALSI)
-                W16B (CLS1, CLS2, ^ALSD.SWAP (Local0)) //Store (^ALSD.SWAP (Local0), CALS)
-                Store (^ALSD.GUPV (Local0), Local1)
-                Store (^ALSD.GLOV (Local0), Local2)
-                Store (^ALSD.ALRC (Local1), Local1)
-                Store (^ALSD.ALRC (Local2), Local2)
-                W16B (EUL1, EUL2, ^ALSD.SWAP (Local1)) //Store (^ALSD.SWAP (Local1), EULV)
-                W16B (ELL1, ELL2, ^ALSD.SWAP (Local2)) //Store (^ALSD.SWAP (Local2), ELLV)
-                Store (One, BALS)
-                Notify (ALSD, 0x80)
+                Store (\_SB.PCI0.LPCB.EC0.ALSD.SWAP (B1B2 (ELU1, ELU2)), Local0) //Store (^ALSD.SWAP (ELUX), Local0)
+                Store (\_SB.PCI0.LPCB.EC0.ALSD.ALSC (Local0), Local0)
+                Store (Local0, \_SB.PCI0.LPCB.EC0.ALSD.ALSI)
+                W16B (CLS1, CLS2, \_SB.PCI0.LPCB.EC0.ALSD.SWAP (Local0)) //Store (^ALSD.SWAP (Local0), CALS)
+                Store (\_SB.PCI0.LPCB.EC0.ALSD.GUPV (Local0), Local1)
+                Store (\_SB.PCI0.LPCB.EC0.ALSD.GLOV (Local0), Local2)
+                Store (\_SB.PCI0.LPCB.EC0.ALSD.ALRC (Local1), Local1)
+                Store (\_SB.PCI0.LPCB.EC0.ALSD.ALRC (Local2), Local2)
+                W16B (EUL1, EUL2, \_SB.PCI0.LPCB.EC0.ALSD.SWAP (Local1)) //Store (^ALSD.SWAP (Local1), EULV)
+                W16B (ELL1, ELL2, \_SB.PCI0.LPCB.EC0.ALSD.SWAP (Local2)) //Store (^ALSD.SWAP (Local2), ELLV)
+                Store (One, \_SB.PCI0.LPCB.EC0.BALS)
+                Notify (\_SB.PCI0.LPCB.EC0.ALSD, 0x80)
                 ADBG ("Update-ALS-K")
             }
             Else
             {
-                XQA9 ()
+                \_SB.PCI0.LPCB.EC0.XQA9 ()
             }
         }
         
@@ -737,7 +737,7 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
                     Store (ALRC (Local2), Local2)
                     W16B (EUL1, EUL2, SWAP (Local1)) //Store (SWAP (Local1), EULV)
                     W16B (ELL1, ELL2, SWAP (Local2)) //Store (SWAP (Local2), ELLV)
-                    Store (One, BALS)
+                    Store (One, \_SB.PCI0.LPCB.EC0.BALS)
                 }
                 Else
                 {
@@ -751,7 +751,7 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
                 {
                     W16B (EUL1, EUL2, SULV) //Store (SULV, EULV)
                     W16B (ELL1, ELL2, SLLV) //Store (SLLV, ELLV)
-                    Store (One, BALS)
+                    Store (One, \_SB.PCI0.LPCB.EC0.BALS)
                 }
                 Else
                 {
@@ -848,7 +848,7 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
                     Return (Zero)
                 }
 
-                Return (B1B2 (\_SB.PCI0.LPCB.EC_.UDC0, \_SB.PCI0.LPCB.EC_.UDC1)) //Return (\_SB.PCI0.LPCB.EC0.URDC)
+                Return (B1B2 (\_SB.PCI0.LPCB.EC0.UDC0, \_SB.PCI0.LPCB.EC0.UDC1)) //Return (\_SB.PCI0.LPCB.EC0.URDC)
             }
             Else
             {
@@ -865,7 +865,7 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
                     Return (Zero)
                 }
 
-                Return (B1B2 (\_SB.PCI0.LPCB.EC_.UDV0, \_SB.PCI0.LPCB.EC_.UDV1)) //Return (\_SB.PCI0.LPCB.EC0.UPDV)
+                Return (B1B2 (\_SB.PCI0.LPCB.EC0.UDV0, \_SB.PCI0.LPCB.EC0.UDV1)) //Return (\_SB.PCI0.LPCB.EC0.UPDV)
             }
             Else
             {
@@ -877,7 +877,7 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
         {
             If (_OSI ("Darwin"))
             {
-                Return (B1B2 (\_SB.PCI0.LPCB.EC_.SUS0, \_SB.PCI0.LPCB.EC_.SUS1)) //Return (\_SB.PCI0.LPCB.EC0.SUSP)
+                Return (B1B2 (\_SB.PCI0.LPCB.EC0.SUS0, \_SB.PCI0.LPCB.EC0.SUS1)) //Return (\_SB.PCI0.LPCB.EC0.SUSP)
             }
             Else
             {
@@ -889,7 +889,7 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
         {
             If (_OSI ("Darwin"))
             {
-                Return (B1B2 (\_SB.PCI0.LPCB.EC_.MXP0, \_SB.PCI0.LPCB.EC_.MXP1)) //Return (\_SB.PCI0.LPCB.EC0.MAXP)
+                Return (B1B2 (\_SB.PCI0.LPCB.EC0.MXP0, \_SB.PCI0.LPCB.EC0.MXP1)) //Return (\_SB.PCI0.LPCB.EC0.MAXP)
             }
             Else
             {
@@ -901,32 +901,32 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
         {
             If (_OSI ("Darwin"))
             {
-                If (LEqual (\_SB.PCI0.LPCB.EC_.ECAV (), Zero))
+                If (LEqual (\_SB.PCI0.LPCB.EC0.ECAV (), Zero))
                 {
                     Return (Zero)
                 }
 
-                If (LEqual (B1B2 (\_SB.PCI0.LPCB.EC_.BFC0, \_SB.PCI0.LPCB.EC_.BFC1), Zero)) //If (LEqual (\_SB.PCI0.LPCB.EC0.B0FC, Zero))
+                If (LEqual (B1B2 (\_SB.PCI0.LPCB.EC0.BFC0, \_SB.PCI0.LPCB.EC0.BFC1), Zero)) //If (LEqual (\_SB.PCI0.LPCB.EC0.B0FC, Zero))
                 {
                     Return (Zero)
                 }
 
-                If (LGreater (B1B2 (\_SB.PCI0.LPCB.EC_.BRC0, \_SB.PCI0.LPCB.EC_.BRC1), B1B2 (\_SB.PCI0.LPCB.EC_.BFC0, \_SB.PCI0.LPCB.EC_.BFC1))) //If (LGreater (\_SB.PCI0.LPCB.EC0.B0RC, \_SB.PCI0.LPCB.EC0.B0FC))
+                If (LGreater (B1B2 (\_SB.PCI0.LPCB.EC0.BRC0, \_SB.PCI0.LPCB.EC0.BRC1), B1B2 (\_SB.PCI0.LPCB.EC0.BFC0, \_SB.PCI0.LPCB.EC0.BFC1))) //If (LGreater (\_SB.PCI0.LPCB.EC0.B0RC, \_SB.PCI0.LPCB.EC0.B0FC))
                 {
                     Return (Zero)
                 }
 
-                If (LEqual (B1B2 (\_SB.PCI0.LPCB.EC_.BRC0, \_SB.PCI0.LPCB.EC_.BRC1), B1B2 (\_SB.PCI0.LPCB.EC_.BFC0, \_SB.PCI0.LPCB.EC_.BFC1))) //If (LEqual (\_SB.PCI0.LPCB.EC0.B0RC, \_SB.PCI0.LPCB.EC0.B0FC))
+                If (LEqual (B1B2 (\_SB.PCI0.LPCB.EC0.BRC0, \_SB.PCI0.LPCB.EC0.BRC1), B1B2 (\_SB.PCI0.LPCB.EC0.BFC0, \_SB.PCI0.LPCB.EC0.BFC1))) //If (LEqual (\_SB.PCI0.LPCB.EC0.B0RC, \_SB.PCI0.LPCB.EC0.B0FC))
                 {
                     Return (0x64)
                 }
 
-                If (LLess (B1B2 (\_SB.PCI0.LPCB.EC_.BRC0, \_SB.PCI0.LPCB.EC_.BRC1), B1B2 (\_SB.PCI0.LPCB.EC_.BFC0, \_SB.PCI0.LPCB.EC_.BFC1))) //If (LLess (\_SB.PCI0.LPCB.EC0.B0RC, \_SB.PCI0.LPCB.EC0.B0FC))
+                If (LLess (B1B2 (\_SB.PCI0.LPCB.EC0.BRC0, \_SB.PCI0.LPCB.EC0.BRC1), B1B2 (\_SB.PCI0.LPCB.EC0.BFC0, \_SB.PCI0.LPCB.EC0.BFC1))) //If (LLess (\_SB.PCI0.LPCB.EC0.B0RC, \_SB.PCI0.LPCB.EC0.B0FC))
                 {
-                    Multiply (B1B2 (\_SB.PCI0.LPCB.EC_.BRC0, \_SB.PCI0.LPCB.EC_.BRC1), 0x64, Local0) //Multiply (\_SB.PCI0.LPCB.EC0.B0RC, 0x64, Local0)
-                    Divide (Local0, B1B2 (\_SB.PCI0.LPCB.EC_.BFC0, \_SB.PCI0.LPCB.EC_.BFC1), Local2, Local1) //Divide (Local0, \_SB.PCI0.LPCB.EC0.B0FC, Local2, Local1)
+                    Multiply (B1B2 (\_SB.PCI0.LPCB.EC0.BRC0, \_SB.PCI0.LPCB.EC0.BRC1), 0x64, Local0) //Multiply (\_SB.PCI0.LPCB.EC0.B0RC, 0x64, Local0)
+                    Divide (Local0, B1B2 (\_SB.PCI0.LPCB.EC0.BFC0, \_SB.PCI0.LPCB.EC0.BFC1), Local2, Local1) //Divide (Local0, \_SB.PCI0.LPCB.EC0.B0FC, Local2, Local1)
                     Divide (Local2, 0x64, , Local2)
-                    Divide (B1B2 (\_SB.PCI0.LPCB.EC_.BFC0, \_SB.PCI0.LPCB.EC_.BFC1), 0xC8, , Local3) //Divide (\_SB.PCI0.LPCB.EC0.B0FC, 0xC8, , Local3)
+                    Divide (B1B2 (\_SB.PCI0.LPCB.EC0.BFC0, \_SB.PCI0.LPCB.EC0.BFC1), 0xC8, , Local3) //Divide (\_SB.PCI0.LPCB.EC0.B0FC, 0xC8, , Local3)
                     If (LGreaterEqual (Local2, Local3))
                     {
                         Add (Local1, One, Local1)
