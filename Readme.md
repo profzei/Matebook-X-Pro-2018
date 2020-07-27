@@ -40,24 +40,53 @@ This is intended to create a "fully" functional (as far as possible) hackintosh 
 
 ## Changelog
 
-#### 2020 - June - 23
+#### 2020 - July - 27
 <details>
 <summary>Show more</summary>
 
 #### Current status:
-- 06-23-2020
+- **07-27-2020**
+	- Update `SSDT-BATT-HUAWEI.aml`
+	- Update [kext] `IntelBluetoothFirmware` v. 1.1.1:
+		- udate firmwares to official (Intel) June release
+		- fix kernel panic when waking up from sleep (Sleep transition timed out 180 seconds while ...)
+		- fix wakeup BT unavailable issue
+		- fix some memory leaks
+	- Update [kext] `AppleALC` v. 1.5.1 (up to [acidanthera/AppleALC@f07c1f8](https://github.com/acidanthera/AppleALC/commit/f07c1f8c65270f58a50f96bac2588710d0ff7683))
+	- Update [kext] `Lilu` v. 1.4.6 (up to [acidanthera/Lilu@28122d0](https://github.com/acidanthera/Lilu/commit/28122d0084dc5fe1b486bd52945160cf5be64d49))
+	- Update [kext] `NVMeFix` v. 1.0.3 (up to [acidanthera/NVMeFix@48a0fda](https://github.com/acidanthera/NVMeFix/commit/48a0fda97650fd6a7563d65e479421524685bcee))
+	- Update [kext] `VirtualSMC` v. 1.1.5 (up to [acidanthera/VirtualSMC@fab53dc](https://github.com/acidanthera/VirtualSMC/commit/fab53dc600eef3b559c9a99b6cfd598c5f24927e))
+	- Update [kext] `VoodooPS2Controller` v. 2.1.6 (up to [acidanthera/VoodooPS2Controller@60a4566](https://github.com/acidanthera/VoodooPS2/commit/60a4566c237f9c39bf38122ec8c0910a388dbe9d))
+	- Update [kext] `WhateverGreen` v. 1.4.1 (up to [acidanthera/WhateverGreen@b97c692](https://github.com/acidanthera/WhateverGreen/commit/b97c692aee9672786a181423dd476a05782ba7e9))
+
+
+- **07-26-2020**
+	- Add `SSDT-ALSD.aml` for better support for native Ambient Light Sensor Device
+	- Add `SSDT-DTPG.aml` to be compliant with ACPI rules
+	- Add `SSDT-TPXX.aml` for enabling proper GPI0 pinning for touchpad device and disabling touchscreen for saving power
+	- Update [kext] `VoodooI2C` v. 2.4.3 (smoother behaviour in gestures)
+	- Update [kext] `VoodooI2CHID` v. 2.4.3 (smoother behaviour in gestures)
+	- Update [OC] `config.plist`:
+        - Added `SSDT-ALSD` in `ACPI -> Add` section
+        - Added `SSDT-DTPG` in `ACPI -> Add` section
+        - Added `SSDT-TPXX` in `ACPI -> Add` section
+        - Removed double istance for `VoodooInput` in `Kernel -> Add` section
+        - Removed istance for `VoodooPS2Keyboard` in `Kernel -> Add` section
+        - Removed istance for `VoodooPS2Mouse` in `Kernel -> Add` section
+
+- **06-23-2020**
 	- Support for **OpenCore 0.5.9**
-	- Update `SSDT-PLUG-PR.PR00`: better Power Management
-    - Update `SSDT-PNLF`
+	- Update `SSDT-PLUG-PR.PR00.aml`: better Power Management
+    - Update `SSDT-PNLF.aml`
 	- Better Sleep support
 	- Detailed guide in [Wiki section](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Converting-from-Clover-to-OpenCore) for converting from Clover to OpenCore
 		- [script](https://github.com/profzei/Matebook-X-Pro-2018/raw/master/Wiki/Converting_Clover_to_OpenCore.sh) for automated deletion
     - Changed [OC] ProductName to `MacBookPro15,2` for better statistics support
-    - Support for dual booting Windows 10 with **rEFInd**
+    - Support for dual booting Windows 10 with rEFInd
     - Added a simple black theme for rEFInd bootloader
     - Detailed guide in [Wiki section](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Converting-from-Clover-to-OpenCore) for configuring rEFInd
 
-- 06-01-2020
+- **06-01-2020**
 	- Update [kext] `Lilu` v. 1.4.5
     - Update [kext] `WhateverGreen` v. 1.4.0
     - Update [kext] `AppleALC` v. 1.5.0
@@ -66,7 +95,7 @@ This is intended to create a "fully" functional (as far as possible) hackintosh 
     - Regression [kext] for a more stability to `VoodooI2CHID` v. 2.3
 	- Update [kext] `VoodooPS2Controller` v. 2.1.5
 
-- 05-31-2020
+- **05-31-2020**
     - Add initial support for `Intel Dual-Band Wireless-AC 8265/8275` card:
         - in (new) section [Network]() instructions and support for `AppleIntelWiFi.kext`
         - in (new) section [Network]() instructions and support for a totally automated loader script `IntelKextAutoLoader`
@@ -203,7 +232,7 @@ Refer to: [here](/Graphics/)
 | [NoTouchID](https://github.com/al3xtjames/NoTouchID/releases) | 1.0.3 |
 | [HibernationFixup](https://github.com/acidanthera/HibernationFixup/releases) | 1.3.3 |
 | [NVMeFix](https://github.com/acidanthera/NVMeFix/releases) | 1.0.2 |
-| [IntelBluetoothFirmware](https://github.com/zxystd/IntelBluetoothFirmware/releases) | 1.0.3 |
+| [IntelBluetoothFirmware](https://github.com/zxystd/IntelBluetoothFirmware/releases) | 1.1.1 |
 
 ## Development: Catalina 10.15.4 support
 
