@@ -1026,7 +1026,7 @@
 				Y29tLmFwcGxlAA==
 				</data>
 				<key>MatchOS</key>
-				<string>10.15</string>
+				<string>10.15.x, 10.16.x</string>
 				<key>Replace</key>
 				<data>
 				bm90LmFwcGxlAA==
