@@ -39,7 +39,7 @@
 					<key>Comment</key>
 					<string>Rename EC0 to EC</string>
 					<key>Disabled</key>
-					<false/>
+					<true/>
 					<key>Find</key>
 					<data>
 					RUMwXw==
