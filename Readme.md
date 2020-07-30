@@ -45,6 +45,12 @@ This is intended to create a "fully" functional (as far as possible) hackintosh 
 <summary>Show more</summary>
 
 #### Current status:
+- **07-30-2020**
+    - Update `SSDT-EC-USBX.aml` to be compliant with Dortania guide
+    - Update [kext] `NoTouchID` v. 1.0.4
+    - Update [OC] `config.plist`:
+        - improved loading kexts order
+
 - **07-27-2020**
 	- Update `SSDT-BATT-HUAWEI.aml`
 	- Update [kext] `IntelBluetoothFirmware` v. 1.1.1:
@@ -229,7 +235,7 @@ Refer to: [here](/Graphics/)
 | [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases) | 2.1.5 |
 | [VirtualSMC](https://github.com/acidanthera/VirtualSMC/releases) | 1.1.4 |
 | NullEthernet | 1.0.6 |
-| [NoTouchID](https://github.com/al3xtjames/NoTouchID/releases) | 1.0.3 |
+| [NoTouchID](https://github.com/al3xtjames/NoTouchID/releases) | 1.0.4 |
 | [HibernationFixup](https://github.com/acidanthera/HibernationFixup/releases) | 1.3.3 |
 | [NVMeFix](https://github.com/acidanthera/NVMeFix/releases) | 1.0.2 |
 | [IntelBluetoothFirmware](https://github.com/zxystd/IntelBluetoothFirmware/releases) | 1.1.1 |

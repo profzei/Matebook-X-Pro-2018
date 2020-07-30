@@ -2,6 +2,12 @@
 
 English
 
+- **07-30-2020**
+    - Update `SSDT-EC-USBX.aml` to be compliant with Dortania guide
+    - Update [kext] `NoTouchID` v. 1.0.4
+    - Update [OC] `config.plist`:
+        - improved loading kexts order
+
 - **07-27-2020**
 	- Update `SSDT-BATT-HUAWEI.aml`
 	- Update [kext] `IntelBluetoothFirmware` v. 1.1.1:
