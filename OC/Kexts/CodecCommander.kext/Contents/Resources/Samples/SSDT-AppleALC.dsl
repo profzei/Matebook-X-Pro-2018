@@ -8,7 +8,7 @@
 // As of CodecCommander v2.7.1, CodecCommander detects AppleALC for setting the default
 // of these two options false.
 
-DefinitionBlock ("", "SSDT", 1, "hack", "CC-ALC", 0)
+DefinitionBlock ("", "SSDT", 1, "hack", "_CCALC", 0)
 {
     External(_SB.PCI0.HDEF, DeviceObj)
     Name(_SB.PCI0.HDEF.RMCF, Package()

@@ -1,13 +1,9 @@
-// SSDT to correct some problems headphone/mic on CX20752.
-//
-// Note: For use with the Anti-pop patches (seee RehabMan NUC repo)
-//
-// created by nayeweiyang/XuWang
+// CodecCommander configuration for ALC1220
+// provided by daliansky @github
 
-DefinitionBlock ("", "SSDT", 1, "hack", "CX20752", 0)
+DefinitionBlock ("", "SSDT", 1, "hack", "_ALC1220", 0)
 {
     External(_SB.PCI0.HDEF, DeviceObj)
-    
     Name(_SB.PCI0.HDEF.RMCF, Package()
     {
         "CodecCommander", Package()
@@ -25,19 +21,18 @@ DefinitionBlock ("", "SSDT", 1, "hack", "CX20752", 0)
                 },
                 Package()
                 {
-                    // 0x1a SET_PIN_WIDGET_CONTROL 0x24
-                    "Command", Buffer() { 0x01, 0xa7, 0x07, 0x24 },
+                    // 0x1B SET_UNSOLICITED_ENABLE 0x83
+                    "Command", Buffer() { 0x01, 0xB7, 0x08, 0x83 },
                     "On Init", ">y",
                     "On Sleep", ">n",
                     "On Wake", ">y",
                 },
-
             },
-            "Perform Reset", ">n",
-            "Perform Reset on External Wake", ">n",
+            "Perform Reset", ">y",
+            //"Perform Reset on External Wake", ">n", // enable if using AppleALC
+            "Send Delay", 10,
+            "Sleep Nodes", ">n",
         },
     })
 }
 //EOF
-
-
