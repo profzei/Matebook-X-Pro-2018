@@ -2,6 +2,17 @@
 
 English
 
+- **08-03-2020**
+	- Update [kext]`AppleALC` v. 1.5.1
+	- Update [kext] `CodecCommander` v. 2.7.2
+	- Update [kext] `CPUFriend` v. 1.2.1
+	- Update [kext] `Lilu` v. 1.4.6
+	- Update [kext] `NVMeFix` v. 1.0.3
+	- Update [kext] `VirtualSMC` and plugins v. 1.1.5
+	- Update [kext] `VoodooPS2Controller` v. 2.1.6
+	- Update [kext] `WhateverGreen` v. 1.4.1
+	- Update [kext] `IntelBluetoothFirmware` v. 1.1.2
+
 - **07-30-2020**
     - Update `SSDT-EC-USBX.aml` to be compliant with Dortania guide
     - Update [kext] `NoTouchID` v. 1.0.4

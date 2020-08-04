@@ -45,6 +45,17 @@ This is intended to create a "fully" functional (as far as possible) hackintosh 
 <summary>Show more</summary>
 
 #### Current status:
+- **08-03-2020**
+	- Update [kext]`AppleALC` v. 1.5.1
+	- Update [kext] `CodecCommander` v. 2.7.2
+	- Update [kext] `CPUFriend` v. 1.2.1
+	- Update [kext] `Lilu` v. 1.4.6
+	- Update [kext] `NVMeFix` v. 1.0.3
+	- Update [kext] `VirtualSMC` and plugins v. 1.1.5
+	- Update [kext] `VoodooPS2Controller` v. 2.1.6
+	- Update [kext] `WhateverGreen` v. 1.4.1
+	- Update [kext] `IntelBluetoothFirmware` v. 1.1.2
+
 - **07-30-2020**
     - Update `SSDT-EC-USBX.aml` to be compliant with Dortania guide
     - Update [kext] `NoTouchID` v. 1.0.4
@@ -224,21 +235,21 @@ Refer to: [here](/Graphics/)
 | MacOS | 10.15.5 |
 | [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.5.9 |
 | [Clover](https://github.com/CloverHackyColor/CloverBootloader/releases) | 5118 |
-| [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.4.5 |
-| [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.4.0 |
-| [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.5.0 |
-| [CodecCommander](https://github.com/Sniki/EAPD-Codec-Commander/releases) | ~~2.7.2~~ 2.7.1 |
-| [CPUFriend](https://github.com/acidanthera/CPUFriend/releases) | 1.2.0 |
+| [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.4.6 |
+| [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.4.1 |
+| [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.5.1 |
+| [CodecCommander](https://github.com/Sniki/EAPD-Codec-Commander/releases) | 2.7.2 |
+| [CPUFriend](https://github.com/acidanthera/CPUFriend/releases) | 1.2.1 |
 | [USBInjectAll](https://github.com/Sniki/OS-X-USB-Inject-All/releases) | 0.7.3 |
 | [VoodooI2C](https://github.com/alexandred/VoodooI2C/releases) | 2.4.3 |
 | [VoodooI2CHID](https://github.com/alexandred/VoodooI2C/releases) | 2.4.3 |
-| [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases) | 2.1.5 |
-| [VirtualSMC](https://github.com/acidanthera/VirtualSMC/releases) | 1.1.4 |
+| [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases) | 2.1.6 |
+| [VirtualSMC](https://github.com/acidanthera/VirtualSMC/releases) | 1.1.5 |
 | NullEthernet | 1.0.6 |
 | [NoTouchID](https://github.com/al3xtjames/NoTouchID/releases) | 1.0.4 |
 | [HibernationFixup](https://github.com/acidanthera/HibernationFixup/releases) | 1.3.3 |
-| [NVMeFix](https://github.com/acidanthera/NVMeFix/releases) | 1.0.2 |
-| [IntelBluetoothFirmware](https://github.com/zxystd/IntelBluetoothFirmware/releases) | 1.1.1 |
+| [NVMeFix](https://github.com/acidanthera/NVMeFix/releases) | 1.0.3 |
+| [IntelBluetoothFirmware](https://github.com/zxystd/IntelBluetoothFirmware/releases) | 1.1.2 |
 
 ## Development: Catalina 10.15.4 support
 
