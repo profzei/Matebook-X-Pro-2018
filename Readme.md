@@ -45,6 +45,11 @@ This is intended to create a "fully" functional (as far as possible) hackintosh 
 <summary>Show more</summary>
 
 #### Current status:
+- **08-07-2020**
+	- Update support for `Intel Dual-Band Wireless-AC 8265/8275` card:
+        - in section [Network](/Network) instructions and support for the **OpenIntelWireless** project, i.e. `itlwm.kext` and `HeliPort.app`
+        - since `itlwm.kext` and `HeliPort.app` are in beta phase, [**pipeline**](https://github.com/1hbb/OpenIntelWireless-Factory/releases) can be used for compiling `itlwm.kext` and `HeliPort.app` with latest changes every 8 hours!
+
 - **08-03-2020**
 	- Update [kext]`AppleALC` v. 1.5.1
 	- Update [kext] `CodecCommander` v. 2.7.2
@@ -114,8 +119,8 @@ This is intended to create a "fully" functional (as far as possible) hackintosh 
 
 - **05-31-2020**
     - Add initial support for `Intel Dual-Band Wireless-AC 8265/8275` card:
-        - in (new) section [Network]() instructions and support for `AppleIntelWiFi.kext`
-        - in (new) section [Network]() instructions and support for a totally automated loader script `IntelKextAutoLoader`
+        - in (new) section [Network](/Network) instructions and support for `AppleIntelWiFi.kext`
+        - in (new) section [Network](/Network) instructions and support for a totally automated loader script `IntelKextAutoLoader`
     - Add `ALCPlugFix` for a better support to the switch between the headset and the built-in input [ComboJack & Realtek ALC256](https://github.com/profzei/ALCPlugFix)
 </details>
 
@@ -127,7 +132,9 @@ This is intended to create a "fully" functional (as far as possible) hackintosh 
 	- Have used `SSDT-DDGPU.aml` to disable it in order to save power.
 - Fingerprint sensor is not working
 	- Have used `SSDT-UIAC.aml` to disable it in order to save power.
-- Intel Wi-Fi (Intel Wireless 8265/8275) is ~~not (yet)~~ working: see in [Network section](/Network) for instructions to load `AppleIntelWiFi.kext` for enabling our Intel Wi-Fi card: it is still in beta phase, but with support for WPA/WPA2 and 2.4 - 5 GHz bands ~~there is hard work and, therefore, some progress in Intel Wi-Fi support. Hope to see a fully functional `kext` asap.~~
+- Intel Wi-Fi (Intel Wireless 8265/8275) is ~~not (yet)~~ working:
+	- see in Network section](/Network) for instructions to load [`itlwm`](https://github.com/OpenIntelWireless/itlwm) and [`HeliPort`](https://github.com/OpenIntelWireless/HeliPort) to drive our Intel Wi-Fi card: it is still in beta phase, but with support for WPA/WPA2 and 2.4 - 5 GHz bands
+	- see in [Network section](/Network) for instructions to load `AppleIntelWiFi.kext` for enabling our Intel Wi-Fi card: it is still in beta phase, but with support for WPA/WPA2 and 2.4 - 5 GHz bands ~~there is hard work and, therefore, some progress in Intel Wi-Fi support. Hope to see a fully functional `kext` asap.~~
 	- Previously I bought a USB Wi-Fi dongle: [tp-link](https://www.tp-link.com/it/support/download/tl-wn823n/?utm_medium=select-local#Driver) TL-WN823Nv3 with macOS updated driver support [Wireless-USB-Adapter Driver](https://github.com/chris1111/Wireless-USB-Adapter-Clover/releases) 
 
 ### What's working
@@ -160,8 +167,17 @@ This is intended to create a "fully" functional (as far as possible) hackintosh 
 - Default bootloader: `OpenCore 0.5.9` [Official release](https://github.com/acidanthera/OpenCorePkg/releases)
 - Alternative bootloader: Clover `r5118` [Official release](https://github.com/CloverHackyColor/CloverBootloader/releases) ~~`r5103` [Dids release](https://github.com/Dids/clover-builder/releases)~~
 
+### OpenCore
+- Support macOS10.14 ~ macOS11.0 beta 4 (20A5343i)
+- Should **clean NVRAM** after using `Clover`: press `Space` in OpenCore boot page and then select `Reset NVRAM` entry
+- Limited theme with `OpenCanopy`
+
+### Clover
+- Support macOS10.14 ~ macOS10.15.6, but **not macOS11+**
+- Should **clean NVRAM** after using `OpenCore`: press `Fn + F11` in Clover boot page
+
 ## SMBIOS
-- Default SMBIOS settings of this repo is `MacBookPro14,1`
+- Default SMBIOS settings of this repo is `MacBookPro15,2` ~~`MacBookPro14,1`~~
 
 ## Power management: CPUFriend
 CPU power management can be achieved by using `CPUFriend.kext` while `CPUFriendDataProvider.kext` defines how it should be done. `CPUFriendDataProvider.kext` is generated for a specific CPU and power setting. The one supplied in this repository was made for `i7-8550U` and is optimized for balanced performance.

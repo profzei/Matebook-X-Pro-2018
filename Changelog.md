@@ -1,9 +1,13 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **08-07-2020**
+	- Update support for `Intel Dual-Band Wireless-AC 8265/8275` card:
+        - in section [Network](/Network) instructions and support for the **OpenIntelWireless** project, i.e. `itlwm.kext` and `HeliPort.app`
+        - since `itlwm.kext` and `HeliPort.app` are in beta phase, [**pipeline**](https://github.com/1hbb/OpenIntelWireless-Factory/releases) can be used for compiling `itlwm.kext` and `HeliPort.app` with latest changes every 8 hours!
 
 - **08-03-2020**
-	- Update [kext]`AppleALC` v. 1.5.1
+	- Update [kext] `AppleALC` v. 1.5.1
 	- Update [kext] `CodecCommander` v. 2.7.2
 	- Update [kext] `CPUFriend` v. 1.2.1
 	- Update [kext] `Lilu` v. 1.4.6
@@ -71,8 +75,8 @@ English
 
 - **05-31-2020**
     - Add initial support for `Intel Dual-Band Wireless-AC 8265/8275` card:
-        - in (new) section [Network]() instructions and support for `AppleIntelWiFi.kext`
-        - in (new) section [Network]() instructions and support for a totally automated loader script `IntelKextAutoLoader`
+        - in (new) section [Network](/Network) instructions and support for `AppleIntelWiFi.kext`
+        - in (new) section [Network](/Network) instructions and support for a totally automated loader script `IntelKextAutoLoader`
     - Add `ALCPlugFix` for a better support to the switch between the headset and the built-in input [ComboJack & Realtek ALC256](https://github.com/profzei/ALCPlugFix)
 
 - **05-26-2020**
