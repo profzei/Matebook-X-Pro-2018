@@ -6,7 +6,60 @@
 	- [tonymacx86 thread](https://www.tonymacx86.com/threads/success-working-intel-wifi-drivers-for-7265ac-on-catalina.292207/page-44): last update on 2020-05-23
 	- [Intel WiFi Kext V2](https://www.youtube.com/watch?v=kHfUjJ2RkyU)
 
-## Usage
+## OpenIntelWireless - How to use
+This project is based on:
+- `itlwm.kext`: an Intel Wifi Adapter Kernel Extension for macOS, based on the OpenBSD Project
+- `HeliPort`: a GUI-based Intel WiFi Client for `itlwm.kext`
+We will use itlwm and HeliPort to drive our Intel Wireless Card. 
+1. Download the latest releases at the following links:
+	- [https://github.com/OpenIntelWireless/itlwm/releases](https://github.com/OpenIntelWireless/itlwm/releases)
+	- [https://github.com/OpenIntelWireless/HeliPort/releases](https://github.com/OpenIntelWireless/HeliPort/releases)
+2. Turn off `Show Wi-Fi status` in menu bar in `System Preferences` -> `Network` -> `Wi-Fi`
+3. Unzip all the packs you downloaded and copy `itlwm.kext` to `/EFI/OC/Kexts/` or `/EFI/CLOVER/kexts/Other/` folder
+4. If you are using **OpenCore**, you need to change your config.plist. Open `/EFI/OC/config.plist` and find the following code:
+```
+<dict>
+	<key>BundlePath</key>
+	<string>itlwm.kext</string>
+	<key>Comment</key>
+	<string>Intel Wi-Fi driver</string>
+	<key>Enabled</key>
+	<false/>
+	...
+```
+and change to:
+```
+<dict>
+	<key>BundlePath</key>
+	<string>itlwm.kext</string>
+	<key>Comment</key>
+	<string>Intel Wi-Fi driver</string>
+	<key>Enabled</key>
+	<true/>
+	...
+```
+5. Reboot and move `HeliPort.App` to your `Applications` folder
+6. Open `HeliPort.App`:
+	– You need to **allow software from any sources first**
+	– If needed, run the following command in `Terminal.App`:
+```
+sudo spctl --master-disable
+```
+7. Add `HeliPort.App` to `System Startup`:
+	- Go to `System Preferences` -> `Users & Groups`
+	- Select in your admin account `Login Items` tab
+	- Add (`+` symbol) `HeliPort.App` from `Applications` folder
+
+Remember that `itlwm.kext` and `HeliPort` are still in **beta phase**, but rapidly improving! Use at your own risk!
+
+[**Pipeline**](https://github.com/1hbb/OpenIntelWireless-Factory/releases) has been created for compiling `itlwm.kext` and `HeliPort.app` with latest changes every 8 hours!
+
+### Discussion
+- If you have questions about the driver, please discuss them on [https://gitter.im/OpenIntelWireless/itlwm](https://gitter.im/OpenIntelWireless/itlwm)
+- If you want to report bugs, please use [https://github.com/OpenIntelWireless/itlwm/issues](https://github.com/OpenIntelWireless/itlwm/issues)
+
+
+## AppleIntelWiFi - How to use
 1. Download `AppleIntelWiFi 0523.zip` and `IntelKextAutoLoader.zip` files from here or from [tonymacx86 thread](https://www.tonymacx86.com/threads/success-working-intel-wifi-drivers-for-7265ac-on-catalina.292207/page-44) (last update: 2020-05-23) 
 2. Create a folder `AppleIntelWiFi` on Desktop
 3. Unzip `AppleIntelWiFi 0523.zip` and move the `kext` file in `Desktop/AppleIntelWiFi` folder
@@ -50,7 +103,7 @@ sudo chmod 4755 IntelKextAutoLoader
 	- Type `wq`: `w` for Write (or Save) and `q` for Quit. This command combination returns you to the command line.
 9. Reboot your machine
 
-Remember that `AppleIntelWiFi.kext` is still in beta phase, but rapidly improving! There have been some reports of random crashes and reboots, use at your own risk!
+Remember that `AppleIntelWiFi.kext` is still in **beta phase**, but rapidly improving! There have been some reports of random crashes and reboots, use at your own risk!
 
-## Other links
-* Another project: [itlwm](https://github.com/zxystd/itlwm). Maintained by [zxystd](https://github.com/zxystd).
+## Other Project
+- [https://github.com/usr-sse2/Black80211-Catalina](https://github.com/usr-sse2/Black80211-Catalina) joins [https://github.com/AppleIntelWifi/Black80211-Catalina](https://github.com/AppleIntelWifi/Black80211-Catalina) and [https://github.com/OpenIntelWireless/itlwm](https://github.com/OpenIntelWireless/itlwm) to provide a wireless driver for Intel adapters that can be controlled using native AirPort menu item.
