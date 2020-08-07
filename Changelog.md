@@ -2,7 +2,7 @@
 
 English
 - **08-07-2020**
-	- Update support for `Intel Dual-Band Wireless-AC 8265/8275` card:
+	- Update support for `Intel Dual-Band Wireless-AC 8265/8275` card [credit to AshleyMiller9696]:
         - in section [Network](/Network) instructions and support for the **OpenIntelWireless** project, i.e. `itlwm.kext` and `HeliPort.app`
         - since `itlwm.kext` and `HeliPort.app` are in beta phase, [**pipeline**](https://github.com/1hbb/OpenIntelWireless-Factory/releases) can be used for compiling `itlwm.kext` and `HeliPort.app` with latest changes every 8 hours!
         
