@@ -40,8 +40,8 @@ and change to:
 ```
 5. Reboot and move `HeliPort.App` to your `Applications` folder
 6. Open `HeliPort.App`:
-	– You need to **allow software from any sources first**
-	– If needed, run the following command in `Terminal.App`:
+	- You need to **allow software from any sources first**
+	- If needed, run the following command in `Terminal.App`:
 ```
 sudo spctl --master-disable
 ```
