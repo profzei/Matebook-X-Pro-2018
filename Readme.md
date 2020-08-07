@@ -40,7 +40,7 @@ This is intended to create a "fully" functional (as far as possible) hackintosh 
 
 ## Changelog
 
-#### 2020 - July - 27
+#### 2020 - August - 07
 <details>
 <summary>Show more</summary>
 
