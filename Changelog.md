@@ -1,6 +1,25 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **08-15-2020**
+    - Update `OpenCore` v. 0.6.0
+    - Update `SSDT-BATT-HUAWEI.aml` to support memory management for Thermal Framework
+    - Add `SSDT-ADP1.aml` to properly load `AppleACPIACAdapter`
+    - Update `SSDT-TPXX.aml`: re-enabled and improved support for touchscreen due to the numerous requests (default option)
+    - Add `SSDT-TPXX-NO.aml` (to be renamed in `config.plist` as `SSDT-TPXX.aml`): version for disabling touchscreen
+    - Add [kext] `ACPIBatteryManager` for fixing (just for now) the very annoying issue due to flooding messages in `Console.app` -> `kernel PMRD: clamshell closed 0, disabled 0, desktopMode 0, ac 0 sleepDisabled 0` (ThreadID 0x74): atm the switch from `SMCBatteryManager` to `ACPIBatteryManager` has been necessary to obtain maximum system stability and ensure the best possible user experience... I'm not happy about this decision because `ACPIBatteryManager` breaks external battery managers! This is a very old random issue (references can be found [tonymacx86](https://www.tonymacx86.com/threads/lid-sensor-flooding-log-with-clamshellstatechanged.272312/), [reddit](https://www.reddit.com/r/MatebookXPro/comments/bvirux/dat_june_hackintosh_update/?sort=new), [InsanelyMac](https://www.insanelymac.com/forum/topic/342497-help-needed-virtualsmc-causes-periodic-updates-of-clamshell-state/), [gnodipac886's repo](https://github.com/gnodipac886/MatebookXPro-hackintosh/issues/75)). **Any contribute is very welcomed!**
+
+    **OpenCore**
+    - Update `config.plist` to support `OpenCore` v. 0.6.0
+    - Delete [config] unuseful entries for cleaner structure
+    - Add [config] 1 binary patch `AC0_ to ADP1` to pair `SSDT-ADP1.aml`
+    - Add [config] 5 binary patches to pair `SSDT-BATT-HUAWEI.aml`:
+        - `TPWR.ACUR to TPWR.XCUR (Thermal Batt)`
+        - `TPWR.AVOL to TPWR.XVOL (Thermal Batt)`
+        - `TPWR.PBSS to TPWR.XBSS (Thermal Batt)`
+        - `TPWR.PMAX to TPWR.XMAX (Thermal Batt)`
+        - `TPWR.PSOC to TPWR.XSOC (Thermal Batt)`
+
 - **08-07-2020**
 	- Update support for `Intel Dual-Band Wireless-AC 8265/8275` card [credit to yichebb and AshleyMiller9696]:
         - in section [Network](/Network) instructions and support for the **OpenIntelWireless** project, i.e. `itlwm.kext` and `HeliPort.app`
