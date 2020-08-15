@@ -6,7 +6,7 @@
 <img src="/Wiki/Images/matebook-x-pro-big-sur.png" alt="Huawei Big Sur 11.0" />
 </div>
 
-#### This repo is currently compatible with macOS Catalina 10.15.5 Supplemental Update (19F101) and OpenCore 0.5.9
+#### This repo is currently compatible with macOS Catalina 10.15.5 Supplemental Update (19F101) and OpenCore 0.6.0
 |     macOS Catalina     |       macOS Mojave       |
 |------------------------|--------------------------|
 |     10.15.5  (19F101)  |       10.14.6  (18G87)   |
@@ -186,7 +186,7 @@ This is intended to create a "fully" functional (as far as possible) hackintosh 
 - Bios version: `1.28`
 
 ## Bootloader Firmware
-- Default bootloader: `OpenCore 0.5.9` [Official release](https://github.com/acidanthera/OpenCorePkg/releases)
+- Default bootloader: `OpenCore 0.6.0` [Official release](https://github.com/acidanthera/OpenCorePkg/releases)
 - Alternative bootloader: Clover `r5118` [Official release](https://github.com/CloverHackyColor/CloverBootloader/releases) ~~`r5103` [Dids release](https://github.com/Dids/clover-builder/releases)~~
 
 ### OpenCore
