@@ -79,7 +79,7 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
     External (_SB.PCI0.LPCB.EC0_.ESEM, FieldUnitObj)
     External (_SB.PCI0.LPCB.EC0_.CMD1, FieldUnitObj)
     External (_SB.PCI0.LPCB.EC0_.EDA1, FieldUnitObj)
-    /*
+    
     External (_SB.TPWR, DeviceObj)
     External (_SB.TPWR.PSRC, MethodObj) // 0 Arguments
     External (_SB.TPWR.XCUR, MethodObj) //ACUR to XCUR  0 Arguments
@@ -87,7 +87,7 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
     External (_SB.TPWR.XBSS, MethodObj) //PBSS to XBSS 0 Arguments
     External (_SB.TPWR.XMAX, MethodObj) //PMAX to XMAX 0 Arguments
     External (_SB.TPWR.XSOC, MethodObj) //PSOC to XSOC 0 Arguments
-    */
+    
     External (ADBG, MethodObj) // 1 Arguments
     External (ALSK, FieldUnitObj)
     External (BSLF, IntObj)
@@ -807,7 +807,7 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
             }
             Return (TEMP)
         }
-        /*
+        
         Method (WE1B, 2, NotSerialized)
         {
             Local0 = ( 0xFEFF0A00 + Arg0) // Offset OperationRegionECWB
@@ -833,17 +833,17 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
                 Increment(Local0)
             }
         }
-        */
+        
     } //End Scope _SB.PCI0.LPCB.EC
     
-    /*
-    Scope (_SB.TPWR)
+    
+    Scope (\_SB.TPWR)
     {
         Method (ACUR, 0, Serialized)
         {
             If (_OSI ("Darwin"))
             {
-                If (LEqual (PSRC (), Zero))
+                If (LEqual (\_SB.TPWR.PSRC (), Zero))
                 {
                     Return (Zero)
                 }
@@ -852,7 +852,7 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
             }
             Else
             {
-                XCUR ()
+                \_SB.TPWR.XCUR ()
             }
         }
         
@@ -860,7 +860,7 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
         {
             If (_OSI ("Darwin"))
             {
-                If (LEqual (PSRC (), Zero))
+                If (LEqual (\_SB.TPWR.PSRC (), Zero))
                 {
                     Return (Zero)
                 }
@@ -869,7 +869,7 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
             }
             Else
             {
-                XVOL ()
+                \_SB.TPWR.XVOL ()
             }
         }
         
@@ -881,7 +881,7 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
             }
             Else
             {
-                XBSS ()
+                \_SB.TPWR.XBSS ()
             }
         }
         
@@ -893,7 +893,7 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
             }
             Else
             {
-                XMAX ()
+                \_SB.TPWR.XMAX ()
             }
         }
         
@@ -941,11 +941,11 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "BATT", 0)
             }
             Else
             {
-                XSOC ()
+                \_SB.TPWR.XSOC ()
             }
         }
     } //End Scope _SB.TPWR
-    */  
+    
 #ifndef NO_DEFINITIONBLOCK
 }
 #endif
