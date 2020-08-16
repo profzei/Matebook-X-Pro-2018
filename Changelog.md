@@ -1,6 +1,9 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **08-16-2020**
+    - Support for macOS Catalina 10.15.6 Supplemental Update (19G2021)
+
 - **08-15-2020**
     - Update `OpenCore` v. 0.6.0
     - Update `SSDT-BATT-HUAWEI.aml` to support memory management for Thermal Framework
