@@ -5,6 +5,9 @@ English
 	**OpenCore**
 	- Update `config.plist` to support `OpenCore` v. 0.6.1
 
+    **Update**
+    - Updated support for macOS Big Sur Beta 5 (20A5354i) in Wiki section](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Upgrade-to-macOS-Big-Sur): "everything" seems to be working fine!
+
 - **08-20-2020**
 	- Initial support for macOS Big Sur Beta 4: for details and an installation guide, please, refer to [Wiki section](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Upgrade-to-macOS-Big-Sur)
 

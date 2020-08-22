@@ -40,7 +40,7 @@ This is intended to create a "fully" functional (as far as possible) hackintosh 
 
 ## Changelog
 
-#### 2020 - August - 20
+#### 2020 - August - 22
 <details>
 <summary>Show more</summary>
 
@@ -49,8 +49,11 @@ This is intended to create a "fully" functional (as far as possible) hackintosh 
     **OpenCore**
     - Update `config.plist` to support `OpenCore` v. 0.6.1
 
+    **Update**
+    - Updated support for macOS Big Sur Beta 5 (20A5354i) in Wiki section](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Upgrade-to-macOS-Big-Sur): "everything" seems to be working fine!
+
 - **08-20-2020**
-    - Initial support for macOS Big Sur Beta 4: for details and an installation guide, please, refer to [Wiki section](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Upgrade-to-macOS-Big-Sur)
+    - Initial support for macOS Big Sur Beta 4 (20A5343i): for details and an installation guide, please, refer to [Wiki section](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Upgrade-to-macOS-Big-Sur)
 
 - **08-16-2020**
     - Support for macOS Catalina 10.15.6 Supplemental Update (19G2021)
