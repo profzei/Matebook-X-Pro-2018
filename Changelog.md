@@ -1,6 +1,9 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **08-20-2020**
+	- Initial support for macOS Big Sur Beta 4: for details and an installation guide, please, refer to [Wiki section](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Upgrade-to-macOS-Big-Sur)
+
 - **08-16-2020**
     - Support for macOS Catalina 10.15.6 Supplemental Update (19G2021)
 
