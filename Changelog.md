@@ -2,6 +2,7 @@
 
 English
 - **08-22-2020**
+
 	**OpenCore**
 	- Update `config.plist` to support `OpenCore` v. 0.6.1
 

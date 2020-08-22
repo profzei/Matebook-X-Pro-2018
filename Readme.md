@@ -46,6 +46,7 @@ This is intended to create a "fully" functional (as far as possible) hackintosh 
 
 #### Current status:
 - **08-22-2020**
+
     **OpenCore**
     - Update `config.plist` to support `OpenCore` v. 0.6.1
 
