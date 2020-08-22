@@ -17,7 +17,7 @@
 |     10.15.1  (19B88)   |       10.14.1  (18B75)   |
 |     10.15    (19A583)  |       10.14    (18A389)  |
 
-#### Preparation for macOS Big Sur 11.0 is on the way
+#### Preparation for macOS Big Sur 11.0 is [on the way](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Upgrade-to-macOS-Big-Sur)
 This is intended to create a "fully" functional (as far as possible) hackintosh for the Huawei Matebook X Pro. There are some well-written guides ([here](https://dortania.github.io/getting-started/)), so it's not a particular issue getting macOS installed onto my MBXP; but the reason why I didn't stop my efforts into resolving each bug, there was because of "minor issues" I ran into. The installation is not perfect yet since it's a continuos work-in-progress, but I'm glad to say that **I learned a lot** in the meantime.
 
 **This repository is for personal purposes**: it was *initially* based on the hard work done by [gnodipac886](https://github.com/gnodipac886/MatebookXPro-hackintosh), but *now* it can be considered as a different project due to **many and original very significant personal improvements in ALL the sections**.
@@ -40,11 +40,15 @@ This is intended to create a "fully" functional (as far as possible) hackintosh 
 
 ## Changelog
 
-#### 2020 - August - 16
+#### 2020 - August - 20
 <details>
 <summary>Show more</summary>
 
 #### Current status:
+- **08-22-2020**
+    **OpenCore**
+    - Update `config.plist` to support `OpenCore` v. 0.6.0
+
 - **08-20-2020**
     - Initial support for macOS Big Sur Beta 4: for details and an installation guide, please, refer to [Wiki section](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Upgrade-to-macOS-Big-Sur)
 
@@ -276,7 +280,7 @@ Refer to: [here](/Graphics/)
 
 | Item | Version |
 | :--- | :--- |
-| MacOS | 10.15.5 |
+| MacOS | 10.15.6 |
 | [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.6.0 |
 | [Clover](https://github.com/CloverHackyColor/CloverBootloader/releases) | 5118 |
 | [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.4.6 |
