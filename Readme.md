@@ -40,11 +40,16 @@ This is intended to create a "fully" functional (as far as possible) hackintosh 
 
 ## Changelog
 
-#### 2020 - August - 22
+#### 2020 - August - 27
 <details>
 <summary>Show more</summary>
 
 #### Current status:
+- **08-27-2020**
+
+    **OpenCore**
+    - Update `config.plist` to support `OpenCore` v. 0.6.1
+
 - **08-22-2020**
 
     **OpenCore**
