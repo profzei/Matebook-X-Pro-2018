@@ -1,6 +1,27 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **09-13-2020**
+
+    **Update**
+    - Update `OpenCore` v. 0.6.1
+    - Update [kext] `Lilu` v. 1.4.7
+    - Update [kext] `VirtualSMC` and plugins v. 1.1.6
+    - Update [kext] `AppleALC` v. 1.5.2
+    - Update [kext] `WhateverGreen` v. 1.4.2
+    - Update `SSDT-TPXX.aml` with a better approach for GPI0 pinning (issue [#46 ](https://github.com/profzei/Matebook-X-Pro-2018/issues/46) **still unresolved**! ...wip)
+
+    **OpenCore**
+    - Update `config.plist` to support `OpenCore` v. 0.6.1
+    - Add [config] 2 binary patches to pair `SSDT-TPXX.aml`:
+        - `TPD0._STA to TPD0.XSTA` for touchscreen
+        - `TPL1._STA to TPL1.XSTA` for touchpad
+    - Add [kext] `EFICheckDisabler`
+    - Add [kext] `HibernationFixup` v. 1.3.5
+    - Add [kext] `itlwm` v. 1.0.0 stable (enabled by default)
+
+    This release is compatible also with macOS **Big Sur Beta 6**
+
 - **08-27-2020**
 
     **OpenCore**

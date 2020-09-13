@@ -40,11 +40,32 @@ This is intended to create a "fully" functional (as far as possible) hackintosh 
 
 ## Changelog
 
-#### 2020 - August - 27
+#### 2020 - September - 13
 <details>
 <summary>Show more</summary>
 
 #### Current status:
+- **09-13-2020**
+
+    **Update**
+    - Update `OpenCore` v. 0.6.1
+    - Update [kext] `Lilu` v. 1.4.7
+    - Update [kext] `VirtualSMC` and plugins v. 1.1.6
+    - Update [kext] `AppleALC` v. 1.5.2
+    - Update [kext] `WhateverGreen` v. 1.4.2
+    - Update `SSDT-TPXX.aml` with a better approach for GPI0 pinning (issue [#46 ](https://github.com/profzei/Matebook-X-Pro-2018/issues/46) **still unresolved**! ...wip)
+
+    **OpenCore**
+    - Update `config.plist` to support `OpenCore` v. 0.6.1
+    - Add [config] 2 binary patches to pair `SSDT-TPXX.aml`:
+        - `TPD0._STA to TPD0.XSTA` for touchscreen
+        - `TPL1._STA to TPL1.XSTA` for touchpad
+    - Add [kext] `EFICheckDisabler`
+    - Add [kext] `HibernationFixup` v. 1.3.5
+    - Add [kext] `itlwm` v. 1.0.0 stable (enabled by default)
+
+    This release is compatible also with macOS **Big Sur Beta 6**
+
 - **08-27-2020**
 
     **OpenCore**
@@ -290,21 +311,21 @@ Refer to: [here](/Graphics/)
 | Item | Version |
 | :--- | :--- |
 | MacOS | 10.15.6 |
-| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.6.0 |
+| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.6.1 |
 | [Clover](https://github.com/CloverHackyColor/CloverBootloader/releases) | 5118 |
-| [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.4.6 |
-| [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.4.1 |
-| [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.5.1 |
+| [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.4.7 |
+| [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.4.2 |
+| [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.5.2 |
 | [CodecCommander](https://github.com/Sniki/EAPD-Codec-Commander/releases) | 2.7.2 |
 | [CPUFriend](https://github.com/acidanthera/CPUFriend/releases) | 1.2.1 |
-| [USBInjectAll](https://github.com/Sniki/OS-X-USB-Inject-All/releases) | 0.7.3 |
+| [USBInjectAll](https://github.com/Sniki/OS-X-USB-Inject-All/releases) | 0.7.5 |
 | [VoodooI2C](https://github.com/alexandred/VoodooI2C/releases) | 2.4.3 |
 | [VoodooI2CHID](https://github.com/alexandred/VoodooI2C/releases) | 2.4.3 |
 | [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases) | 2.1.6 |
-| [VirtualSMC](https://github.com/acidanthera/VirtualSMC/releases) | 1.1.5 |
+| [VirtualSMC](https://github.com/acidanthera/VirtualSMC/releases) | 1.1.6 |
 | NullEthernet | 1.0.6 |
 | [NoTouchID](https://github.com/al3xtjames/NoTouchID/releases) | 1.0.4 |
-| [HibernationFixup](https://github.com/acidanthera/HibernationFixup/releases) | 1.3.3 |
+| [HibernationFixup](https://github.com/acidanthera/HibernationFixup/releases) | 1.3.5 |
 | [NVMeFix](https://github.com/acidanthera/NVMeFix/releases) | 1.0.3 |
 | [IntelBluetoothFirmware](https://github.com/zxystd/IntelBluetoothFirmware/releases) | 1.1.2 |
 
