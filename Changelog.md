@@ -1,6 +1,15 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **09-15-2020**
+
+    **Update**
+    - Add `SSDT-PWRB.aml` for enabling Power Button Device: just press down for 1-2 seconds to shown `Shut Down Dialog`
+
+    **OpenCore**
+    - Add [config] 1 binary patch in ACPI section to pair `SSDT-PWRB.aml`:
+        - `PWRB._STA to PWRB.XSTA`
+
 - **09-13-2020**
 
     **Update**
@@ -13,7 +22,7 @@ English
 
     **OpenCore**
     - Update `config.plist` to support `OpenCore` v. 0.6.1
-    - Add [config] 2 binary patches to pair `SSDT-TPXX.aml`:
+    - Add [config] 2 binary patches in ACPI section to pair `SSDT-TPXX.aml`:
         - `TPD0._STA to TPD0.XSTA` for touchscreen
         - `TPL1._STA to TPL1.XSTA` for touchpad
     - Add [kext] `EFICheckDisabler`

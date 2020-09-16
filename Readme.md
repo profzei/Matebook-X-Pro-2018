@@ -40,11 +40,20 @@ This is intended to create a "fully" functional (as far as possible) hackintosh 
 
 ## Changelog
 
-#### 2020 - September - 13
+#### 2020 - September - 15
 <details>
 <summary>Show more</summary>
 
 #### Current status:
+- **09-15-2020**
+
+    **Update**
+    - Add `SSDT-PWRB.aml` for enabling Power Button Device: just press down for 1-2 seconds to shown `Shut Down Dialog`
+
+    **OpenCore**
+    - Add [config] 1 binary patch in ACPI section to pair `SSDT-PWRB.aml`:
+        - `PWRB._STA to PWRB.XSTA`
+
 - **09-13-2020**
 
     **Update**
