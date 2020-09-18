@@ -1,10 +1,93 @@
 ## Notes
 * Works on Catalina 10.15.x
-* You need delete `SSDT-DRP11.aml` if it is present in `EFI/CLOVER/ACPI/patched/`
+* You need delete `SSDT-DRP11.aml` if it is present in `OC/ACPI/` or in `EFI/CLOVER/ACPI/patched/`
 * Support for WPA/WPA2
-* For reference see:
-	- [tonymacx86 thread](https://www.tonymacx86.com/threads/success-working-intel-wifi-drivers-for-7265ac-on-catalina.292207/page-44): last update on 2020-05-23
-	- [Intel WiFi Kext V2](https://www.youtube.com/watch?v=kHfUjJ2RkyU)
+
+At the moment [18 September 2020] there are two ways to drive our native **Intel Wireless Card**:
+* use **itlwm** and **HeliPort**
+* use **AirportItlwm**
+
+## AirportItlwm - How to use
+This project is still in **beta phase**:
+* supports all itlwm-supported devices
+* supports native Wi-Fi selection and switching with WPA/WPA2/Unencrypted Wi-Fi Networks
+* supports Location Services
+* Handoff and Universal Clipboard perfectly supported (See [#292 (comment)](https://github.com/OpenIntelWireless/itlwm/issues/292#issuecomment-693728787))
+
+Since it's in **beta phase**, there are **known issues and limitations**:
+* Handoff and Universal Clipboard are the only supported Continuity features.
+* Instant HotSpot from iPhone can be recognized but may likely fail to connect. **Workaround**: use itlwm.kext with HeliPort.
+* Apple Bluetooth peripherals may fail to connect. **Workaround**: use itlwm.kext with HeliPort or disable iCloud.
+
+Bootloader Compatibility:
+* Supported: OpenCore -> `Kernel Collections with & without Apple Secure Boot`
+* Supported: OpenCore -> `Prelinked Kernel with ImmutableKernel`
+* Not Supported: OpenCore & Clover with `Prelinked Kernel without ImmutableKernel`
+
+1. First, make sure your macOS version >= 10.15 and your OpenCore bootloader version >= 0.6.1
+2. [If applicable] Remove `itlwm` and `HeliPort`
+3. Turn on `Show Wi-Fi status` in menu bar in `System Preferences` -> `Network` -> `Wi-Fi`
+4. Download the latest release at the following link:
+	- [https://github.com/OpenIntelWireless/itlwm/releases](https://github.com/OpenIntelWireless/itlwm/releases)
+5. Unzip the pack you downloaded and copy `AirportItlwm.kext` to `EFI/OC/Kexts/` folder
+6. Open `/EFI/OC/config.plist` and find the following code:
+```
+<dict>
+	<key>Arch</key>
+	<string>x86_64</string>
+	<key>BundlePath</key>
+	<string>AirportItlwm.kext</string>
+	<key>Comment</key>
+	<string>Intel Wi-Fi driver</string>
+	<key>Enabled</key>
+	<false/>
+	...
+```
+and change to:
+```
+<dict>
+	<key>Arch</key>
+	<string>x86_64</string>
+	<key>BundlePath</key>
+	<string>AirportItlwm.kext</string>
+	<key>Comment</key>
+	<string>Intel Wi-Fi driver</string>
+	<key>Enabled</key>
+	<true/>
+	...
+```
+7. Also change your `SecureBootModel` to allow loading **immutablekernel**. **Warning**: if your macOS version >= macOS 11 (KernelCollection) then you don't need to do the following steps!
+	- find the following code:
+```
+<dict>
+	<key>DmgLoading</key>
+	<string>Any</string>
+	...
+```
+	and change to:
+```
+<dict>
+	<key>DmgLoading</key>
+	<string>Signed</string>
+	...
+```
+	- find the following code:
+```
+<dict>
+	<key>SecureBootModel</key>
+	<string>Disabled</string>
+	...
+```
+	and change to:
+```
+<dict>
+	<key>SecureBootModel</key>
+	<string>Default</string>
+	...
+```
+8. Reboot
+
+Remember that `AirportItlwm.kext` is still in **beta phase**, but rapidly improving! Use at your own risk!
 
 ## OpenIntelWireless - How to use
 This project is based on:
@@ -50,7 +133,7 @@ sudo spctl --master-disable
 	- Select in your admin account `Login Items` tab
 	- Add (`+` symbol) `HeliPort.App` from `Applications` folder
 
-Remember that `itlwm.kext` and `HeliPort` are still in **beta phase**, but rapidly improving! Use at your own risk!
+~~Remember that `itlwm.kext` and `HeliPort` are still in **beta phase**, but rapidly improving! Use at your own risk!~~
 
 [**Pipeline**](https://github.com/1hbb/OpenIntelWireless-Factory/releases) has been created for compiling `itlwm.kext` and `HeliPort.app` with latest changes every 8 hours!
 
@@ -59,7 +142,11 @@ Remember that `itlwm.kext` and `HeliPort` are still in **beta phase**, but rapid
 - If you want to report bugs, please use [https://github.com/OpenIntelWireless/itlwm/issues](https://github.com/OpenIntelWireless/itlwm/issues)
 
 
-## AppleIntelWiFi - How to use
+## ~~AppleIntelWiFi - How to use~~ [Deprecated!]
+* For reference see:
+	- [tonymacx86 thread](https://www.tonymacx86.com/threads/success-working-intel-wifi-drivers-for-7265ac-on-catalina.292207/page-44): last update on 2020-05-23
+	- [Intel WiFi Kext V2](https://www.youtube.com/watch?v=kHfUjJ2RkyU)
+
 1. Download `AppleIntelWiFi 0523.zip` and `IntelKextAutoLoader.zip` files from here or from [tonymacx86 thread](https://www.tonymacx86.com/threads/success-working-intel-wifi-drivers-for-7265ac-on-catalina.292207/page-44) (last update: 2020-05-23) 
 2. Create a folder `AppleIntelWiFi` on Desktop
 3. Unzip `AppleIntelWiFi 0523.zip` and move the `kext` file in `Desktop/AppleIntelWiFi` folder
