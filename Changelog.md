@@ -1,6 +1,16 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **09-18-2020**
+
+	**Update**
+	- Update [kext] `itlwm` v. 1.1.0 stable
+	- Update `Network` section for supporting `AirportItlwm` beta
+
+	**OpenCore**
+	- Update `config.plist` to support `AirportItlwm` beta
+	- Add [kext] `AirportItlwm` beta
+
 - **09-15-2020**
 
     **Update**

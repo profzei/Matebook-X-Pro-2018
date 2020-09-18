@@ -40,11 +40,21 @@ This is intended to create a "fully" functional (as far as possible) hackintosh 
 
 ## Changelog
 
-#### 2020 - September - 15
+#### 2020 - September - 18
 <details>
 <summary>Show more</summary>
 
 #### Current status:
+- **09-18-2020**
+
+    **Update**
+    - Update [kext] `itlwm` v. 1.1.0 stable
+    - Update `Network` section for supporting `AirportItlwm` beta
+
+    **OpenCore**
+    - Update `config.plist` to support `AirportItlwm` beta
+    - Add [kext] `AirportItlwm` beta
+
 - **09-15-2020**
 
     **Update**
