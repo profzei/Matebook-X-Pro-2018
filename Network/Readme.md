@@ -1,6 +1,6 @@
 ## Notes
 * Works on Catalina 10.15.x
-* You need delete `SSDT-DRP11.aml` if it is present in `OC/ACPI/` or in `EFI/CLOVER/ACPI/patched/`
+* You need delete `SSDT-DRP11.aml` if it is present in `EFI/OC/ACPI/` or in `EFI/CLOVER/ACPI/patched/`
 * Support for WPA/WPA2
 
 At the moment [18 September 2020] there are two ways to drive our native **Intel Wireless Card**:
