@@ -57,28 +57,29 @@ and change to:
 	...
 ```
 7. Also change your `SecureBootModel` to allow loading **immutablekernel**. **Warning**: if your macOS version >= macOS 11 (KernelCollection) then you don't need to do the following steps!
-	- find the following code:
+
+Find the following code:
 ```
 <dict>
 	<key>DmgLoading</key>
 	<string>Any</string>
 	...
 ```
-	- and change to:
+and change to:
 ```
 <dict>
 	<key>DmgLoading</key>
 	<string>Signed</string>
 	...
 ```
-	- find the following code:
+Find the following code:
 ```
 <dict>
 	<key>SecureBootModel</key>
 	<string>Disabled</string>
 	...
 ```
-	and change to:
+and change to:
 ```
 <dict>
 	<key>SecureBootModel</key>
