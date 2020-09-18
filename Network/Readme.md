@@ -64,8 +64,7 @@ and change to:
 	<string>Any</string>
 	...
 ```
-
-	and change to:
+	- and change to:
 ```
 <dict>
 	<key>DmgLoading</key>
