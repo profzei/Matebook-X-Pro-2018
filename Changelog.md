@@ -1,6 +1,11 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **09-19-2020**
+
+    **OpenCore**
+    - Update `config.plist` to support OpenCore v. 0.6.2
+
 - **09-18-2020**
 
 	**Update**
