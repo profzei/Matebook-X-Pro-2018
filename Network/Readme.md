@@ -86,7 +86,39 @@ and change to:
 	<string>Default</string>
 	...
 ```
-8. Reboot
+
+8. If the above method doesn't work, you can force loading `IO80211Family`. Open `/EFI/OC/config.plist`, find the following code:
+```
+<key>Force</key>
+	<array>
+		<dict>
+			<key>Arch</key>
+			<string>Any</string>
+			<key>BundlePath</key>
+			<string>System/Library/Extensions/IO80211Family.kext</string>
+			<key>Comment</key>
+			<string></string>
+			<key>Enabled</key>
+			<false/>
+	...
+```
+and change to:
+```
+<key>Force</key>
+	<array>
+		<dict>
+			<key>Arch</key>
+			<string>Any</string>
+			<key>BundlePath</key>
+			<string>System/Library/Extensions/IO80211Family.kext</string>
+			<key>Comment</key>
+			<string></string>
+			<key>Enabled</key>
+			<true/>
+	...
+```
+
+9. Reboot
 
 Remember that `AirportItlwm.kext` is still in **beta phase**, but rapidly improving! Use at your own risk!
 
