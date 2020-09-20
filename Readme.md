@@ -40,11 +40,19 @@ This is intended to create a "fully" functional (as far as possible) hackintosh 
 
 ## Changelog
 
-#### 2020 - September - 19
+#### 2020 - September - 20
 <details>
 <summary>Show more</summary>
 
 #### Current status:
+- **09-20-2020**
+
+    **Update**
+    - Update `Network` section with new instructions for `AirportItlwm` using `OC Force` (i.e. forcing injection of `IO80211Family.kext`)
+
+    **OpenCore**
+    - Update [config] `Force` section with `IO80211Family.kext` code to support proper loading for `AirportItlwm`
+
 - **09-19-2020**
 
     **OpenCore**
