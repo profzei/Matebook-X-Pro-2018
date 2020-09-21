@@ -40,11 +40,16 @@ This is intended to create a "fully" functional (as far as possible) hackintosh 
 
 ## Changelog
 
-#### 2020 - September - 20
+#### 2020 - September - 21
 <details>
 <summary>Show more</summary>
 
 #### Current status:
+- **09-21-2020**
+
+    **Update**
+    - Update `SSDT-EC-USBX.aml`: improved ACPI Darwin detection in `USBX` device
+
 - **09-20-2020**
 
     **Update**

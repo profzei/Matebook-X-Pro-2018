@@ -1,6 +1,11 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **09-21-2020**
+
+    **Update**
+    - Update `SSDT-EC-USBX.aml`: improved ACPI Darwin detection in `USBX` device
+
 - **09-20-2020**
 
     **Update**
