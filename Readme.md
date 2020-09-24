@@ -40,11 +40,16 @@ This is intended to create a "fully" functional (as far as possible) hackintosh 
 
 ## Changelog
 
-#### 2020 - September - 21
+#### 2020 - September - 23
 <details>
 <summary>Show more</summary>
 
 #### Current status:
+- **09-23-2020**
+
+    **Update**
+    - Support for Big Sur Beta 8
+
 - **09-21-2020**
 
     **Update**

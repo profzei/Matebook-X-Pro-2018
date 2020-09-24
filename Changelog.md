@@ -1,6 +1,11 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **09-23-2020**
+
+    **Update**
+    - Support for Big Sur Beta 8 
+
 - **09-21-2020**
 
     **Update**
