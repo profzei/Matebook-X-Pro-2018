@@ -6,16 +6,17 @@
 <img src="/Wiki/Images/matebook-x-pro-big-sur.png" alt="Huawei Big Sur 11.0" />
 </div>
 
-#### This repo is currently compatible with macOS Catalina 10.15.6 Supplemental Update (19G2021) and OpenCore 0.6.0
+#### This repo is currently compatible with macOS Catalina 10.15.7 (19H2??) and OpenCore 0.6.1
 |     macOS Catalina     |       macOS Mojave       |
 |------------------------|--------------------------|
-|     10.15.6  (19G2021) |       10.14.6  (18G87)   |
-|     10.15.5  (19F101)  |       10.14.5  (18F132)  |
-|     10.15.4  (19E287)  |       10.14.4  (18E226)  |
-|     10.15.3  (19D76)   |       10.14.3  (18D42)   |
-|     10.15.2  (19C57)   |       10.14.2  (18C54)   |
-|     10.15.1  (19B88)   |       10.14.1  (18B75)   |
-|     10.15    (19A583)  |       10.14    (18A389)  |
+|     10.15.7  (19H2??)  |       10.14.6  (18G87)   |
+|     10.15.6  (19G2021) |       10.14.5  (18F132)  |
+|     10.15.5  (19F101)  |       10.14.4  (18E226)  |
+|     10.15.4  (19E287)  |       10.14.3  (18D42)   |
+|     10.15.3  (19D76)   |       10.14.2  (18C54)   |
+|     10.15.2  (19C57)   |       10.14.1  (18B75)   |
+|     10.15.1  (19B88)   |       10.14    (18A389)  |
+|     10.15    (19A583)  |                          |
 
 #### Preparation for macOS Big Sur 11.0 is [on the way](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Upgrade-to-macOS-Big-Sur)
 This is intended to create a "fully" functional (as far as possible) hackintosh for the Huawei Matebook X Pro. There are some well-written guides ([here](https://dortania.github.io/getting-started/)), so it's not a particular issue getting macOS installed onto my MBXP; but the reason why I didn't stop my efforts into resolving each bug, there was because of "minor issues" I ran into. The installation is not perfect yet since it's a continuos work-in-progress, but I'm glad to say that **I learned a lot** in the meantime.
@@ -40,11 +41,15 @@ This is intended to create a "fully" functional (as far as possible) hackintosh 
 
 ## Changelog
 
-#### 2020 - September - 23
+#### 2020 - September - 25
 <details>
 <summary>Show more</summary>
 
 #### Current status:
+- **09-25-2020**
+
+	Update to macOS Catalina 10.15.7
+
 - **09-23-2020**
 
     **Update**

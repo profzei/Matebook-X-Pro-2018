@@ -1,6 +1,10 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **09-25-2020**
+
+    Update to macOS Catalina 10.15.7
+
 - **09-23-2020**
 
     **Update**
