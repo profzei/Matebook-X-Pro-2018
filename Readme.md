@@ -19,9 +19,17 @@
 |     10.15    (19A583)  |                          |
 
 #### Preparation for macOS Big Sur 11.0 is [on the way](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Upgrade-to-macOS-Big-Sur)
+
+
+### Status: Work in Progress
+
+This repo contains information for getting macOS 10.15.x Catalina working on a **Huawei MateBook X Pro (2018 Edition)** laptop.
+
 This is intended to create a "fully" functional (as far as possible) hackintosh for the Huawei Matebook X Pro. There are some well-written guides ([here](https://dortania.github.io/getting-started/)), so it's not a particular issue getting macOS installed onto my MBXP; but the reason why I didn't stop my efforts into resolving each bug, there was because of "minor issues" I ran into. The installation is not perfect yet since it's a continuos work-in-progress, but I'm glad to say that **I learned a lot** in the meantime.
 
-**This repository is for personal purposes**: it was *initially* based on the hard work done by [gnodipac886](https://github.com/gnodipac886/MatebookXPro-hackintosh), but *now* it can be considered as a different project due to **many and original very significant personal improvements in ALL the sections**.
+The compatibility is good for the most part, most of the stuff works like it would on a real MacBook, including camera, audio, touchpad, iCloud services. The experience is pleasant, as the laptop is smooth and responsive under macOS Catalina. Battery life is quite great (from personal experience it lasts from 8 to 10 hours for light works depending on its age with a behaviour very similar to Windows 10). The Intel WiFi card is soldered onto the motherboard, which means it can't be replaced with a Broadcom one, but the Intel card is now functional albeit not operating at full speeds - I am getting 50/10 mbit up/down on a 200/20 connection, which is fine for most use cases. With the latest `itlwm.kext` even Handoff and Continuity features are working, except for AirDrop. 
+
+**This repository is for personal purposes**
 
 
 ## Configuration
@@ -273,16 +281,16 @@ This is intended to create a "fully" functional (as far as possible) hackintosh 
 - Bios version: `1.28`
 
 ## Bootloader Firmware
-- Default bootloader: `OpenCore 0.6.0` [Official release](https://github.com/acidanthera/OpenCorePkg/releases)
+- Default bootloader: `OpenCore 0.6.1` [Official release](https://github.com/acidanthera/OpenCorePkg/releases)
 - Alternative bootloader: Clover `r5118` [Official release](https://github.com/CloverHackyColor/CloverBootloader/releases) ~~`r5103` [Dids release](https://github.com/Dids/clover-builder/releases)~~
 
 ### OpenCore
-- Support macOS10.14 ~ macOS11.0 beta 4 (20A5343i)
+- Support macOS10.14 ~ macOS11.0 beta 8
 - Should **clean NVRAM** after using `Clover`: press `Space` in OpenCore boot page and then select `Reset NVRAM` entry
 - Limited theme with `OpenCanopy`
 
 ### Clover
-- Support macOS10.14 ~ macOS10.15.6, but **not macOS11+**
+- Support macOS10.14 ~ macOS10.15.7, but **not macOS11+**
 - Should **clean NVRAM** after using `OpenCore`: press `Fn + F11` in Clover boot page
 
 ## SMBIOS
@@ -355,26 +363,27 @@ Refer to: [here](/Graphics/)
 
 ## Update tracker
 
-| Item | Version |
-| :--- | :--- |
-| MacOS | 10.15.6 |
-| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.6.1 |
-| [Clover](https://github.com/CloverHackyColor/CloverBootloader/releases) | 5118 |
-| [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.4.7 |
-| [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.4.2 |
-| [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.5.2 |
-| [CodecCommander](https://github.com/Sniki/EAPD-Codec-Commander/releases) | 2.7.2 |
-| [CPUFriend](https://github.com/acidanthera/CPUFriend/releases) | 1.2.1 |
-| [USBInjectAll](https://github.com/Sniki/OS-X-USB-Inject-All/releases) | 0.7.5 |
-| [VoodooI2C](https://github.com/alexandred/VoodooI2C/releases) | 2.4.3 |
-| [VoodooI2CHID](https://github.com/alexandred/VoodooI2C/releases) | 2.4.3 |
-| [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases) | 2.1.6 |
-| [VirtualSMC](https://github.com/acidanthera/VirtualSMC/releases) | 1.1.6 |
-| NullEthernet | 1.0.6 |
-| [NoTouchID](https://github.com/al3xtjames/NoTouchID/releases) | 1.0.4 |
-| [HibernationFixup](https://github.com/acidanthera/HibernationFixup/releases) | 1.3.5 |
-| [NVMeFix](https://github.com/acidanthera/NVMeFix/releases) | 1.0.3 |
-| [IntelBluetoothFirmware](https://github.com/zxystd/IntelBluetoothFirmware/releases) | 1.1.2 |
+| Item | Version | Remark |
+| :--- | :--- | :--- |
+| MacOS | 10.15.7 | |
+| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.6.1 | Default Bootloader|
+| [Clover](https://github.com/CloverHackyColor/CloverBootloader/releases) | 5118 | Alternative (not more supported) Bootloader|
+| [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.4.7 | Kext patcher |
+| [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.4.2 | Handle Graphics card |
+| [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.5.2 | Handle/fix onboard audio |
+| [CodecCommander](https://github.com/Sniki/EAPD-Codec-Commander/releases) | 2.7.2 | |
+| [CPUFriend](https://github.com/acidanthera/CPUFriend/releases) | 1.2.1 | Power management |
+| [HibernationFixup](https://github.com/acidanthera/HibernationFixup/releases) | 1.3.5 | |
+| [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases) | 1.1.2 | Handle Bluetooth |
+| [itlwm](https://github.com/OpenIntelWireless/itlwm/releases) | 1.1.0 | Handle WiFi with HeliPort app |
+| NullEthernet | 1.0.6 | |
+| [NoTouchID](https://github.com/al3xtjames/NoTouchID/releases) | 1.0.4 | Disable TouchID|
+| [NVMeFix](https://github.com/acidanthera/NVMeFix/releases) | 1.0.3 | Fix for NVMe SSDs |
+| [VoodooI2C](https://github.com/alexandred/VoodooI2C/releases) | 2.4.3 | Handle I2C device |
+| [VoodooI2CHID](https://github.com/alexandred/VoodooI2C/releases) | 2.4.3 | Touchpad I2C satellite |
+| [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases) | 2.1.6 | Enable keyboard, alternative trackpad driver |
+| [VirtualSMC + plugins](https://github.com/acidanthera/VirtualSMC/releases) | 1.1.6 | SMC chip emulation |
+| [USBInjectAll](https://github.com/Sniki/OS-X-USB-Inject-All/releases) | 0.7.5 | Inject USB ports |
 
 ## Development: Catalina 10.15.4 support
 
@@ -443,48 +452,12 @@ killall -9 accountsd com.apple.iCloudHelper
 sudo reboot
 ```
 
+## Credits
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- [Acidanthera](https://github.com/acidanthera)
+- [Dortania OC guide](https://dortania.github.io/OpenCore-Install-Guide/)
+- [Rehabman's battery patch guide](https://www.tonymacx86.com/threads/guide-how-to-patch-dsdt-for-working-battery-status.116102/) and [Rehabman's ACPI hotpatching guide](https://www.tonymacx86.com/threads/guide-using-clover-to-hotpatch-acpi.200137/)
+- [CorpNewt's tools](https://github.com/corpnewt)
+- [OpenWireless and itlwm](https://github.com/OpenIntelWireless/itlwm)
+- [Daliansky's OC-little repo](https://github.com/daliansky/OC-little)
+- [Gnodipac886's MatebookXPro-hackintosh repo](https://github.com/gnodipac886/MatebookXPro-hackintosh): this project was *initially* based on the hard work done by Gnodipac886 guy, but *now* it can be considered as a different project due to **many and original very significant personal improvements in ALL the sections**.
