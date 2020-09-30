@@ -7,6 +7,10 @@ At the moment [18 September 2020] there are two ways to drive our native **Intel
 * use **itlwm** and **HeliPort**
 * use **AirportItlwm**
 
+As mentioned in the related project documentation, **Intel Wi-Fi card cannot reach maximum speeds at the moment**: developers are putting efforts to polish drivers and add new features.
+
+
+
 ## AirportItlwm - How to use
 This project is still in **beta phase**:
 * supports all itlwm-supported devices
@@ -121,6 +125,11 @@ and change to:
 9. Reboot
 
 Remember that `AirportItlwm.kext` is still in **beta phase**, but rapidly improving! Use at your own risk!
+
+### Discussion
+- If you have questions about the driver, please discuss them on [https://gitter.im/OpenIntelWireless/itlwm](https://gitter.im/OpenIntelWireless/itlwm)
+- If you want to report bugs, please use [https://github.com/OpenIntelWireless/itlwm/issues](https://github.com/OpenIntelWireless/itlwm/issues)
+
 
 ## OpenIntelWireless - How to use
 This project is based on:
