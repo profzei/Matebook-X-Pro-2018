@@ -1,14 +1,17 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **09-30-2020**
+
+    Support for Big Sur Beta 9 (20A5384c)
+
 - **09-25-2020**
 
-    Update to macOS Catalina 10.15.7
+    Update to macOS Catalina 10.15.7 (19H2)
 
 - **09-23-2020**
 
-    **Update**
-    - Support for Big Sur Beta 8 
+    Support for Big Sur Beta 8 (20A5374i)
 
 - **09-21-2020**
 

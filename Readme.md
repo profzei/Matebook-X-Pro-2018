@@ -6,10 +6,10 @@
 <img src="/Wiki/Images/matebook-x-pro-big-sur.png" alt="Huawei Big Sur 11.0" />
 </div>
 
-#### This repo is currently compatible with macOS Catalina 10.15.7 (19H2??) and OpenCore 0.6.1
+#### This repo is currently compatible with macOS Catalina 10.15.7 (19H2) and OpenCore 0.6.1
 |     macOS Catalina     |       macOS Mojave       |
 |------------------------|--------------------------|
-|     10.15.7  (19H2??)  |       10.14.6  (18G87)   |
+|     10.15.7  (19H2)    |       10.14.6  (18G87)   |
 |     10.15.6  (19G2021) |       10.14.5  (18F132)  |
 |     10.15.5  (19F101)  |       10.14.4  (18E226)  |
 |     10.15.4  (19E287)  |       10.14.3  (18D42)   |
@@ -49,19 +49,22 @@ The compatibility is good for the most part, most of the stuff works like it wou
 
 ## Changelog
 
-#### 2020 - September - 25
+#### 2020 - September - 30
 <details>
 <summary>Show more</summary>
 
 #### Current status:
+- **09-30-2020**
+
+    Support for Big Sur Beta 9 (20A5384c)
+
 - **09-25-2020**
 
-	Update to macOS Catalina 10.15.7
+	Update to macOS Catalina 10.15.7 (19H2)
 
 - **09-23-2020**
 
-    **Update**
-    - Support for Big Sur Beta 8
+    Support for Big Sur Beta 8 (20A5374i)
 
 - **09-21-2020**
 
@@ -285,7 +288,7 @@ The compatibility is good for the most part, most of the stuff works like it wou
 - Alternative bootloader: Clover `r5118` [Official release](https://github.com/CloverHackyColor/CloverBootloader/releases) ~~`r5103` [Dids release](https://github.com/Dids/clover-builder/releases)~~
 
 ### OpenCore
-- Support macOS10.14 ~ macOS11.0 beta 8
+- Support macOS10.14 ~ macOS11.0 beta 9
 - Should **clean NVRAM** after using `Clover`: press `Space` in OpenCore boot page and then select `Reset NVRAM` entry
 - Limited theme with `OpenCanopy`
 
@@ -368,7 +371,7 @@ Refer to: [here](/Graphics/)
 | MacOS | 10.15.7 | |
 | [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.6.1 | Default Bootloader|
 | [Clover](https://github.com/CloverHackyColor/CloverBootloader/releases) | 5118 | Alternative (not more supported) Bootloader|
-| [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.4.7 | Kext patcher |
+| [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.4.7 | Kext/process/framework/library patcher |
 | [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.4.2 | Handle Graphics card |
 | [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.5.2 | Handle/fix onboard audio |
 | [CodecCommander](https://github.com/Sniki/EAPD-Codec-Commander/releases) | 2.7.2 | |
