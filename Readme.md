@@ -49,11 +49,19 @@ The compatibility is good for the most part, most of the stuff works like it wou
 
 ## Changelog
 
-#### 2020 - September - 30
+#### 2020 - October - 04
 <details>
 <summary>Show more</summary>
 
 #### Current status:
+- **10-04-2020**
+
+    **Update**
+    - Update `SSDT-FnKey.aml` for switching Command - Option keys
+
+    **OpenCore**
+    - Update `config.plist` to support OpenCore v. 0.6.2
+
 - **09-30-2020**
 
     - Support for Big Sur Beta 9 (20A5384c)

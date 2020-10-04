@@ -1,6 +1,14 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **10-04-2020**
+
+    **Update**
+    - Update `SSDT-FnKey.aml` for switching Command - Option keys
+
+    **OpenCore**
+    - Update `config.plist` to support OpenCore v. 0.6.2
+
 - **09-30-2020**
 
     - Support for Big Sur Beta 9 (20A5384c)
