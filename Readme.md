@@ -1,5 +1,5 @@
 # Huawei Matebook X Pro (2018 Edition)
-[![Model](https://img.shields.io/badge/Model-MACH-W29-lightgrey)](https://consumer.huawei.com/it/support/laptops/matebook-x-pro/)
+[![Model](https://img.shields.io/badge/MACH-W29-lightgrey)](https://consumer.huawei.com/it/support/laptops/matebook-x-pro/)
 [![BIOS](https://img.shields.io/badge/BIOS-1.28-lightgrey)](https://consumer.huawei.com/it/support/laptops/matebook-x-pro/)
 [![LICENSE](https://img.shields.io/badge/license-MIT-purple)](/LICENSE)
 [![Release](https://img.shields.io/badge/download-release-blue.svg)](https://github.com/profzei/Matebook-X-Pro-2018/releases)
