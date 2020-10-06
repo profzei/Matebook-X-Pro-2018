@@ -335,7 +335,7 @@ Default **SMBIOS** settings of this repo is `MacBookPro15,2` ~~`MacBookPro14,1`~
 <details>  
 <summary><strong>Activate Surround Sound via MIDI</strong></summary>
 
-For a detailed guide see [Wiki section](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Activate-Surround-Sound-via-MIDI-on-internal-speakers) 
+For a detailed guide on how to activate surround sound via MIDI on internal speakers and native audio shortcuts, see [Wiki section](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Activate-Surround-Sound-via-MIDI-on-internal-speakers) 
 </details>
 
 ## Power management: CPUFriend

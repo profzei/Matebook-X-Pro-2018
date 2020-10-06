@@ -1,6 +1,10 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **10-06-2020**
+
+    Add a new section in [Wiki](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Activate-Surround-Sound-via-MIDI-on-internal-speakers) for activating **surround sound** via MIDI on internal speakers and native audio shortcuts
+
 - **10-04-2020**
 
     **Update**
