@@ -7,12 +7,8 @@
 
 ### macOS on Huawei Matebook X Pro 2018
 <p align="center">
-![Huawei Big Sur 11.0](/Wiki/Images/matebook-x-pro-big-sur.png)
+<img src="/Wiki/Images/matebook-x-pro-big-sur.png" alt="Huawei Big Sur 11.0" />
 </p>
-
-xxxx
-
-<img align="center" src="/Wiki/Images/matebook-x-pro-big-sur.png" alt="Huawei Big Sur 11.0" />
 
 #### This repo is currently compatible with macOS Catalina 10.15.7 (19H2) and OpenCore 0.6.1
 |     macOS Catalina     |       macOS Mojave       |
