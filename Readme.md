@@ -24,6 +24,10 @@
 
 #### Preparation for macOS Big Sur 11.0 is [on the way](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Upgrade-to-macOS-Big-Sur)
 
+#### Disclaimer
+Read the entire README before you start.
+I am not responsible for any damages you may cause.  
+Should you find an error or improve anything — whether in the config or in the documentation — please consider opening an issue or pull request.
 
 ### Status: Work in Progress
 
@@ -311,6 +315,27 @@ The compatibility is good for the most part, most of the stuff works like it wou
 
 ## SMBIOS
 - Default SMBIOS settings of this repo is `MacBookPro15,2` ~~`MacBookPro14,1`~~
+
+## Post - Install
+<details>  
+<summary><strong>Enable Apple Services</strong></summary>
+
+Default **SMBIOS** settings of this repo is `MacBookPro15,2` ~~`MacBookPro14,1`~~
+1. Launch `Terminal` app
+2. Copy the following script, paste it into the `Terminal` window, then press `Enter`
+   ```bash
+   git clone https://github.com/corpnewt/GenSMBIOS && cd GenSMBIOS && ./GenSMBIOS.command 
+   ```
+3. Type `2`, then press `Enter`
+4. Drag your `config.plist` inside the `Terminal` window
+5. Type `3`, then press `Enter`
+6. Type `MacBookPro15,2`, then press `Enter`
+</details>
+
+<details>  
+<summary><strong>Activate Surround Sound via MIDI</strong></summary>
+For a detailed guide see [Wiki section](/wiki/Activate-Surround-Sound-via-MIDI-on-internal-speakers) 
+</details>
 
 ## Power management: CPUFriend
 CPU power management can be achieved by using `CPUFriend.kext` while `CPUFriendDataProvider.kext` defines how it should be done. `CPUFriendDataProvider.kext` is generated for a specific CPU and power setting. The one supplied in this repository was made for `i7-8550U` and is optimized for balanced performance.
