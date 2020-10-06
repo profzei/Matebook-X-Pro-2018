@@ -1,9 +1,9 @@
 # Huawei Matebook X Pro (2018 Edition)
 [![Model](https://img.shields.io/badge/Model-MACH_W29-orange)](https://consumer.huawei.com/it/support/laptops/matebook-x-pro/)
-[![BIOS](https://img.shields.io/badge/BIOS-1.28-lightgrey)](https://consumer.huawei.com/it/support/laptops/matebook-x-pro/)
+[![BIOS](https://img.shields.io/badge/BIOS-1.28-red)](https://consumer.huawei.com/it/support/laptops/matebook-x-pro/)
 [![LICENSE](https://img.shields.io/badge/License-MIT-purple)](/LICENSE)
 [![Release](https://img.shields.io/badge/Download-Releases-blue.svg)](https://github.com/profzei/Matebook-X-Pro-2018/releases)
-[![Wiki](https://img.shields.io/badge/Support-Wiki-green.svg)](https://github.comß/profzei/Matebook-X-Pro-2018/wiki)
+[![Wiki](https://img.shields.io/badge/Support-Wiki-green.svg)](https://github.com/profzei/Matebook-X-Pro-2018/wiki)
 
 ### macOS on Huawei Matebook X Pro 2018
 <p align="center">
@@ -334,7 +334,7 @@ Default **SMBIOS** settings of this repo is `MacBookPro15,2` ~~`MacBookPro14,1`~
 
 <details>  
 <summary><strong>Activate Surround Sound via MIDI</strong></summary>
-For a detailed guide see [Wiki section](/wiki/Activate-Surround-Sound-via-MIDI-on-internal-speakers) 
+For a detailed guide see [Wiki section](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Activate-Surround-Sound-via-MIDI-on-internal-speakers) 
 </details>
 
 ## Power management: CPUFriend
