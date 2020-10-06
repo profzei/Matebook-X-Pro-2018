@@ -1,10 +1,12 @@
 # Huawei Matebook X Pro (2018 Edition)
-[![release](https://img.shields.io/badge/download-release-blue.svg)](https://github.com/profzei/Matebook-X-Pro-2018/releases) [![wiki](https://img.shields.io/badge/support-wiki-green.svg)](https://github.com/profzei/Matebook-X-Pro-2018/wiki)
+[![Model](https://img.shields.io/badge/Model-MACH-W29-lightgrey)](https://consumer.huawei.com/it/support/laptops/matebook-x-pro/)
+[![BIOS](https://img.shields.io/badge/BIOS-1.28-lightgrey)](https://consumer.huawei.com/it/support/laptops/matebook-x-pro/)
+[![LICENSE](https://img.shields.io/badge/license-MIT-purple)](/LICENSE)
+[![Release](https://img.shields.io/badge/download-release-blue.svg)](https://github.com/profzei/Matebook-X-Pro-2018/releases)
+[![Wiki](https://img.shields.io/badge/support-wiki-green.svg)](https://github.comß/profzei/Matebook-X-Pro-2018/wiki)
 
 ### macOS on Huawei Matebook X Pro 2018
-<div align="center">
-<img src="/Wiki/Images/matebook-x-pro-big-sur.png" alt="Huawei Big Sur 11.0" />
-</div>
+<img align="center" src="/Wiki/Images/matebook-x-pro-big-sur.png" alt="Huawei Big Sur 11.0" />
 
 #### This repo is currently compatible with macOS Catalina 10.15.7 (19H2) and OpenCore 0.6.1
 |     macOS Catalina     |       macOS Mojave       |
