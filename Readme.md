@@ -6,7 +6,9 @@
 [![Wiki](https://img.shields.io/badge/Support-Wiki-green.svg)](https://github.comß/profzei/Matebook-X-Pro-2018/wiki)
 
 ### macOS on Huawei Matebook X Pro 2018
+<p align="center">
 ![Huawei Big Sur 11.0](/Wiki/Images/matebook-x-pro-big-sur.png)
+</p>
 
 xxxx
 
