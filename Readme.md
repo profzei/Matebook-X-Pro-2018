@@ -57,11 +57,15 @@ The compatibility is good for the most part, most of the stuff works like it wou
 
 ## Changelog
 
-#### 2020 - October - 04
+#### 2020 - October - 06
 <details>
 <summary>Show more</summary>
 
 #### Current status:
+- **10-06-2020**
+
+    Add a new section in [Wiki](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Activate-Surround-Sound-via-MIDI-on-internal-speakers) for activating **surround sound** via MIDI on internal speakers with support for **native audio shortcuts**
+
 - **10-04-2020**
 
     **Update**
@@ -73,7 +77,7 @@ The compatibility is good for the most part, most of the stuff works like it wou
 - **09-30-2020**
 
     - Support for Big Sur Beta 9 (20A5384c)
-    - Added macOS Boot chime support: disabled by default, set `PlayChime` to `True` if you want it. Boot chime was upsampled by @tylernguyen using Audacity: this upsampled file will be used until `AudioDxe.efi` can upsample audio on the fly.
+    - Added macOS Boot chime support: disabled by default, set `PlayChime` and `AudioSupport` to `True` if you want it. Boot chime was upsampled by @tylernguyen using Audacity: this upsampled file will be used until `AudioDxe.efi` can upsample audio on the fly.
 
 - **09-25-2020**
 
