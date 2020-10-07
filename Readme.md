@@ -24,10 +24,11 @@
 
 #### Preparation for macOS Big Sur 11.0 is [on the way](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Upgrade-to-macOS-Big-Sur)
 
-#### Disclaimer
+#### DISCLAIMER
 Read the entire README before you start.
 I am not responsible for any damages you may cause.  
 Should you find an error or improve anything — whether in the config or in the documentation — please consider opening an issue or pull request.
+If you find this bootloader configuration useful, consider **giving** it **a star** to make it more visible.
 
 ### Status: Work in Progress
 
