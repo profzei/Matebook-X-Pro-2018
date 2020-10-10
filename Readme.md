@@ -44,7 +44,6 @@ The compatibility is good for the most part, most of the stuff works like it wou
 
 Quick note: my serial number, MLB and UUID have been removed from the `config.plist`. Please use CorpNewt's [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) to create your own.
 
-
 ## Configuration
 
 | Specifications      | Details                                          |
@@ -59,6 +58,7 @@ Quick note: my serial number, MLB and UUID have been removed from the `config.pl
 | Wireless Card       | Intel Dual Band Wireless-AC 8265/8275            |
 | Bluetooth Card      | Intel Bluetooth 8265/8275                        |
 
+**Device Firmware** Bios version: `1.28`
 
 ## Changelog
 
@@ -105,22 +105,24 @@ See [**Current status**](Changelog.md)
 	- Previously I bought a USB Wi-Fi dongle: [tp-link](https://www.tp-link.com/it/support/download/tl-wn823n/?utm_medium=select-local#Driver) TL-WN823Nv3 with macOS updated driver support [Wireless-USB-Adapter Driver](https://github.com/chris1111/Wireless-USB-Adapter-Clover/releases) 
 </details>
 
-## Device Firmware
-- Bios version: `1.28`
-
 ## Bootloader Firmware
 - Default bootloader: `OpenCore 0.6.1` [Official release](https://github.com/acidanthera/OpenCorePkg/releases)
 - Alternative bootloader: Clover `r5118` [Official release](https://github.com/CloverHackyColor/CloverBootloader/releases) ~~`r5103` [Dids release](https://github.com/Dids/clover-builder/releases)~~
 
-### OpenCore
+<details>
+<summary><strong>OpenCore</strong></summary>
+
 - Support macOS10.14 ~ macOS11.0 beta 9
 - Should **clean NVRAM** after using `Clover`: press `Space` in OpenCore boot page and then select `Reset NVRAM` entry
 - Limited theme with `OpenCanopy`
+<details>
 
-### Clover
+<details>
+<summary><strong>Clover</strong></summary>
+
 - Support macOS10.14 ~ macOS10.15.7, but **not macOS11+**
 - Should **clean NVRAM** after using `OpenCore`: press `Fn + F11` in Clover boot page
-
+<details>
 
 ## Post - Install
 <details>
@@ -198,6 +200,9 @@ About power consumption, [HWMonitor](https://github.com/kzlekk/HWSensors/release
 </details>
 
 ## USB port mapping
+<details>
+<summary><strong>Mapping scheme</strong></summary>
+
 Proper `SSDT-UIAC.aml` and `SSDT-USBX.aml` are used for USB Host Controller (XHCI-Device-ID: `<2f 9d 00 00>`): these files are configured to map only the necessary ports (tested with IOReg) with the correct connector type and prevent it from shutdown issues.
 
 | Port      | Address               | Physical Location                                         | Internal/External |
@@ -208,11 +213,13 @@ Proper `SSDT-UIAC.aml` and `SSDT-USBX.aml` are used for USB Host Controller (XHC
 | HS05      | `00000005`            | Bluetooth USB Port                                        | I                 |
 | HS07      | `00000007`            | Integrated HD Camera module                               | I                 |
 
+</details>
+
 ## Optional
 <details>
-<summary><strong>Monitor temperatures and power consumption with [HWMonitor](https://github.com/kzlekk/HWSensors/releases)</strong></summary>
+<summary><strong>Monitor temperatures and power consumption with HWMonitor</strong></summary>
 
-This app is relatively old and no longer supported, but it gets the job done.
+[**HWMonitor**](https://github.com/kzlekk/HWSensors/releases) is relatively old and no longer supported, but it gets the job done.
 </details>
 
 <details>
