@@ -250,9 +250,11 @@ sudo reboot
 
 </details>
 
+<details>  
+<summary><strong>Graphics section</strong></summary>
 
-#### Graphics section
 Refer to: [here](/Graphics/)
+</details>
 
 ## Update tracker
 
