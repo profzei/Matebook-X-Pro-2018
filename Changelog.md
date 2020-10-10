@@ -1,6 +1,10 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **10-10-2020**
+
+    Add a new section in [Wiki](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Undervolt-via-VoltageShift) for **undervolting** our MBXP: it is possible to use `VoltageShift` from the **EFI folder** instead of disabling SIP. At the moment support only for Catalina!
+
 - **10-06-2020**
 
     Add a new section in [Wiki](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Activate-Surround-Sound-via-MIDI-on-internal-speakers) for activating **surround sound** via MIDI on internal speakers with support for **native audio shortcuts**
