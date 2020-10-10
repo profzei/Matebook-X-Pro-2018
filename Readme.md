@@ -115,14 +115,14 @@ See [**Current status**](Changelog.md)
 - Support macOS10.14 ~ macOS11.0 beta 9
 - Should **clean NVRAM** after using `Clover`: press `Space` in OpenCore boot page and then select `Reset NVRAM` entry
 - Limited theme with `OpenCanopy`
-<details>
+</details>
 
 <details>
 <summary><strong>Clover</strong></summary>
 
 - Support macOS10.14 ~ macOS10.15.7, but **not macOS11+**
 - Should **clean NVRAM** after using `OpenCore`: press `Fn + F11` in Clover boot page
-<details>
+</details>
 
 ## Post - Install
 <details>
