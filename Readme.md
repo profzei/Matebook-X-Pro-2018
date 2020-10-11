@@ -28,6 +28,7 @@
 Read the entire README before you start.
 I am not responsible for any damages you may cause.  
 Should you find an error or improve anything — whether in the config or in the documentation — please consider opening an issue or pull request.
+
 If you find this bootloader configuration useful, consider **giving** it **a star** to make it more visible.
 
 ### Introduction
@@ -39,6 +40,8 @@ If you would like to get started with creating a hackintosh on your MBXP but hav
 With each new release of macOS we need to resolve each new "minor issue" we run into. The installation is not perfect yet since it's a continuos work-in-progress, but I'm glad to say that **I learned a lot** in the meantime. All of the steps I made to get to this point were a result of countless hours of reading along with trial and error. I am by no means an expert so any help to get this project functional is very appreciated!
 
 The compatibility is good for the most part, most of the stuff works like it would on a real MacBook, including camera, audio, touchpad, iCloud services. The experience is pleasant, as the laptop is smooth and responsive under macOS Catalina. Battery life is quite great (from personal experience it lasts from 8 to 10 hours for light works depending on its age with a behaviour very similar to Windows 10). The Intel WiFi card is soldered onto the motherboard, which means it can't be replaced with a Broadcom one, but the Intel card is now functional albeit not operating at full speeds - I am getting 50/10 mbit up/down on a 200/20 connection, which is fine for most use cases. With the latest `itlwm.kext` even Handoff and Continuity features are working, except for AirDrop. 
+
+<img src="/Wiki/Images/ScreenBattery.png" alt="MBXP Battery Menu bar" />
 
 **This repository is for personal purposes**
 
