@@ -1,6 +1,27 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **10-12-2020**
+
+    **Update**
+    - Update `OpenCore` v. 0.6.2
+    - Update [kext] `AppleALC` v. 1.5.3
+    - Update [kext] `CPUFriend` v. 1.2.2
+    - Update [kext] `HibernationFixup` v. 1.3.6
+    - Update [kext] `Lilu` v. 1.4.8
+    - Update [kext] `NVMeFix` v. 1.0.4
+    - Update [kext] `VirtualSMC` and plugins v. 1.1.7
+    - Update [kext] `VoodooI2C` v. 2.5.2
+    - Update [kext] `VoodooI2CHID` v. 2.5.2
+    - Update [kext] `VoodooPS2Controller` v. 2.1.7
+    - Update [kext] `WhateverGreen` v. 1.4.3
+    - Update `SSDT-ADP1.aml` to improve Power Resources for Wake-up
+    - Update `SSDT-TPXX.aml` to fix bus speed (`SSCN` and `FMCN` methods)
+
+    **OpenCore**
+    - Update `config.plist` to support OpenCore v. 0.6.2
+    - Add [kext] `VoltageShift` v. 1.22 for undervolting support
+    
 - **10-10-2020**
 
     Add a new section in [Wiki](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Undervolt-via-VoltageShift) for **undervolting** our MBXP: it is possible to use `VoltageShift` from the **EFI folder** instead of disabling SIP. At the moment support only for Catalina!

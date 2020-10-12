@@ -10,7 +10,7 @@
 <img src="/Wiki/Images/matebook-x-pro-big-sur.png" alt="Huawei Big Sur 11.0" />
 </p>
 
-#### This repo is currently compatible with macOS Catalina 10.15.7 (19H2) and OpenCore 0.6.1
+#### This repo is currently compatible with macOS Catalina 10.15.7 (19H2) and OpenCore 0.6.2
 |        macOS Big Sur        |     macOS Catalina     |       macOS Mojave       |
 |-----------------------------|------------------------|--------------------------|
 |     11.0 Beta 9 (20A5384c)  |     10.15.7  (19H2)    |       10.14.6  (18G87)   |
@@ -65,7 +65,7 @@ Quick note: my serial number, MLB and UUID have been removed from the `config.pl
 
 ## Changelog
 
-#### 2020 - October - 10
+#### 2020 - October - 12
 See [**Current status**](Changelog.md)
 
 ## Status
@@ -109,7 +109,7 @@ See [**Current status**](Changelog.md)
 </details>
 
 ## Bootloader Firmware
-- Default bootloader: `OpenCore 0.6.1` [Official release](https://github.com/acidanthera/OpenCorePkg/releases)
+- Default bootloader: `OpenCore 0.6.2` [Official release](https://github.com/acidanthera/OpenCorePkg/releases)
 - Alternative bootloader: Clover `r5118` [Official release](https://github.com/CloverHackyColor/CloverBootloader/releases) ~~`r5103` [Dids release](https://github.com/Dids/clover-builder/releases)~~
 
 <details>
@@ -264,23 +264,23 @@ Refer to: [here](/Graphics/)
 | Item | Version | Remark |
 | :--- | :--- | :--- |
 | MacOS | 10.15.7 | |
-| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.6.1 | Default Bootloader|
+| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.6.2 | Default Bootloader|
 | [Clover](https://github.com/CloverHackyColor/CloverBootloader/releases) | 5118 | Alternative (not more supported) Bootloader|
-| [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.4.7 | Kext/process/framework/library patcher |
-| [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.4.2 | Handle Graphics card |
-| [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.5.2 | Handle/fix onboard audio |
+| [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.4.8 | Kext/process/framework/library patcher |
+| [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.4.3 | Handle Graphics card |
+| [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.5.3 | Handle/fix onboard audio |
 | [CodecCommander](https://github.com/Sniki/EAPD-Codec-Commander/releases) | 2.7.2 | |
-| [CPUFriend](https://github.com/acidanthera/CPUFriend/releases) | 1.2.1 | Power management |
-| [HibernationFixup](https://github.com/acidanthera/HibernationFixup/releases) | 1.3.5 | |
+| [CPUFriend](https://github.com/acidanthera/CPUFriend/releases) | 1.2.2 | Power management |
+| [HibernationFixup](https://github.com/acidanthera/HibernationFixup/releases) | 1.3.6 | |
 | [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases) | 1.1.2 | Handle Bluetooth |
 | [itlwm](https://github.com/OpenIntelWireless/itlwm/releases) | 1.1.0 | Handle WiFi with HeliPort app |
 | NullEthernet | 1.0.6 | |
 | [NoTouchID](https://github.com/al3xtjames/NoTouchID/releases) | 1.0.4 | Disable TouchID|
-| [NVMeFix](https://github.com/acidanthera/NVMeFix/releases) | 1.0.3 | Fix for NVMe SSDs |
-| [VoodooI2C](https://github.com/alexandred/VoodooI2C/releases) | 2.4.3 | Handle I2C device |
-| [VoodooI2CHID](https://github.com/alexandred/VoodooI2C/releases) | 2.4.3 | Touchpad I2C satellite |
-| [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases) | 2.1.6 | Enable keyboard, alternative trackpad driver |
-| [VirtualSMC + plugins](https://github.com/acidanthera/VirtualSMC/releases) | 1.1.6 | SMC chip emulation |
+| [NVMeFix](https://github.com/acidanthera/NVMeFix/releases) | 1.0.4 | Fix for NVMe SSDs |
+| [VoodooI2C](https://github.com/alexandred/VoodooI2C/releases) | 2.5.2 | Handle I2C device |
+| [VoodooI2CHID](https://github.com/alexandred/VoodooI2C/releases) | 2.5.2 | Touchpad I2C satellite |
+| [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases) | 2.1.7 | Enable keyboard, alternative trackpad driver |
+| [VirtualSMC + plugins](https://github.com/acidanthera/VirtualSMC/releases) | 1.1.7 | SMC chip emulation |
 | [USBInjectAll](https://github.com/Sniki/OS-X-USB-Inject-All/releases) | 0.7.5 | Inject USB ports |
 
 ## Development
