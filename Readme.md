@@ -259,6 +259,21 @@ sudo reboot
 Refer to: [here](/Graphics/)
 </details>
 
+<details>  
+<summary><strong>Dual Booting: fix Windows time</strong></summary>
+
+Windows uses local time by default while macOS uses universal time. You can switch Windows 
+to use universal time.
+Open up a command prompt in Windows as an administrator and copy and paste this in:
+```
+reg add
+"HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation" /v RealTimeIsUniversal /d1 /t REG_QWORD /f
+```
+That will make Windows use universal time instead of local time.
+Then update your clock via the built-in internet time setting to update the time.
+
+</details>
+
 ## Update tracker
 
 | Item | Version | Remark |
