@@ -1,6 +1,11 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **10-18-2020**
+
+    - Add a new repository for BIOS
+    - Support for Big Sur Beta 10 (20A5395g): wip for renewed ACPI support...
+
 - **10-12-2020**
 
     **Update**

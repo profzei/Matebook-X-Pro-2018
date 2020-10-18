@@ -13,7 +13,7 @@
 #### This repo is currently compatible with macOS Catalina 10.15.7 (19H2) and OpenCore 0.6.2
 |        macOS Big Sur        |     macOS Catalina     |       macOS Mojave       |
 |-----------------------------|------------------------|--------------------------|
-|     11.0 Beta 9 (20A5384c)  |     10.15.7  (19H2)    |       10.14.6  (18G87)   |
+|     11.0 Beta 10 (20A5395g) |     10.15.7  (19H2)    |       10.14.6  (18G87)   |
 |                             |     10.15.6  (19G2021) |       10.14.5  (18F132)  |
 |                             |     10.15.5  (19F101)  |       10.14.4  (18E226)  |
 |                             |     10.15.4  (19E287)  |       10.14.3  (18D42)   |
@@ -65,7 +65,7 @@ Quick note: my serial number, MLB and UUID have been removed from the `config.pl
 
 ## Changelog
 
-#### 2020 - October - 12
+#### 2020 - October - 18
 See [**Current status**](Changelog.md)
 
 ## Status
