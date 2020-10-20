@@ -46,7 +46,7 @@ English
 - **09-30-2020**
 
     - Support for Big Sur Beta 9 (20A5384c)
-    - Added macOS Boot chime support: disabled by default, set `PlayChime` and `AudioSupport` to `True` if you want it. Also add AudioDxe.efi to >Drivers inside config.plist. Boot chime was upsampled by @tylernguyen using Audacity: this upsampled file will be used until `AudioDxe.efi` can upsample audio on the fly.
+    - Added macOS Boot chime support: disabled by default, set `PlayChime` and `AudioSupport` to `True` if you want it. Also, be sure to add AudioDxe.efi to >Drivers inside config.plist to enable sound support on bootpicker. Boot chime was upsampled by @tylernguyen using Audacity: this upsampled file will be used until `AudioDxe.efi` can upsample audio on the fly.
 
 - **09-25-2020**
 
