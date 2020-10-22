@@ -63,6 +63,14 @@ Quick note: my serial number, MLB and UUID have been removed from the `config.pl
 
 **Device Firmware** Bios version: `1.28`
 
+<details>
+<summary><strong>Benchmarks</strong></summary>
+
+| ![](Wiki/Images/MacBookBench01.png)  | ![](Wiki/Images/MacBookBench02.png) |
+|:---:|:---:|
+| System configuration | **GPU** - **OpenCL** Single-Core  |
+</details>
+
 ## Changelog
 
 #### 2020 - October - 18
