@@ -68,7 +68,7 @@ Quick note: my serial number, MLB and UUID have been removed from the `config.pl
 
 | ![](Wiki/Images/MacBookBench01.png)  | ![](Wiki/Images/MacBookBench02.png) |
 |:---:|:---:|
-| System configuration | **GPU** - **OpenCL** Single-Core  |
+| System configuration | **GPU** - **OpenCL** Single-Core 4618 |
 </details>
 
 ## Changelog
