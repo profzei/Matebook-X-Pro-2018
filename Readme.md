@@ -68,12 +68,12 @@ Quick note: my serial number, MLB and UUID have been removed from the `config.pl
 
 | ![](Wiki/Images/MacBookBench01.png)  | ![](Wiki/Images/MacBookBench02.png) |
 |:---:|:---:|
-| System configuration | **GPU** - **OpenCL** Single-Core 4618 |
+| System configuration | **GPU** - **OpenCL** Single-Core **4618** |
 </details>
 
 ## Changelog
 
-#### 2020 - October - 18
+#### 2020 - October - 23
 See [**Current status**](Changelog.md)
 
 ## Status
@@ -123,7 +123,7 @@ See [**Current status**](Changelog.md)
 <details>
 <summary><strong>OpenCore</strong></summary>
 
-- Support macOS10.14 ~ macOS11.0 beta 9
+- Support macOS 10.14 ~ macOS 11.0 beta 10
 - Should **clean NVRAM** after using `Clover`: press `Space` in OpenCore boot page and then select `Reset NVRAM` entry
 - Limited theme with `OpenCanopy`
 </details>
@@ -131,7 +131,7 @@ See [**Current status**](Changelog.md)
 <details>
 <summary><strong>Clover</strong></summary>
 
-- Support macOS10.14 ~ macOS10.15.7, but **not macOS11+**
+- Support macOS 10.14 ~ macOS 10.15.7, but **not macOS 11+**
 - Should **clean NVRAM** after using `OpenCore`: press `Fn + F11` in Clover boot page
 </details>
 

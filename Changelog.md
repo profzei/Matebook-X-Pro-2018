@@ -1,6 +1,10 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **10-23-2020**
+
+    Update [`Network`](https://github.com/profzei/Matebook-X-Pro-2018/tree/master/Network) section with new instructions for modifying `HeliPort menubar icon` for **macOS Big Sur** [credit **@R-Teer**]
+
 - **10-18-2020**
 
     - Add a new repository for BIOS
@@ -64,7 +68,7 @@ English
 - **09-20-2020**
 
     **Update**
-    - Update `Network` section with new instructions for `AirportItlwm` using `OC Force` (i.e. forcing injection of `IO80211Family.kext`)
+    - Update [`Network`](https://github.com/profzei/Matebook-X-Pro-2018/tree/master/Network) section with new instructions for `AirportItlwm` using `OC Force` (i.e. forcing injection of `IO80211Family.kext`)
 
     **OpenCore**
     - Update [config] `Force` section with `IO80211Family.kext` code to support proper loading for `AirportItlwm`
@@ -78,7 +82,7 @@ English
 
 	**Update**
 	- Update [kext] `itlwm` v. 1.1.0 stable
-	- Update `Network` section for supporting `AirportItlwm` beta
+	- Update [`Network`](https://github.com/profzei/Matebook-X-Pro-2018/tree/master/Network) section for supporting `AirportItlwm` beta
 
 	**OpenCore**
 	- Update `config.plist` to support `AirportItlwm` beta
@@ -154,7 +158,7 @@ English
 
 - **08-07-2020**
 	- Update support for `Intel Dual-Band Wireless-AC 8265/8275` card [credit to yichebb and AshleyMiller9696]:
-        - in section [Network](/Network) instructions and support for the **OpenIntelWireless** project, i.e. `itlwm.kext` and `HeliPort.app`
+        - in section [`Network`](https://github.com/profzei/Matebook-X-Pro-2018/tree/master/Network) instructions and support for the **OpenIntelWireless** project, i.e. `itlwm.kext` and `HeliPort.app`
         - since `itlwm.kext` and `HeliPort.app` are in beta phase, [**pipeline**](https://github.com/1hbb/OpenIntelWireless-Factory/releases) can be used for compiling `itlwm.kext` and `HeliPort.app` with latest changes every 8 hours!
         
     **OpenCore**
@@ -229,8 +233,8 @@ English
 
 - **05-31-2020**
     - Add initial support for `Intel Dual-Band Wireless-AC 8265/8275` card:
-        - in (new) section [Network](/Network) instructions and support for `AppleIntelWiFi.kext`
-        - in (new) section [Network](/Network) instructions and support for a totally automated loader script `IntelKextAutoLoader`
+        - in (new) section [`Network`](https://github.com/profzei/Matebook-X-Pro-2018/tree/master/Network) instructions and support for `AppleIntelWiFi.kext`
+        - in (new) section [`Network`](https://github.com/profzei/Matebook-X-Pro-2018/tree/master/Network) instructions and support for a totally automated loader script `IntelKextAutoLoader`
     - Add `ALCPlugFix` for a better support to the switch between the headset and the built-in input [ComboJack & Realtek ALC256](https://github.com/profzei/ALCPlugFix)
 
 - **05-26-2020**
