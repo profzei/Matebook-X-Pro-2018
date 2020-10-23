@@ -179,6 +179,13 @@ sudo spctl --master-disable
 
 [**Pipeline**](https://github.com/1hbb/OpenIntelWireless-Factory/releases) has been created for compiling `itlwm.kext` and `HeliPort.app` with latest changes every 8 hours!
 
+8. [Optional] You can modify **HeliPort's menubar icon** for **macOS Big Sur**:
+	- Quit HeliPort app by holding `Alt` key + clicking `HeliPort menubar icon` -> then choose `Quit HeliPort`
+	- In your `Applications` folder, locate `HeliPort` app
+	- After selecting `HeliPort` app, right click on it and then choose `Show Package Contents`
+	- Under `Contents -> Resources` replace `Assets.car` with the file available [https://github.com/R-Teer/Heliport-Menubar-Icon-Big-Sur](https://github.com/R-Teer/Heliport-Menubar-Icon-Big-Sur/blob/main/Assets.car) [credit **@R-Teer**]
+	- Restart `HeliPort` app and enjoy the revised look!
+
 ### Discussion
 - If you have questions about the driver, please discuss them on [https://gitter.im/OpenIntelWireless/itlwm](https://gitter.im/OpenIntelWireless/itlwm)
 - If you want to report bugs, please use [https://github.com/OpenIntelWireless/itlwm/issues](https://github.com/OpenIntelWireless/itlwm/issues)
