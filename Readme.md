@@ -13,7 +13,7 @@
 #### This repo is currently compatible with macOS Catalina 10.15.7 (19H2) and OpenCore 0.6.2
 |        macOS Big Sur        |     macOS Catalina     |       macOS Mojave       |
 |-----------------------------|------------------------|--------------------------|
-|     11.0 Beta 10 (20A5395g) |     10.15.7  (19H2)    |       10.14.6  (18G87)   |
+|     11.0.1 Beta (20B5012d)  |     10.15.7  (19H2)    |       10.14.6  (18G87)   |
 |                             |     10.15.6  (19G2021) |       10.14.5  (18F132)  |
 |                             |     10.15.5  (19F101)  |       10.14.4  (18E226)  |
 |                             |     10.15.4  (19E287)  |       10.14.3  (18D42)   |
@@ -73,7 +73,7 @@ Quick note: my serial number, MLB and UUID have been removed from the `config.pl
 
 ## Changelog
 
-#### 2020 - October - 23
+#### 2020 - October - 28
 See [**Current status**](Changelog.md)
 
 ## Status
@@ -123,7 +123,7 @@ See [**Current status**](Changelog.md)
 <details>
 <summary><strong>OpenCore</strong></summary>
 
-- Support macOS 10.14 ~ macOS 11.0 beta 10
+- Support macOS 10.14 ~ macOS 11.0.1 beta
 - Should **clean NVRAM** after using `Clover`: press `Space` in OpenCore boot page and then select `Reset NVRAM` entry
 - Limited theme with `OpenCanopy`
 </details>
@@ -303,7 +303,7 @@ Then update your clock via the built-in internet time setting to update the time
 | [VoodooI2CHID](https://github.com/alexandred/VoodooI2C/releases) | 2.5.2 | Touchpad I2C satellite |
 | [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases) | 2.1.7 | Enable keyboard, alternative trackpad driver |
 | [VirtualSMC + plugins](https://github.com/acidanthera/VirtualSMC/releases) | 1.1.7 | SMC chip emulation |
-| [USBInjectAll](https://github.com/Sniki/OS-X-USB-Inject-All/releases) | 0.7.5 | Inject USB ports |
+| [USBInjectAll](https://github.com/daliansky/OS-X-USB-Inject-All/releases) | 0.7.6 | Inject USB ports |
 
 ## Development
 <details>  

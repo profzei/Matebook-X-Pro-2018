@@ -1,8 +1,14 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **10-28-2020**
+    Support for Big Sur Beta 11.0.1 (20B5012d): wip for renewed ACPI support...
+
 - **10-23-2020**
 
+    **Update**
+    - Update [kext] `USBInjectAll` v. 0.7.6
+    
     Update [`Network`](https://github.com/profzei/Matebook-X-Pro-2018/tree/master/Network) section with new instructions for modifying `HeliPort menubar icon` for **macOS Big Sur** [credit **@R-Teer**]
 
 - **10-18-2020**
