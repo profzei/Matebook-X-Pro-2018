@@ -21,6 +21,7 @@ English
     	- enabled forced loading for `IO80211Family`
 
 - **10-28-2020**
+
     Support for Big Sur Beta 11.0.1 (20B5012d): wip for renewed ACPI support...
 
 - **10-23-2020**
