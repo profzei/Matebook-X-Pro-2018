@@ -1,6 +1,25 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **11-01-2020**
+
+	**Update**
+	- Update `SSDT-BATT-HUAWEI.aml` to improve memory management for Embedded Controller (`EC0_`)
+	- Update [kext] `IntelBluetoothFirmware` optimizing its size from 15-16 MB to 644 KB
+	- Remove [kext] `itlwm` using `AirportItlwm` as default option
+
+	**OpenCore**
+    - Add [kext] `AirportItlwm` v. 1.2.0-alpha ([4f88bea](https://github.com/OpenIntelWireless/itlwm/commit/4f88beaaef2ff82481476361c8d2da00ca50046c)) reducing its size from 10-11 MB to 2 MB
+    - Add [config] 4 binary patch in ACPI section to pair `SSDT-BATT-HUAWEI.aml`:
+        - `EC0.SMBR to EC0.XMBR`
+        - `EC0.SMBW to EC0.XMBW`
+        - `EC0.SMR1 to EC0.XMR1`
+        - `EC0.SMW1 to EC0.XMW1`
+    - Update [config] quirks for enabling proper support for `AirportItlwm` in `config.plist` for macOS Catalina (for more details see [`Network`](https://github.com/profzei/Matebook-X-Pro-2018/tree/master/Network) section):
+    	- `DmgLoading` set to `Signed`
+    	- `SecureBootModel` set to `Default`
+    	- enabled forced loading for `IO80211Family`
+
 - **10-28-2020**
     Support for Big Sur Beta 11.0.1 (20B5012d): wip for renewed ACPI support...
 
