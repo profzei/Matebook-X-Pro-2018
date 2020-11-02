@@ -371,4 +371,5 @@ Then update your clock via the built-in internet time setting to update the time
 - [CorpNewt's tools](https://github.com/corpnewt)
 - [OpenWireless and itlwm](https://github.com/OpenIntelWireless/itlwm)
 - [Daliansky's OC-little repo](https://github.com/daliansky/OC-little)
+- [Daliansky's Xiaomi Pro Hackintosh](https://github.com/daliansky/XiaoMi-Pro-Hackintosh)
 - [Gnodipac886's MatebookXPro-hackintosh repo](https://github.com/gnodipac886/MatebookXPro-hackintosh): this project was *initially* based on the hard work done by Gnodipac886 guy, but *now* it can be considered as a different project due to **many and original very significant personal improvements in ALL the sections**.
