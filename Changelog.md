@@ -1,6 +1,36 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **11-01-2020**
+
+	**Update**
+	- Update `SSDT-BATT-HUAWEI.aml` to improve memory management for Embedded Controller (`EC0_`)
+	- Update [kext] `IntelBluetoothFirmware` optimizing its size from 15-16 MB to 644 KB
+	- Remove [kext] `itlwm` using `AirportItlwm` as default option
+
+	**OpenCore**
+    - Add [kext] `AirportItlwm` v. 1.2.0-alpha ([4f88bea](https://github.com/OpenIntelWireless/itlwm/commit/4f88beaaef2ff82481476361c8d2da00ca50046c)) reducing its size from 10-11 MB to 2 MB
+    - Add [config] 4 binary patch in ACPI section to pair `SSDT-BATT-HUAWEI.aml`:
+        - `EC0.SMBR to EC0.XMBR`
+        - `EC0.SMBW to EC0.XMBW`
+        - `EC0.SMR1 to EC0.XMR1`
+        - `EC0.SMW1 to EC0.XMW1`
+    - Update [config] quirks for enabling proper support for `AirportItlwm` in `config.plist` for macOS Catalina (for more details see [`Network`](https://github.com/profzei/Matebook-X-Pro-2018/tree/master/Network) section):
+    	- `DmgLoading` set to `Signed`
+    	- `SecureBootModel` set to `Default`
+    	- enabled forced loading for `IO80211Family`
+
+- **10-28-2020**
+
+    Support for Big Sur Beta 11.0.1 (20B5012d): wip for renewed ACPI support...
+
+- **10-23-2020**
+
+    **Update**
+    - Update [kext] `USBInjectAll` v. 0.7.6
+    
+    Update [`Network`](https://github.com/profzei/Matebook-X-Pro-2018/tree/master/Network) section with new instructions for modifying `HeliPort menubar icon` for **macOS Big Sur** [credit **@R-Teer**]
+
 - **10-18-2020**
 
     - Add a new repository for BIOS
@@ -46,7 +76,7 @@ English
 - **09-30-2020**
 
     - Support for Big Sur Beta 9 (20A5384c)
-    - Added macOS Boot chime support: disabled by default, set `PlayChime` and `AudioSupport` to `True` if you want it. Boot chime was upsampled by @tylernguyen using Audacity: this upsampled file will be used until `AudioDxe.efi` can upsample audio on the fly.
+    - Added macOS Boot chime support: disabled by default, set `PlayChime` and `AudioSupport` to `True` if you want it. Also, be sure to add `AudioDxe.efi` to `Drivers` section inside `config.plist` to enable sound support on bootpicker. Boot chime was upsampled by @tylernguyen using Audacity: this upsampled file will be used until `AudioDxe.efi` can upsample audio on the fly.
 
 - **09-25-2020**
 
@@ -64,7 +94,7 @@ English
 - **09-20-2020**
 
     **Update**
-    - Update `Network` section with new instructions for `AirportItlwm` using `OC Force` (i.e. forcing injection of `IO80211Family.kext`)
+    - Update [`Network`](https://github.com/profzei/Matebook-X-Pro-2018/tree/master/Network) section with new instructions for `AirportItlwm` using `OC Force` (i.e. forcing injection of `IO80211Family.kext`)
 
     **OpenCore**
     - Update [config] `Force` section with `IO80211Family.kext` code to support proper loading for `AirportItlwm`
@@ -78,7 +108,7 @@ English
 
 	**Update**
 	- Update [kext] `itlwm` v. 1.1.0 stable
-	- Update `Network` section for supporting `AirportItlwm` beta
+	- Update [`Network`](https://github.com/profzei/Matebook-X-Pro-2018/tree/master/Network) section for supporting `AirportItlwm` beta
 
 	**OpenCore**
 	- Update `config.plist` to support `AirportItlwm` beta
@@ -154,7 +184,7 @@ English
 
 - **08-07-2020**
 	- Update support for `Intel Dual-Band Wireless-AC 8265/8275` card [credit to yichebb and AshleyMiller9696]:
-        - in section [Network](/Network) instructions and support for the **OpenIntelWireless** project, i.e. `itlwm.kext` and `HeliPort.app`
+        - in section [`Network`](https://github.com/profzei/Matebook-X-Pro-2018/tree/master/Network) instructions and support for the **OpenIntelWireless** project, i.e. `itlwm.kext` and `HeliPort.app`
         - since `itlwm.kext` and `HeliPort.app` are in beta phase, [**pipeline**](https://github.com/1hbb/OpenIntelWireless-Factory/releases) can be used for compiling `itlwm.kext` and `HeliPort.app` with latest changes every 8 hours!
         
     **OpenCore**
@@ -229,8 +259,8 @@ English
 
 - **05-31-2020**
     - Add initial support for `Intel Dual-Band Wireless-AC 8265/8275` card:
-        - in (new) section [Network](/Network) instructions and support for `AppleIntelWiFi.kext`
-        - in (new) section [Network](/Network) instructions and support for a totally automated loader script `IntelKextAutoLoader`
+        - in (new) section [`Network`](https://github.com/profzei/Matebook-X-Pro-2018/tree/master/Network) instructions and support for `AppleIntelWiFi.kext`
+        - in (new) section [`Network`](https://github.com/profzei/Matebook-X-Pro-2018/tree/master/Network) instructions and support for a totally automated loader script `IntelKextAutoLoader`
     - Add `ALCPlugFix` for a better support to the switch between the headset and the built-in input [ComboJack & Realtek ALC256](https://github.com/profzei/ALCPlugFix)
 
 - **05-26-2020**
