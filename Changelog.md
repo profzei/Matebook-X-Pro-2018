@@ -10,7 +10,7 @@ English
 		- optimized image file sizes for some resources
     - This can be enabled by configuring in `config.plist`:
     	- add `Drivers -> OpenCanopy.efi` entry
-		- `Misc -> Boot -> PickerMode: External`
+		- `Misc -> Boot -> PickerMode: External` (previous value: `Builtin`)
 		- `Misc -> Boot -> PickerAttributes : 1`
 		- [Optional] you can set `Misc -> Boot -> HideAuxiliary: true` also: auxiliary options can be viewed then using spacebar during picker screen
 
