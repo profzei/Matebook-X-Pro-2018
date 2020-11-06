@@ -30,7 +30,7 @@ Bootloader Compatibility:
 
 1. First, make sure your macOS version >= 10.15 and your OpenCore bootloader version >= 0.6.1
 2. [If applicable] Remove `itlwm` and `HeliPort`
-3. Turn on `Show Wi-Fi status` in menu bar in `System Preferences` -> `Network` -> `Wi-Fi`
+3. Turn on `Show Wi-Fi status` in menu bar in `System Preferences` -> `Network` -> `Wi-Fi` (In MacOS 11<=* `System Preferences` -> `Dock & Menu bar` -> `Wi-Fi`)
 4. Download the latest release at the following link:
 	- [https://github.com/OpenIntelWireless/itlwm/releases](https://github.com/OpenIntelWireless/itlwm/releases)
 5. Unzip the pack you downloaded and copy `AirportItlwm.kext` to `EFI/OC/Kexts/` folder
@@ -140,6 +140,7 @@ We will use itlwm and HeliPort to drive our Intel Wireless Card.
 	- [https://github.com/OpenIntelWireless/itlwm/releases](https://github.com/OpenIntelWireless/itlwm/releases)
 	- [https://github.com/OpenIntelWireless/HeliPort/releases](https://github.com/OpenIntelWireless/HeliPort/releases)
 2. Turn off `Show Wi-Fi status` in menu bar in `System Preferences` -> `Network` -> `Wi-Fi`
+   (In MacOS 11<=* `System Preferences` -> `Dock & Menu bar` -> `Wi-Fi`)
 3. Unzip all the packs you downloaded and copy `itlwm.kext` to `/EFI/OC/Kexts/` or `/EFI/CLOVER/kexts/Other/` folder
 4. If you are using **OpenCore**, you need to change your config.plist. Open `/EFI/OC/config.plist` and find the following code:
 ```
