@@ -2055,7 +2055,7 @@
 			<key>AuthRestart</key>
 			<false/>
 			<key>BootProtect</key>
-			<string>None</string>
+			<string>Bootstrap</string>
 			<key>DmgLoading</key>
 			<string>Any</string>
 			<key>EnablePassword</key>
