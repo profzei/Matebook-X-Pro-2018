@@ -1,6 +1,18 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **11-06-2020**
+	
+	**Update**
+	A cleaner version of OpenCanopy with custom graphics has been provided by **@R-Teer**:
+		- better icon spacing and readability
+		- added new T2 chip boot chime with better bass and key change from legacy chime
+		- optimized image file sizes for some resources
+	This can be enabled by configuring in `config.plist`:
+		- `Misc -> Boot -> PickerMode: External`
+		- `Misc -> Boot -> PickerAttributes : 1`
+		- if you like you can hide `auxiliary` also which can be viewed then using spacebar during picker screen
+
 - **11-01-2020**
 
 	**Update**
