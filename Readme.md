@@ -10,10 +10,10 @@
 <img src="/Wiki/Images/matebook-x-pro-big-sur.png" alt="Huawei Big Sur 11.0" />
 </p>
 
-#### This repo is currently compatible with macOS Catalina 10.15.7 (19H2) and OpenCore 0.6.2
+#### This repo is currently compatible with macOS Catalina 10.15.7 Supplemental Update (19H15) and OpenCore 0.6.2
 |        macOS Big Sur        |     macOS Catalina     |       macOS Mojave       |
 |-----------------------------|------------------------|--------------------------|
-|     11.0.1 Beta (20B5012d)  |     10.15.7  (19H2)    |       10.14.6  (18G87)   |
+|     11.0.1 Beta (20B5012d)  |     10.15.7  (19H15)   |       10.14.6  (18G87)   |
 |                             |     10.15.6  (19G2021) |       10.14.5  (18F132)  |
 |                             |     10.15.5  (19F101)  |       10.14.4  (18E226)  |
 |                             |     10.15.4  (19E287)  |       10.14.3  (18D42)   |
