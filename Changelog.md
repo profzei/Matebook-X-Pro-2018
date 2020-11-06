@@ -9,6 +9,7 @@ English
 		- added new T2 chip boot chime with better bass and key change from legacy chime
 		- optimized image file sizes for some resources
     - This can be enabled by configuring in `config.plist`:
+        - `Security -> BootProtect -> Bootstrap` (previous value: `None`)
     	- add `Drivers -> OpenCanopy.efi` entry
 		- `Misc -> Boot -> PickerMode: External` (previous value: `Builtin`)
 		- `Misc -> Boot -> PickerAttributes : 1`
