@@ -14,6 +14,7 @@ English
 		- if you like you can hide `auxiliary` also which can be viewed then using spacebar during picker screen
 
 	Support for macOS Catalina 10.15.7 Supplemental Update (19H15)
+	Support for Big Sur Beta 11.0.1 Release Candidate (20B5022a): wip for renewed ACPI support...
 
 - **11-01-2020**
 
