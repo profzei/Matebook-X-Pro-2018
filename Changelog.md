@@ -9,9 +9,10 @@ English
 		- added new T2 chip boot chime with better bass and key change from legacy chime
 		- optimized image file sizes for some resources
     - This can be enabled by configuring in `config.plist`:
+    	- add `Drivers -> OpenCanopy.efi` entry
 		- `Misc -> Boot -> PickerMode: External`
 		- `Misc -> Boot -> PickerAttributes : 1`
-		- if you like you can hide `auxiliary` also which can be viewed then using spacebar during picker screen
+		- [Optional] you can set `Misc -> Boot -> HideAuxiliary: true` also: auxiliary options can be viewed then using spacebar during picker screen
 
 	Support for macOS Catalina 10.15.7 Supplemental Update (19H15)
 	
