@@ -1,6 +1,20 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **11-11-2020**
+	
+	**Update**
+	- Update [kext] `AppleALC` v. 1.5.4
+	- Update [kext] `HibernationFixup` v. 1.3.7
+	- Update [kext] `Lilu` v. 1.4.9
+	- Update [kext] `VirtualSMC` and plugins v. 1.1.8
+	- Update [kext] `VoodooPS2Controller` v. 2.1.8
+	- Update [kext] `WhateverGreen` v. 1.4.4
+
+- **11-10-2020**
+
+	Fixed `HardDrive.icns` icon in custom graphics for OpenCanopy GUI [credit to **@R-Teer**]
+
 - **11-06-2020**
 	
 	**Update**
