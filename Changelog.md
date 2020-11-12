@@ -1,6 +1,22 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **11-12-2020**
+
+    **Update**
+    - Update `OpenCore` v. 0.6.3
+
+    **OpenCore**
+    - Update `config.plist` to support OpenCore v. 0.6.3:
+        - `Kernel -> Quirks -> ForceSecureBootScheme` set to `false`
+        - `Kernel -> Quirks -> LegacyCommpage` set to `false`
+        - `PlatformInfo -> CustomMemory` set to `false`
+        - `UEFI -> Output -> ForceResolution` set to `false`
+    - [config] Disable `IntelBluetoothInjector` entry in `Kernel -> Add` section for macOS 11+ to resume boot speed
+    - [config] Remove `itlwm` entry in `Kernel -> Add` section in favour of `AirportItlwm` to support native Intel(R) Wi-Fi card as default option
+    - [config] Disable `NoTouchID` entry in `Kernel -> Add` section: this kext seems not needed anymore for avoiding lag before password verification on Catalina 10.15.7 & Big Sur 11.0.1 
+    - [config] Remove `AAPL, slot-name` info in `DeviceProperties -> Add` section to support HEVC on macOS 11+
+
 - **11-11-2020**
 	
 	**Update**
