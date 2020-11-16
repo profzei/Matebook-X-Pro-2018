@@ -40,7 +40,7 @@ English
     Therefore original `SSDT-7-KBL-ULT.aml` has been dropped from loading process (its entry added in `config.plist` in `ACPI -> Delete` section) in favour of its modified version `SSDT-7KBL.aml`
 
     **OpenCore**
-    - Add [config] `PCI0._INI,0,S to PCI0.ZINI,0,S` binary patch
+    - Add [config] `PCI0._INI,0,S to PCI0.XINI,0,S` binary patch
     - Add [config] `HPET._CRS to HPET.XCRS` standard binary patch
     - Add [config] `RTC IRQ 8` standard binary patch
     - Add [config] `TIMR IRQ 0` standard binary patch
