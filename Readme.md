@@ -295,7 +295,7 @@ Then update your clock via the built-in internet time setting to update the time
 | [CPUFriend](https://github.com/acidanthera/CPUFriend/releases) | 1.2.2 | Power management |
 | [HibernationFixup](https://github.com/acidanthera/HibernationFixup/releases) | 1.3.7 | |
 | [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases) | 1.1.2 | Handle Bluetooth |
-| [itlwm](https://github.com/OpenIntelWireless/itlwm/releases) | 1.1.0 | Handle WiFi with HeliPort app |
+| [AirportItlwm](https://github.com/OpenIntelWireless/itlwm/releases) | 1.2.0 beta| Handle native Wi-Fi card |
 | NullEthernet | 1.0.6 | |
 | [NoTouchID](https://github.com/al3xtjames/NoTouchID/releases) | 1.0.4 | Disable TouchID|
 | [NVMeFix](https://github.com/acidanthera/NVMeFix/releases) | 1.0.4 | Fix for NVMe SSDs |
