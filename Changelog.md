@@ -30,10 +30,12 @@ English
     - Remove `SSDT-TPXX.aml`
     	
     Analyzing OEM SSDTs, I found 3 critical errors on the ACPI setup under `SSDT-7-KBL-ULT.aml` (sensor hub). I report here in the following for my memory: there are 3 big screwups on methods (`\_SB.SGOV`) that require two arguments, being passed as a method (`\_SB.GGOV`) with one argument and then a "hanging" argument which then causes compilation errors.
+    
     Correcting instances like:
     - `\_SB.SGOV (0x02010016, OLDV)`
     - `\_SB.SGOV (0x02010014, DFUE)`
     - `\_SB.SGOV (0x02010014, OLDV)`
+
     should let the board to handle power correctly.
     Therefore original `SSDT-7-KBL-ULT.aml` has been dropped from loading process (its entry added in `config.plist` in `ACPI -> Delete` section) in favour of its modified version `SSDT-7KBL.aml`
 
