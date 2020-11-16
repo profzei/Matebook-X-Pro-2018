@@ -4,35 +4,36 @@ English
 - **11-16-2020**
 
     **Update**
+
     A lot of work has been developed under the hood to try to mimic the behavior of a real MacbookPro: it seems to me that the system is stable (all checks atm have been performed on Catalina 10.15.7 Supplemental Update which is taken as reference). Most of the patches in the ACPI section have been rewritten from scratch:
-    	- Add `SSDT-AC0.aml`: updated version of `SSDT-ADP1.aml` for patching AC-Device so that AppleACPIACAdapter-driver loads
-    	- Add `SSDT-INIT.aml`: patch for initializing some global variables
-    	- Add `SSDT-DDGPU.aml`: updated version of `SSDT-DDGPU-Optimus2.aml` for removing discrete GPU
-    	- Add `SSDT-KBD.aml`: updated version of `SSDT-FnKey2.aml`
-    	- Add `SSDT-PM.aml`: unique patch for fixing power management
-    	- Add `SSDT-PTSWAK-SLEEP.aml`: totally reworked patch for handling not only sleep/wake-up process but also for proper updating AC-state and lid-status
-    	- Add `SSDT-SHARE.aml`: patch for handling common utils for other SSDTs
-    	- Add `SSDT-VDEV.aml`: unique patch for handling virtual devices for macOS compatibility (DMAC, MCHC, MEM2, BUS0)
-    	- Update `SSDT-BATT-HUAWEI.aml`
-    	- Update `SSDT-EC-USBX.aml`
-    	- Update `SSDT-PNLF.aml`
-    	- Update `SSDT-PWRB.aml`
-    	- Remove `SSDT-DMAC.aml`
-    	- Remove `SSDT-DTPG.aml`
-    	- Remove `SSDT-MCHC.aml`
-    	- Remove `SSDT-MEM2.aml`
-    	- Remove `SSDT-PLUG-PR.PR00.aml`
-    	- Remove `SSDT-PMCR.aml`
-    	- Remove `SSDT-PTSWAK-Optimus2.aml`
-    	- Remove `SSDT-RMCF.aml` (pair with `SSDT-PTSWAK-Optimus2.aml`)
-    	- Remove `SSDT-SBUS.aml`
-    	- Remove `SSDT-TPXX.aml`
+    - Add `SSDT-AC0.aml`: updated version of `SSDT-ADP1.aml` for patching AC-Device so that AppleACPIACAdapter-driver loads
+    - Add `SSDT-INIT.aml`: patch for initializing some global variables
+    - Add `SSDT-DDGPU.aml`: updated version of `SSDT-DDGPU-Optimus2.aml` for removing discrete GPU
+    - Add `SSDT-KBD.aml`: updated version of `SSDT-FnKey2.aml`
+    - Add `SSDT-PM.aml`: unique patch for fixing power management
+    - Add `SSDT-PTSWAK-SLEEP.aml`: totally reworked patch for handling not only sleep/wake-up process but also for proper updating AC-state and lid-status
+    - Add `SSDT-SHARE.aml`: patch for handling common utils for other SSDTs
+    - Add `SSDT-VDEV.aml`: unique patch for handling virtual devices for macOS compatibility (DMAC, MCHC, MEM2, BUS0)
+    - Update `SSDT-BATT-HUAWEI.aml`
+    - Update `SSDT-EC-USBX.aml`
+    - Update `SSDT-PNLF.aml`
+    - Update `SSDT-PWRB.aml`
+    - Remove `SSDT-DMAC.aml`
+    - Remove `SSDT-DTPG.aml`
+    - Remove `SSDT-MCHC.aml`
+    - Remove `SSDT-MEM2.aml`
+    - Remove `SSDT-PLUG-PR.PR00.aml`
+    - Remove `SSDT-PMCR.aml`
+    - Remove `SSDT-PTSWAK-Optimus2.aml`
+    - Remove `SSDT-RMCF.aml` (pair with `SSDT-PTSWAK-Optimus2.aml`)
+    - Remove `SSDT-SBUS.aml`
+    - Remove `SSDT-TPXX.aml`
     	
     Analyzing OEM SSDTs, I found 3 critical errors on the ACPI setup under `SSDT-7-KBL-ULT.aml` (sensor hub). I report here in the following for my memory: there are 3 big screwups on methods (`\_SB.SGOV`) that require two arguments, being passed as a method (`\_SB.GGOV`) with one argument and then a "hanging" argument which then causes compilation errors.
     Correcting instances like:
-    	- `\_SB.SGOV (0x02010016, OLDV)`
-    	- `\_SB.SGOV (0x02010014, DFUE)`
-    	- `\_SB.SGOV (0x02010014, OLDV)`
+    - `\_SB.SGOV (0x02010016, OLDV)`
+    - `\_SB.SGOV (0x02010014, DFUE)`
+    - `\_SB.SGOV (0x02010014, OLDV)`
     should let the board to handle power correctly.
     Therefore original `SSDT-7-KBL-ULT.aml` has been dropped from loading process (its entry added in `config.plist` in `ACPI -> Delete` section) in favour of its modified version `SSDT-7KBL.aml`
 
