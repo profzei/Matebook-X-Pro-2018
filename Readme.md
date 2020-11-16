@@ -10,7 +10,7 @@
 <img src="/Wiki/Images/matebook-x-pro-big-sur.png" alt="Huawei Big Sur 11.0" />
 </p>
 
-#### This repo is currently compatible with macOS Catalina 10.15.7 Supplemental Update (19H15) and OpenCore 0.6.2
+#### This repo is currently compatible with macOS Catalina 10.15.7 Supplemental Update (19H15) and OpenCore 0.6.3
 |        macOS Big Sur        |     macOS Catalina     |       macOS Mojave       |
 |-----------------------------|------------------------|--------------------------|
 |     11.0.1 Beta (20B5022a)  |     10.15.7  (19H15)   |       10.14.6  (18G87)   |
@@ -73,7 +73,7 @@ Quick note: my serial number, MLB and UUID have been removed from the `config.pl
 
 ## Changelog
 
-#### 2020 - November - 12
+#### 2020 - November - 16
 See [**Current status**](Changelog.md)
 
 ## Status
@@ -286,7 +286,7 @@ Then update your clock via the built-in internet time setting to update the time
 | Item | Version | Remark |
 | :--- | :--- | :--- |
 | MacOS | 10.15.7 | |
-| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.6.2 | Default Bootloader|
+| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.6.3 | Default Bootloader|
 | [Clover](https://github.com/CloverHackyColor/CloverBootloader/releases) | 5118 | Alternative (not more supported) Bootloader|
 | [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.4.9 | Kext/process/framework/library patcher |
 | [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.4.4 | Handle Graphics card |
