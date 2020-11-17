@@ -1,6 +1,18 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **11-17-2020**
+
+	Initial support for macOS Big Sur 11.0.1
+	
+	**Update**
+	- Update [kext] stripped `AirportItlwm_Catalina` v. 1.2.0 beta (6b22398)
+	- Update [kext] stripped `AirportItlwm_Big_Sur` v. 1.2.0 beta (6b22398)
+
+    **OpenCore**
+    - Add [config] support for managing in `Kernel -> Add` section both `AirportItlwm_Big_Sur.kext` and `AirportItlwm_Catalina.kext`
+    - Disable [config] loading for `IntelBluetoothInjector.kext` for macOS Big Sur for resuming speed on boot (more digging needed...)
+
 - **11-16-2020**
 
     **Update**

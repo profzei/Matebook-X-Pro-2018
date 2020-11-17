@@ -10,19 +10,19 @@
 <img src="/Wiki/Images/matebook-x-pro-big-sur.png" alt="Huawei Big Sur 11.0" />
 </p>
 
-#### This repo is currently compatible with macOS Catalina 10.15.7 Supplemental Update (19H15) and OpenCore 0.6.3
-|        macOS Big Sur        |     macOS Catalina     |       macOS Mojave       |
-|-----------------------------|------------------------|--------------------------|
-|     11.0.1 Beta (20B5022a)  |     10.15.7  (19H15)   |       10.14.6  (18G87)   |
-|                             |     10.15.6  (19G2021) |       10.14.5  (18F132)  |
-|                             |     10.15.5  (19F101)  |       10.14.4  (18E226)  |
-|                             |     10.15.4  (19E287)  |       10.14.3  (18D42)   |
-|                             |     10.15.3  (19D76)   |       10.14.2  (18C54)   |
-|                             |     10.15.2  (19C57)   |       10.14.1  (18B75)   |
-|                             |     10.15.1  (19B88)   |       10.14    (18A389)  |
-|                             |     10.15    (19A583)  |                          |
+#### This repo is currently compatible with macOS Big Sur 11.0.1, Catalina 10.15.7 Supplemental Update (19H15) and OpenCore 0.6.3
+|     macOS Big Sur      |     macOS Catalina     |       macOS Mojave       |
+|------------------------|------------------------|--------------------------|
+|     11.0.1 (20B29)     |     10.15.7  (19H15)   |       10.14.6  (18G87)   |
+|                        |     10.15.6  (19G2021) |       10.14.5  (18F132)  |
+|                        |     10.15.5  (19F101)  |       10.14.4  (18E226)  |
+|                        |     10.15.4  (19E287)  |       10.14.3  (18D42)   |
+|                        |     10.15.3  (19D76)   |       10.14.2  (18C54)   |
+|                        |     10.15.2  (19C57)   |       10.14.1  (18B75)   |
+|                        |     10.15.1  (19B88)   |       10.14    (18A389)  |
+|                        |     10.15    (19A583)  |                          |
 
-#### Preparation for macOS Big Sur 11.0 is [on the way](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Upgrade-to-macOS-Big-Sur)
+#### macOS Big Sur 11.0.1 is here!
 
 #### DISCLAIMER
 Read the entire README before you start.
@@ -73,7 +73,7 @@ Quick note: my serial number, MLB and UUID have been removed from the `config.pl
 
 ## Changelog
 
-#### 2020 - November - 16
+#### 2020 - November - 17
 See [**Current status**](Changelog.md)
 
 ## Status
@@ -81,7 +81,7 @@ See [**Current status**](Changelog.md)
 <summary><strong>What's working</strong></summary>
 
 - [x] Intel(R) UHD 620 Graphics card  
-- [x] Intel(R) Wireless-AC 8265/8265 & Intel(R) Bluetooth
+- [x] Intel(R) Wireless-AC 8265/8275 & Intel(R) Bluetooth
 - [x] Audio for Realtek ALC256 card (via AppleALC and layout-id 97)
 - [x] Power Management with support for HWP (Intel Speed Shift & Intel SpeedStep)
 - [x] Automatic Backlight control (with more granular levels)
@@ -117,15 +117,15 @@ See [**Current status**](Changelog.md)
 </details>
 
 ## Bootloader Firmware
-- Default bootloader: `OpenCore 0.6.2` [Official release](https://github.com/acidanthera/OpenCorePkg/releases)
-- Alternative bootloader: Clover `r5118` [Official release](https://github.com/CloverHackyColor/CloverBootloader/releases) ~~`r5103` [Dids release](https://github.com/Dids/clover-builder/releases)~~
+- Default bootloader: `OpenCore 0.6.3` [Official release](https://github.com/acidanthera/OpenCorePkg/releases). See more info in [Wiki section](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Converting-from-Clover-to-OpenCore) about migration.
+- No longer maintained: Clover `r5118` [Official release](https://github.com/CloverHackyColor/CloverBootloader/releases) ~~`r5103` [Dids release](https://github.com/Dids/clover-builder/releases)~~
 
 <details>
 <summary><strong>OpenCore</strong></summary>
 
-- Support macOS 10.14 ~ macOS 11.0.1 beta RC
+- Support macOS 10.14 ~ macOS 11.0.1
 - Should **clean NVRAM** after using `Clover`: press `Space` in OpenCore boot page and then select `Reset NVRAM` entry
-- Limited theme with `OpenCanopy`
+- Limited theme with `OpenCanopy`: a cleaner version with custom graphics has been provided by **@R-Teer**
 </details>
 
 <details>
@@ -366,10 +366,12 @@ Then update your clock via the built-in internet time setting to update the time
 ## Credits
 
 - [Acidanthera](https://github.com/acidanthera)
-- [Dortania OC guide](https://dortania.github.io/OpenCore-Install-Guide/)
+- [Dortania's OC guide](https://dortania.github.io/OpenCore-Install-Guide/)
 - [Rehabman's battery patch guide](https://www.tonymacx86.com/threads/guide-how-to-patch-dsdt-for-working-battery-status.116102/) and [Rehabman's ACPI hotpatching guide](https://www.tonymacx86.com/threads/guide-using-clover-to-hotpatch-acpi.200137/)
 - [CorpNewt's tools](https://github.com/corpnewt)
-- [OpenWireless and itlwm](https://github.com/OpenIntelWireless/itlwm)
+- [OpenWireless project](https://github.com/OpenIntelWireless/itlwm)
 - [Daliansky's OC-little repo](https://github.com/daliansky/OC-little)
 - [Daliansky's Xiaomi Pro Hackintosh](https://github.com/daliansky/XiaoMi-Pro-Hackintosh)
 - [Gnodipac886's MatebookXPro-hackintosh repo](https://github.com/gnodipac886/MatebookXPro-hackintosh): this project was *initially* based on the hard work done by Gnodipac886 guy, but *now* it can be considered as a different project due to **many and original very significant personal improvements in ALL the sections**.
+
+The greatest thank you and appreciation to [Zero-zer0](https://github.com/Zero-zer0), [GZXiaoBai](https://github.com/GZXiaoBai) and [Benbender](https://github.com/benbender)
