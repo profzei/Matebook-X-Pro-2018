@@ -10,7 +10,7 @@
 <img src="/Wiki/Images/matebook-x-pro-big-sur.png" alt="Huawei Big Sur 11.0" />
 </p>
 
-#### This repo is currently compatible with macOS Big Sur 11.0.1, Catalina 10.15.7 Supplemental Update (19H15) and OpenCore 0.6.3
+#### This repo is currently compatible with macOS Big Sur 11.0.1 (20B29), Catalina 10.15.7 Supplemental Update (19H15) and OpenCore 0.6.3
 |     macOS Big Sur      |     macOS Catalina     |       macOS Mojave       |
 |------------------------|------------------------|--------------------------|
 |     11.0.1 (20B29)     |     10.15.7  (19H15)   |       10.14.6  (18G87)   |
@@ -30,6 +30,8 @@ I am not responsible for any damages you may cause.
 Should you find an error or improve anything — whether in the config or in the documentation — please consider opening an issue or pull request.
 
 If you find this bootloader configuration useful, consider **giving** it **a star** to make it more visible.
+
+If you find my work useful, please consider donating via PayPal. [![donate](https://img.shields.io/badge/-buy%20me%20a%20coffee-orange)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=TSJHK3C2BSQN6&currency_code=EUR)
 
 ### Introduction
 

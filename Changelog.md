@@ -10,8 +10,9 @@ English
 	- Update [kext] stripped `AirportItlwm_Big_Sur` v. 1.2.0 beta (6b22398)
 
     **OpenCore**
+    - `Booter -> Quirks -> SyncRuntimePermissions` set to `true` value (conservative approach)
     - Add [config] support for managing in `Kernel -> Add` section both `AirportItlwm_Big_Sur.kext` and `AirportItlwm_Catalina.kext`
-    - Disable [config] loading for `IntelBluetoothInjector.kext` for macOS Big Sur for resuming speed on boot (more digging needed...)
+    - Re-enabled [config] loading for `IntelBluetoothInjector.kext` for macOS Big Sur
 
 - **11-16-2020**
 
