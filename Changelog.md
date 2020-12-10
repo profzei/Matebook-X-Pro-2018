@@ -1,6 +1,32 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **12-10-2020**
+
+    **Update**
+    - Update `OpenCore` v. 0.6.4
+    - Update [kext] stripped `AirportItlwm_Big_Sur` v. 1.2.0 beta (commit c2f2c51)
+    - Update [kext] stripped `AirportItlwm_Catalina` v. 1.2.0 beta (commit c2f2c51)
+    - Update [kext] `AppleALC` v. 1.5.5
+    - Update [kext] `HibernationFixup` v. 1.3.8
+    - Update [kext] stripped `IntelBluetoothFirmware` v. 1.1.2 (commit 16bc609)
+    - Update [kext] `Lilu` v. 1.5.0
+    - Update [kext] `VirtualSMC` + plugins v. 1.1.9
+    - Update [kext] `VoodooPS2Controller` v. 2.1.9
+    - Update [kext] `WhateverGreen` v. 1.4.5
+    - Update `SSDT-KBD` for handling only (atm) `Fn` brightness keys
+    - Update `SSDT-PTSWAK-SLEEP` removing ACPI-S0 support
+
+    **OpenCore**
+    - Update `config.plist` to support OpenCore v. 0.6.4:
+        - Add `Booter -> Patch` section
+        - `Booter -> Quirks -> AllowRelocationBlock` set to `false`
+        - `Misc -> Security -> BlacklistAppleUpdate` set to `true`
+        - `UEFI -> Audio -> PlayChime` from boolean to string type (value set to `Enabled`)
+    - Add [config] `TPD0._STA,0,N to TPD0.XSTA,0,N` binary patch
+    - Add `SSDT-DTPD` for disabling Touchscreen and therefore fixing touchpad issue after sleeping (this was necessary since `Multi_GPIO` support for `VoodooI2C` v. 2.5.2 seems to be bugged)
+    - Add `SSDT-PS2K` for swapping Command and Option keys in default (if not needed, please, set to `false` the variable `Enabled` for `SSDT-PS2K` in `ACPI -> Add` section)
+
 - **11-17-2020**
 
 	Initial support for macOS Big Sur 11.0.1
