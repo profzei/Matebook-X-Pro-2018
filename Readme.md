@@ -10,11 +10,11 @@
 <img src="/Wiki/Images/matebook-x-pro-big-sur.png" alt="Huawei Big Sur 11.0" />
 </p>
 
-#### This repo is currently compatible with macOS Big Sur 11.0.1 (20B29), Catalina 10.15.7 Supplemental Update (19H15) and OpenCore 0.6.4
+#### This repo is currently compatible with macOS Big Sur 11.1 (20C69), Catalina 10.15.7 Supplemental Update (19H15) and OpenCore 0.6.4
 |     macOS Big Sur      |     macOS Catalina     |       macOS Mojave       |
 |------------------------|------------------------|--------------------------|
-|     11.0.1 (20B29)     |     10.15.7  (19H15)   |       10.14.6  (18G87)   |
-|                        |     10.15.6  (19G2021) |       10.14.5  (18F132)  |
+|     11.1 (20C69)       |     10.15.7  (19H15)   |       10.14.6  (18G87)   |
+|     11.0.1 (20B29)     |     10.15.6  (19G2021) |       10.14.5  (18F132)  |
 |                        |     10.15.5  (19F101)  |       10.14.4  (18E226)  |
 |                        |     10.15.4  (19E287)  |       10.14.3  (18D42)   |
 |                        |     10.15.3  (19D76)   |       10.14.2  (18C54)   |
@@ -22,7 +22,7 @@
 |                        |     10.15.1  (19B88)   |       10.14    (18A389)  |
 |                        |     10.15    (19A583)  |                          |
 
-#### macOS Big Sur 11.0.1 is here!
+#### macOS Big Sur 11.1 is here!
 
 #### DISCLAIMER
 Read the entire README before you start.
@@ -75,7 +75,7 @@ Quick note: my serial number, MLB and UUID have been removed from the `config.pl
 
 ## Changelog
 
-#### 2020 - December - 10
+#### 2020 - December - 15
 See [**Current status**](Changelog.md)
 
 ## Status
@@ -287,7 +287,7 @@ Then update your clock via the built-in internet time setting to update the time
 
 | Item | Version | Remark |
 | :--- | :--- | :--- |
-| MacOS | 11.0.1 | |
+| MacOS | 11.1 | |
 | [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.6.4 | Default Bootloader|
 | [Clover](https://github.com/CloverHackyColor/CloverBootloader/releases) | 5118 | Alternative (not more supported) Bootloader|
 | [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.5.0 | Kext/process/framework/library patcher |

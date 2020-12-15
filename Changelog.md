@@ -1,6 +1,14 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **14-12-2020**
+
+    Update to macOS Big Sur 11.1 (20C69)
+    - Checking/rewriting some ACPI SSDTs: wip...
+    - Restructuring repository: wip...
+    - Re-enabling [kext] `SMCBatteryManager` for testing purpouses
+    - Disabling [kext] `ACPIBatteryManager`
+
 - **12-10-2020**
 
     **Update**
