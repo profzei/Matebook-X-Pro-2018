@@ -8,6 +8,8 @@ English
         - Delete `CLOVER` folder since no more supported
         - Delete `SSDT` folder
         - Update `Readme` accordingly
+    - Update [kext] stripped `AirportItlwm_Big_Sur` v. 1.2.0 beta (commit 4133528) for testing tx aggregation
+    - Update [kext] stripped `AirportItlwm_Catalina` v. 1.2.0 beta (commit 4133528) for testing tx aggregation
 
     **OpenCore**
     - Update `config.plist` to improve support for booting Windows from OpenCanopy GUI loading default OEM information (long term testing needed):
@@ -19,6 +21,7 @@ English
         - `Booter -> Quirks -> ProvideCustomSlide` set to `false` (previous value `true`) since all slides are usable therefore this quirk can be disabled
         - `Booter -> Quirks -> RebuildAppleMemoryMap` set to `true` (previous value `false`)
         - `Booter -> Quirks -> SyncRuntimePermissions` set to `true` (previous value `true`)
+    - Changed priority order for loading kexts
     
 - **14-12-2020**
 
