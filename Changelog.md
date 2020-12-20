@@ -1,6 +1,24 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **20-12-2020**
+    
+    Restructing actual configuration for repo:
+        - Delete `CLOVER` folder since no more supported
+        - Delete `SSDT` folder
+        - Update `Readme` accordingly
+
+    **OpenCore**
+    - Update `config.plist` to improve support for booting Windows from OpenCanopy GUI loading default OEM information (long term testing needed):
+        - `Kernel -> Quirks -> CustomSMBIOSGuid` set to `true` (previous value `false`)
+        - `PlatformInfo -> UpdateSMBIOSMode` set to `Custom` (previous value `Create`)
+    - Fixed `MAT Support is 1` issue caused by our buggy firmware (atm firmware release for this repo is 1.28):
+        - `Booter -> Quirks -> DevirtualiseMmio` set to `true` (previous value `false`)
+        - `Booter -> Quirks -> EnableWriteUnprotector` set to `false` (previous value `true`)
+        - `Booter -> Quirks -> ProvideCustomSlide` set to `false` (previous value `true`) since all slides are usable therefore this quirk can be disabled
+        - `Booter -> Quirks -> RebuildAppleMemoryMap` set to `true` (previous value `false`)
+        - `Booter -> Quirks -> SyncRuntimePermissions` set to `true` (previous value `true`)
+    
 - **14-12-2020**
 
     Update to macOS Big Sur 11.1 (20C69)

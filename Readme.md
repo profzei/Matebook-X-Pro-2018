@@ -75,7 +75,7 @@ Quick note: my serial number, MLB and UUID have been removed from the `config.pl
 
 ## Changelog
 
-#### 2020 - December - 15
+#### 2020 - December - 20
 See [**Current status**](Changelog.md)
 
 ## Status
@@ -128,13 +128,6 @@ See [**Current status**](Changelog.md)
 - Support macOS 10.14 ~ macOS 11.0.1
 - Should **clean NVRAM** after using `Clover`: press `Space` in OpenCore boot page and then select `Reset NVRAM` entry
 - Limited theme with `OpenCanopy`: a cleaner version with custom graphics has been provided by **@R-Teer**
-</details>
-
-<details>
-<summary><strong>Clover</strong></summary>
-
-- Support macOS 10.14 ~ macOS 10.15.7, but **not macOS 11+**
-- Should **clean NVRAM** after using `OpenCore`: press `Fn + F11` in Clover boot page
 </details>
 
 ## Post - Install
@@ -289,7 +282,6 @@ Then update your clock via the built-in internet time setting to update the time
 | :--- | :--- | :--- |
 | MacOS | 11.1 | |
 | [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.6.4 | Default Bootloader|
-| [Clover](https://github.com/CloverHackyColor/CloverBootloader/releases) | 5118 | Alternative (not more supported) Bootloader|
 | [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.5.0 | Kext/process/framework/library patcher |
 | [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.4.5 | Handle Graphics card |
 | [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.5.5 | Handle/fix onboard audio |
