@@ -3,7 +3,8 @@
 English
 - **20-12-2020**
     
-    Restructing actual configuration for repo:
+    **Update**
+    - Restructing actual configuration for repo:
         - Delete `CLOVER` folder since no more supported
         - Delete `SSDT` folder
         - Update `Readme` accordingly
