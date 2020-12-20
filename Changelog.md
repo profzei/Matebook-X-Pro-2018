@@ -22,6 +22,7 @@ English
         - `Booter -> Quirks -> RebuildAppleMemoryMap` set to `true` (previous value `false`)
         - `Booter -> Quirks -> SyncRuntimePermissions` set to `true` (previous value `true`)
     - Changed priority order for loading kexts
+    - Update `config.plist` using (for testing purpouses) the custom boot-args `itlwm=IT` to use my country code IT-Italy
     
 - **14-12-2020**
 
