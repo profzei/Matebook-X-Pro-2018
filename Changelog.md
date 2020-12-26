@@ -1,6 +1,48 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **26-12-2020**
+
+    **Update**
+    - Update [kext] stripped `AirportItlwm_Big_Sur` v. 1.2.0 beta (commit eeebc4c)
+    - Update [kext] stripped `AirportItlwm_Catalina` v. 1.2.0 beta (commit eeebc4c)
+    - Update [kext] `VoltageShift` v. 1.25 (from v. 1.22 modified version)
+    - Update `SSDT-AC0` for storing in `PWRS` variable updated state for `EC0.ACAP` method (call in `_PSR` Method)
+    - Update `SSDT-EC-USBX` modifying `EC0.ECAV` method (removing call to `_REV>=0x02`)
+    - Update `SSDT-PTSWAK-SLEEP` fixing type for `SS3` (from `FieldUnitObj` to `IntObj`)
+    - Rename `SSDT-BATT-HUAWEI` to `SSDT-BAT0-HUAWEI` modifying `BAT0._STA` and `EC0._REG` methods (updating `LIDS` and `PWRS` status variables)
+    - Add [kext] `RestrictEvents` (commit 5f5f4bf) to replace `EFICheckDisabler`
+    - Add `SSDT-LID` for updating `LIDS` variable with LID status
+    - Add `SSDT-NVME` for handling NVMe SSD (injected properties to mimic MacbookPro14,1)
+    - Add `SSDT-TPL1` for re-enabling GPI0 pinning for touchpad
+    - Remove [kext] `EFICheckDisabler`
+    - Remove `SSDT-TB3HP` (`Enabled` key set to `false` value) for better automatic sleep support: wip... more tests needed
+
+    **OpenCore**
+    - Add [config] support for managing in `Kernel -> Add` section `RestrictEvents.kext`
+    - Add [config] `AC0._PSR,0,N to AC0.XPSR,0,N` binary patch
+    - Add [config] `EC0.ECAV,0,N to EC0.XCAV,0,N` binary patch
+    - Add [config] `LID._LID,0,N to LID.XLID,0,N` binary patch
+    - Add [config] `EC0._Q81,0,N to EC0.XQ81,0,N` binary patch
+    - Add [config] `BAT0._STA,0,N to BAT0.XSTA,0,N` binary patch
+    - Add [config] `EC0._REG,2,N to EC0.XREG,2,N` binary patch
+    - Remove [config] all entries in `NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82 -> boot-args` except for `-igfxnorpsc=1` (for Intel UHD620) and `itlwm_cc=IT` (for `AirportItlwm` country code support)
+    - Remove [config] `acpi-wake-type` entry from `Pci(0x14, 0x0)` USB Controller
+
+    For supporting full auto sleep mode (i.e. macOS default hibernatemode 3) atm two key steps are needed:
+    - removing hot-plug for Thunderbolt devices (managed by `SSDT-TB3HP`)
+    - setting in macOS menubar `Soundflower (2ch)` to `None` as default settings instead of `Multi-Output Device` (this means that you need to manually set `Multi-Output Device` when it is necessary)
+
+    The latter step is needed since Soundflower maintains an open audio channel even when no audio is playing (for reference see [Soundflower prevents screen saver, display and comptuer sleep #179](https://github.com/feniix/soundflower/issues/179#issuecomment-581544566))
+
+- **25-12-2020**
+
+    **Update**
+    - Update `SSDT-RMNE` removing ADR value
+    - Remove `SSDT-HPET` (`HPTE` initialization in `SSDT-INIT`)
+    - New script for automatic and recursive compiling `.dsl` to `.aml` file format for `SSDT` hotpatches
+    - Use stable ASL+ Optimizing Compiler/disassembler version 20200528
+
 - **20-12-2020**
     
     **Update**
@@ -22,7 +64,7 @@ English
         - `Booter -> Quirks -> RebuildAppleMemoryMap` set to `true` (previous value `false`)
         - `Booter -> Quirks -> SyncRuntimePermissions` set to `true` (previous value `true`)
     - Changed priority order for loading kexts
-    - Update `config.plist` using (for testing purpouses) the custom boot-args `itlwm=IT` to use my country code IT-Italy
+    - Update `config.plist` using (for testing purpouses) the custom boot-args `itlwm_cc=IT` to use my country code IT-Italy
     
 - **14-12-2020**
 
