@@ -14,12 +14,12 @@ English
     - Remove [kext] `USBInjectALL` (because of native ACPI-implementation for USB) 
 
     **OpenCore**
-    - Add [config] `_UPC,0,N to XUPC,0,N` (for USB support)
-    - Add [config] `_GPE.NTFY,1,S to XTFY,1,S` (for Thunderbolt support)
+    - Add [config] `_UPC,0,N to XUPC,0,N` binary patch (for USB support)
+    - Add [config] `_GPE.NTFY,1,S to XTFY,1,S` binary patch (for Thunderbolt support)
 
-    The new Thunderbolt implementation is compatible with native macOS support for proper automatic sleep (hibernatemode 3) and hibernation (hibernatemode 25). This work is largely untested since I didn't have Thunderbolt devices! Anyway it should be better than previous support (at least for power management!)
+    The new Thunderbolt implementation is compatible with native macOS support for proper automatic sleep (`hibernatemode 3`) and hibernation (`hibernatemode 25`). This work is largely untested since I didn't have Thunderbolt devices! Anyway it should be better than previous support (at least for power management!)
     
-    The native ACPI-implementation for USB has revealed another (?) bug of our DSDT i.e. Bluetooth device is properly recognized at boot-time and it needs a toggle off/on cycle to be "active" (i.e. turned on): further investigation needed but probably a login script for toggle off/on Bluetooth device needed to be implemented (wip...)
+    The native ACPI-implementation for USB has revealed another (?) bug of our DSDT i.e. Bluetooth device is properly recognized at boot-time but it needs a toggle off/on cycle to be "active" (i.e. turned on): further investigation needed but probably a login script for toggle off/on Bluetooth device needed to be implemented (wip...)
 
 - **26-12-2020**
 
@@ -49,7 +49,7 @@ English
     - Remove [config] all entries in `NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82 -> boot-args` except for `-igfxnorpsc=1` (for Intel UHD620) and `itlwm_cc=IT` (for `AirportItlwm` country code support)
     - Remove [config] `acpi-wake-type` entry from `Pci(0x14, 0x0)` USB Controller
 
-    For supporting full auto sleep mode (i.e. macOS default hibernatemode 3) atm two key steps are needed:
+    For supporting full auto sleep mode (i.e. macOS default `hibernatemode 3`) atm two key steps are needed:
     - removing hot-plug for Thunderbolt devices (managed by `SSDT-TB3HP`)
     - setting in macOS menubar `Soundflower (2ch)` to `None` as default settings instead of `Multi-Output Device` (this means that you need to manually set `Multi-Output Device` when it is necessary)
 
