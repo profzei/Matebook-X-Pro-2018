@@ -1,6 +1,26 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **29-12-2020**
+
+    **Update**
+    - Add more native Thunderbolt support (not only the previous PCIe-to-PCIe bridge mode):
+        - native macOS drivers without patched Thunderbolt firmware (wip...)
+        - slightly improved power management for Thunderbolt controller (wip...)
+    - Update `SSDT-INIT` for initializing Thunderbolt controller
+    - Rename `SSDT-EC-USBX` to `SSDT-EC` removing USB power injection
+    - Add `SSDT-XHC` for native ACPI-implementation of USB 2.0/3.0 (only useful USB ports are active) and relative USB power injection
+    - Remove `SSDT-UIAC` (because of native ACPI-implementation for USB)
+    - Remove [kext] `USBInjectALL` (because of native ACPI-implementation for USB) 
+
+    **OpenCore**
+    - Add [config] `_UPC,0,N to XUPC,0,N` (for USB support)
+    - Add [config] `_GPE.NTFY,1,S to XTFY,1,S` (for Thunderbolt support)
+
+    The new Thunderbolt implementation is compatible with native macOS support for proper automatic sleep (hibernatemode 3) and hibernation (hibernatemode 25). This work is largely untested since I didn't have Thunderbolt devices! Anyway it should be better than previous support (at least for power management!)
+    
+    The native ACPI-implementation for USB has revealed another (?) bug of our DSDT i.e. Bluetooth device is properly recognized at boot-time and it needs a toggle off/on cycle to be "active" (i.e. turned on): further investigation needed but probably a login script for toggle off/on Bluetooth device needed to be implemented (wip...)
+
 - **26-12-2020**
 
     **Update**
