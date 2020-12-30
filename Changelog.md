@@ -1,6 +1,12 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **30-12-2020**
+    
+    **OpenCore**
+    - Add [config] for Intel(R) UHD Graphics 620 the property `AAPL00,override-no-connect` (EDID obtained from Linux)
+    - Add [config] `RP09._INI,0,N to XINI,0,N` binary patch for disabling ICM (Integrated Connection Manager) for Thunderbolt support
+
 - **29-12-2020**
 
     **Update**
