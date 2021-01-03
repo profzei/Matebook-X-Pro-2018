@@ -1,6 +1,41 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **01-03-2021**
+
+    **Update**
+    - Update [kext] stripped `AirportItlwm_Big_Sur` v. 1.2.0 beta (commit 3f244c8)
+    - Update [kext] stripped `AirportItlwm_Catalina` v. 1.2.0 beta (commit 3f244c8)
+    - Update `SSDT-XHC.aml`: fixed loading for Intel(R) Bluetooth device
+    - Add `SSDT-ARPT.aml` for OSX-native ACPI-interface for (Airport) WiFi-cards
+
+- **01-02-2021**
+
+    **Update**
+    - Update `SSDT-XHC.aml` adding `_STA,0,N` method
+
+    **OpenCore**
+    - Update [config] `DeviceProperties -> Add` section for PCI devices:
+        - cleaning info removing `name` property
+        - injecting `ThunderboltUUID` property for Intel(R) JHL6240 Thunderbolt 3 Bridge [Alpine Ridge LP 2016] device
+
+- **01-01-2021**
+
+    **Update**
+    - Update `SSDT-BAT0-HUAWEI.aml`:
+        - support for Battery Information Supplement implementing `BAT0.CBIS,0,N` and `BAT0.CBSS,0,N` methods
+        - splitting for some EC fields (respectively `B0TM`, `B0C1`, `B0CV`)
+
+    Sidenote for Bluetooth (loading) issue: according to [stevezhengshiqi's opinion](https://github.com/daliansky/XiaoMi-Pro-Hackintosh/issues/522#issuecomment-753402849) it could be a driver issue from IntelBluetoothFirmware. A simple way to fix it could be a boot script (not a login script) powering down and then powering up BT device (script already written: only need for testing it) 
+
+    Sidenote for Thunderbolt support: full TB support might be tricky as MateBook X Pro (2018) only has one TB-port and seems to be missing the usual switch between ports. Didn't look into it too much but it may be actually impossible to get it fully working (at least a better power management is achieved). 
+
+- **31-12-2020**
+
+    - Debugging work:
+        - debug some `_Qxx` EC methods related to AC plugging in actions (`SSDT-DBG.aml`)
+        - debug some EC fields deducing their role (`SSDT-DBG.aml`)
+
 - **30-12-2020**
     
     **OpenCore**
@@ -13,10 +48,10 @@ English
     - Add more native Thunderbolt support (not only the previous PCIe-to-PCIe bridge mode):
         - native macOS drivers without patched Thunderbolt firmware (wip...)
         - slightly improved power management for Thunderbolt controller (wip...)
-    - Update `SSDT-INIT` for initializing Thunderbolt controller
-    - Rename `SSDT-EC-USBX` to `SSDT-EC` removing USB power injection
-    - Add `SSDT-XHC` for native ACPI-implementation of USB 2.0/3.0 (only useful USB ports are active) and relative USB power injection
-    - Remove `SSDT-UIAC` (because of native ACPI-implementation for USB)
+    - Update `SSDT-INIT.aml` for initializing Thunderbolt controller
+    - Rename `SSDT-EC-USBX.aml` to `SSDT-EC.aml` removing USB power injection
+    - Add `SSDT-XHC.aml` for native ACPI-implementation of USB 2.0/3.0 (only useful USB ports are active) and relative USB power injection
+    - Remove `SSDT-UIAC.aml` (because of native ACPI-implementation for USB)
     - Remove [kext] `USBInjectALL` (because of native ACPI-implementation for USB) 
 
     **OpenCore**
@@ -33,16 +68,16 @@ English
     - Update [kext] stripped `AirportItlwm_Big_Sur` v. 1.2.0 beta (commit eeebc4c)
     - Update [kext] stripped `AirportItlwm_Catalina` v. 1.2.0 beta (commit eeebc4c)
     - Update [kext] `VoltageShift` v. 1.25 (from v. 1.22 modified version)
-    - Update `SSDT-AC0` for storing in `PWRS` variable updated state for `EC0.ACAP` method (call in `_PSR` Method)
-    - Update `SSDT-EC-USBX` modifying `EC0.ECAV` method (removing call to `_REV>=0x02`)
-    - Update `SSDT-PTSWAK-SLEEP` fixing type for `SS3` (from `FieldUnitObj` to `IntObj`)
-    - Rename `SSDT-BATT-HUAWEI` to `SSDT-BAT0-HUAWEI` modifying `BAT0._STA` and `EC0._REG` methods (updating `LIDS` and `PWRS` status variables)
+    - Update `SSDT-AC0.aml` for storing in `PWRS` variable updated state for `EC0.ACAP` method (call in `_PSR` Method)
+    - Update `SSDT-EC-USBX.aml` modifying `EC0.ECAV` method (removing call to `_REV>=0x02`)
+    - Update `SSDT-PTSWAK-SLEEP.aml` fixing type for `SS3` (from `FieldUnitObj` to `IntObj`)
+    - Rename `SSDT-BATT-HUAWEI.aml` to `SSDT-BAT0-HUAWEI.aml` modifying `BAT0._STA` and `EC0._REG` methods (updating `LIDS` and `PWRS` status variables)
     - Add [kext] `RestrictEvents` (commit 5f5f4bf) to replace `EFICheckDisabler`
-    - Add `SSDT-LID` for updating `LIDS` variable with LID status
-    - Add `SSDT-NVME` for handling NVMe SSD (injected properties to mimic MacbookPro14,1)
-    - Add `SSDT-TPL1` for re-enabling GPI0 pinning for touchpad
+    - Add `SSDT-LID.aml` for updating `LIDS` variable with LID status
+    - Add `SSDT-NVME.aml` for handling NVMe SSD (injected properties to mimic MacbookPro14,1)
+    - Add `SSDT-TPL1.aml` for re-enabling GPI0 pinning for touchpad
     - Remove [kext] `EFICheckDisabler`
-    - Remove `SSDT-TB3HP` (`Enabled` key set to `false` value) for better automatic sleep support: wip... more tests needed
+    - Remove `SSDT-TB3HP.aml` (`Enabled` key set to `false` value) for better automatic sleep support: wip... more tests needed
 
     **OpenCore**
     - Add [config] support for managing in `Kernel -> Add` section `RestrictEvents.kext`
@@ -56,7 +91,7 @@ English
     - Remove [config] `acpi-wake-type` entry from `Pci(0x14, 0x0)` USB Controller
 
     For supporting full auto sleep mode (i.e. macOS default `hibernatemode 3`) atm two key steps are needed:
-    - removing hot-plug for Thunderbolt devices (managed by `SSDT-TB3HP`)
+    - removing hot-plug for Thunderbolt devices (managed by `SSDT-TB3HP.aml`)
     - setting in macOS menubar `Soundflower (2ch)` to `None` as default settings instead of `Multi-Output Device` (this means that you need to manually set `Multi-Output Device` when it is necessary)
 
     The latter step is needed since Soundflower maintains an open audio channel even when no audio is playing (for reference see [Soundflower prevents screen saver, display and comptuer sleep #179](https://github.com/feniix/soundflower/issues/179#issuecomment-581544566))
@@ -64,8 +99,8 @@ English
 - **25-12-2020**
 
     **Update**
-    - Update `SSDT-RMNE` removing ADR value
-    - Remove `SSDT-HPET` (`HPTE` initialization in `SSDT-INIT`)
+    - Update `SSDT-RMNE.aml` removing ADR value
+    - Remove `SSDT-HPET.aml` (`HPTE` initialization in `SSDT-INIT.aml`)
     - New script for automatic and recursive compiling `.dsl` to `.aml` file format for `SSDT` hotpatches
     - Use stable ASL+ Optimizing Compiler/disassembler version 20200528
 
@@ -113,8 +148,8 @@ English
     - Update [kext] `VirtualSMC` + plugins v. 1.1.9
     - Update [kext] `VoodooPS2Controller` v. 2.1.9
     - Update [kext] `WhateverGreen` v. 1.4.5
-    - Update `SSDT-KBD` for handling only (atm) `Fn` brightness keys
-    - Update `SSDT-PTSWAK-SLEEP` removing ACPI-S0 support
+    - Update `SSDT-KBD.aml` for handling only (atm) `Fn` brightness keys
+    - Update `SSDT-PTSWAK-SLEEP.aml` removing ACPI-S0 support
 
     **OpenCore**
     - Update `config.plist` to support OpenCore v. 0.6.4:
@@ -123,8 +158,8 @@ English
         - `Misc -> Security -> BlacklistAppleUpdate` set to `true`
         - `UEFI -> Audio -> PlayChime` from boolean to string type (value set to `Enabled`)
     - Add [config] `TPD0._STA,0,N to TPD0.XSTA,0,N` binary patch
-    - Add `SSDT-DTPD` for disabling Touchscreen and therefore fixing touchpad issue after sleeping (this was necessary since `Multi_GPIO` support for `VoodooI2C` v. 2.5.2 seems to be bugged)
-    - Add `SSDT-PS2K` for swapping Command and Option keys in default (if not needed, please, set to `false` the variable `Enabled` for `SSDT-PS2K` in `ACPI -> Add` section)
+    - Add `SSDT-DTPD.aml` for disabling Touchscreen and therefore fixing touchpad issue after sleeping (this was necessary since `Multi_GPIO` support for `VoodooI2C` v. 2.5.2 seems to be bugged)
+    - Add `SSDT-PS2K.aml` for swapping Command and Option keys in default (if not needed, please, set to `false` the variable `Enabled` for `SSDT-PS2K` in `ACPI -> Add` section)
 
 - **11-17-2020**
 
