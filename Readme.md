@@ -75,7 +75,7 @@ Quick note: my serial number, MLB and UUID have been removed from the `config.pl
 
 ## Changelog
 
-#### 2020 - December - 30
+#### 2021 - January - 03
 See [**Current status**](Changelog.md)
 
 ## Status
