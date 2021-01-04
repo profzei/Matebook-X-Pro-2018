@@ -1,6 +1,11 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **01-04-2021**
+
+    **Update**
+    - Update `SSDT-PS2K.aml`: better way to remap Cmd and Option keys
+
 - **01-03-2021**
 
     **Update**
