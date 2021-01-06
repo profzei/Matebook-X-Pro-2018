@@ -1,6 +1,16 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **01-06-2021**
+
+    **Update**
+    - Update [kext] `WhateverGreen` v. 1.4.6
+    - Update [kext] `AppleALC` v. 1.5.6
+    - Update [kext] `CPUFriend` v. 1.2.3
+    - Update [kext] `HibernationFixup` v. 1.3.9
+    - Update [kext] `NVMeFix` v. 1.0.5
+    - Update [kext] `RestrictEvents` v. 1.0.0
+
 - **01-04-2021**
 
     **Update**
