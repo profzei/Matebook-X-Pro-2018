@@ -1,6 +1,17 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **07-01-2021**
+
+    **Update**
+    - Add `SSDT-BIOS.aml` (testing) which defines a new `_QBF,0,N` method (i.e. referred to `EC0`) found in original HUAWEI BIOS v. 1.33:
+        - it's the only difference from HUAWEI BIOS v. 1.28 (supported atm in this repo) or v. 1.30
+        - according to [this post in Reddit r/MatebookXPro](https://www.reddit.com/r/MatebookXPro/comments/kksexv/matebook_x_pro_bios_version_133_released_12242020/gh5jpkm?utm_source=share&utm_medium=web2x&context=3) MBXP's overheat when plugged in (reported by some users in the same sub r/MatebookXPro) should be fixed or at least improved
+    - Restructing actual configuration for repo:
+        - Delete `BOOT` folder (outdated to OpenCore v. 0.6.3)
+        - Delete `OC` folder (outdated to OpenCore v. 0.6.3)
+        - Update `Readme` accordingly
+
 - **01-06-2021**
 
     **Update**
