@@ -1,6 +1,18 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **08-01-2021**
+
+    **Update**
+    - Update `OpenCore` v. 0.6.5
+    - Update OpenCanopy theme fixing some warnings shown only by OC Debug version
+
+    **OpenCore**
+    - Update `config.plist` to support OpenCore v. 0.6.5:
+        - Add `Misc -> Boot -> PickerVariant` set to `Other` (for selecting custom icon set)
+        - Add `UEFI -> Audio -> SetupDelay` set to `0`
+        - Delete `UEFI -> Quirks -> DeduplicateBootOrder` key
+    
 - **07-01-2021**
 
     **Update**
