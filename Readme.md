@@ -10,7 +10,7 @@
 <img src="/Wiki/Images/matebook-x-pro-big-sur.png" alt="Huawei Big Sur 11.0" />
 </p>
 
-#### This repo is currently compatible with macOS Big Sur 11.1 (20C69), Catalina 10.15.7 Supplemental Update (19H15) and OpenCore 0.6.4
+#### This repo is currently compatible with macOS Big Sur 11.1 (20C69), Catalina 10.15.7 Supplemental Update (19H15) and OpenCore 0.6.5
 |     macOS Big Sur      |     macOS Catalina     |       macOS Mojave       |
 |------------------------|------------------------|--------------------------|
 |     11.1 (20C69)       |     10.15.7  (19H15)   |       10.14.6  (18G87)   |
@@ -119,7 +119,7 @@ See [**Current status**](Changelog.md)
 </details>
 
 ## Bootloader Firmware
-- Default bootloader: `OpenCore 0.6.4` [Official release](https://github.com/acidanthera/OpenCorePkg/releases). See more info in [Wiki section](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Converting-from-Clover-to-OpenCore) about migration.
+- Default bootloader: `OpenCore 0.6.5` [Official release](https://github.com/acidanthera/OpenCorePkg/releases). See more info in [Wiki section](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Converting-from-Clover-to-OpenCore) about migration.
 - No longer maintained: Clover `r5118` [Official release](https://github.com/CloverHackyColor/CloverBootloader/releases) ~~`r5103` [Dids release](https://github.com/Dids/clover-builder/releases)~~
 
 <details>
@@ -134,7 +134,7 @@ See [**Current status**](Changelog.md)
 <details>
 <summary><strong>Enable Apple Services</strong></summary>
 
-Default **SMBIOS** settings of this repo is `MacBookPro15,2` ~~`MacBookPro14,1`~~
+Default **SMBIOS** settings of this repo is `MacBookPro14,1` ~~`MacBookPro15,2`~~
 1. Launch `Terminal` app
 2. Copy the following script, paste it into the `Terminal` window, then press `Enter`
    ```bash
@@ -143,7 +143,7 @@ Default **SMBIOS** settings of this repo is `MacBookPro15,2` ~~`MacBookPro14,1`~
 3. Type `2`, then press `Enter`
 4. Drag your `config.plist` inside the `Terminal` window
 5. Type `3`, then press `Enter`
-6. Type `MacBookPro15,2`, then press `Enter`
+6. Type `MacBookPro14,1`, then press `Enter`
 </details>
 
 <details>
@@ -281,7 +281,7 @@ Then update your clock via the built-in internet time setting to update the time
 | Item | Version | Remark |
 | :--- | :--- | :--- |
 | MacOS | 11.1 | |
-| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.6.4 | Default Bootloader|
+| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.6.5 | Default Bootloader|
 | [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.5.0 | Kext/process/framework/library patcher |
 | [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.4.6 | Handle Graphics card |
 | [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.5.6 | Handle/fix onboard audio |
