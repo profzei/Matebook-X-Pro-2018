@@ -1,6 +1,12 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **09-01-2021**
+
+    **Update**
+    - Update [kext] stripped `AirportItlwm_Big_Sur` v. 1.2.0 beta (commit 040a5e8)
+    - Update [kext] stripped `AirportItlwm_Catalina` v. 1.2.0 beta (commit 040a5e8)
+
 - **08-01-2021**
 
     **Update**
@@ -9,7 +15,7 @@ English
 
     **OpenCore**
     - Update `config.plist` to support OpenCore v. 0.6.5:
-        - Add `Misc -> Boot -> PickerVariant` set to `Other` (for selecting custom icon set)
+        - Add `Misc -> Boot -> PickerVariant` set to `Auto` (for selecting custom icon set)
         - Add `UEFI -> Audio -> SetupDelay` set to `0`
         - Delete `UEFI -> Quirks -> DeduplicateBootOrder` key
     
