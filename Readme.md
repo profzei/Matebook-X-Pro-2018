@@ -10,7 +10,7 @@
 <img src="/Wiki/Images/matebook-x-pro-big-sur.png" alt="Huawei Big Sur 11.0" />
 </p>
 
-#### This repo is currently compatible with macOS Big Sur 11.1 (20C69), Catalina 10.15.7 Supplemental Update (19H15) and OpenCore 0.6.5
+#### This repo is currently compatible with macOS Big Sur, Catalina and OpenCore 0.6.5
 |     macOS Big Sur      |     macOS Catalina     |       macOS Mojave       |
 |------------------------|------------------------|--------------------------|
 |     11.1 (20C69)       |     10.15.7  (19H15)   |       10.14.6  (18G87)   |
@@ -22,16 +22,21 @@
 |                        |     10.15.1  (19B88)   |       10.14    (18A389)  |
 |                        |     10.15    (19A583)  |                          |
 
-#### macOS Big Sur 11.1 is here!
+
 
 #### DISCLAIMER
-Read the entire README before you start.
-I am not responsible for any damages you may cause.  
-Should you find an error or improve anything — whether in the config or in the documentation — please consider opening an issue or pull request.
+
+- Read the entire README before you start.
+- I am not responsible for any damages you may cause.
+- Should you find an error or improve anything — whether in the config or in the documentation — please consider opening an issue or pull request.
+- Complete EFI packs are available in the [**Releases**](https://github.com/profzei/Matebook-X-Pro-2018/releases) page (please, refer to the right side menu).
+- Please do not clone or download the main branch for daily use: it may include **unstable code** just because it is my repository.
+
+<img src="/Wiki/Images/Disclaimer.png" alt="Disclaimer" />
 
 If you find this bootloader configuration useful, consider **giving** it **a star** to make it more visible.
 
-If you find my work useful, please consider donating via PayPal. [![donate](https://img.shields.io/badge/-buy%20me%20a%20coffee-orange)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=TSJHK3C2BSQN6&currency_code=EUR)
+If you find my work useful, please consider **donating via PayPal**. [![donate](https://img.shields.io/badge/-buy%20me%20a%20coffee-orange)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=TSJHK3C2BSQN6&currency_code=EUR)
 
 ### Introduction
 
