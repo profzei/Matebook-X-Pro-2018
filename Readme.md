@@ -24,7 +24,7 @@
 
 
 
-#### DISCLAIMER
+### DISCLAIMER
 
 - Read the entire README before you start.
 - I am not responsible for any damages you may cause.
@@ -40,7 +40,7 @@ If you find this bootloader configuration useful, consider **giving** it **a sta
 
 If you find my work useful, please consider **donating via PayPal**. [![donate](https://img.shields.io/badge/-buy%20me%20a%20coffee-orange)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=TSJHK3C2BSQN6&currency_code=EUR)
 
-### Introduction
+## Introduction
 
 This repo contains information for getting macOS working on a **Huawei MateBook X Pro (2018 Edition)** laptop.
 
@@ -57,7 +57,7 @@ With each new release of macOS we need to resolve each new "minor issue" we run 
 
 **This repository is for personal purposes**
 
-#### Generate your own SMBIOS Information
+### Generate your own SMBIOS Information
 
 For privacy reasons, all SMBIOS information has been wiped out in the configuration file `EFI/OC/config.plist`. You need to generate your unique SMBIOS info by yourself (recommend to use [**CorpNewt's GenSMBIOS**](https://github.com/corpnewt/GenSMBIOS)), and inject them into your `config.plist`.
 
@@ -124,10 +124,6 @@ See [**Current status**](Changelog.md)
 	- Have used `SSDT-DDGPU.aml` to disable it in order to save power.
 - [ ] Fingerprint sensor is not working
 	- Have used `SSDT-XHC.aml` to disable it in order to save power.
-- [ ] Intel Wi-Fi (Intel Wireless 8265/8275) is ~~not (yet)~~ working:
-	- see in Network section](/Network) for instructions to load [`itlwm`](https://github.com/OpenIntelWireless/itlwm) and [`HeliPort`](https://github.com/OpenIntelWireless/HeliPort) to drive our Intel Wi-Fi card: it is still in beta phase, but with support for WPA/WPA2 and 2.4 - 5 GHz bands
-	- see in [Network section](/Network) for instructions to load `AppleIntelWiFi.kext` for enabling our Intel Wi-Fi card: it is still in beta phase, but with support for WPA/WPA2 and 2.4 - 5 GHz bands ~~there is hard work and, therefore, some progress in Intel Wi-Fi support. Hope to see a fully functional `kext` asap.~~
-	- Previously I bought a USB Wi-Fi dongle: [tp-link](https://www.tp-link.com/it/support/download/tl-wn823n/?utm_medium=select-local#Driver) TL-WN823Nv3 with macOS updated driver support [Wireless-USB-Adapter Driver](https://github.com/chris1111/Wireless-USB-Adapter-Clover/releases) 
 </details>
 
 ## Bootloader Firmware
@@ -222,7 +218,7 @@ About power consumption, [HWMonitor](https://github.com/kzlekk/HWSensors/release
 <details>
 <summary><strong>Mapping scheme</strong></summary>
 
-Proper `SSDT-UIAC.aml` and `SSDT-USBX.aml` are used for USB Host Controller (XHCI-Device-ID: `<2f 9d 00 00>`): these files are configured to map only the necessary ports (tested with IOReg) with the correct connector type and prevent it from shutdown issues.
+Proper `SSDT-XHC.aml` is used for USB Host Controller (XHCI-Device-ID: `<2f 9d 00 00>`): this file is configured to map only the necessary ports (tested with IOReg) with the correct connector type and prevent it from shutdown issues.
 
 | Port      | Address               | Physical Location                                         | Internal/External |
 | :--- | :--- | :--- | :--- |
