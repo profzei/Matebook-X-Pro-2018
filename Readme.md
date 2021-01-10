@@ -29,10 +29,12 @@
 - Read the entire README before you start.
 - I am not responsible for any damages you may cause.
 - Should you find an error or improve anything — whether in the config or in the documentation — please consider opening an issue or pull request.
-- Complete EFI packs are available in the [**Releases**](https://github.com/profzei/Matebook-X-Pro-2018/releases) page (please, refer to the right side menu).
-- Please do not clone or download the main branch for daily use: it may include **unstable code** just because it is my repository.
+- **Complete EFI packs** are available in the [**Releases**](https://github.com/profzei/Matebook-X-Pro-2018/releases) page (please, refer to the right side menu).
+- Please **do not clone or download** the main branch for daily use: it may include **unstable code** just because it is my repository.
 
+<p align="center">
 <img src="/Wiki/Images/Disclaimer.png" alt="Disclaimer" />
+</p>
 
 If you find this bootloader configuration useful, consider **giving** it **a star** to make it more visible.
 
