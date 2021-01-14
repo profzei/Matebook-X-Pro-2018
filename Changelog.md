@@ -4,7 +4,7 @@ English
 - **14-01-2021**
 
     **Update**
-    - Update `SSDT-DDGPU.aml`: fixing path for `RP01` device `_OFF` method to `RP01.PC01._OFF` since it is in `PowerResource (PC01, 0x00, 0x0000)` section [credit to **@bingzujia**]
+    - Update `SSDT-DDGPU.aml`: fixing path for `RP01` device `_OFF` method to `RP01.PC01._OFF` since it is in `PowerResource (PC01, 0x00, 0x0000)` section [[credit to](https://github.com/profzei/Matebook-X-Pro-2018/issues/129) **@bingzujia**]
     - Update `SSDT-PTSWAK-SLEEP.aml`: same as above
 
 - **09-01-2021**
