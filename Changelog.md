@@ -1,6 +1,12 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **15-01-2021**
+
+    **Update**
+    - Update [kext] `AirportItlwm_Big_Sur` v. 1.2.0 stable: [OpenIntelWireless](https://github.com/OpenIntelWireless/itlwm) developer team (sadly) revert Tx Aggregation due to its instability (see commit [6d31398](https://github.com/OpenIntelWireless/itlwm/commit/6d31398f35d12bb07a8ed0c95482d81b9cc29f11))
+    - Update [kext] `AirportItlwm_Catalina` v. 1.2.0 stable (obviously same as above...)
+    
 - **14-01-2021**
 
     **Update**
