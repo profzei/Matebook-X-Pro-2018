@@ -29,7 +29,7 @@
 - Read the entire README before you start.
 - I am not responsible for any damages you may cause.
 - Should you find an error or improve anything — whether in the config or in the documentation — please consider opening an issue or pull request.
-- **Complete EFI packs** are available in the [**Releases**](https://github.com/profzei/Matebook-X-Pro-2018/releases) page (please, refer to the right side menu).
+- **Complete EFI packs** are available in the [**Releases**](https://github.com/profzei/Matebook-X-Pro-2018/releases) page (please, refer to the rightside menu).
 - Please **do not clone or download** the main branch for daily use: it may include **unstable code** just because it is my repository.
 
 <p align="center">
@@ -51,7 +51,7 @@ With each new release of macOS we need to resolve each new "minor issue" we run 
 - The **compatibility** is **very good** for the most part, most of the stuff works like it would on a real MacBook, including camera, audio, touchpad, iCloud services.
 - The **experience** is **pleasant**, as the laptop is smooth and responsive under macOS Big Sur/Catalina.
 - **Battery life** is **quite great** (from personal experience it lasts from 8 to 10 hours for light works depending on its age with a behaviour very similar to Windows 10).
-- The **Intel WiFi** card is soldered onto the motherboard, which means it can't be replaced with a Broadcom one, but the Intel card is now **functional albeit not operating at full speeds** (however it is fine for most use cases). With the latest `AirportItlwm.kext` even Handoff and Continuity features are working, except for AirDrop. For any issues about `AirportItlwm.kext` please refer to [**OpenIntelWireless Gitter Page**](https://gitter.im/OpenIntelWireless/itlwm)
+- The **Intel WiFi** card is soldered onto the motherboard, which means it can't be replaced with a Broadcom one, but the Intel card is now **functional albeit not operating at full speeds** (however it is fine for most use cases). With the latest `AirportItlwm.kext` even Handoff and Continuity features are working, but with a very limited support for AirDrop and Apple Watch unlocking (see [Changelog for OpenIntelWireless release v. 1.2.0 stable](https://github.com/OpenIntelWireless/itlwm/releases)). For any issues about `AirportItlwm.kext` please refer to [**OpenIntelWireless Gitter Page**](https://gitter.im/OpenIntelWireless/itlwm?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 <img src="/Wiki/Images/ScreenBattery.png" alt="MBXP Battery Menu bar" />
 
@@ -94,36 +94,39 @@ See [**Current status**](Changelog.md)
 <details>
 <summary><strong>What's working</strong></summary>
 
-- [x] Intel(R) UHD 620 Graphics card  
-- [x] Intel(R) Wireless-AC 8265/8275 & Intel(R) Bluetooth
-- [x] Audio for Realtek ALC256 card (via AppleALC and layout-id 97)
-- [x] Power Management with support for HWP (Intel Speed Shift & Intel SpeedStep)
-- [x] Automatic Backlight control (with more granular levels)
+- [x] **Intel(R) UHD 620** Graphics card  
+- [x] **Intel(R) Wireless-AC** 8265/8275 & **Intel(R) Bluetooth**
+- [x] **Power Management** with support for HWP (Intel Speed Shift & Intel SpeedStep)
+- [x] **Sleep** and **Wake** (support for native macOS `hibernatemode3`)
+- [x] **Hibernation** (support for native macOS `hibernatemode25` with `HibernationFixup.kext`)
+- [x] **Battery support** with better memory access and integration of [Battery Information Supplement](https://github.com/acidanthera/VirtualSMC/blob/master/Docs/Battery%20Information%20Supplement.md)
+- [x] **Automatic Backlight control** (with more granular levels)
 - [x] Backlight shortcuts (F1 [brightness level down] - F2 [brightness level up])
 - [x] Volume shortcuts (F4 [mute] - F5 [audio level down] - F6 [audio level up])
-- [x] Sleep and Wake (or Hibernation)
-- [x] Battery support with better memory access
-- [x] Headphone jack [2 in 1]  (via ALCPlugFix)
-- [x] Speaker (4 Channels) & Internal Mic
-- [x] HDMI 2.0 up to two 4K @60 Hz monitors (via LSPCON)
-- [x] Native Color Profile for Display JDI 3k
-- [x] TouchPad (via GPIO interrupt mode) and native gestures
+- [x] **Audio** for **Realtek ALC256** card (via `AppleALC.kext` and `layout-id 97`)
+- [x] **Speakers** (4 Channels) & Internal Mic
+- [x] **Headphone** jack [2 in 1]  (via `ALCPlugFix`)
+- [x] **HDMI 2.0** up to two 4K @60 Hz monitors (via LSPCON)
+- [x] **Native Color Profile** for Display JDI 3k
+- [x] **TouchPad** (via `GPI0` interrupt mode) and **native macOS gestures**
 - [x] Touchscreen
 - [x] Updated support for LiteON SSD PCIe NVMe 
 - [x] PCI Devices latency support and complete description for System Information app
-- [x] USB Ports (Type-A & Type-C) with proper power levels
-- [x] Thunderbolt Port
+- [x] **USB Ports Mapping** (Type-A & Type-C) with proper power levels
+- [x] **Thunderbolt Port** (limited support)
 - [x] HD Camera
-- [x] Native NVRAM (~~via [OcQuirks](https://github.com/ReddestDream/OcQuirks/releases)~~)
+- [x] NVRAM native support
 </details>
 
 <details>
 <summary><strong>What's not working</strong></summary>
 
-- [ ] Discrete graphics card (NVIDIA GeForce MX150) is not working, since macOS doesn't support Optimus technology
+- [ ] **Discrete graphics card** (NVIDIA GeForce MX150) is not working, since macOS doesn't support Optimus technology
 	- Have used `SSDT-DDGPU.aml` to disable it in order to save power.
-- [ ] Fingerprint sensor is not working
-	- Have used `SSDT-XHC.aml` to disable it in order to save power.
+- [ ] **Fingerprint sensor** is not working
+	- Fingerprint readers on Macbooks are managed by T2 chip which has not been very throughly reverse engieered yet
+	- Have used `SSDT-XHC.aml` to disable it (in order to save some power).
+- [] **Intel Bluetooth** could not support some Bluetooth devices like some Bluetooth mouse since it is only a firmware injector; please, report any issues not here but only on [**OpenIntelWireless/IntelBluetoothFirmware Gitter Chat**](https://gitter.im/OpenIntelWireless/IntelBluetoothFirmware?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 </details>
 
 ## Bootloader Firmware
@@ -369,7 +372,7 @@ Then update your clock via the built-in internet time setting to update the time
 </details>
 
 ## Credits
-
+Standing on the shoulders of giants! Based on the works of many great people.
 - [Acidanthera](https://github.com/acidanthera)
 - [Dortania's OC guide](https://dortania.github.io/OpenCore-Install-Guide/)
 - [Rehabman's battery patch guide](https://www.tonymacx86.com/threads/guide-how-to-patch-dsdt-for-working-battery-status.116102/) and [Rehabman's ACPI hotpatching guide](https://www.tonymacx86.com/threads/guide-using-clover-to-hotpatch-acpi.200137/)
@@ -377,6 +380,13 @@ Then update your clock via the built-in internet time setting to update the time
 - [OpenWireless project](https://github.com/OpenIntelWireless/itlwm)
 - [Daliansky's OC-little repo](https://github.com/daliansky/OC-little)
 - [Daliansky's Xiaomi Pro Hackintosh](https://github.com/daliansky/XiaoMi-Pro-Hackintosh)
-- [Gnodipac886's MatebookXPro-hackintosh repo](https://github.com/gnodipac886/MatebookXPro-hackintosh): this project was *initially* based on the hard work done by Gnodipac886 guy, but *now* it can be considered as a different project due to **many and original very significant personal improvements in ALL the sections**.
 
 The greatest thank you and appreciation to [Zero-zer0](https://github.com/Zero-zer0), [GZXiaoBai](https://github.com/GZXiaoBai) and [Benbender](https://github.com/benbender) whose work is very inspiring!
+
+And to everyone else who supports and uses my repo.
+
+<details>  
+<summary><strong>Other Matebook X Pro repositories [Old]</strong></summary>
+
+- [Gnodipac886's MatebookXPro-hackintosh repo](https://github.com/gnodipac886/MatebookXPro-hackintosh): this project was *initially* based on the hard work done by Gnodipac886 guy, but *now* it can be considered as a different project due to **many and original very significant personal improvements in ALL the sections**.
+</details>

@@ -63,7 +63,7 @@ English
     - Update [kext] stripped `AirportItlwm_Big_Sur` v. 1.2.0 beta (commit 3f244c8)
     - Update [kext] stripped `AirportItlwm_Catalina` v. 1.2.0 beta (commit 3f244c8)
     - Update `SSDT-XHC.aml`: fixed loading for Intel(R) Bluetooth device
-    - Add `SSDT-ARPT.aml` for OSX-native ACPI-interface for (Airport) WiFi-cards
+    - Add `SSDT-ARPT.aml` for OSX-native ACPI-interface for (Airport) WiFi-cards: it handles complete power-down of PCIe interface if OS requests it as on genuine machines
 
 - **01-02-2021**
 
