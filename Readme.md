@@ -126,7 +126,7 @@ See [**Current status**](Changelog.md)
 - [ ] **Fingerprint sensor** is not working
 	- Fingerprint readers on Macbooks are managed by T2 chip which has not been very throughly reverse engieered yet
 	- Have used `SSDT-XHC.aml` to disable it (in order to save some power).
-- [] **Intel Bluetooth** could not support some Bluetooth devices like some Bluetooth mouse since it is only a firmware injector; please, report any issues not here but only on [**OpenIntelWireless/IntelBluetoothFirmware Gitter Chat**](https://gitter.im/OpenIntelWireless/IntelBluetoothFirmware?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+- [ ] **Intel Bluetooth** could not support some Bluetooth devices like some Bluetooth mouse since it is only a firmware injector; please, report any issues not here but only on [**OpenIntelWireless/IntelBluetoothFirmware Gitter Chat**](https://gitter.im/OpenIntelWireless/IntelBluetoothFirmware?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 </details>
 
 ## Bootloader Firmware
