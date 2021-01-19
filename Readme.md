@@ -167,6 +167,8 @@ For a detailed guide on how to activate surround sound via MIDI on internal spea
 <details>
 <summary><strong>Undervolt using VoltageShift</strong></summary>
 
+Undervolting is a great way to to maximise performance, lower power consumption and reduce temperatures.
+
 For a detailed guide on how to undervolt our MBXP using `VoltageShift` from the EFI folder instead of disabling SIP, see [Wiki section](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Undervolt-via-VoltageShift) 
 </details>
 
@@ -182,38 +184,34 @@ CPU power management can be achieved by using `CPUFriend.kext` while `CPUFriendD
 </details>
 
 <details>
-<summary><strong>Hibernation</strong></summary>
+<summary><strong>Sleep & Hibernation settings</strong></summary>
 
-Hibernation (suspend to disk or S4 sleep) is not fully supported on a Hackintosh: so it's recommended to disable it.
+**Sleep** function works flawlessly (both via software and via clamshell) like **hibernation** (suspend to disk or S4 sleep). In order to get automatic sleep working properly like real Macs, the following settings are mandatory: 
+```
+sudo pmset -a standby 0
+sudo pmset -a powernap 0 
+sudo pmset -a proximitywake 0
+sudo pmset -a tcpkeepalive 0
+sudo pmset -a womp 0
+```
+- `powernap` will wake up the system from time to time to check mail, make Time Machine backups, etc...
+- `proximitywake` can wake your machine when an iDevice is near.
+- `tcpkeepalive` has resolved periodic wake events after setting up iCloud.
+- `womp` is wake on lan.
+Default macOS setting is **hibernatemode 3** i.e. **sleep mode**.
+
+**Hibernation mode** can be enabled only via console command `sudo pmset -a hibernatemode 25` and is fully supported by Matebook X Pro (obviously using `HibernationFixup` kext). If, however, you would like to disable it, then
 ```
 sudo pmset -a hibernatemode 0
+sudo pmset -a autopoweroff 0
 sudo rm -rf /private/var/vm/sleepimage
 sudo touch /private/var/vm/sleepimage
 sudo chflags uchg /private/var/vm/sleepimage
 ```
-Also, it's important to disable the other hibernation related functions.
-```
-sudo pmset -a standby 0
-sudo pmset -a autopoweroff 0
-```
-Disabling additional features prevents random wakeups while the lid is closed.
-```
-sudo pmset -a powernap 0
-sudo pmset -a proximitywake 0   [optional]
-sudo pmset -b tcpkeepalive 0    [optional]
-```
-After every update, ALL these settings should be reapplied manually.
+**After every update, ALL these settings should be reapplied manually!**
 
-You can verify yuor power settings by typing in terminal `sudo pmset -g live` . If you ever want to reset these settings: `sudo pmset -a restoredefaults`
-</details>
+You can verify your power settings by typing in terminal `sudo pmset -g live` . If you ever want to reset these settings: `sudo pmset -a restoredefaults`
 
-<details>
-<summary><strong>Sleep discharge fix</strong></summary>
-
-Sleep function works flawlessly (both via software and via clamshell) thanks to the following improvements:
-- "right" choice of framebuffer `C0870005` for Intel(R) UHD 620 Graphics card
-- use of attribute `acpi-wake-type` for the USB Controller `PciRoot(0x0)/Pci(0x14,0x0)`
-- set `HWPEnable` value to true for SpeedShift CPU support
 About power consumption, [HWMonitor](https://github.com/kzlekk/HWSensors/releases) reports for the idle state both before and after sleep phase the same value for "CPU package total" (0.65-0.70 W). Sleep discharge rate is about 1% every 4:30 hours (during night).
 </details>
 
