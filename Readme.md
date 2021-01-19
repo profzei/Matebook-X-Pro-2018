@@ -198,7 +198,10 @@ sudo pmset -a womp 0
 - `proximitywake` can wake your machine when an iDevice is near.
 - `tcpkeepalive` has resolved periodic wake events after setting up iCloud.
 - `womp` is wake on lan.
+
 Default macOS setting is **hibernatemode 3** i.e. **sleep mode**.
+
+**After every update, ALL these settings should be reapplied manually!**
 
 **Hibernation mode** can be enabled only via console command `sudo pmset -a hibernatemode 25` and is fully supported by Matebook X Pro (obviously using `HibernationFixup` kext). If, however, you would like to disable it, then
 ```
@@ -208,7 +211,6 @@ sudo rm -rf /private/var/vm/sleepimage
 sudo touch /private/var/vm/sleepimage
 sudo chflags uchg /private/var/vm/sleepimage
 ```
-**After every update, ALL these settings should be reapplied manually!**
 
 You can verify your power settings by typing in terminal `sudo pmset -g live` . If you ever want to reset these settings: `sudo pmset -a restoredefaults`
 
