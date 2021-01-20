@@ -91,8 +91,6 @@ For privacy reasons, all SMBIOS information has been wiped out in the configurat
 See [**Current status**](Changelog.md)
 
 ## Status
-<details>
-<summary><strong>What's working</strong></summary>
 
 - [x] **Intel(R) UHD 620** Graphics card  
 - [x] **Intel(R) Wireless-AC** 8265/8275 & **Intel(R) Bluetooth**
@@ -119,7 +117,7 @@ See [**Current status**](Changelog.md)
 
 [^1]: Even if touchscreen is working, it's support is disabled by default. Why? It seems that all `VoodooI2C` versions after 2.4 are affected to a greater or lesser extent by `Multi_GPI0` issues.
 The solution proposed so far by `VoodooI2C` developers is only a workaround and not a real fix: proposing to use the `GPI0` pinning for touchpad and polling method for touchscreen is not a real fix because this approach increases interrupts and causes a degrade in battery life. This being the case and not needing to use the touchscreen in my daily work, for the moment I have disabled this function pending improvements that can only come from `VoodooI2C` developers.
-</details>
+
 
 <details>
 <summary><strong>What's not working</strong></summary>
