@@ -111,7 +111,7 @@ See [**Current status**](Changelog.md)
 - [x] Updated support for LiteON SSD PCIe NVMe 
 - [x] PCI Devices latency support and complete description for System Information app
 - [x] **USB Ports Mapping** (Type-A & Type-C) with proper power levels
-- [x] **Thunderbolt Port** (limited support, see Notes)
+- [x] **Thunderbolt Port** (limited support)
 - [x] HD Camera
 - [x] NVRAM native support
 
@@ -121,17 +121,22 @@ See [**Current status**](Changelog.md)
 1. **Intel Bluetooth** could not support some Bluetooth devices like some Bluetooth mouse since it is only a firmware injector; please, report any issues not here but only on [**OpenIntelWireless/IntelBluetoothFirmware Gitter Chat**](https://gitter.im/OpenIntelWireless/IntelBluetoothFirmware?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 2. **Touchscreen support is disabled by default** since [release v. 1.8.0](https://github.com/profzei/Matebook-X-Pro-2018/releases). Why? It seems that all `VoodooI2C` versions after 2.4 are affected to a greater or lesser extent by `Multi_GPI0` issues.
 The solution proposed so far by `VoodooI2C` developers is only a workaround and not a real fix: proposing to use the `GPI0` pinning for touchpad and polling method for touchscreen is not a real fix because this approach increases interrupts and causes a degrade in battery life. This being the case and not needing to use the touchscreen in my daily work, for the moment I have disabled this function pending improvements that can only come from `VoodooI2C` developers.
-3. As reported in [NotebookCheck review](https://www.notebookcheck.net/Huawei-has-pulled-a-Dell-the-MateBook-X-Pro-uses-a-gimped-Thunderbolt-3-port.316550.0.html) our Matebook X pro (2018) is utilizing only half the PCIe lanes for its single Thunderbolt 3 port (TB). Thus, its PCIe x2 Thunderbolt 3 port is only capable of providing a maximum of 20 Gbps instead of 40 Gbps when compared to a standard Thunderbolt 3 port with PCIe x4 lanes.
+</details>
+
+<details>
+<summary><strong>Thunderbolt support</strong></summary>
+
+As reported in [NotebookCheck review](https://www.notebookcheck.net/Huawei-has-pulled-a-Dell-the-MateBook-X-Pro-uses-a-gimped-Thunderbolt-3-port.316550.0.html) our Matebook X pro (2018) is utilizing only half the PCIe lanes for its single Thunderbolt 3 port (TB). Thus, its PCIe x2 Thunderbolt 3 port is only capable of providing a maximum of 20 Gbps instead of 40 Gbps when compared to a standard Thunderbolt 3 port with PCIe x4 lanes.
 
 The connector type is Usb-C and it can do multiple protocols (TB, USB 2/3/3.1, DP, etc...) with different backing controllers.
 
 The problem on Hackintoshes is mostly about TB on Usb-C, because the firmware and power management of Apple's TB-controllers works entirely different than those for other OS'es. So even if it's the same hardware found on Windows laptops, they don't "just work" because of the different firmware.
 
 The ACPI-part fro handling Thunderbolt 3 port and its power management has been implemented:
-	- it enables not only the PCIe-to-PCIe-bridge mode of the TB controller but also the native drivers which make it possible to completely poweroff the controller after using the TB port, saving battery life and prevent the controller from preventing the CPU goes into deeper C-State
-	- the ICM is disabled on boot to let OSX' drivers take over the job
-	- the TB port works when any device is plugged into it at the boot time: this means no hot-plug
-	- it's largely untested since I don't have any TB 3 devices.
+- it enables not only the PCIe-to-PCIe-bridge mode of the TB controller but also the native drivers which make it possible to completely poweroff the controller after using the TB port, saving battery life and prevent the controller from preventing the CPU goes into deeper C-State
+- the ICM is disabled on boot to let OSX' drivers take over the job
+- the TB port works when any device is plugged into it at the boot time: this means no hot-plug
+- it's largely untested since I don't have any TB 3 devices.
 
 For reference, see [Thunderbolt 3 Fix](https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3) and [ThunderboltPatcher](https://github.com/osy86/ThunderboltPatcher) for related attempts to fix TB by patching its firmware.
 </details>
