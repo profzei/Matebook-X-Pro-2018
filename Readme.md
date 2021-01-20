@@ -107,7 +107,7 @@ See [**Current status**](Changelog.md)
 - [x] **HDMI 2.0** up to two 4K @60 Hz monitors (via LSPCON)
 - [x] **Native Color Profile** for Display JDI 3k
 - [x] **TouchPad** (via `GPI0` interrupt mode) and **native macOS gestures**
-- [x] Touchscreen [^1]
+- [x] Touchscreen
 - [x] Updated support for LiteON SSD PCIe NVMe 
 - [x] PCI Devices latency support and complete description for System Information app
 - [x] **USB Ports Mapping** (Type-A & Type-C) with proper power levels
@@ -115,9 +115,13 @@ See [**Current status**](Changelog.md)
 - [x] HD Camera
 - [x] NVRAM native support
 
-[^1]: Even if touchscreen is working, it's support is disabled by default. Why? It seems that all `VoodooI2C` versions after 2.4 are affected to a greater or lesser extent by `Multi_GPI0` issues.
-The solution proposed so far by `VoodooI2C` developers is only a workaround and not a real fix: proposing to use the `GPI0` pinning for touchpad and polling method for touchscreen is not a real fix because this approach increases interrupts and causes a degrade in battery life. This being the case and not needing to use the touchscreen in my daily work, for the moment I have disabled this function pending improvements that can only come from `VoodooI2C` developers.
+<details>
+<summary><strong>Notes</strong></summary>
 
+1. **Intel Bluetooth** could not support some Bluetooth devices like some Bluetooth mouse since it is only a firmware injector; please, report any issues not here but only on [**OpenIntelWireless/IntelBluetoothFirmware Gitter Chat**](https://gitter.im/OpenIntelWireless/IntelBluetoothFirmware?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+2. **Touchscreen support is disabled by default** since [release v. 1.8.0](https://github.com/profzei/Matebook-X-Pro-2018/releases). Why? It seems that all `VoodooI2C` versions after 2.4 are affected to a greater or lesser extent by `Multi_GPI0` issues.
+The solution proposed so far by `VoodooI2C` developers is only a workaround and not a real fix: proposing to use the `GPI0` pinning for touchpad and polling method for touchscreen is not a real fix because this approach increases interrupts and causes a degrade in battery life. This being the case and not needing to use the touchscreen in my daily work, for the moment I have disabled this function pending improvements that can only come from `VoodooI2C` developers.
+</details>
 
 <details>
 <summary><strong>What's not working</strong></summary>
@@ -127,7 +131,6 @@ The solution proposed so far by `VoodooI2C` developers is only a workaround and 
 - [ ] **Fingerprint sensor** is not working
 	- Fingerprint readers on Macbooks are managed by T2 chip which has not been very throughly reverse engieered yet
 	- Have used `SSDT-XHC.aml` to disable it (in order to save some power).
-- [ ] **Intel Bluetooth** could not support some Bluetooth devices like some Bluetooth mouse since it is only a firmware injector; please, report any issues not here but only on [**OpenIntelWireless/IntelBluetoothFirmware Gitter Chat**](https://gitter.im/OpenIntelWireless/IntelBluetoothFirmware?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 </details>
 
 ## Bootloader Firmware
