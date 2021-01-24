@@ -138,7 +138,7 @@ The ACPI-part for handling Thunderbolt 3 port and its power management has been 
 
 For reference, see [Thunderbolt 3 Fix](https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3) and [ThunderboltPatcher](https://github.com/osy86/ThunderboltPatcher) for related attempts to fix TB by patching its firmware.
 
-Due to lack of Thunderbolt devices my interest in this feature is very marginal; therefore, in my default `config.plist`, Thunderbolt controller has been left disabled.
+Due to lack of Thunderbolt devices my interest in this feature is very marginal; therefore, in my default `config.plist`, **Thunderbolt controller has been left disabled**.
 </details>
 
 <details>
