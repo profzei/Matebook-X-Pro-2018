@@ -87,7 +87,7 @@ For privacy reasons, all SMBIOS information has been wiped out in the configurat
 
 ## Changelog
 
-#### 2021 - January - 15
+#### 2021 - January - 24
 See [**Current status**](Changelog.md)
 
 ## Status
@@ -137,6 +137,8 @@ The ACPI-part for handling Thunderbolt 3 port and its power management has been 
 - it's largely untested since I don't have any TB 3 devices.
 
 For reference, see [Thunderbolt 3 Fix](https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3) and [ThunderboltPatcher](https://github.com/osy86/ThunderboltPatcher) for related attempts to fix TB by patching its firmware.
+
+Due to lack of Thunderbolt devices my interest in this feature is very marginal; therefore, in my default `config.plist`, Thunderbolt controller has been left disabled.
 </details>
 
 <details>

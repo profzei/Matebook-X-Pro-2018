@@ -1,6 +1,15 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **24-01-2021**
+
+    **Update**
+    - Add `SSDT-DTB3.aml` for disabling Thunderbolt controller `\_SB.PCI0.RP09`
+    - Update `SSDT-INIT.aml`: switch for enabling/disabling Thunderbolt controller
+    - Update `SSDT-XHC.aml`: switch for enabling/disabling Thunderbolt controller
+
+    Due to lack of Thunderbolt devices my interest in this feature is very marginal; therefore, in my default `config.plist`, Thunderbolt controller has been left disabled.
+
 - **15-01-2021**
 
     **Update**
