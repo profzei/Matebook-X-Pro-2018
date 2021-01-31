@@ -1,6 +1,17 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **31-01-2021**
+
+    **Update**
+    - Update `SSDT-KBD.aml` for remapping hotkeys F7, F9, F10 to F16, F17 and F18 thus allowing custom shortcuts (enhancement suggested by **@R-Teer**: waiting for his guide about hotkey assignment)
+
+    **OpenCore**
+    - Update `config.plist`:
+        - Added `EC0._Q10,0,N to XQ10,0,N` binary patch (F7 to F16)
+        - Added `EC0._Q12,0,N to XQ12,0,N` binary patch (F9 to F17)
+        - Added `EC0._Q13,0,N to XQ13,0,N` binary patch (F10 to F18)
+
 - **24-01-2021**
 
     **Update**

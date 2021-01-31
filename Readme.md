@@ -87,7 +87,7 @@ For privacy reasons, all SMBIOS information has been wiped out in the configurat
 
 ## Changelog
 
-#### 2021 - January - 24
+#### 2021 - January - 31
 See [**Current status**](Changelog.md)
 
 ## Status
