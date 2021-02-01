@@ -10,42 +10,56 @@
 <img src="/Wiki/Images/matebook-x-pro-big-sur.png" alt="Huawei Big Sur 11.0" />
 </p>
 
-#### This repo is currently compatible with macOS Catalina 10.15.7 Supplemental Update (19H15) and OpenCore 0.6.2
-|        macOS Big Sur        |     macOS Catalina     |       macOS Mojave       |
-|-----------------------------|------------------------|--------------------------|
-|     11.0.1 Beta (20B5022a)  |     10.15.7  (19H15)   |       10.14.6  (18G87)   |
-|                             |     10.15.6  (19G2021) |       10.14.5  (18F132)  |
-|                             |     10.15.5  (19F101)  |       10.14.4  (18E226)  |
-|                             |     10.15.4  (19E287)  |       10.14.3  (18D42)   |
-|                             |     10.15.3  (19D76)   |       10.14.2  (18C54)   |
-|                             |     10.15.2  (19C57)   |       10.14.1  (18B75)   |
-|                             |     10.15.1  (19B88)   |       10.14    (18A389)  |
-|                             |     10.15    (19A583)  |                          |
+#### This repo is currently compatible with macOS Big Sur, Catalina and OpenCore 0.6.5
+|     macOS Big Sur      |     macOS Catalina     |       macOS Mojave       |
+|------------------------|------------------------|--------------------------|
+|     11.1 (20C69)       |     10.15.7  (19H15)   |       10.14.6  (18G87)   |
+|     11.0.1 (20B29)     |     10.15.6  (19G2021) |       10.14.5  (18F132)  |
+|                        |     10.15.5  (19F101)  |       10.14.4  (18E226)  |
+|                        |     10.15.4  (19E287)  |       10.14.3  (18D42)   |
+|                        |     10.15.3  (19D76)   |       10.14.2  (18C54)   |
+|                        |     10.15.2  (19C57)   |       10.14.1  (18B75)   |
+|                        |     10.15.1  (19B88)   |       10.14    (18A389)  |
+|                        |     10.15    (19A583)  |                          |
 
-#### Preparation for macOS Big Sur 11.0 is [on the way](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Upgrade-to-macOS-Big-Sur)
 
-#### DISCLAIMER
-Read the entire README before you start.
-I am not responsible for any damages you may cause.  
-Should you find an error or improve anything — whether in the config or in the documentation — please consider opening an issue or pull request.
+
+### DISCLAIMER
+
+- Read the entire README before you start.
+- I am not responsible for any damages you may cause.
+- Should you find an error or improve anything — whether in the config or in the documentation — please consider opening an issue or pull request.
+- **Complete EFI packs** are available in the [**Releases**](https://github.com/profzei/Matebook-X-Pro-2018/releases) page (please, refer to the rightside menu).
+- Please **do not clone or download** the main branch for daily use: it may include **unstable code** just because it is my repository.
+
+<p align="center">
+<img src="/Wiki/Images/Disclaimer.png" alt="Disclaimer" />
+</p>
 
 If you find this bootloader configuration useful, consider **giving** it **a star** to make it more visible.
 
-### Introduction
+If you find my work useful, please consider **donating via PayPal**. [![donate](https://img.shields.io/badge/-buy%20me%20a%20coffee-orange)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=TSJHK3C2BSQN6&currency_code=EUR)
 
-This repo contains information for getting macOS 10.15.x Catalina working on a **Huawei MateBook X Pro (2018 Edition)** laptop.
+## Introduction
+
+This repo contains information for getting macOS working on a **Huawei MateBook X Pro (2018 Edition)** laptop.
 
 This is intended to create a "fully" functional (as far as possible) hackintosh for the Huawei Matebook X Pro.
-If you would like to get started with creating a hackintosh on your MBXP but have non experience, I would highly recomend following Dortania's [OpenCore Install guide](https://dortania.github.io/OpenCore-Install-Guide/) and then returning here for troubleshooting.
+If you would like to get started with creating a hackintosh on your MBXP but have non experience, I would highly recomend following [**Dortania's OpenCore Install guide**](https://dortania.github.io/OpenCore-Install-Guide/) and then returning here for troubleshooting.
 With each new release of macOS we need to resolve each new "minor issue" we run into. The installation is not perfect yet since it's a continuos work-in-progress, but I'm glad to say that **I learned a lot** in the meantime. All of the steps I made to get to this point were a result of countless hours of reading along with trial and error. I am by no means an expert so any help to get this project functional is very appreciated!
 
-The compatibility is good for the most part, most of the stuff works like it would on a real MacBook, including camera, audio, touchpad, iCloud services. The experience is pleasant, as the laptop is smooth and responsive under macOS Catalina. Battery life is quite great (from personal experience it lasts from 8 to 10 hours for light works depending on its age with a behaviour very similar to Windows 10). The Intel WiFi card is soldered onto the motherboard, which means it can't be replaced with a Broadcom one, but the Intel card is now functional albeit not operating at full speeds - I am getting 50/10 mbit up/down on a 200/20 connection, which is fine for most use cases. With the latest `itlwm.kext` even Handoff and Continuity features are working, except for AirDrop. 
+- The **compatibility** is **very good** for the most part, most of the stuff works like it would on a real MacBook, including camera, audio, touchpad, iCloud services.
+- The **experience** is **pleasant**, as the laptop is smooth and responsive under macOS Big Sur/Catalina.
+- **Battery life** is **quite great** (from personal experience it lasts from 8 to 10 hours for light works depending on its age with a behaviour very similar to Windows 10).
+- The **Intel WiFi** card is soldered onto the motherboard, which means it can't be replaced with a Broadcom one, but the Intel card is now **functional albeit not operating at full speeds** (however it is fine for most use cases). With the latest `AirportItlwm.kext` even Handoff and Continuity features are working, but with a very limited support for AirDrop and Apple Watch unlocking (see [Changelog for OpenIntelWireless release v. 1.2.0 stable](https://github.com/OpenIntelWireless/itlwm/releases)). For any issues about `AirportItlwm.kext` please refer to [**OpenIntelWireless Gitter Page**](https://gitter.im/OpenIntelWireless/itlwm?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 <img src="/Wiki/Images/ScreenBattery.png" alt="MBXP Battery Menu bar" />
 
 **This repository is for personal purposes**
 
-Quick note: my serial number, MLB and UUID have been removed from the `config.plist`. Please use CorpNewt's [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) to create your own.
+### Generate your own SMBIOS Information
+
+For privacy reasons, all SMBIOS information has been wiped out in the configuration file `EFI/OC/config.plist`. You need to generate your unique SMBIOS info by yourself (recommend to use [**CorpNewt's GenSMBIOS**](https://github.com/corpnewt/GenSMBIOS)), and inject them into your `config.plist`.
 
 ## Configuration
 
@@ -73,73 +87,88 @@ Quick note: my serial number, MLB and UUID have been removed from the `config.pl
 
 ## Changelog
 
-#### 2020 - November - 06
+#### 2021 - January - 31
 See [**Current status**](Changelog.md)
 
 ## Status
-<details>
-<summary><strong>What's working</strong></summary>
 
-- [x] Intel(R) UHD 620 Graphics card  
-- [x] Intel(R) Wireless-AC 8265/8265 & Intel(R) Bluetooth
-- [x] Audio for Realtek ALC256 card (via AppleALC and layout-id 97)
-- [x] Power Management with support for HWP (Intel Speed Shift & Intel SpeedStep)
-- [x] Automatic Backlight control (with more granular levels)
+- [x] **Intel(R) UHD 620** Graphics card  
+- [x] **Intel(R) Wireless-AC** 8265/8275 & **Intel(R) Bluetooth**
+- [x] **Power Management** with support for HWP (Intel Speed Shift & Intel SpeedStep)
+- [x] **Sleep** and **Wake** (support for native macOS `hibernatemode3`)
+- [x] **Hibernation** (support for native macOS `hibernatemode25` with `HibernationFixup.kext`)
+- [x] **Battery support** with better memory access and integration of [Battery Information Supplement](https://github.com/acidanthera/VirtualSMC/blob/master/Docs/Battery%20Information%20Supplement.md)
+- [x] **Automatic Backlight control** (with more granular levels)
 - [x] Backlight shortcuts (F1 [brightness level down] - F2 [brightness level up])
 - [x] Volume shortcuts (F4 [mute] - F5 [audio level down] - F6 [audio level up])
-- [x] Sleep and Wake (or Hibernation)
-- [x] Battery support with better memory access
-- [x] Headphone jack [2 in 1]  (via ALCPlugFix)
-- [x] Speaker (4 Channels) & Internal Mic
-- [x] HDMI 2.0 up to two 4K @60 Hz monitors (via LSPCON)
-- [x] Native Color Profile for Display JDI 3k
-- [x] TouchPad (via GPIO interrupt mode) and native gestures
+- [x] **Audio** for **Realtek ALC256** card (via `AppleALC.kext` and `layout-id 97`)
+- [x] **Speakers** (4 Channels) & Internal Mic
+- [x] **Headphone** jack [2 in 1]  (via `ALCPlugFix`)
+- [x] **HDMI 2.0** up to two 4K @60 Hz monitors (via LSPCON)
+- [x] **Native Color Profile** for Display JDI 3k
+- [x] **TouchPad** (via `GPI0` interrupt mode) and **native macOS gestures**
 - [x] Touchscreen
 - [x] Updated support for LiteON SSD PCIe NVMe 
 - [x] PCI Devices latency support and complete description for System Information app
-- [x] USB Ports (Type-A & Type-C) with proper power levels
-- [x] Thunderbolt Port
+- [x] **USB Ports Mapping** (Type-A & Type-C) with proper power levels
+- [x] **Thunderbolt Port** (limited support)
 - [x] HD Camera
-- [x] Native NVRAM (~~via [OcQuirks](https://github.com/ReddestDream/OcQuirks/releases)~~)
+- [x] NVRAM native support
+
+<details>
+<summary><strong>Notes</strong></summary>
+
+1. **Intel Bluetooth** could not support some Bluetooth devices like some Bluetooth mouse since it is only a firmware injector; please, report any issues not here but only on [**OpenIntelWireless/IntelBluetoothFirmware Gitter Chat**](https://gitter.im/OpenIntelWireless/IntelBluetoothFirmware?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+2. **Touchscreen support is disabled by default** since [release v. 1.8.0](https://github.com/profzei/Matebook-X-Pro-2018/releases). Why? It seems that all `VoodooI2C` versions after 2.4 are affected to a greater or lesser extent by `Multi_GPI0` issues.
+The solution proposed so far by `VoodooI2C` developers is only a workaround and not a real fix: proposing to use the `GPI0` pinning for touchpad and polling method for touchscreen is not a real fix because this approach increases interrupts and causes a degrade in battery life. This being the case and not needing to use the touchscreen in my daily work, for the moment I have disabled this function pending improvements that can only come from `VoodooI2C` developers.
+</details>
+
+<details>
+<summary><strong>Thunderbolt support</strong></summary>
+
+As reported in [NotebookCheck review](https://www.notebookcheck.net/Huawei-has-pulled-a-Dell-the-MateBook-X-Pro-uses-a-gimped-Thunderbolt-3-port.316550.0.html) our Matebook X pro (2018) is utilizing only half the PCIe lanes for its single Thunderbolt 3 port (TB). Thus, its PCIe x2 Thunderbolt 3 port is only capable of providing a maximum of 20 Gbps instead of 40 Gbps when compared to a standard Thunderbolt 3 port with PCIe x4 lanes.
+
+The connector type is Usb-C and it can do multiple protocols (TB, USB 2/3/3.1, DP, etc...) with different backing controllers. The problem on Hackintoshes is mostly about TB on Usb-C, because the firmware and power management of Apple's TB-controllers works entirely different than those for other OS'es. So even if it's the same hardware found on Windows laptops, they don't "just work" because of the different firmware.
+
+The ACPI-part for handling Thunderbolt 3 port and its power management has been implemented:
+- it enables not only the PCIe-to-PCIe-bridge mode of the TB controller but also the native drivers which make it possible to completely poweroff the controller after using the TB port, saving battery life and prevent the controller from preventing the CPU goes into deeper C-State
+- the ICM is disabled on boot to let OSX' drivers take over the job
+- the TB port works when any device is plugged into it at the boot time: this means no hot-plug
+- it's largely untested since I don't have any TB 3 devices.
+
+For reference, see [Thunderbolt 3 Fix](https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3) and [ThunderboltPatcher](https://github.com/osy86/ThunderboltPatcher) for related attempts to fix TB by patching its firmware.
+
+Due to lack of Thunderbolt devices my interest in this feature is very marginal; therefore, in my default `config.plist`, **Thunderbolt controller has been left disabled**.
 </details>
 
 <details>
 <summary><strong>What's not working</strong></summary>
 
-- [ ] Discrete graphics card (NVIDIA GeForce MX150) is not working, since macOS doesn't support Optimus technology
+- [ ] **Discrete graphics card** (NVIDIA GeForce MX150) is not working, since macOS doesn't support Optimus technology
 	- Have used `SSDT-DDGPU.aml` to disable it in order to save power.
-- [ ] Fingerprint sensor is not working
-	- Have used `SSDT-UIAC.aml` to disable it in order to save power.
-- [ ] Intel Wi-Fi (Intel Wireless 8265/8275) is ~~not (yet)~~ working:
-	- see in Network section](/Network) for instructions to load [`itlwm`](https://github.com/OpenIntelWireless/itlwm) and [`HeliPort`](https://github.com/OpenIntelWireless/HeliPort) to drive our Intel Wi-Fi card: it is still in beta phase, but with support for WPA/WPA2 and 2.4 - 5 GHz bands
-	- see in [Network section](/Network) for instructions to load `AppleIntelWiFi.kext` for enabling our Intel Wi-Fi card: it is still in beta phase, but with support for WPA/WPA2 and 2.4 - 5 GHz bands ~~there is hard work and, therefore, some progress in Intel Wi-Fi support. Hope to see a fully functional `kext` asap.~~
-	- Previously I bought a USB Wi-Fi dongle: [tp-link](https://www.tp-link.com/it/support/download/tl-wn823n/?utm_medium=select-local#Driver) TL-WN823Nv3 with macOS updated driver support [Wireless-USB-Adapter Driver](https://github.com/chris1111/Wireless-USB-Adapter-Clover/releases) 
+- [ ] **Fingerprint sensor** is not working
+	- Fingerprint readers on Macbooks are managed by T2 chip which has not been very throughly reverse engineered yet
+	- Have used `SSDT-XHC.aml` to disable it (in order to save some power).
 </details>
 
 ## Bootloader Firmware
-- Default bootloader: `OpenCore 0.6.2` [Official release](https://github.com/acidanthera/OpenCorePkg/releases)
-- Alternative bootloader: Clover `r5118` [Official release](https://github.com/CloverHackyColor/CloverBootloader/releases) ~~`r5103` [Dids release](https://github.com/Dids/clover-builder/releases)~~
+- Default bootloader: `OpenCore 0.6.5` [Official release](https://github.com/acidanthera/OpenCorePkg/releases). See more info in [Wiki section](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Converting-from-Clover-to-OpenCore) about migration.
+- No longer maintained: Clover `r5118` [Official release](https://github.com/CloverHackyColor/CloverBootloader/releases) ~~`r5103` [Dids release](https://github.com/Dids/clover-builder/releases)~~
 
 <details>
 <summary><strong>OpenCore</strong></summary>
 
-- Support macOS 10.14 ~ macOS 11.0.1 beta RC
-- Should **clean NVRAM** after using `Clover`: press `Space` in OpenCore boot page and then select `Reset NVRAM` entry
-- Limited theme with `OpenCanopy`
-</details>
-
-<details>
-<summary><strong>Clover</strong></summary>
-
-- Support macOS 10.14 ~ macOS 10.15.7, but **not macOS 11+**
-- Should **clean NVRAM** after using `OpenCore`: press `Fn + F11` in Clover boot page
+- Support macOS 10.14 ~ macOS 11.1
+- **For dual-booting systems, Windows Activation may fail due to different hardware UUID generated by OpenCore**
+	- According to [OpenCore Official Configuration](https://github.com/acidanthera/OpenCorePkg/blob/master/Docs/Configuration.pdf), you are highly recommended to inject the **original Windows system UUID** to `PlatformInfo -> Generic - >SystemUUID` in `EFI/OC/config.plist`: run `wmic csproduct get UUID` command in Windows PowerShell app 
+- Limited theme with `OpenCanopy`: a cleaner version with custom graphics has been provided by **@R-Teer**
 </details>
 
 ## Post - Install
 <details>
 <summary><strong>Enable Apple Services</strong></summary>
 
-Default **SMBIOS** settings of this repo is `MacBookPro15,2` ~~`MacBookPro14,1`~~
+Default **SMBIOS** settings of this repo is `MacBookPro14,1` ~~`MacBookPro15,2`~~
 1. Launch `Terminal` app
 2. Copy the following script, paste it into the `Terminal` window, then press `Enter`
    ```bash
@@ -148,7 +177,7 @@ Default **SMBIOS** settings of this repo is `MacBookPro15,2` ~~`MacBookPro14,1`~
 3. Type `2`, then press `Enter`
 4. Drag your `config.plist` inside the `Terminal` window
 5. Type `3`, then press `Enter`
-6. Type `MacBookPro15,2`, then press `Enter`
+6. Type `MacBookPro14,1`, then press `Enter`
 </details>
 
 <details>
@@ -159,6 +188,8 @@ For a detailed guide on how to activate surround sound via MIDI on internal spea
 
 <details>
 <summary><strong>Undervolt using VoltageShift</strong></summary>
+
+Undervolting is a great way to to maximise performance, lower power consumption and reduce temperatures.
 
 For a detailed guide on how to undervolt our MBXP using `VoltageShift` from the EFI folder instead of disabling SIP, see [Wiki section](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Undervolt-via-VoltageShift) 
 </details>
@@ -175,38 +206,36 @@ CPU power management can be achieved by using `CPUFriend.kext` while `CPUFriendD
 </details>
 
 <details>
-<summary><strong>Hibernation</strong></summary>
+<summary><strong>Sleep & Hibernation settings</strong></summary>
 
-Hibernation (suspend to disk or S4 sleep) is not fully supported on a Hackintosh: so it's recommended to disable it.
+**Sleep** function works flawlessly (both via software and via clamshell) like **hibernation** (suspend to disk or S4 sleep). In order to get automatic sleep working properly like real Macs, the following settings are mandatory: 
+```
+sudo pmset -a standby 0
+sudo pmset -a powernap 0 
+sudo pmset -a proximitywake 0
+sudo pmset -a tcpkeepalive 0
+sudo pmset -a womp 0
+```
+- `powernap` will wake up the system from time to time to check mail, make Time Machine backups, etc...
+- `proximitywake` can wake your machine when an iDevice is near.
+- `tcpkeepalive` has resolved periodic wake events after setting up iCloud.
+- `womp` is wake on lan.
+
+Default macOS setting is **hibernatemode 3** i.e. **sleep mode**.
+
+**After every update, ALL these settings should be reapplied manually!**
+
+**Hibernation mode** can be enabled only via console command `sudo pmset -a hibernatemode 25` and is fully supported by Matebook X Pro (obviously using `HibernationFixup` kext). If, however, you would like to disable it, then
 ```
 sudo pmset -a hibernatemode 0
+sudo pmset -a autopoweroff 0
 sudo rm -rf /private/var/vm/sleepimage
 sudo touch /private/var/vm/sleepimage
 sudo chflags uchg /private/var/vm/sleepimage
 ```
-Also, it's important to disable the other hibernation related functions.
-```
-sudo pmset -a standby 0
-sudo pmset -a autopoweroff 0
-```
-Disabling additional features prevents random wakeups while the lid is closed.
-```
-sudo pmset -a powernap 0
-sudo pmset -a proximitywake 0   [optional]
-sudo pmset -b tcpkeepalive 0    [optional]
-```
-After every update, ALL these settings should be reapplied manually.
 
-You can verify yuor power settings by typing in terminal `sudo pmset -g live` . If you ever want to reset these settings: `sudo pmset -a restoredefaults`
-</details>
+You can verify your power settings by typing in terminal `sudo pmset -g live` . If you ever want to reset these settings: `sudo pmset -a restoredefaults`
 
-<details>
-<summary><strong>Sleep discharge fix</strong></summary>
-
-Sleep function works flawlessly (both via software and via clamshell) thanks to the following improvements:
-- "right" choice of framebuffer `C0870005` for Intel(R) UHD 620 Graphics card
-- use of attribute `acpi-wake-type` for the USB Controller `PciRoot(0x0)/Pci(0x14,0x0)`
-- set `HWPEnable` value to true for SpeedShift CPU support
 About power consumption, [HWMonitor](https://github.com/kzlekk/HWSensors/releases) reports for the idle state both before and after sleep phase the same value for "CPU package total" (0.65-0.70 W). Sleep discharge rate is about 1% every 4:30 hours (during night).
 </details>
 
@@ -214,7 +243,7 @@ About power consumption, [HWMonitor](https://github.com/kzlekk/HWSensors/release
 <details>
 <summary><strong>Mapping scheme</strong></summary>
 
-Proper `SSDT-UIAC.aml` and `SSDT-USBX.aml` are used for USB Host Controller (XHCI-Device-ID: `<2f 9d 00 00>`): these files are configured to map only the necessary ports (tested with IOReg) with the correct connector type and prevent it from shutdown issues.
+Proper `SSDT-XHC.aml` is used for USB Host Controller (XHCI-Device-ID: `<2f 9d 00 00>`): this file is configured to map only the necessary ports (tested with IOReg) with the correct connector type and prevent it from shutdown issues.
 
 | Port      | Address               | Physical Location                                         | Internal/External |
 | :--- | :--- | :--- | :--- |
@@ -285,25 +314,26 @@ Then update your clock via the built-in internet time setting to update the time
 
 | Item | Version | Remark |
 | :--- | :--- | :--- |
-| MacOS | 10.15.7 | |
-| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.6.2 | Default Bootloader|
-| [Clover](https://github.com/CloverHackyColor/CloverBootloader/releases) | 5118 | Alternative (not more supported) Bootloader|
-| [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.4.8 | Kext/process/framework/library patcher |
-| [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.4.3 | Handle Graphics card |
-| [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.5.3 | Handle/fix onboard audio |
-| [CodecCommander](https://github.com/Sniki/EAPD-Codec-Commander/releases) | 2.7.2 | |
-| [CPUFriend](https://github.com/acidanthera/CPUFriend/releases) | 1.2.2 | Power management |
-| [HibernationFixup](https://github.com/acidanthera/HibernationFixup/releases) | 1.3.6 | |
+| MacOS | 11.1 | |
+| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.6.5 | Default Bootloader|
+| [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.5.0 | Kext/process/framework/library patcher |
+| [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.4.6 | Handle Graphics card |
+| [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.5.6 | Handle/fix onboard audio |
+| [CodecCommander](https://github.com/Sniki/EAPD-Codec-Commander/releases) | 2.7.2 | Fix headphone audio switch |
+| [CPUFriend](https://github.com/acidanthera/CPUFriend/releases) | 1.2.3 | Power management |
+| [HibernationFixup](https://github.com/acidanthera/HibernationFixup/releases) | 1.3.9 | Handle hibernate status |
 | [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases) | 1.1.2 | Handle Bluetooth |
-| [itlwm](https://github.com/OpenIntelWireless/itlwm/releases) | 1.1.0 | Handle WiFi with HeliPort app |
-| NullEthernet | 1.0.6 | |
+| [AirportItlwm](https://github.com/OpenIntelWireless/itlwm/releases) | 1.2.0 | Handle native Wi-Fi card |
+| [NullEthernet](https://bitbucket.org/RehabMan/OS-X-Null-Ethernet/downloads/) | 1.0.6 | Fake Ethernet card |
 | [NoTouchID](https://github.com/al3xtjames/NoTouchID/releases) | 1.0.4 | Disable TouchID|
-| [NVMeFix](https://github.com/acidanthera/NVMeFix/releases) | 1.0.4 | Fix for NVMe SSDs |
+| [NVMeFix](https://github.com/acidanthera/NVMeFix/releases) | 1.0.5 | Fix for NVMe SSDs |
+| [RestrictEvents](https://github.com/acidanthera/RestrictEvents/releases) | 1.0.0 | Block unwanted processes |
 | [VoodooI2C](https://github.com/alexandred/VoodooI2C/releases) | 2.5.2 | Handle I2C device |
 | [VoodooI2CHID](https://github.com/alexandred/VoodooI2C/releases) | 2.5.2 | Touchpad I2C satellite |
-| [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases) | 2.1.7 | Enable keyboard, alternative trackpad driver |
-| [VirtualSMC + plugins](https://github.com/acidanthera/VirtualSMC/releases) | 1.1.7 | SMC chip emulation |
+| [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases) | 2.1.9 | Enable keyboard, alternative trackpad driver |
+| [VirtualSMC + plugins](https://github.com/acidanthera/VirtualSMC/releases) | 1.1.9 | SMC chip emulation |
 | [USBInjectAll](https://github.com/daliansky/OS-X-USB-Inject-All/releases) | 0.7.6 | Inject USB ports |
+| [VoltageShift](https://github.com/sicreative/VoltageShift) | 1.25 | Undervoltage tool |
 
 ## Development
 <details>  
@@ -364,12 +394,21 @@ Then update your clock via the built-in internet time setting to update the time
 </details>
 
 ## Credits
-
+Standing on the shoulders of giants! Based on the works of many great people.
 - [Acidanthera](https://github.com/acidanthera)
-- [Dortania OC guide](https://dortania.github.io/OpenCore-Install-Guide/)
+- [Dortania's OC guide](https://dortania.github.io/OpenCore-Install-Guide/)
 - [Rehabman's battery patch guide](https://www.tonymacx86.com/threads/guide-how-to-patch-dsdt-for-working-battery-status.116102/) and [Rehabman's ACPI hotpatching guide](https://www.tonymacx86.com/threads/guide-using-clover-to-hotpatch-acpi.200137/)
 - [CorpNewt's tools](https://github.com/corpnewt)
-- [OpenWireless and itlwm](https://github.com/OpenIntelWireless/itlwm)
+- [OpenWireless project](https://github.com/OpenIntelWireless/itlwm)
 - [Daliansky's OC-little repo](https://github.com/daliansky/OC-little)
 - [Daliansky's Xiaomi Pro Hackintosh](https://github.com/daliansky/XiaoMi-Pro-Hackintosh)
+
+The greatest thank you and appreciation to [Zero-zer0](https://github.com/Zero-zer0), [GZXiaoBai](https://github.com/GZXiaoBai) and [Benbender](https://github.com/benbender) whose work is very inspiring!
+
+And to everyone else who supports and uses my repo.
+
+<details>  
+<summary><strong>Other Matebook X Pro repositories [Old]</strong></summary>
+
 - [Gnodipac886's MatebookXPro-hackintosh repo](https://github.com/gnodipac886/MatebookXPro-hackintosh): this project was *initially* based on the hard work done by Gnodipac886 guy, but *now* it can be considered as a different project due to **many and original very significant personal improvements in ALL the sections**.
+</details>

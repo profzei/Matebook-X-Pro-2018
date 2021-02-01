@@ -1,6 +1,332 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **31-01-2021**
+
+    **Update**
+    - Update `SSDT-KBD.aml` for remapping hotkeys F7, F9, F10 to F16, F17 and F18 thus allowing custom shortcuts (enhancement suggested by **@R-Teer**: waiting for his guide about hotkey assignment)
+
+    **OpenCore**
+    - Update `config.plist`:
+        - Added `EC0._Q10,0,N to XQ10,0,N` binary patch (F7 to F16)
+        - Added `EC0._Q12,0,N to XQ12,0,N` binary patch (F9 to F17)
+        - Added `EC0._Q13,0,N to XQ13,0,N` binary patch (F10 to F18)
+
+- **24-01-2021**
+
+    **Update**
+    - Add `SSDT-DTB3.aml` for disabling Thunderbolt controller `\_SB.PCI0.RP09`
+    - Update `SSDT-INIT.aml`: switch for enabling/disabling Thunderbolt controller
+    - Update `SSDT-XHC.aml`: switch for enabling/disabling Thunderbolt controller
+
+    Due to lack of Thunderbolt devices my interest in this feature is very marginal; therefore, in my default `config.plist`, Thunderbolt controller has been left disabled.
+
+- **15-01-2021**
+
+    **Update**
+    - Update [kext] `AirportItlwm_Big_Sur` v. 1.2.0 stable: [OpenIntelWireless](https://github.com/OpenIntelWireless/itlwm) developer team (sadly) revert Tx Aggregation due to its instability (see commit [6d31398](https://github.com/OpenIntelWireless/itlwm/commit/6d31398f35d12bb07a8ed0c95482d81b9cc29f11))
+    - Update [kext] `AirportItlwm_Catalina` v. 1.2.0 stable (obviously same as above...)
+    
+- **14-01-2021**
+
+    **Update**
+    - Update `SSDT-DDGPU.aml`: fixing path for `RP01` device `_OFF` method to `RP01.PC01._OFF` since it is in `PowerResource (PC01, 0x00, 0x0000)` section [[credit to](https://github.com/profzei/Matebook-X-Pro-2018/issues/129) **@bingzujia**]
+    - Update `SSDT-PTSWAK-SLEEP.aml`: same as above
+
+- **09-01-2021**
+
+    **Update**
+    - Update [kext] stripped `AirportItlwm_Big_Sur` v. 1.2.0 beta (commit 040a5e8)
+    - Update [kext] stripped `AirportItlwm_Catalina` v. 1.2.0 beta (commit 040a5e8)
+
+- **08-01-2021**
+
+    **Update**
+    - Update `OpenCore` v. 0.6.5
+    - Update OpenCanopy theme fixing some warnings shown only by OC Debug version
+
+    **OpenCore**
+    - Update `config.plist` to support OpenCore v. 0.6.5:
+        - Add `Misc -> Boot -> PickerVariant` set to `Auto` (for selecting custom icon set)
+        - Add `UEFI -> Audio -> SetupDelay` set to `0`
+        - Delete `UEFI -> Quirks -> DeduplicateBootOrder` key
+    
+- **07-01-2021**
+
+    **Update**
+    - Add `SSDT-BIOS.aml` (testing) which defines a new `_QBF,0,N` method (i.e. referred to `EC0`) found in original HUAWEI BIOS v. 1.33:
+        - it's the only difference from HUAWEI BIOS v. 1.28 (supported atm in this repo) or v. 1.30
+        - according to [this post in Reddit r/MatebookXPro](https://www.reddit.com/r/MatebookXPro/comments/kksexv/matebook_x_pro_bios_version_133_released_12242020/gh5jpkm?utm_source=share&utm_medium=web2x&context=3) MBXP's overheat when plugged in (reported by some users in the same sub r/MatebookXPro) should be fixed or at least improved
+    - Restructing actual configuration for repo:
+        - Delete `BOOT` folder (outdated to OpenCore v. 0.6.3)
+        - Delete `OC` folder (outdated to OpenCore v. 0.6.3)
+        - Update `Readme` accordingly
+
+- **01-06-2021**
+
+    **Update**
+    - Update [kext] `WhateverGreen` v. 1.4.6
+    - Update [kext] `AppleALC` v. 1.5.6
+    - Update [kext] `CPUFriend` v. 1.2.3
+    - Update [kext] `HibernationFixup` v. 1.3.9
+    - Update [kext] `NVMeFix` v. 1.0.5
+    - Update [kext] `RestrictEvents` v. 1.0.0
+
+- **01-04-2021**
+
+    **Update**
+    - Update `SSDT-PS2K.aml`: better way to remap Cmd and Option keys
+
+- **01-03-2021**
+
+    **Update**
+    - Update [kext] stripped `AirportItlwm_Big_Sur` v. 1.2.0 beta (commit 3f244c8)
+    - Update [kext] stripped `AirportItlwm_Catalina` v. 1.2.0 beta (commit 3f244c8)
+    - Update `SSDT-XHC.aml`: fixed loading for Intel(R) Bluetooth device
+    - Add `SSDT-ARPT.aml` for OSX-native ACPI-interface for (Airport) WiFi-cards: it handles complete power-down of PCIe interface if OS requests it as on genuine machines
+
+- **01-02-2021**
+
+    **Update**
+    - Update `SSDT-XHC.aml` adding `_STA,0,N` method
+
+    **OpenCore**
+    - Update [config] `DeviceProperties -> Add` section for PCI devices:
+        - cleaning info removing `name` property
+        - injecting `ThunderboltUUID` property for Intel(R) JHL6240 Thunderbolt 3 Bridge [Alpine Ridge LP 2016] device
+
+- **01-01-2021**
+
+    **Update**
+    - Update `SSDT-BAT0-HUAWEI.aml`:
+        - support for Battery Information Supplement implementing `BAT0.CBIS,0,N` and `BAT0.CBSS,0,N` methods
+        - splitting for some EC fields (respectively `B0TM`, `B0C1`, `B0CV`)
+
+    Sidenote for Bluetooth (loading) issue: according to [stevezhengshiqi's opinion](https://github.com/daliansky/XiaoMi-Pro-Hackintosh/issues/522#issuecomment-753402849) it could be a driver issue from IntelBluetoothFirmware. A simple way to fix it could be a boot script (not a login script) powering down and then powering up BT device (script already written: only need for testing it) 
+
+    Sidenote for Thunderbolt support: full TB support might be tricky as MateBook X Pro (2018) only has one TB-port and seems to be missing the usual switch between ports. Didn't look into it too much but it may be actually impossible to get it fully working (at least a better power management is achieved). 
+
+- **31-12-2020**
+
+    - Debugging work:
+        - debug some `_Qxx` EC methods related to AC plugging in actions (`SSDT-DBG.aml`)
+        - debug some EC fields deducing their role (`SSDT-DBG.aml`)
+
+- **30-12-2020**
+    
+    **OpenCore**
+    - Add [config] for Intel(R) UHD Graphics 620 the property `AAPL00,override-no-connect` (EDID obtained from Linux)
+    - Add [config] `RP09._INI,0,N to XINI,0,N` binary patch for disabling ICM (Integrated Connection Manager) for Thunderbolt support
+
+- **29-12-2020**
+
+    **Update**
+    - Add more native Thunderbolt support (not only the previous PCIe-to-PCIe bridge mode):
+        - native macOS drivers without patched Thunderbolt firmware (wip...)
+        - slightly improved power management for Thunderbolt controller (wip...)
+    - Update `SSDT-INIT.aml` for initializing Thunderbolt controller
+    - Rename `SSDT-EC-USBX.aml` to `SSDT-EC.aml` removing USB power injection
+    - Add `SSDT-XHC.aml` for native ACPI-implementation of USB 2.0/3.0 (only useful USB ports are active) and relative USB power injection
+    - Remove `SSDT-UIAC.aml` (because of native ACPI-implementation for USB)
+    - Remove [kext] `USBInjectALL` (because of native ACPI-implementation for USB) 
+
+    **OpenCore**
+    - Add [config] `_UPC,0,N to XUPC,0,N` binary patch (for USB support)
+    - Add [config] `_GPE.NTFY,1,S to XTFY,1,S` binary patch (for Thunderbolt support)
+
+    The new Thunderbolt implementation is compatible with native macOS support for proper automatic sleep (`hibernatemode 3`) and hibernation (`hibernatemode 25`). This work is largely untested since I didn't have Thunderbolt devices! Anyway it should be better than previous support (at least for power management!)
+    
+    The native ACPI-implementation for USB has revealed another (?) bug of our DSDT i.e. Bluetooth device is properly recognized at boot-time but it needs a toggle off/on cycle to be "active" (i.e. turned on): further investigation needed but probably a login script for toggle off/on Bluetooth device needed to be implemented (wip...)
+
+- **26-12-2020**
+
+    **Update**
+    - Update [kext] stripped `AirportItlwm_Big_Sur` v. 1.2.0 beta (commit eeebc4c)
+    - Update [kext] stripped `AirportItlwm_Catalina` v. 1.2.0 beta (commit eeebc4c)
+    - Update [kext] `VoltageShift` v. 1.25 (from v. 1.22 modified version)
+    - Update `SSDT-AC0.aml` for storing in `PWRS` variable updated state for `EC0.ACAP` method (call in `_PSR` Method)
+    - Update `SSDT-EC-USBX.aml` modifying `EC0.ECAV` method (removing call to `_REV>=0x02`)
+    - Update `SSDT-PTSWAK-SLEEP.aml` fixing type for `SS3` (from `FieldUnitObj` to `IntObj`)
+    - Rename `SSDT-BATT-HUAWEI.aml` to `SSDT-BAT0-HUAWEI.aml` modifying `BAT0._STA` and `EC0._REG` methods (updating `LIDS` and `PWRS` status variables)
+    - Add [kext] `RestrictEvents` (commit 5f5f4bf) to replace `EFICheckDisabler`
+    - Add `SSDT-LID.aml` for updating `LIDS` variable with LID status
+    - Add `SSDT-NVME.aml` for handling NVMe SSD (injected properties to mimic MacbookPro14,1)
+    - Add `SSDT-TPL1.aml` for re-enabling GPI0 pinning for touchpad
+    - Remove [kext] `EFICheckDisabler`
+    - Remove `SSDT-TB3HP.aml` (`Enabled` key set to `false` value) for better automatic sleep support: wip... more tests needed
+
+    **OpenCore**
+    - Add [config] support for managing in `Kernel -> Add` section `RestrictEvents.kext`
+    - Add [config] `AC0._PSR,0,N to AC0.XPSR,0,N` binary patch
+    - Add [config] `EC0.ECAV,0,N to EC0.XCAV,0,N` binary patch
+    - Add [config] `LID._LID,0,N to LID.XLID,0,N` binary patch
+    - Add [config] `EC0._Q81,0,N to EC0.XQ81,0,N` binary patch
+    - Add [config] `BAT0._STA,0,N to BAT0.XSTA,0,N` binary patch
+    - Add [config] `EC0._REG,2,N to EC0.XREG,2,N` binary patch
+    - Remove [config] all entries in `NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82 -> boot-args` except for `-igfxnorpsc=1` (for Intel UHD620) and `itlwm_cc=IT` (for `AirportItlwm` country code support)
+    - Remove [config] `acpi-wake-type` entry from `Pci(0x14, 0x0)` USB Controller
+
+    For supporting full auto sleep mode (i.e. macOS default `hibernatemode 3`) atm two key steps are needed:
+    - removing hot-plug for Thunderbolt devices (managed by `SSDT-TB3HP.aml`)
+    - setting in macOS menubar `Soundflower (2ch)` to `None` as default settings instead of `Multi-Output Device` (this means that you need to manually set `Multi-Output Device` when it is necessary)
+
+    The latter step is needed since Soundflower maintains an open audio channel even when no audio is playing (for reference see [Soundflower prevents screen saver, display and comptuer sleep #179](https://github.com/feniix/soundflower/issues/179#issuecomment-581544566))
+
+- **25-12-2020**
+
+    **Update**
+    - Update `SSDT-RMNE.aml` removing ADR value
+    - Remove `SSDT-HPET.aml` (`HPTE` initialization in `SSDT-INIT.aml`)
+    - New script for automatic and recursive compiling `.dsl` to `.aml` file format for `SSDT` hotpatches
+    - Use stable ASL+ Optimizing Compiler/disassembler version 20200528
+
+- **20-12-2020**
+    
+    **Update**
+    - Restructing actual configuration for repo:
+        - Delete `CLOVER` folder since no more supported
+        - Delete `SSDT` folder
+        - Update `Readme` accordingly
+    - Update [kext] stripped `AirportItlwm_Big_Sur` v. 1.2.0 beta (commit 4133528) for testing tx aggregation
+    - Update [kext] stripped `AirportItlwm_Catalina` v. 1.2.0 beta (commit 4133528) for testing tx aggregation
+
+    **OpenCore**
+    - Update `config.plist` to improve support for booting Windows from OpenCanopy GUI loading default OEM information (long term testing needed):
+        - `Kernel -> Quirks -> CustomSMBIOSGuid` set to `true` (previous value `false`)
+        - `PlatformInfo -> UpdateSMBIOSMode` set to `Custom` (previous value `Create`)
+    - Fixed `MAT Support is 1` issue caused by our buggy firmware (atm firmware release for this repo is 1.28):
+        - `Booter -> Quirks -> DevirtualiseMmio` set to `true` (previous value `false`)
+        - `Booter -> Quirks -> EnableWriteUnprotector` set to `false` (previous value `true`)
+        - `Booter -> Quirks -> ProvideCustomSlide` set to `false` (previous value `true`) since all slides are usable therefore this quirk can be disabled
+        - `Booter -> Quirks -> RebuildAppleMemoryMap` set to `true` (previous value `false`)
+        - `Booter -> Quirks -> SyncRuntimePermissions` set to `true` (previous value `true`)
+    - Changed priority order for loading kexts
+    - Update `config.plist` using (for testing purpouses) the custom boot-args `itlwm_cc=IT` to use my country code IT-Italy
+    
+- **14-12-2020**
+
+    Update to macOS Big Sur 11.1 (20C69)
+    - Checking/rewriting some ACPI SSDTs: wip...
+    - Restructuring repository: wip...
+    - Re-enabling [kext] `SMCBatteryManager` for testing purpouses
+    - Disabling [kext] `ACPIBatteryManager`
+
+- **12-10-2020**
+
+    **Update**
+    - Update `OpenCore` v. 0.6.4
+    - Update [kext] stripped `AirportItlwm_Big_Sur` v. 1.2.0 beta (commit c2f2c51)
+    - Update [kext] stripped `AirportItlwm_Catalina` v. 1.2.0 beta (commit c2f2c51)
+    - Update [kext] `AppleALC` v. 1.5.5
+    - Update [kext] `HibernationFixup` v. 1.3.8
+    - Update [kext] stripped `IntelBluetoothFirmware` v. 1.1.2 (commit 16bc609)
+    - Update [kext] `Lilu` v. 1.5.0
+    - Update [kext] `VirtualSMC` + plugins v. 1.1.9
+    - Update [kext] `VoodooPS2Controller` v. 2.1.9
+    - Update [kext] `WhateverGreen` v. 1.4.5
+    - Update `SSDT-KBD.aml` for handling only (atm) `Fn` brightness keys
+    - Update `SSDT-PTSWAK-SLEEP.aml` removing ACPI-S0 support
+
+    **OpenCore**
+    - Update `config.plist` to support OpenCore v. 0.6.4:
+        - Add `Booter -> Patch` section
+        - `Booter -> Quirks -> AllowRelocationBlock` set to `false`
+        - `Misc -> Security -> BlacklistAppleUpdate` set to `true`
+        - `UEFI -> Audio -> PlayChime` from boolean to string type (value set to `Enabled`)
+    - Add [config] `TPD0._STA,0,N to TPD0.XSTA,0,N` binary patch
+    - Add `SSDT-DTPD.aml` for disabling Touchscreen and therefore fixing touchpad issue after sleeping (this was necessary since `Multi_GPIO` support for `VoodooI2C` v. 2.5.2 seems to be bugged)
+    - Add `SSDT-PS2K.aml` for swapping Command and Option keys in default (if not needed, please, set to `false` the variable `Enabled` for `SSDT-PS2K` in `ACPI -> Add` section)
+
+- **11-17-2020**
+
+	Initial support for macOS Big Sur 11.0.1
+	
+	**Update**
+	- Update [kext] stripped `AirportItlwm_Catalina` v. 1.2.0 beta (6b22398)
+	- Update [kext] stripped `AirportItlwm_Big_Sur` v. 1.2.0 beta (6b22398)
+
+    **OpenCore**
+    - `Booter -> Quirks -> SyncRuntimePermissions` set to `true` value (conservative approach)
+    - Add [config] support for managing in `Kernel -> Add` section both `AirportItlwm_Big_Sur.kext` and `AirportItlwm_Catalina.kext`
+    - Re-enabled [config] loading for `IntelBluetoothInjector.kext` for macOS Big Sur
+
+- **11-16-2020**
+
+    **Update**
+
+    A lot of work has been developed under the hood to try to mimic the behavior of a real MacbookPro: it seems to me that the system is stable (all checks atm have been performed on Catalina 10.15.7 Supplemental Update which is taken as reference). Most of the patches in the ACPI section have been rewritten from scratch:
+    - Add `SSDT-AC0.aml`: updated version of `SSDT-ADP1.aml` for patching AC-Device so that AppleACPIACAdapter-driver loads
+    - Add `SSDT-INIT.aml`: patch for initializing some global variables
+    - Add `SSDT-DDGPU.aml`: updated version of `SSDT-DDGPU-Optimus2.aml` for removing discrete GPU
+    - Add `SSDT-KBD.aml`: updated version of `SSDT-FnKey2.aml`
+    - Add `SSDT-PM.aml`: unique patch for fixing power management
+    - Add `SSDT-PTSWAK-SLEEP.aml`: totally reworked patch for handling not only sleep/wake-up process but also for proper updating AC-state and lid-status
+    - Add `SSDT-SHARE.aml`: patch for handling common utils for other SSDTs
+    - Add `SSDT-VDEV.aml`: unique patch for handling virtual devices for macOS compatibility (DMAC, MCHC, MEM2, BUS0)
+    - Update `SSDT-BATT-HUAWEI.aml`
+    - Update `SSDT-EC-USBX.aml`
+    - Update `SSDT-PNLF.aml`
+    - Update `SSDT-PWRB.aml`
+    - Remove `SSDT-DMAC.aml`
+    - Remove `SSDT-DTPG.aml`
+    - Remove `SSDT-MCHC.aml`
+    - Remove `SSDT-MEM2.aml`
+    - Remove `SSDT-PLUG-PR.PR00.aml`
+    - Remove `SSDT-PMCR.aml`
+    - Remove `SSDT-PTSWAK-Optimus2.aml`
+    - Remove `SSDT-RMCF.aml` (pair with `SSDT-PTSWAK-Optimus2.aml`)
+    - Remove `SSDT-SBUS.aml`
+    - Remove `SSDT-TPXX.aml`
+    	
+    Analyzing OEM SSDTs, I found 3 critical errors on the ACPI setup under `SSDT-7-KBL-ULT.aml` (sensor hub). I report here in the following for my memory: there are 3 big screwups on methods (`\_SB.SGOV`) that require two arguments, being passed as a method (`\_SB.GGOV`) with one argument and then a "hanging" argument which then causes compilation errors.
+    
+    Correcting instances like:
+    - `\_SB.SGOV (0x02010016, OLDV)`
+    - `\_SB.SGOV (0x02010014, DFUE)`
+    - `\_SB.SGOV (0x02010014, OLDV)`
+
+    should let the board to handle power correctly.
+    Therefore original `SSDT-7-KBL-ULT.aml` has been dropped from loading process (its entry added in `config.plist` in `ACPI -> Delete` section) in favour of its modified version `SSDT-7KBL.aml`
+
+    **OpenCore**
+    - Add [config] `PCI0._INI,0,S to PCI0.XINI,0,S` binary patch
+    - Add [config] `HPET._CRS to HPET.XCRS` standard binary patch
+    - Add [config] `RTC IRQ 8` standard binary patch
+    - Add [config] `TIMR IRQ 0` standard binary patch
+    - Remove [config] `AC0_ to ADP1` binary patch
+    - Remove [config] `TPD0._STA,0,N to TPD0.XSTA,0,N` binary patch
+    - Remove [config] `TPL1._STA,0,N to TPL1.XSTA,0,N` binary patch
+
+- **11-12-2020**
+
+    **Update**
+    - Update `OpenCore` v. 0.6.3
+
+    **OpenCore**
+    - Update `config.plist` to support OpenCore v. 0.6.3:
+        - `Kernel -> Quirks -> ForceSecureBootScheme` set to `false`
+        - `Kernel -> Quirks -> LegacyCommpage` set to `false`
+        - `PlatformInfo -> CustomMemory` set to `false`
+        - `UEFI -> Output -> ForceResolution` set to `false`
+    - [config] Disable `IntelBluetoothInjector` entry in `Kernel -> Add` section for macOS 11+ to resume boot speed
+    - [config] Remove `itlwm` entry in `Kernel -> Add` section in favour of `AirportItlwm` to support native Intel(R) Wi-Fi card as default option
+    - [config] Disable `NoTouchID` entry in `Kernel -> Add` section: this kext seems not needed anymore for avoiding lag before password verification on Catalina 10.15.7 & Big Sur 11.0.1 
+    - [config] Remove `AAPL, slot-name` info in `DeviceProperties -> Add` section to support HEVC on macOS 11+
+
+- **11-11-2020**
+	
+	**Update**
+	- Update [kext] `AppleALC` v. 1.5.4
+	- Update [kext] `HibernationFixup` v. 1.3.7
+	- Update [kext] `Lilu` v. 1.4.9
+	- Update [kext] `VirtualSMC` and plugins v. 1.1.8
+	- Update [kext] `VoodooPS2Controller` v. 2.1.8
+	- Update [kext] `WhateverGreen` v. 1.4.4
+
+- **11-10-2020**
+
+	Fixed `HardDrive.icns` icon in custom graphics for OpenCanopy GUI [credit to **@R-Teer**]
+
 - **11-06-2020**
 	
 	**Update**
