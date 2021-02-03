@@ -13,9 +13,9 @@
 #### This repo is currently compatible with macOS Big Sur, Catalina and OpenCore 0.6.5
 |     macOS Big Sur      |     macOS Catalina     |       macOS Mojave       |
 |------------------------|------------------------|--------------------------|
-|     11.2 (20D64)      |     10.15.7  (19H15)   |       10.14.6  (18G87)   |
-|     11.1 (20C69)      |     10.15.6  (19G2021) |       10.14.5  (18F132)  |
-|     11.0.1 (20B29)    |     10.15.5  (19F101)  |       10.14.4  (18E226)  |
+|     11.2 (20D64)       |     10.15.7  (19H15)   |       10.14.6  (18G87)   |
+|     11.1 (20C69)       |     10.15.6  (19G2021) |       10.14.5  (18F132)  |
+|     11.0.1 (20B29)     |     10.15.5  (19F101)  |       10.14.4  (18E226)  |
 |                        |     10.15.4  (19E287)  |       10.14.3  (18D42)   |
 |                        |     10.15.3  (19D76)   |       10.14.2  (18C54)   |
 |                        |     10.15.2  (19C57)   |       10.14.1  (18B75)   |
@@ -87,7 +87,7 @@ For privacy reasons, all SMBIOS information has been wiped out in the configurat
 
 ## Changelog
 
-#### 2021 - January - 31
+#### 2021 - February - 03
 See [**Current status**](Changelog.md)
 
 ## Status

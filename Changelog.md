@@ -1,7 +1,11 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
-- **31-01-2021**
+- **02-03-2021**
+
+    Update to macOS Big Sur 11.2 (20D64)
+
+- **01-31-2021**
 
     **Update**
     - Update `SSDT-KBD.aml` for remapping hotkeys F7, F9, F10 to F16, F17 and F18 thus allowing custom shortcuts (enhancement suggested by **@R-Teer**: waiting for his guide about hotkey assignment)
@@ -12,7 +16,7 @@ English
         - Added `EC0._Q12,0,N to XQ12,0,N` binary patch (F9 to F17)
         - Added `EC0._Q13,0,N to XQ13,0,N` binary patch (F10 to F18)
 
-- **24-01-2021**
+- **01-24-2021**
 
     **Update**
     - Add `SSDT-DTB3.aml` for disabling Thunderbolt controller `\_SB.PCI0.RP09`
@@ -21,25 +25,25 @@ English
 
     Due to lack of Thunderbolt devices my interest in this feature is very marginal; therefore, in my default `config.plist`, Thunderbolt controller has been left disabled.
 
-- **15-01-2021**
+- **01-15-2021**
 
     **Update**
     - Update [kext] `AirportItlwm_Big_Sur` v. 1.2.0 stable: [OpenIntelWireless](https://github.com/OpenIntelWireless/itlwm) developer team (sadly) revert Tx Aggregation due to its instability (see commit [6d31398](https://github.com/OpenIntelWireless/itlwm/commit/6d31398f35d12bb07a8ed0c95482d81b9cc29f11))
     - Update [kext] `AirportItlwm_Catalina` v. 1.2.0 stable (obviously same as above...)
     
-- **14-01-2021**
+- **01-14-2021**
 
     **Update**
     - Update `SSDT-DDGPU.aml`: fixing path for `RP01` device `_OFF` method to `RP01.PC01._OFF` since it is in `PowerResource (PC01, 0x00, 0x0000)` section [[credit to](https://github.com/profzei/Matebook-X-Pro-2018/issues/129) **@bingzujia**]
     - Update `SSDT-PTSWAK-SLEEP.aml`: same as above
 
-- **09-01-2021**
+- **01-09-2021**
 
     **Update**
     - Update [kext] stripped `AirportItlwm_Big_Sur` v. 1.2.0 beta (commit 040a5e8)
     - Update [kext] stripped `AirportItlwm_Catalina` v. 1.2.0 beta (commit 040a5e8)
 
-- **08-01-2021**
+- **01-08-2021**
 
     **Update**
     - Update `OpenCore` v. 0.6.5
@@ -51,7 +55,7 @@ English
         - Add `UEFI -> Audio -> SetupDelay` set to `0`
         - Delete `UEFI -> Quirks -> DeduplicateBootOrder` key
     
-- **07-01-2021**
+- **01-07-2021**
 
     **Update**
     - Add `SSDT-BIOS.aml` (testing) which defines a new `_QBF,0,N` method (i.e. referred to `EC0`) found in original HUAWEI BIOS v. 1.33:
@@ -106,19 +110,19 @@ English
 
     Sidenote for Thunderbolt support: full TB support might be tricky as MateBook X Pro (2018) only has one TB-port and seems to be missing the usual switch between ports. Didn't look into it too much but it may be actually impossible to get it fully working (at least a better power management is achieved). 
 
-- **31-12-2020**
+- **12-31-2020**
 
     - Debugging work:
         - debug some `_Qxx` EC methods related to AC plugging in actions (`SSDT-DBG.aml`)
         - debug some EC fields deducing their role (`SSDT-DBG.aml`)
 
-- **30-12-2020**
+- **12-30-2020**
     
     **OpenCore**
     - Add [config] for Intel(R) UHD Graphics 620 the property `AAPL00,override-no-connect` (EDID obtained from Linux)
     - Add [config] `RP09._INI,0,N to XINI,0,N` binary patch for disabling ICM (Integrated Connection Manager) for Thunderbolt support
 
-- **29-12-2020**
+- **12-29-2020**
 
     **Update**
     - Add more native Thunderbolt support (not only the previous PCIe-to-PCIe bridge mode):
@@ -138,7 +142,7 @@ English
     
     The native ACPI-implementation for USB has revealed another (?) bug of our DSDT i.e. Bluetooth device is properly recognized at boot-time but it needs a toggle off/on cycle to be "active" (i.e. turned on): further investigation needed but probably a login script for toggle off/on Bluetooth device needed to be implemented (wip...)
 
-- **26-12-2020**
+- **12-26-2020**
 
     **Update**
     - Update [kext] stripped `AirportItlwm_Big_Sur` v. 1.2.0 beta (commit eeebc4c)
@@ -172,7 +176,7 @@ English
 
     The latter step is needed since Soundflower maintains an open audio channel even when no audio is playing (for reference see [Soundflower prevents screen saver, display and comptuer sleep #179](https://github.com/feniix/soundflower/issues/179#issuecomment-581544566))
 
-- **25-12-2020**
+- **12-25-2020**
 
     **Update**
     - Update `SSDT-RMNE.aml` removing ADR value
@@ -180,7 +184,7 @@ English
     - New script for automatic and recursive compiling `.dsl` to `.aml` file format for `SSDT` hotpatches
     - Use stable ASL+ Optimizing Compiler/disassembler version 20200528
 
-- **20-12-2020**
+- **12-20-2020**
     
     **Update**
     - Restructing actual configuration for repo:
@@ -203,7 +207,7 @@ English
     - Changed priority order for loading kexts
     - Update `config.plist` using (for testing purpouses) the custom boot-args `itlwm_cc=IT` to use my country code IT-Italy
     
-- **14-12-2020**
+- **12-14-2020**
 
     Update to macOS Big Sur 11.1 (20C69)
     - Checking/rewriting some ACPI SSDTs: wip...
