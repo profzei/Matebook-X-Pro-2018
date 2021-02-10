@@ -316,13 +316,6 @@ sudo reboot
 </details>
 
 <details>  
-<summary><strong>Graphics section</strong></summary>
-
-Refer to: [here](/Graphics/)
-
-</details>
-
-<details>  
 <summary><strong>Dual Booting: fix Windows time</strong></summary>
 
 Windows uses local time by default while macOS uses universal time. You can switch Windows 

@@ -13,7 +13,9 @@ English
     **Wiki**
     - Add [Wiki](https://github.com/profzei/Matebook-X-Pro-2018/wiki) sections for 
         - managing `EFI` folder in Windows
-        - removing unnecessary Intel(R) WiFi/Bluetooth firmware files 
+        - removing unnecessary Intel(R) WiFi/Bluetooth firmware files
+        - handling Intel(R) UHD Graphics 620
+        - handling Intel(R) Wireless-AC 8265/8275 card
 
 - **02-03-2021**
 
