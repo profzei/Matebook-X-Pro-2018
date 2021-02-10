@@ -336,6 +336,23 @@ Then update your clock via the built-in internet time setting to update the time
 
 </details>
 
+<details>  
+<summary><strong>Add custom shortcuts to F7, F9 & F10 hotkeys</strong></summary>
+
+With the latest update and inclusion of the new `SSDT-KBD.aml` we are now able to reconfigure the shortcuts to custom settings.
+
+There are various freeware software tools to achive this such as [Karabiner Elements](https://karabiner-elements.pqrs.org/) or [Ukelele](https://software.sil.org/ukelele/).
+
+Personally I use the application [BetterTouchTool](https://folivora.ai/), which is paid but incredibly useful and allows custom trackpad gestures amongst other features.
+
+My current settings are as follows;
+
+<p align="center">
+<img src="/Wiki/Images/Screenshot%202021-02-01%20at%2014.55.54.png" alt="BetterTouchTool Settings" />
+</p>
+
+</details>
+
 ## Update tracker
 
 | Item | Version | Remark |
