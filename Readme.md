@@ -267,6 +267,7 @@ Proper `SSDT-XHC.aml` is used for USB Host Controller (XHCI-Device-ID: `<2f 9d 0
 <summary><strong>Monitor temperatures and power consumption with HWMonitor</strong></summary>
 
 [**HWMonitor**](https://github.com/kzlekk/HWSensors/releases) is relatively old and no longer supported, but it gets the job done.
+
 </details>
 
 <details>
@@ -278,6 +279,23 @@ defaults write com.apple.dock autohide-delay -float 0
 defaults write com.apple.dock autohide-time-modifier -float 0.5
 killall Dock
 ```
+
+</details>
+
+<details>  
+<summary><strong>Remove Eject icon from macOS menu bar</strong></summary>
+Apple no longer sells any Mac with a built-in optical drive, but many users still rely on CDs, DVDs, and Blu-ray discs for both work and entertainment.
+
+*How do I get rid of this icon?*
+- Press and hold the `Apple/Command` key
+- Click and drag the `Eject` menu icon off the menu bar
+- Once you start dragging the `Eject` icon, you can release the `Apple/Command` key
+- When you see a small "x" icon appear, then release the mouse button: it will remove the `Eject` icon from your menu bar.
+
+*How to add Eject icon to menu bar*
+- From the macOS desktop, make sure *Finder* is the active application and then select `Go -> Go to Folder` from the menu bar. Alternatively, you can use the keyboard shortcut `Shift-Command-G`
+- Enter the following location: `/System/Library/CoreServices/Menu Extras/`
+- Find and double-click on `Eject.menu`
 
 </details>
 
@@ -301,6 +319,7 @@ sudo reboot
 <summary><strong>Graphics section</strong></summary>
 
 Refer to: [here](/Graphics/)
+
 </details>
 
 <details>  
