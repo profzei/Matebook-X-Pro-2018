@@ -4,9 +4,10 @@ English
 - **02-10-2021**
 
     Update to macOS Big Sur 11.2.1 (20D74)
+
     Add [Wiki](https://github.com/profzei/Matebook-X-Pro-2018/wiki) sections for 
-      - managing `EFI` folder in Windows
-      - removing unnecessary Intel(R) WiFi/Bluetooth firmware files 
+    - managing `EFI` folder in Windows
+    - removing unnecessary Intel(R) WiFi/Bluetooth firmware files 
 
 - **02-03-2021**
 
