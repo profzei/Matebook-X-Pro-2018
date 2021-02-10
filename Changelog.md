@@ -5,6 +5,11 @@ English
 
     Update to macOS Big Sur 11.2.1 (20D74)
 
+    **Update**
+    - Update `Readme` with info about:
+        - how to remove `Eject` icon from menu bar
+        - how to add custom shortcuts to F7, F9 and F10 hotkeys [credit to **@R-Teer**]
+
     **Wiki**
     - Add [Wiki](https://github.com/profzei/Matebook-X-Pro-2018/wiki) sections for 
         - managing `EFI` folder in Windows
