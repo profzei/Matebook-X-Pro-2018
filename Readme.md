@@ -322,7 +322,7 @@ Personally I use the application BetterTouchTool, which is paid but incredibly u
 My current settings are as follows;
 
 <p align="center">
-<img src="/Wiki/Images/Screenshot%202021-02-01%20at%2014.55.54.pngg" alt="BetterTouchTool Settings" />
+<img src="/Wiki/Images/Screenshot%202021-02-01%20at%2014.55.54.png" alt="BetterTouchTool Settings" />
 </p>
 
 </details>
