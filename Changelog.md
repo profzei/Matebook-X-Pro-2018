@@ -1,6 +1,16 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **02-11-2021**
+
+    **Update**
+    - Update [kext] `Lilu` v. 1.5.1
+    - Update [kext] `WhateverGreen` v. 1.4.7
+    - Update [kext] `AppleALC` v. 1.5.7
+    - Update [kext] `VoodooPS2Controller` v. 2.2.1
+    - Update [kext] stripped `AirportItlwm_Big_Sur` v. 1.3.0 beta (commit dbdbf00)
+    - Update [kext] stripped `AirportItlwm_Catalina` v. 1.3.0 beta (commit dbdbf00)
+
 - **02-10-2021**
 
     Update to macOS Big Sur 11.2.1 (20D74)
