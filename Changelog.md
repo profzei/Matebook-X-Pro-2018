@@ -8,6 +8,7 @@ English
     **Update**
     - Update `Readme` with info about:
         - how to remove `Eject` icon from menu bar
+        - how to increase `Launchpad` icons number
         - how to add custom shortcuts to F7, F9 and F10 hotkeys [credit to **@R-Teer**]
 
     **Wiki**

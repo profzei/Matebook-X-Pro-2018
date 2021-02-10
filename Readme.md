@@ -284,18 +284,41 @@ killall Dock
 
 <details>  
 <summary><strong>Remove Eject icon from macOS menu bar</strong></summary>
+
 Apple no longer sells any Mac with a built-in optical drive, but many users still rely on CDs, DVDs, and Blu-ray discs for both work and entertainment.
 
-*How do I get rid of this icon?*
+**How do I get rid of this icon?**
 - Press and hold the `Apple/Command` key
 - Click and drag the `Eject` menu icon off the menu bar
 - Once you start dragging the `Eject` icon, you can release the `Apple/Command` key
 - When you see a small "x" icon appear, then release the mouse button: it will remove the `Eject` icon from your menu bar.
 
-*How to add Eject icon to menu bar*
+**How to add Eject icon to menu bar**
 - From the macOS desktop, make sure *Finder* is the active application and then select `Go -> Go to Folder` from the menu bar. Alternatively, you can use the keyboard shortcut `Shift-Command-G`
 - Enter the following location: `/System/Library/CoreServices/Menu Extras/`
 - Find and double-click on `Eject.menu`
+
+</details>
+
+<details>  
+<summary><strong>Increase Launchpad icons number</strong></summary>
+
+By default (for a 13 inch MacBook Pro), the Launchpad shows the icons in 5×7 format.
+
+Type in Terminal the following commands:
+```
+defaults write com.apple.dock springboard-rows -int 6
+defaults write com.apple.dock springboard-columns -int 9;killall Dock
+```
+Relaunch the Launchpad to see the icons are changed now.
+
+Finally you can revert to the default setting with the following commands:
+```
+defaults delete com.apple.dock springboard-rows
+defaults delete com.apple.dock springboard-columns
+defaults write com.apple.dock ResetLaunchPad -bool TRUE;killall Dock
+```
+(**Warning**: the last command also will remove any custom folders you have created)
 
 </details>
 
@@ -338,7 +361,7 @@ There are various freeware software tools to achive this such as [Karabiner Elem
 
 Personally I use the application [BetterTouchTool](https://folivora.ai/), which is paid but incredibly useful and allows custom trackpad gestures amongst other features.
 
-My current settings are as follows;
+My current settings are as follows:
 
 <p align="center">
 <img src="/Wiki/Images/Screenshot%202021-02-01%20at%2014.55.54.png" alt="BetterTouchTool Settings" />
@@ -371,63 +394,6 @@ My current settings are as follows;
 | [USBInjectAll](https://github.com/daliansky/OS-X-USB-Inject-All/releases) | 0.7.6 | Inject USB ports |
 | [VoltageShift](https://github.com/sicreative/VoltageShift) | 1.25 | Undervoltage tool |
 
-## Development
-<details>  
-<summary><strong>Catalina 10.15.4 support</strong></summary>
-
-- Update `Clover` to r5107+ to support macOS 10.15.4
-- Remove [config] `MSR 0xE2` kernel patch because `Clover` can automatically patch
-```
-	<dict>
-		<key>Comment</key>
-		<string>MSR 0xE2 _xcpm_idle instant reboot(c) Pike R. Alpha</string>
-		<key>Disabled</key>
-		<false/>
-		<key>Find</key>
-		<data>ILniAAAADzA=</data>
-		<key>Replace</key>
-		<data>ILniAAAAkJA=</data>
-	</dict>
-```
-- Add [config] `setpowerstate_panic=0` kernel patch for macOS 10.15 according to [Acindathera/AppleALC#513](https://github.com/acidanthera/bugtracker/issues/513#issuecomment-542838126)
-```
-	<dict>
-		<key>Comment</key>
-		<string>Disable setPowerState panic with setpowerstate_panic=0 boot-args on 10.15 (credit vit9696)</string>
-		<key>Disabled</key>
-		<false/>
-		<key>MatchOS</key>
-		<string>10.15</string>
-		<key>Find</key>
-		<data>Y29tLmFwcGxlAA==</data>
-		<key>Replace</key>
-		<data>bm90LmFwcGxlAA==</data>
-	</dict>
-```
-- Add [config] `complete-modeset-framebuffers` property to Intel UHD Graphics 620 device section to improve HDMI
-```
-	<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
-	<dict>
-		...
-		<key>complete-modeset-framebuffers</key>
-		<data>AAAAAAAAAAE=</data>
-		...
-	</dict>
-```
-- Add [config] `force-online` and `force-online-framebuffers` properties to Intel UHD Graphics 620 device section to fix HDMI on macOS 10.15.4
-```
-	<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
-	<dict>
-		...
-		<key>force-online</key>
-		<data>AQAAAA==</data>
-		<key>force-online-framebuffers</key>
-		<data>AAAAAAAAAAE=</data>
-		...
-	</dict>
-```
-
-</details>
 
 ## Credits
 Standing on the shoulders of giants! Based on the works of many great people.
