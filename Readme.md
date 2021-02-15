@@ -87,7 +87,7 @@ For privacy reasons, all SMBIOS information has been wiped out in the configurat
 
 ## Changelog
 
-#### 2021 - February - 11
+#### 2021 - February - 15
 See [**Current status**](Changelog.md)
 
 ## Status
@@ -357,11 +357,12 @@ Then update your clock via the built-in internet time setting to update the time
 
 With the latest update and inclusion of the new `SSDT-KBD.aml` we are now able to reconfigure the shortcuts to custom settings.
 
-There are various freeware software tools to achive this such as [Karabiner Elements](https://karabiner-elements.pqrs.org/) or [Ukelele](https://software.sil.org/ukelele/).
+For a detailed guide on how to enable original `F7`, `F9` & `F10` hotkeys using native **Automator** app, please see [Wiki section](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Add-custom-shortcuts-to-Fn-hotkeys).
 
-Personally I use the application [BetterTouchTool](https://folivora.ai/), which is paid but incredibly useful and allows custom trackpad gestures amongst other features.
-
-My current settings are as follows:
+Otherwise, you can follow these suggestions [credit **@R-Teer**]:
+- There are various freeware software tools to achive this such as [Karabiner Elements](https://karabiner-elements.pqrs.org/) or [Ukelele](https://software.sil.org/ukelele/).
+- Personally I use the application [BetterTouchTool](https://folivora.ai/), which is paid but incredibly useful and allows custom trackpad gestures amongst other features.
+- My current settings are as follows:
 
 <p align="center">
 <img src="Wiki/Images/Screenshot%202021-02-01%20at%2014.55.54.png" alt="BetterTouchTool Settings" />

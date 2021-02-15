@@ -1,6 +1,10 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **02-15-2021**
+
+    Add [Wiki](https://github.com/profzei/Matebook-X-Pro-2018/wiki) section for customising `F7`, `F9` & `F10` hotkeys for mimic original **Matebook X Pro** shortcuts using native macOS **Automator** app
+
 - **02-11-2021**
 
     **Update**
