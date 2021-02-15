@@ -1,13 +1,13 @@
-# Huawei Matebook X Pro (2018 Edition)
-[![Model](https://img.shields.io/badge/Model-MACH_W29-orange)](https://consumer.huawei.com/it/support/laptops/matebook-x-pro/)
-[![BIOS](https://img.shields.io/badge/BIOS-1.28-red)](https://consumer.huawei.com/it/support/laptops/matebook-x-pro/)
-[![LICENSE](https://img.shields.io/badge/License-MIT-purple)](/LICENSE)
-[![Release](https://img.shields.io/badge/Download-Releases-blue.svg)](https://github.com/profzei/Matebook-X-Pro-2018/releases)
-[![Wiki](https://img.shields.io/badge/Support-Wiki-green.svg)](https://github.com/profzei/Matebook-X-Pro-2018/wiki)
-
-### macOS on Huawei Matebook X Pro 2018
+# macOS  on Huawei Matebook X Pro 2018
 <p align="center">
-<img src="/Wiki/Images/matebook-x-pro-big-sur.png" alt="Huawei Big Sur 11.0" />
+<img src="Wiki/Images/matebook-x-pro-big-sur.png" alt="Huawei Big Sur 11.0" />
+</p>
+<p align="center">
+<a href="https://consumer.huawei.com/it/support/laptops/matebook-x-pro/" target="_blank"><img src="https://img.shields.io/badge/Model-MACH_W29-orange.svg" /></a>
+<a href="https://consumer.huawei.com/it/support/laptops/matebook-x-pro/" target="_blank"><img src="https://img.shields.io/badge/BIOS-1.28-red.svg" /></a>
+<a href="LICENSE" target="_blank"><img src="https://img.shields.io/badge/License-MIT-purple.svg" /></a>
+<a href="https://github.com/profzei/Matebook-X-Pro-2018/releases" target="_blank"><img src="https://img.shields.io/badge/Download-Releases-blue.svg" /></a>
+<a href="https://github.com/profzei/Matebook-X-Pro-2018/wiki" target="_blank"><img src="https://img.shields.io/badge/Support-Wiki-green.svg" /></a>
 </p>
 
 #### This repo is currently compatible with macOS Big Sur, Catalina and OpenCore 0.6.5
@@ -33,7 +33,7 @@
 - Please **do not clone or download** the main branch for daily use: it may include **unstable code** just because it is my repository.
 
 <p align="center">
-<img src="/Wiki/Images/Disclaimer.png" alt="Disclaimer" />
+<img src="Wiki/Images/Disclaimer.png" alt="Disclaimer" />
 </p>
 
 If you find this bootloader configuration useful, consider **giving** it **a star** to make it more visible.
@@ -53,7 +53,7 @@ With each new release of macOS we need to resolve each new "minor issue" we run 
 - **Battery life** is **quite great** (from personal experience it lasts from 8 to 10 hours for light works depending on its age with a behaviour very similar to Windows 10).
 - The **Intel WiFi** card is soldered onto the motherboard, which means it can't be replaced with a Broadcom one, but the Intel card is now **functional albeit not operating at full speeds** (however it is fine for most use cases). With the latest `AirportItlwm.kext` even Handoff and Continuity features are working, but with a very limited support for AirDrop and Apple Watch unlocking (see [Changelog for OpenIntelWireless release v. 1.2.0 stable](https://github.com/OpenIntelWireless/itlwm/releases)). For any issues about `AirportItlwm.kext` please refer to [**OpenIntelWireless Gitter Page**](https://gitter.im/OpenIntelWireless/itlwm?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-<img src="/Wiki/Images/ScreenBattery.png" alt="MBXP Battery Menu bar" />
+<img src="Wiki/Images/ScreenBattery.png" alt="MBXP Battery Menu bar" />
 
 **This repository is for personal purposes**
 
@@ -364,7 +364,7 @@ Personally I use the application [BetterTouchTool](https://folivora.ai/), which 
 My current settings are as follows:
 
 <p align="center">
-<img src="/Wiki/Images/Screenshot%202021-02-01%20at%2014.55.54.png" alt="BetterTouchTool Settings" />
+<img src="Wiki/Images/Screenshot%202021-02-01%20at%2014.55.54.png" alt="BetterTouchTool Settings" />
 </p>
 
 </details>
