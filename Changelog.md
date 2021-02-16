@@ -3,7 +3,7 @@
 English
 - **02-16-2021**
 
-    Update [Wiki](https://github.com/profzei/Matebook-X-Pro-2018/wiki) section for controlling surround sound device using **AggregateVolumeMenu**
+    Update [Wiki](https://github.com/profzei/Matebook-X-Pro-2018/wiki) section for controlling surround sound device using **AggregateVolumeMenu** [credit to **@samueljoh**]
     
 - **02-15-2021**
 
