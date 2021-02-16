@@ -87,7 +87,7 @@ For privacy reasons, all SMBIOS information has been wiped out in the configurat
 
 ## Changelog
 
-#### 2021 - February - 15
+#### 2021 - February - 16
 See [**Current status**](Changelog.md)
 
 ## Status
@@ -190,13 +190,15 @@ Default **SMBIOS** settings of this repo is `MacBookPro14,1` ~~`MacBookPro15,2`~
 <details>
 <summary><strong>Activate Surround Sound via MIDI</strong></summary>
 
+By default macOS only uses 2 out of our MBXP 4 speakers: if you want to achieve a **surround sound system** on macOS, you need to create an **Aggregate Device**. But then macOS does not allow you to control the volume of the sound: yes, it is real and is a general behaviour of MacBookPro machines.
+
 For a detailed guide on how to activate surround sound via MIDI on internal speakers and native audio shortcuts, see [Wiki section](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Activate-Surround-Sound-via-MIDI-on-internal-speakers) 
 </details>
 
 <details>
 <summary><strong>Undervolt using VoltageShift</strong></summary>
 
-Undervolting is a great way to to maximise performance, lower power consumption and reduce temperatures.
+Undervolting is a great way to maximise performance, lower power consumption and reduce temperatures.
 
 For a detailed guide on how to undervolt our MBXP using `VoltageShift` from the EFI folder instead of disabling SIP, see [Wiki section](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Undervolt-via-VoltageShift) 
 </details>
