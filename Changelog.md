@@ -1,6 +1,10 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **02-26-2021**
+
+    Update to macOS Big Sur 11.2.2 (20D80)
+
 - **02-16-2021**
 
     Update [Wiki](https://github.com/profzei/Matebook-X-Pro-2018/wiki) section for controlling surround sound device using **AggregateVolumeMenu** [credit to **@samueljoh**]
