@@ -1,6 +1,24 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **02-28-2021**
+
+    **Update**
+    - Update `OpenCore` v. 0.6.6
+
+    **OpenCore**
+    - Update `config.plist` to support OpenCore v. 0.6.6:
+        - Add `Kernel -> Quirks -> SetApfsTrimTimeout` set to `-1`
+        - Add `Misc -> Boot -> LauncherOption` set to `Full`
+        - Add `Misc -> Boot -> LauncherPath` set to `Default`
+        - Add `PlatformInfo -> Generic -> MaxBIOSVersion` set to `false`
+        - Add `PlatformInfo -> UseRawUuidEncoding` set to `false`
+        - Add `UEFI -> Quirks -> DisableSecurityPolicy` set to `false`
+        - Modified `Misc -> Boot -> PickerAttributes` value to `17` (previous value was `1`)
+        - Delete `Misc -> Security -> BootProtect` key
+    - Update `Drivers -> HfsPlus.efi`
+    - Add `Left.icns` and `Right.icns` in `Resources -> Image` folder otherwise OpenCanopy will not display our custom theme but only shows you the text bootpicker (my assumption is that OpenCanopy will not work if a full theme set is not recognised: if there are missing icons, then it will just show the text bootpicker)
+
 - **02-26-2021**
 
     Update to macOS Big Sur 11.2.2 (20D80)
