@@ -1,6 +1,24 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **03-02-2021**
+
+    **Update**
+    - Update `OpenCore` v. 0.6.7
+    - Update `AppleALC` v. 1.5.8
+    - Update `VirtualSMC` v. 1.2.1
+    - Update `VoodooPS2Controller` v. 2.2.2
+    - Update `WhateverGreen` v. 1.4.8
+
+    **OpenCore**
+    - Update `config.plist` to support OpenCore v. 0.6.7:
+        - Modified `PlatformInfo -> Generic -> SystemSerialNumber` set to `OEM` (previous value empty string)
+        - Modified `PlatformInfo -> Generic -> SystemUUID` set to `OEM` (previous value empty string)
+        - Add `UEFI -> Audio -> ResetTrafficClass` set to `false`
+        - Add `UEFI -> Output -> GopPassThrough` set to `false`
+        - Add `UEFI -> Quirks -> ActivateHpetSupport` set to `false`
+        - Delete `UEFI -> Input -> KeyMergeThreshold` key
+
 - **02-28-2021**
 
     **Update**
