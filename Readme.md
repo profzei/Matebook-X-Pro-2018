@@ -10,6 +10,7 @@
 <a href="https://github.com/profzei/Matebook-X-Pro-2018/wiki" target="_blank"><img src="https://img.shields.io/badge/Support-Wiki-green.svg" /></a>
 </p>
 
+
 #### This repo is currently compatible with macOS Big Sur, Catalina and OpenCore 0.6.7
 |     macOS Big Sur      |     macOS Catalina     |       macOS Mojave       |
 |------------------------|------------------------|--------------------------|
@@ -23,7 +24,6 @@
 |                        |     10.15    (19A583)  |                          |
 
 
-
 ### DISCLAIMER
 
 - Read the entire README before you start.
@@ -33,7 +33,7 @@
 - Please **do not clone or download** the main branch for daily use: it may include **unstable code** just because it is my repository.
 
 <p align="center">
-<img src="Wiki/Images/Disclaimer.png" alt="Disclaimer" />
+<img src="Wiki/Images/Disclaimer.png" width="70%" alt="Disclaimer" />
 </p>
 
 If you find this bootloader configuration useful, consider **giving** it **a star** to make it more visible.
@@ -53,13 +53,19 @@ With each new release of macOS we need to resolve each new "minor issue" we run 
 - **Battery life** is **quite great** (from personal experience it lasts from 8 to 10 hours for light works depending on its age with a behaviour very similar to Windows 10).
 - The **Intel WiFi** card is soldered onto the motherboard, which means it can't be replaced with a Broadcom one, but the Intel card is now **functional albeit not operating at full speeds** (however it is fine for most use cases). With the latest `AirportItlwm.kext` even Handoff and Continuity features are working, but with a very limited support for AirDrop and Apple Watch unlocking (see [Changelog for OpenIntelWireless release v. 1.2.0 stable](https://github.com/OpenIntelWireless/itlwm/releases)). For any issues about `AirportItlwm.kext` please refer to [**OpenIntelWireless Gitter Page**](https://gitter.im/OpenIntelWireless/itlwm?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-<img src="Wiki/Images/ScreenBattery.png" alt="MBXP Battery Menu bar" />
+<p align="center">
+<img src="Wiki/Images/ScreenMenuBar03.png" width="90%" alt="MBXP Battery Menu bar" />
+</p>
 
 **This repository is for personal purposes**
 
 ### Generate your own SMBIOS Information
 
-For privacy reasons, all SMBIOS information has been wiped out in the configuration file `EFI/OC/config.plist`. You need to generate your unique SMBIOS info by yourself (recommend to use [**CorpNewt's GenSMBIOS**](https://github.com/corpnewt/GenSMBIOS)), and inject them into your `config.plist`.
+For privacy reasons, all SMBIOS information has been wiped out in the configuration file `EFI/OC/config.plist`. You need to generate your unique `SMBIOS` info by yourself (recommend to use [**CorpNewt's GenSMBIOS**](https://github.com/corpnewt/GenSMBIOS)), and inject them into your `config.plist`. For more details on **dual booting settings**, please, see also below [**OpenCore**](https://github.com/profzei/Matebook-X-Pro-2018#bootloader-firmware) notes.
+
+<p align="center">
+<img src="Wiki/Images/AboutThisMac.png" width="70%" alt="About this Mac" />
+</p>
 
 ## Configuration
 
@@ -87,7 +93,7 @@ For privacy reasons, all SMBIOS information has been wiped out in the configurat
 
 ## Changelog
 
-#### 2021 - March - 03
+#### 2021 - March - 07
 See [**Current status**](Changelog.md)
 
 ## Status
@@ -173,6 +179,20 @@ Steps for enabling support for Thunderbolt controller (`\_SB.PCI0.RP09`):
 
 ## Post - Install
 <details>
+<summary><strong>Enable Tap (with one finger) for Touchpad</strong></summary>
+
+Starting from [VoodooI2C v. 2.4.1](https://github.com/VoodooI2C/VoodooI2C/releases), the **click down** action is emulated to **force touch**, which causes the failure of click down and drag gestures.
+
+For example, you can turn off `Force Click` in `System Preferences -> Trackpad` or choose three finger drag in `System Preferences -> Accessibility -> Mouse & Trackpad -> Trackpad Options`
+
+Suggested configuration:
+<p align="center">
+<img src="Wiki/Images/ScreenTouchpad.png" width="75%" alt="Touchpad Settings" />
+</p>
+
+</details>
+
+<details>
 <summary><strong>Enable Apple Services</strong></summary>
 
 Default **SMBIOS** settings of this repo is `MacBookPro14,1` ~~`MacBookPro15,2`~~
@@ -185,33 +205,6 @@ Default **SMBIOS** settings of this repo is `MacBookPro14,1` ~~`MacBookPro15,2`~
 4. Drag your `config.plist` inside the `Terminal` window
 5. Type `3`, then press `Enter`
 6. Type `MacBookPro14,1`, then press `Enter`
-</details>
-
-<details>
-<summary><strong>Activate Surround Sound via MIDI</strong></summary>
-
-By default macOS only uses 2 out of our MBXP 4 speakers: if you want to achieve a **surround sound system** on macOS, you need to create an **Aggregate Device**. But then macOS does not allow you to control the volume of the sound: yes, it is real and is a general behaviour of MacBookPro machines.
-
-For a detailed guide on how to activate surround sound via MIDI on internal speakers and native audio shortcuts, see [Wiki section](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Activate-Surround-Sound-via-MIDI-on-internal-speakers) 
-</details>
-
-<details>
-<summary><strong>Undervolt using VoltageShift</strong></summary>
-
-Undervolting is a great way to maximise performance, lower power consumption and reduce temperatures.
-
-For a detailed guide on how to undervolt our MBXP using `VoltageShift` from the EFI folder instead of disabling SIP, see [Wiki section](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Undervolt-via-VoltageShift) 
-</details>
-
-## Power management
-<details>
-<summary><strong>CPUFriend</strong></summary>
-
-CPU power management can be achieved by using `CPUFriend.kext` while `CPUFriendDataProvider.kext` defines how it should be done. `CPUFriendDataProvider.kext` is generated for a specific CPU and power setting. The one supplied in this repository was made for `i7-8550U` and is optimized for balanced performance.
-- The kexts and SSDT for `i7-8550U` are [here](/CPUFriend/1.2.0).
-- `CPUFriendDataProvider.kext` is generated for SMBIOS `MacBookPro15,2` because of Kaby Lake R architecture.
-- `CPUFriend.kext` and `CPUFriendDataProvider.kext` need to be put in `CLOVER/kexts/Other`
-- Furthermore, you also need to put `SSDT-XCPM.aml` in `CLOVER/ACPI/patched` for working as normal after awake.
 </details>
 
 <details>
@@ -234,6 +227,12 @@ Default macOS setting is **hibernatemode 3** i.e. **sleep mode**.
 
 **After every update, ALL these settings should be reapplied manually!**
 
+Suggested configuration in `System Preferences -> Bluetooth -> Advanced` for **Bluetooth devices** for avoiding random wake events during sleep:
+
+<p align="center">
+<img src="Wiki/Images/ScreenBluetooth.png" width="80%" alt="Bluetooth settings" />
+</p>
+
 **Hibernation mode** can be enabled only via console command `sudo pmset -a hibernatemode 25` and is fully supported by Matebook X Pro (obviously using `HibernationFixup` kext). If, however, you would like to disable it, then
 ```
 sudo pmset -a hibernatemode 0
@@ -248,21 +247,44 @@ You can verify your power settings by typing in terminal `sudo pmset -g live` . 
 About power consumption, [HWMonitor](https://github.com/kzlekk/HWSensors/releases) reports for the idle state both before and after sleep phase the same value for "CPU package total" (0.65-0.70 W). Sleep discharge rate is about 1% every 4:30 hours (during night).
 </details>
 
-## USB port mapping
 <details>
-<summary><strong>Mapping scheme</strong></summary>
+<summary><strong>Power Management settings</strong></summary>
 
-Proper `SSDT-XHC.aml` is used for USB Host Controller (XHCI-Device-ID: `<2f 9d 00 00>`): this file is configured to map only the necessary ports (tested with IOReg) with the correct connector type and prevent it from shutdown issues.
+With `CPUFriend.kext` and `SSDT-PM.aml` we achieved a **very good power management on battery** (without compromising performance) as reported in the following macOS menu bar screeshots:
+- a mean 10% rate discharge for hour
+- temperature range from 30°C to 40°C for light/medium CPU workload
+- a mean `CPU package total` value of about 0.65-0.70 W for idle state
 
-| Port      | Address               | Physical Location                                         | Internal/External |
-| :--- | :--- | :--- | :--- |
-| HS01/SS01 | `00000001`/`0000000D` | Left Port type-C (Power Source) - next to 3.5mm jack port | E                 |
-| HS02/SS02 | `00000002`/`0000000E` | Right Port type-A                                         | E                 |
-| HS03      | `00000003`            | Left Port type-C Thunderbolt                              | E                 |
-| HS05      | `00000005`            | Bluetooth USB Port                                        | I                 |
-| HS07      | `00000007`            | Integrated HD Camera module                               | I                 |
+<p align="center">
+<img src="Wiki/Images/ScreenMenuBar01.png" width="110%" alt="MBXP Battery Menu bar" />
+<img src="Wiki/Images/ScreenMenuBar02.png" width="95%" alt="MBXP Battery Menu bar" />
+</p>
+
+Suggested configuration for **Battery** and **Power Adapter** settings in `System Preferences -> Battery` are reported in the following:
+
+<p align="center">
+<img src="Wiki/Images/ScreenBattery.png" width="80%" alt="Battery settings" />
+<img src="Wiki/Images/ScreenPowerAdapter.png" width="80%" alt="Power Adapter settings" />
+</p>
 
 </details>
+
+<details>
+<summary><strong>Activate Surround Sound via MIDI</strong></summary>
+
+By default macOS only uses 2 out of our MBXP 4 speakers: if you want to achieve a **surround sound system** on macOS, you need to create an **Aggregate Device**. But then macOS does not allow you to control the volume of the sound: yes, it is real and is a general behaviour of MacBookPro machines.
+
+For a detailed guide on how to activate surround sound via MIDI on internal speakers and native audio shortcuts, see [Wiki section](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Activate-Surround-Sound-via-MIDI-on-internal-speakers) 
+</details>
+
+<details>
+<summary><strong>Undervolt using VoltageShift</strong></summary>
+
+Undervolting is a great way to maximise performance, lower power consumption and reduce temperatures.
+
+For a detailed guide on how to undervolt our MBXP using `VoltageShift` from the EFI folder instead of disabling SIP, see [Wiki section](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Undervolt-via-VoltageShift) 
+</details>
+
 
 ## Optional
 <details>
@@ -281,7 +303,6 @@ defaults write com.apple.dock autohide-delay -float 0
 defaults write com.apple.dock autohide-time-modifier -float 0.5
 killall Dock
 ```
-
 </details>
 
 <details>  
@@ -299,7 +320,6 @@ Apple no longer sells any Mac with a built-in optical drive, but many users stil
 - From the macOS desktop, make sure *Finder* is the active application and then select `Go -> Go to Folder` from the menu bar. Alternatively, you can use the keyboard shortcut `Shift-Command-G`
 - Enter the following location: `/System/Library/CoreServices/Menu Extras/`
 - Find and double-click on `Eject.menu`
-
 </details>
 
 <details>  
@@ -321,7 +341,6 @@ defaults delete com.apple.dock springboard-columns
 defaults write com.apple.dock ResetLaunchPad -bool TRUE;killall Dock
 ```
 (**Warning**: the last command also will remove any custom folders you have created)
-
 </details>
 
 <details>  
@@ -337,7 +356,6 @@ rm -rf ~/Library/Accounts
 killall -9 accountsd com.apple.iCloudHelper
 sudo reboot
 ```
-
 </details>
 
 <details>  
@@ -351,7 +369,6 @@ reg add "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation
 ```
 That will make Windows use universal time instead of local time.
 Then update your clock via the built-in internet time setting to update the time.
-
 </details>
 
 <details>  
@@ -397,6 +414,80 @@ Otherwise, you can follow these suggestions [credit **@R-Teer**]:
 | [USBInjectAll](https://github.com/daliansky/OS-X-USB-Inject-All/releases) | 0.7.6 | Inject USB ports |
 | [VoltageShift](https://github.com/sicreative/VoltageShift) | 1.25 | Undervoltage tool |
 
+
+## Dev. Notes
+
+In [**Wiki section**](https://github.com/profzei/Matebook-X-Pro-2018/wiki) are stored some significant/**advanced technical guides**.
+
+<details>
+<summary><strong>USB port mapping scheme</strong></summary>
+
+Proper `SSDT-XHC.aml` is used for USB Host Controller (XHCI-Device-ID: `<2f 9d 00 00>`): this file is configured to map only the necessary ports (tested with IOReg) with the correct connector type and prevent it from shutdown issues.
+
+| Port      | Address               | Physical Location                                         | Internal/External |
+| :--- | :--- | :--- | :--- |
+| HS01/SS01 | `00000001`/`0000000D` | Left Port type-C (Power Source) - next to 3.5mm jack port | E                 |
+| HS02/SS02 | `00000002`/`0000000E` | Right Port type-A                                         | E                 |
+| HS03      | `00000003`            | Left Port type-C Thunderbolt                              | E                 |
+| HS05      | `00000005`            | Bluetooth USB Port                                        | I                 |
+| HS07      | `00000007`            | Integrated HD Camera module                               | I                 |
+
+</details>
+
+<details>
+<summary><strong>Boot arguments</strong></summary>
+
+A very minimal set of boot arguments has been achieved for actual `config.plist`:
+1. `igfxnorpsc=1` enables **RPS** control patch and improves **IGPU performance**
+2. `itlwm_cc=IT` changes/enables the country code to **IT-Italy** for `AirportItlwm.kext`
+</details>
+
+<details>
+<summary><strong>Power Management</strong></summary>
+
+Verify working `XCPM` configuration by typing the commands below:
+```
+sysctl machdep.xcpm.mode
+   // If it returns '1', then it means the XCPM is active.
+```
+Verify if the `X86PlatformPlugin.kext` is loaded:
+```
+kextstat|grep -y x86plat
+```
+Verify loaded/injected kexts in macOS system:
+```
+kextstat -kl | awk '!/com\.apple/{printf "%s %s\n", $6, $7}'
+```
+Saving last boot info:
+```
+log show --predicate 'process == "kernel"' --style syslog --source --debug --last boot > sys_log.txt
+```
+</details>
+
+<details>
+<summary><strong>Fixing Xcode issue</strong></summary>
+
+If you encounter an issue with Xcode, you could kill it with the following commands:
+```
+killall Xcode
+xcrun -k
+xcodebuild -alltargets clean
+rm -rf "$(getconf DARWIN_USER_CACHE_DIR)/org.llvm.clang/ModuleCache"
+rm -rf "$(getconf DARWIN_USER_CACHE_DIR)/org.llvm.clang.$(whoami)/ModuleCache"
+rm -rf /Applications/Xcode.app
+rm -rf ~/Library/Caches/com.apple.dt.Xcode
+rm -rf ~/Library/Developer
+rm -rf ~/Library/MobileDevice
+rm -rf ~/Library/Preferences/com.apple.dt.Xcode.plist
+rm -rf ~/Library/Preferences/com.apple.dt.xcodebuild.plist
+sudo rm -rf /Library/Preferences/com.apple.dt.Xcode.plist
+sudo rm -rf /System/Library/Receipts/com.apple.pkg.XcodeExtensionSupport.bom
+sudo rm -rf /System/Library/Receipts/com.apple.pkg.XcodeExtensionSupport.plist
+sudo rm -rf /System/Library/Receipts/com.apple.pkg.XcodeSystemResources.bom
+sudo rm -rf /System/Library/Receipts/com.apple.pkg.XcodeSystemResources.plist
+sudo rm -rf /private/var/db/receipts/com.apple.pkg.Xcode.bom
+```
+</details>
 
 ## Credits
 Standing on the shoulders of giants! Based on the works of many great people.
