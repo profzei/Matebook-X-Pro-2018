@@ -50,7 +50,7 @@ With each new release of macOS we need to resolve each new "minor issue" we run 
 
 - The **compatibility** is **very good** for the most part, most of the stuff works like it would on a real MacBook, including camera, audio, touchpad, iCloud services.
 - The **experience** is **pleasant**, as the laptop is smooth and responsive under macOS Big Sur/Catalina.
-- **Battery life** is **quite great** (from personal experience it lasts from 8 to 10 hours for light works depending on its age with a behaviour very similar to Windows 10).
+- **Battery life** is **quite great** (from personal experience it **lasts from 8 to 10 hours** for light works depending on its age with a behaviour very similar to Windows 10 as shown in the macOS menu bar screenshots below).
 - The **Intel WiFi** card is soldered onto the motherboard, which means it can't be replaced with a Broadcom one, but the Intel card is now **functional albeit not operating at full speeds** (however it is fine for most use cases). With the latest `AirportItlwm.kext` even Handoff and Continuity features are working, but with a very limited support for AirDrop and Apple Watch unlocking (see [Changelog for OpenIntelWireless release v. 1.2.0 stable](https://github.com/OpenIntelWireless/itlwm/releases)). For any issues about `AirportItlwm.kext` please refer to [**OpenIntelWireless Gitter Page**](https://gitter.im/OpenIntelWireless/itlwm?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 <p align="center">
@@ -177,7 +177,7 @@ Steps for enabling support for Thunderbolt controller (`\_SB.PCI0.RP09`):
 - Limited theme with `OpenCanopy`: a cleaner version with custom graphics has been provided by **@R-Teer**
 </details>
 
-## Post - Install
+## Post - Install Settings
 <details>
 <summary><strong>Enable Tap (with one finger) for Touchpad</strong></summary>
 
@@ -286,7 +286,7 @@ For a detailed guide on how to undervolt our MBXP using `VoltageShift` from the 
 </details>
 
 
-## Optional
+## Optional Settings
 <details>
 <summary><strong>Monitor temperatures and power consumption with HWMonitor</strong></summary>
 

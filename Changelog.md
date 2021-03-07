@@ -1,6 +1,14 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **03-07-2021**
+
+    Update `Readme` with more detailed info about:
+    - how to enable tap with one finger for Touchpad
+    - how to customize Bluetooth advanced menu for avoiding random wake events during sleep phase
+    - how to customize Battery and Power Adapter settings
+    - some additional [**technical notes**](https://github.com/profzei/Matebook-X-Pro-2018#dev-notes) and a reference to **Wiki** section for [**more detailed guides**](https://github.com/profzei/Matebook-X-Pro-2018/wiki)
+
 - **03-02-2021**
 
     **Update**
