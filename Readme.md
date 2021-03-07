@@ -278,6 +278,12 @@ For a detailed guide on how to activate surround sound via MIDI on internal spea
 </details>
 
 <details>
+<summary><strong>Fix Headphone jack switch</strong></summary>
+
+Refer to my custom [**ALCPlugFix**](https://github.com/profzei/Matebook-X-Pro-2018/tree/master/ALCPlugFix) instructions for properly setting/fixing headphone jack switch for Matebook X Pro.
+</details>
+
+<details>
 <summary><strong>Undervolt using VoltageShift</strong></summary>
 
 Undervolting is a great way to maximise performance, lower power consumption and reduce temperatures.

@@ -7,6 +7,7 @@ English
     - how to enable tap with one finger for Touchpad
     - how to customize Bluetooth advanced menu for avoiding random wake events during sleep phase
     - how to customize Battery and Power Adapter settings
+    - how to fix headphone jack switch
     - some additional [**technical notes**](https://github.com/profzei/Matebook-X-Pro-2018#dev-notes) and a reference to **Wiki** section for [**more detailed guides**](https://github.com/profzei/Matebook-X-Pro-2018/wiki)
 
 - **03-02-2021**
