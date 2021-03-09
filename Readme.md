@@ -14,12 +14,12 @@
 #### This repo is currently compatible with macOS Big Sur, Catalina and OpenCore 0.6.7
 |     macOS Big Sur      |     macOS Catalina     |       macOS Mojave       |
 |------------------------|------------------------|--------------------------|
-|     11.2.2 (20D80)     |     10.15.7  (19H15)   |       10.14.6  (18G87)   |
-|     11.2.1 (20D74)     |     10.15.6  (19G2021) |       10.14.5  (18F132)  |
-|     11.2   (20D64)     |     10.15.5  (19F101)  |       10.14.4  (18E226)  |
-|     11.1   (20C69)     |     10.15.4  (19E287)  |       10.14.3  (18D42)   |
-|     11.0.1 (20B29)     |     10.15.3  (19D76)   |       10.14.2  (18C54)   |
-|                        |     10.15.2  (19C57)   |       10.14.1  (18B75)   |
+|     11.2.3 (20D91)     |     10.15.7  (19H15)   |       10.14.6  (18G87)   |
+|     11.2.2 (20D80)     |     10.15.6  (19G2021) |       10.14.5  (18F132)  |
+|     11.2.1 (20D74)     |     10.15.5  (19F101)  |       10.14.4  (18E226)  |
+|     11.2   (20D64)     |     10.15.4  (19E287)  |       10.14.3  (18D42)   |
+|     11.1   (20C69)     |     10.15.3  (19D76)   |       10.14.2  (18C54)   |
+|     11.0.1 (20B29)     |     10.15.2  (19C57)   |       10.14.1  (18B75)   |
 |                        |     10.15.1  (19B88)   |       10.14    (18A389)  |
 |                        |     10.15    (19A583)  |                          |
 
@@ -93,7 +93,7 @@ For privacy reasons, all SMBIOS information has been wiped out in the configurat
 
 ## Changelog
 
-#### 2021 - March - 07
+#### 2021 - March - 09
 See [**Current status**](Changelog.md)
 
 ## Status
@@ -399,7 +399,7 @@ Otherwise, you can follow these suggestions [credit **@R-Teer**]:
 
 | Item | Version | Remark |
 | :--- | :--- | :--- |
-| MacOS | 11.2.2 | |
+| MacOS | 11.2.3 | |
 | [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.6.7 | Default Bootloader|
 | [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.5.1 | Kext/process/framework/library patcher |
 | [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.4.8 | Handle Graphics card |

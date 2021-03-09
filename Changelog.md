@@ -1,6 +1,10 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **03-09-2021**
+
+    Update to macOS Big Sur 11.2.3 (20D91)
+    
 - **03-07-2021**
 
     Update `Readme` with more detailed info about:
