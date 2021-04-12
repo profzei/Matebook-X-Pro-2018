@@ -93,7 +93,7 @@ For privacy reasons, all SMBIOS information has been wiped out in the configurat
 
 ## Changelog
 
-#### 2021 - March - 09
+#### 2021 - April - 12
 See [**Current status**](Changelog.md)
 
 ## Status
@@ -401,22 +401,22 @@ Otherwise, you can follow these suggestions [credit **@R-Teer**]:
 | :--- | :--- | :--- |
 | MacOS | 11.2.3 | |
 | [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.6.7 | Default Bootloader|
-| [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.5.1 | Kext/process/framework/library patcher |
-| [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.4.8 | Handle Graphics card |
-| [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.5.8 | Handle/fix onboard audio |
+| [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.5.2 | Kext/process/framework/library patcher |
+| [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.4.9 | Handle Graphics card |
+| [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.5.9 | Handle/fix onboard audio |
 | [CodecCommander](https://github.com/Sniki/EAPD-Codec-Commander/releases) | 2.7.2 | Fix headphone audio switch |
 | [CPUFriend](https://github.com/acidanthera/CPUFriend/releases) | 1.2.3 | Power management |
-| [HibernationFixup](https://github.com/acidanthera/HibernationFixup/releases) | 1.3.9 | Handle hibernate status |
+| [HibernationFixup](https://github.com/acidanthera/HibernationFixup/releases) | 1.4.0 | Handle hibernate status |
 | [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases) | 1.1.2 | Handle Bluetooth |
 | [AirportItlwm](https://github.com/OpenIntelWireless/itlwm/releases) | 1.3.0 beta| Handle native Wi-Fi card |
 | [NullEthernet](https://bitbucket.org/RehabMan/OS-X-Null-Ethernet/downloads/) | 1.0.6 | Fake Ethernet card |
 | [NoTouchID](https://github.com/al3xtjames/NoTouchID/releases) | 1.0.4 | Disable TouchID|
-| [NVMeFix](https://github.com/acidanthera/NVMeFix/releases) | 1.0.5 | Fix for NVMe SSDs |
+| [NVMeFix](https://github.com/acidanthera/NVMeFix/releases) | 1.0.6 | Fix for NVMe SSDs |
 | [RestrictEvents](https://github.com/acidanthera/RestrictEvents/releases) | 1.0.0 | Block unwanted processes |
 | [VoodooI2C](https://github.com/alexandred/VoodooI2C/releases) | 2.5.2 | Handle I2C device |
 | [VoodooI2CHID](https://github.com/alexandred/VoodooI2C/releases) | 2.5.2 | Touchpad I2C satellite |
 | [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases) | 2.2.2 | Enable keyboard, alternative trackpad driver |
-| [VirtualSMC + plugins](https://github.com/acidanthera/VirtualSMC/releases) | 1.2.1 | SMC chip emulation |
+| [VirtualSMC + plugins](https://github.com/acidanthera/VirtualSMC/releases) | 1.2.2 | SMC chip emulation |
 | [USBInjectAll](https://github.com/daliansky/OS-X-USB-Inject-All/releases) | 0.7.6 | Inject USB ports |
 | [VoltageShift](https://github.com/sicreative/VoltageShift) | 1.25 | Undervoltage tool |
 
@@ -492,6 +492,17 @@ sudo rm -rf /System/Library/Receipts/com.apple.pkg.XcodeExtensionSupport.plist
 sudo rm -rf /System/Library/Receipts/com.apple.pkg.XcodeSystemResources.bom
 sudo rm -rf /System/Library/Receipts/com.apple.pkg.XcodeSystemResources.plist
 sudo rm -rf /private/var/db/receipts/com.apple.pkg.Xcode.bom
+```
+</details>
+
+<details>
+<summary><strong>Fixing Command Line Tools</strong></summary>
+
+It may occur Big Sur (or Xcode) updates remove the CLT which are, for example, required by Homebrew.
+Simply removing their folder and reinstalling them worked; open your `Terminal` app and type the following commands:
+```
+sudo rm -rf /Library/Developer/CommandLineTools
+sudo xcode-select --install
 ```
 </details>
 

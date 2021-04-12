@@ -1,6 +1,26 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **04-12-2021**
+
+    **Update**
+    - Update [kext] `AppleALC` v. 1.5.9
+    - Update [kext] `HibernationFixup` v. 1.4.0
+    - Update [kext] `Lilu` v. 1.5.2
+    - Update [kext] `NVMeFix` v. 1.0.6
+    - Update [kext] `VirtualSMC` + plugins v. 1.2.2
+    - Update [kext] `WhateverGreen` v. 1.4.9
+    - Update [kext] stripped `AirportItlwm_Catalina` v. 1.3.0 beta (commit 68bc77c)
+    - Update [kext] stripped `IntelBluetoothFirmware` v. 1.1.2 (commit 16bc609)
+
+    **OpenCore**
+    - Update `config.plist`: enabling PCI in `DeviceProperties` section
+
+    **Debug**
+    - Update `MaciASL` v. 1.6.0
+
+    Experimenting on my other project (i.e. on old **Intel NUC7i3BNH** converted in hackintosh) during the last two weeks, I checked that settings (the same I use on our **Matebook X Pro**) should work fine for dual booting with Windows at least if the two Oses are put on different ssds: therefore, the issue should be due to some non-protected patch... wip!
+
 - **03-09-2021**
 
     Update to macOS Big Sur 11.2.3 (20D91)
