@@ -19,7 +19,7 @@ English
     **Debug**
     - Update `MaciASL` v. 1.6.0
 
-    Experimenting on my other project (i.e. on old **Intel NUC7i3BNH** converted in hackintosh) during the last two weeks, I checked that settings (the same I use on our **Matebook X Pro**) should work fine for dual booting with Windows at least if the two Oses are put on different ssds: therefore, the issue should be due to some non-protected patch... wip!
+    Experimenting on [**my other project**](https://github.com/profzei/NUC7i3BNH) (i.e. on old **Intel NUC7i3BNH** converted in hackintosh) during the last two weeks, I checked that settings (the same I use on our **Matebook X Pro**) should work fine for dual booting with Windows at least if the two Oses are put on different ssds: therefore, the issue should be due to some non-protected patch... wip!
 
 - **03-09-2021**
 
