@@ -3,9 +3,13 @@
 English
 - **04-28-2021**
 
+    Update to macOS Big Sur 11.3 (20E232)
+
     **Update**
     - Update [kext] stripped `AirportItlwm_Big_Sur` v. 2.0.0 beta (commit c448fbd)
     - Update [kext] stripped `AirportItlwm_Catalina` v. 2.0.0 beta (commit c448fbd)
+
+    Added a new section in `Readme.md` for making macOS zsh Terminal colorful (therefore improving readability in Terminal.app)
 
 - **04-12-2021**
 
