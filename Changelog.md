@@ -1,6 +1,12 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **04-28-2021**
+
+    **Update**
+    - Update [kext] stripped `AirportItlwm_Big_Sur` v. 2.0.0 beta (commit c448fbd)
+    - Update [kext] stripped `AirportItlwm_Catalina` v. 2.0.0 beta (commit c448fbd)
+
 - **04-12-2021**
 
     **Update**
@@ -10,8 +16,8 @@ English
     - Update [kext] `NVMeFix` v. 1.0.6
     - Update [kext] `VirtualSMC` + plugins v. 1.2.2
     - Update [kext] `WhateverGreen` v. 1.4.9
+    - Update [kext] stripped `AirportItlwm_Big_Sur` v. 1.3.0 beta (commit 68bc77c)
     - Update [kext] stripped `AirportItlwm_Catalina` v. 1.3.0 beta (commit 68bc77c)
-    - Update [kext] stripped `IntelBluetoothFirmware` v. 1.1.2 (commit 16bc609)
 
     **OpenCore**
     - Update `config.plist`: enabling PCI in `DeviceProperties` section
@@ -19,7 +25,7 @@ English
     **Debug**
     - Update `MaciASL` v. 1.6.0
 
-    Experimenting on [**my other project**](https://github.com/profzei/NUC7i3BNH) (i.e. on old **Intel NUC7i3BNH** converted in hackintosh) during the last two weeks, I checked that settings (the same I use on our **Matebook X Pro**) should work fine for dual booting with Windows at least if the two Oses are put on different ssds: therefore, the issue should be due to some non-protected patch... wip!
+    Experimenting on [**my other project**](https://github.com/profzei/NUC7i3BNH) (i.e. on old **Intel NUC7i3BNH** converted in hackintosh) during the last two weeks, I checked that settings (the same I use on our **Matebook X Pro**) should work fine for dual booting with Windows at least if the two Oses are put on different ssds: therefore, [the issue](https://github.com/profzei/Matebook-X-Pro-2018/issues/154) should be due to some non-protected patch... wip!
 
 - **03-09-2021**
 

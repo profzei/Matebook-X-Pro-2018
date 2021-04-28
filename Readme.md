@@ -93,7 +93,7 @@ For privacy reasons, all SMBIOS information has been wiped out in the configurat
 
 ## Changelog
 
-#### 2021 - April - 12
+#### 2021 - April - 28
 See [**Current status**](Changelog.md)
 
 ## Status
@@ -408,7 +408,7 @@ Otherwise, you can follow these suggestions [credit **@R-Teer**]:
 | [CPUFriend](https://github.com/acidanthera/CPUFriend/releases) | 1.2.3 | Power management |
 | [HibernationFixup](https://github.com/acidanthera/HibernationFixup/releases) | 1.4.0 | Handle hibernate status |
 | [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases) | 1.1.2 | Handle Bluetooth |
-| [AirportItlwm](https://github.com/OpenIntelWireless/itlwm/releases) | 1.3.0 beta| Handle native Wi-Fi card |
+| [AirportItlwm](https://github.com/OpenIntelWireless/itlwm/releases) | 2.0.0 beta| Handle native Wi-Fi card |
 | [NullEthernet](https://bitbucket.org/RehabMan/OS-X-Null-Ethernet/downloads/) | 1.0.6 | Fake Ethernet card |
 | [NoTouchID](https://github.com/al3xtjames/NoTouchID/releases) | 1.0.4 | Disable TouchID|
 | [NVMeFix](https://github.com/acidanthera/NVMeFix/releases) | 1.0.6 | Fix for NVMe SSDs |
