@@ -3,7 +3,7 @@
 English
 - **05-13-2021**
 
-    Update to macOS Big Sur 11.3.1
+    Update to macOS Big Sur 11.3.1 (20E241)
 
     **Update**
     - Update [kext] `AppleALC` v. 1.6.0
@@ -12,9 +12,18 @@ English
     - Update [kext] `RestrictEvents` v. 1.0.1
     - Update [kext] `VirtualSMC` + plugins v. 1.2.3
     - Update [kext] `VoodooPS2Controller` v. 2.2.3
+    - Update [kext] stripped `AirportItlwm_Big_Sur` v. 2.0.0 beta (commit 032a141)
+    - Update [kext] stripped `AirportItlwm_Catalina` v. 2.0.0 beta (commit 032a141)
 
     **OpenCore**
-    - Update `config.plist` to support OpenCore v. 0.6.9
+    - Update `config.plist` to support OpenCore v. 0.6.9:
+        - Added `Base` and `BaseSkip` keys for every binary patch in `ACPI -> Patch section`
+        - Added `UEFI -> AppleInput` section and associated parameters
+        - Removed `UEFI -> ProtocolOverrides -> AppleEvent` key
+        - Added `UEFI -> Quirks -> EnableVectorAcceleration` key (value set to `true`)
+        - Added `UEFI -> Quirks -> ForgeUefiSupport` key (value set to `false`)
+        - Added `UEFI -> Quirks -> ReloadOptionRoms` key (value set to `false`)
+    - Update `OC -> Resources -> Image` to support OpenCanopy v. 0.6.9
 
 - **04-28-2021**
 

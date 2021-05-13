@@ -11,17 +11,17 @@
 </p>
 
 
-#### This repo is currently compatible with macOS Big Sur, Catalina and OpenCore 0.6.7
+#### This repo is currently compatible with macOS Big Sur, Catalina and OpenCore 0.6.9
 |     macOS Big Sur      |     macOS Catalina     |       macOS Mojave       |
 |------------------------|------------------------|--------------------------|
-|     11.3   (20E232)    |     10.15.7  (19H15)   |       10.14.6  (18G87)   |
-|     11.2.3 (20D91)     |     10.15.6  (19G2021) |       10.14.5  (18F132)  |
-|     11.2.2 (20D80)     |     10.15.5  (19F101)  |       10.14.4  (18E226)  |
-|     11.2.1 (20D74)     |     10.15.4  (19E287)  |       10.14.3  (18D42)   |
-|     11.2   (20D64)     |     10.15.3  (19D76)   |       10.14.2  (18C54)   |
-|     11.1   (20C69)     |     10.15.2  (19C57)   |       10.14.1  (18B75)   |
-|     11.0.1 (20B29)     |     10.15.1  (19B88)   |       10.14    (18A389)  |
-|                        |     10.15    (19A583)  |                          |
+|     11.3.1 (20E241)    |     10.15.7  (19H15)   |       10.14.6  (18G87)   |
+|     11.3   (20E232)    |     10.15.6  (19G2021) |       10.14.5  (18F132)  |
+|     11.2.3 (20D91)     |     10.15.5  (19F101)  |       10.14.4  (18E226)  |
+|     11.2.2 (20D80)     |     10.15.4  (19E287)  |       10.14.3  (18D42)   |
+|     11.2.1 (20D74)     |     10.15.3  (19D76)   |       10.14.2  (18C54)   |
+|     11.2   (20D64)     |     10.15.2  (19C57)   |       10.14.1  (18B75)   |
+|     11.1   (20C69)     |     10.15.1  (19B88)   |       10.14    (18A389)  |
+|     11.0.1 (20B29)     |     10.15    (19A583)  |                          |
 
 
 ### DISCLAIMER
@@ -174,7 +174,7 @@ Steps for enabling support for Thunderbolt controller (`\_SB.PCI0.RP09`):
 </details>
 
 ## Bootloader Firmware
-- Default bootloader: `OpenCore 0.6.7` [Official release](https://github.com/acidanthera/OpenCorePkg/releases). See more info in [Wiki section](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Converting-from-Clover-to-OpenCore) about migration.
+- Default bootloader: `OpenCore 0.6.9` [Official release](https://github.com/acidanthera/OpenCorePkg/releases). See more info in [Wiki section](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Converting-from-Clover-to-OpenCore) about migration.
 - No longer maintained: Clover `r5118` [Official release](https://github.com/CloverHackyColor/CloverBootloader/releases) ~~`r5103` [Dids release](https://github.com/Dids/clover-builder/releases)~~
 
 <details>
