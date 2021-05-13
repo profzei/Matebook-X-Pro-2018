@@ -1,6 +1,21 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **05-13-2021**
+
+    Update to macOS Big Sur 11.3.1
+
+    **Update**
+    - Update [kext] `AppleALC` v. 1.6.0
+    - Update [kext] `Lilu` v. 1.5.3
+    - Update [kext] `NVMeFix` v. 1.0.7
+    - Update [kext] `RestrictEvents` v. 1.0.1
+    - Update [kext] `VirtualSMC` + plugins v. 1.2.3
+    - Update [kext] `VoodooPS2Controller` v. 2.2.3
+
+    **OpenCore**
+    - Update `config.plist` to support OpenCore v. 0.6.9
+
 - **04-28-2021**
 
     Update to macOS Big Sur 11.3 (20E232)
@@ -24,7 +39,7 @@ English
     - Update [kext] stripped `AirportItlwm_Catalina` v. 1.3.0 beta (commit 68bc77c)
 
     **OpenCore**
-    - Update `config.plist`: enabling PCI in `DeviceProperties` section
+    - Update `config.plist`: re-enabling `AAPL,slot-name` for PCI Devices in `DeviceProperties -> Add` section
 
     **Debug**
     - Update `MaciASL` v. 1.6.0
