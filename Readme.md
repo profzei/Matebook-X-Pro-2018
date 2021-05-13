@@ -130,6 +130,15 @@ The solution proposed so far by `VoodooI2C` developers is only a workaround and 
 </details>
 
 <details>
+<summary><strong>Catalina support for AirportItlwm</strong></summary>
+
+If you use this release in **macOS Catalina** you need to make the following changes in the `config.plist` to make `AirportItlwm.kext` support active:
+- `DmgLoading` set to `Signed`
+- `SecureBootModel` set to `Default`
+
+</details>
+
+<details>
 <summary><strong>Thunderbolt support</strong></summary>
 
 As reported in [NotebookCheck review](https://www.notebookcheck.net/Huawei-has-pulled-a-Dell-the-MateBook-X-Pro-uses-a-gimped-Thunderbolt-3-port.316550.0.html) our Matebook X pro (2018) is utilizing only half the PCIe lanes for its single Thunderbolt 3 port (TB). Thus, its PCIe x2 Thunderbolt 3 port is only capable of providing a maximum of 20 Gbps instead of 40 Gbps when compared to a standard Thunderbolt 3 port with PCIe x4 lanes.
