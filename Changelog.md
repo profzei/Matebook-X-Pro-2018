@@ -1,6 +1,19 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **05-14-2021**
+
+    **Update**
+    - Add `SSDT-FWHD.aml` for enabling Intel 82802 Firmware Hub Device
+    - Update `SSDT-PM.aml`:
+        - Assigned ACPI device name `THRM` to undefined PCI device `0x00140002` (Intel Corporation Thermal Subsystem) in `IODeviceTree` list for enhancing compatibility with thermal zone
+    - Reverting back to [kext] stripped `AirportItlwm_Big_Sur` v. 2.0.0 beta (commit c448fbd): more reliable stability
+    - Reverting back to [kext] stripped `AirportItlwm_Catalina` v. 2.0.0 beta (commit c448fbd): more reliable stability
+
+    **OpenCore**
+    - Update `config.plist`:
+        - Added `compatible` key for `PciRoot(0x0)/Pci(0x14,0x2)` with value `pci8086,9d21` resulting to vanilla detection for thermal zone (pair with `SSDT-PM.aml` update)
+
 - **05-13-2021**
 
     Update to macOS Big Sur 11.3.1 (20E241)
