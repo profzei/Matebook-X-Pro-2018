@@ -7,6 +7,8 @@ English
     - Add `SSDT-FWHD.aml` for enabling Intel 82802 Firmware Hub Device
     - Update `SSDT-PM.aml`:
         - Assigned ACPI device name `THRM` to undefined PCI device `0x00140002` (Intel Corporation Thermal Subsystem) in `IODeviceTree` list for enhancing compatibility with thermal zone
+    - Update `SSDT-ARPT.aml`
+    - Update `SSDT-NMVE.aml`
     - Reverting back to [kext] stripped `AirportItlwm_Big_Sur` v. 2.0.0 beta (commit c448fbd): more reliable stability
     - Reverting back to [kext] stripped `AirportItlwm_Catalina` v. 2.0.0 beta (commit c448fbd): more reliable stability
 
