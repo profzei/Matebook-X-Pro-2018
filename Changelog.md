@@ -13,6 +13,7 @@ English
     **OpenCore**
     - Update `config.plist`:
         - Added `compatible` key for `PciRoot(0x0)/Pci(0x14,0x2)` with value `pci8086,9d21` resulting to vanilla detection for thermal zone (pair with `SSDT-PM.aml` update)
+        - `UEFI -> Quirks -> EnableVectorAcceleration` key set to `false` (previous value was `true`)
 
 - **05-13-2021**
 
