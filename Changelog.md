@@ -1,6 +1,12 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **05-16-2021**
+
+    **OpenCore**
+    - Update `config.plist`:
+        - improved compatibility with external monitor (see for reference [#161](https://github.com/profzei/Matebook-X-Pro-2018/issues/161#issuecomment-824906264)) changing default connector type from HDMI to DisplayPort [credit to **@ldan93**]
+
 - **05-14-2021**
 
     **Update**
@@ -15,7 +21,7 @@ English
     **OpenCore**
     - Update `config.plist`:
         - Added `compatible` key for `PciRoot(0x0)/Pci(0x14,0x2)` with value `pci8086,9d21` resulting to vanilla detection for thermal zone (pair with `SSDT-PM.aml` update)
-        - `UEFI -> Quirks -> EnableVectorAcceleration` key set to `false` (previous value was `true`)
+        - `UEFI -> Quirks -> EnableVectorAcceleration` key set to `false` (previous value was `true`): this setting is related to Apple Secure Boot signature verification process
 
 - **05-13-2021**
 

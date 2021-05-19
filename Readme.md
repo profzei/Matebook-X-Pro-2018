@@ -31,6 +31,7 @@
 - Should you find an error or improve anything — whether in the config or in the documentation — please consider opening an issue or pull request.
 - **Complete EFI packs** are available in the [**Releases**](https://github.com/profzei/Matebook-X-Pro-2018/releases) page (please, refer to the rightside menu).
 - Please **do not clone or download** the main branch for daily use: it may include **unstable code** just because it is my repository.
+- **EFI** is configured with **Big Sur** in mind: if you are using it on **Catalina** (or Mojave), read the whole guide to make the necessary changes.
 
 <p align="center">
 <img src="Wiki/Images/Disclaimer.png" width="70%" alt="Disclaimer" />
@@ -61,7 +62,9 @@ With each new release of macOS we need to resolve each new "minor issue" we run 
 
 ### Generate your own SMBIOS Information
 
-For privacy reasons, all SMBIOS information has been wiped out in the configuration file `EFI/OC/config.plist`. You need to generate your unique `SMBIOS` info by yourself (recommend to use [**CorpNewt's GenSMBIOS**](https://github.com/corpnewt/GenSMBIOS)), and inject them into your `config.plist`. For more details on **dual booting settings**, please, see also below [**OpenCore**](https://github.com/profzei/Matebook-X-Pro-2018#bootloader-firmware) notes.
+For privacy reasons, all SMBIOS information has been wiped out in the configuration file `EFI/OC/config.plist`. You need to generate your unique `SMBIOS` info by yourself (recommend to use [**CorpNewt's GenSMBIOS**](https://github.com/corpnewt/GenSMBIOS)), and inject them into your `config.plist`.
+- With every **EFI update** you retrieve from [here](https://github.com/profzei/Matebook-X-Pro-2018/releases), please, remember to transfer your Device details under `PlatformInfo -> Generic` in your `config.plist`.
+- For more details on **dual booting settings**, please, see also below [**OpenCore**](https://github.com/profzei/Matebook-X-Pro-2018#bootloader-firmware) notes.
 
 <p align="center">
 <img src="Wiki/Images/AboutThisMac.png" width="70%" alt="About this Mac" />
@@ -579,6 +582,14 @@ Simply removing their folder and reinstalling them worked; open your `Terminal` 
 sudo rm -rf /Library/Developer/CommandLineTools
 sudo xcode-select --install
 ```
+</details>
+
+<details>
+<summary><strong>Fixing Notification banner</strong></summary>
+
+It may occur some notifications won't appear in Big Sur (check you don't have "Do not Disturb" on...).
+Simply deleting `~/Library/Preferences/com.apple.ncprefs.plist` and then restart your machine.
+
 </details>
 
 ## Credits
