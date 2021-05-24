@@ -52,7 +52,8 @@ With each new release of macOS we need to resolve each new "minor issue" we run 
 - The **compatibility** is **very good** for the most part, most of the stuff works like it would on a real MacBook, including camera, audio, touchpad, iCloud services.
 - The **experience** is **pleasant**, as the laptop is smooth and responsive under macOS Big Sur/Catalina.
 - **Battery life** is **quite great** (from personal experience it **lasts from 8 to 10 hours** for light works depending on its age with a behaviour very similar to Windows 10 as shown in the macOS menu bar screenshots below).
-- The **Intel WiFi** card is soldered onto the motherboard, which means it can't be replaced with a Broadcom one, but the Intel card is now **functional albeit not operating at full speeds** (however it is fine for most use cases). With the latest `AirportItlwm.kext` even Handoff and Continuity features are working, but with a very limited support for AirDrop and Apple Watch unlocking (see [Changelog for OpenIntelWireless release v. 1.2.0 stable](https://github.com/OpenIntelWireless/itlwm/releases)). For any issues about `AirportItlwm.kext` please refer first to [**OpenIntelWireless Troubleshooting page**](https://openintelwireless.github.io/itlwm/Troubleshooting.html#kernel-extension-loading-status) and then to [**OpenIntelWireless Gitter Page**](https://gitter.im/OpenIntelWireless/itlwm?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+- The **Intel WiFi** card is soldered onto the motherboard, which means it can't be replaced with a Broadcom one, but the Intel card is now **functional albeit not operating at full speeds** (however it is fine for most use cases). With the latest `AirportItlwm.kext` even Handoff and Continuity features are working, but with a very limited support for AirDrop and Apple Watch unlocking (see [Changelog for OpenIntelWireless release v. 1.2.0 stable](https://github.com/OpenIntelWireless/itlwm/releases)).
+For any issues about `AirportItlwm.kext` please refer first to [**OpenIntelWireless Troubleshooting page**](https://openintelwireless.github.io/itlwm/Troubleshooting.html#kernel-extension-loading-status) and then to [**OpenIntelWireless Gitter Page**](https://gitter.im/OpenIntelWireless/itlwm?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 <p align="center">
 <img src="Wiki/Images/ScreenMenuBar03.png" width="90%" alt="MBXP Battery Menu bar" />
@@ -94,7 +95,7 @@ For privacy reasons, all SMBIOS information has been wiped out in the configurat
 | System configuration | **GPU** - **OpenCL** Performance **4731** |
 
 <p align="center">
-<img src="Wiki/Images/Lexar_AmorphousDiskMark.png" width="50%" alt="" />
+<img src="Wiki/Images/LiteOn_AmorphousDiskMark.png" width="50%" alt="" />
 </p>
 
 </details>
@@ -212,7 +213,7 @@ Suggested configuration:
 <details>
 <summary><strong>Enable Apple Services</strong></summary>
 
-Default **SMBIOS** settings of this repo is `MacBookPro14,1` ~~`MacBookPro15,2`~~
+Default **SMBIOS** settings of this repo is `MacBookPro16,3` ~~`MacBookPro14,1`~~ ~~`MacBookPro15,2`~~
 1. Launch `Terminal` app
 2. Copy the following script, paste it into the `Terminal` window, then press `Enter`
    ```bash
@@ -221,7 +222,7 @@ Default **SMBIOS** settings of this repo is `MacBookPro14,1` ~~`MacBookPro15,2`~
 3. Type `2`, then press `Enter`
 4. Drag your `config.plist` inside the `Terminal` window
 5. Type `3`, then press `Enter`
-6. Type `MacBookPro14,1`, then press `Enter`
+6. Type `MacBookPro16,3`, then press `Enter`
 </details>
 
 <details>
