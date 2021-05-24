@@ -5,7 +5,7 @@ English
 
     **OpenCore**
     - Update `config.plist`:
-        - improved compatibility with external monitor (see for reference [#161](https://github.com/profzei/Matebook-X-Pro-2018/issues/161#issuecomment-824906264)) changing default connector type from HDMI to DisplayPort [credit to **@ldan93**]
+        - Improved compatibility with external monitor (see for reference [#161](https://github.com/profzei/Matebook-X-Pro-2018/issues/161#issuecomment-824906264)) changing default connector type from HDMI to DisplayPort [credit to **@ldan93**]
 
 - **05-14-2021**
 
