@@ -455,68 +455,77 @@ Then update your clock via the built-in internet time setting to update the time
 <details>
 <summary><strong>Terminal Commands</strong></summary>
 
-#### macOS specific:
+#### --> macOS specific
 
-**Disable Gatekeeper:**</br>
-`sudo spctl --master-disable`
-
-**Disable Logging:**</br>
-`sudo rm /System/Library/LaunchDaemons/com.apple.syslogd.plist`
-
-**Show all Files in Finder**:</br>
+**Disable Gatekeeper**:
 ```
-defaults write com.apple.finder AppleShowAllFiles TRUE
-killall Finder
+sudo spctl --master-disable
 ```
 
-**Show User Library in Big Sur**:</br>
+**Disable Logging**:
 ```
-setfile -a v ~/Library
-chflags nohidden ~/Library
-```
-
-**Sidecar**:</br>
-```
-defaults write com.apple.sidecar.display AllowAllDevices -bool true
-defaults write com.apple.sidecar.display hasShownPref -bool true
+sudo rm /System/Library/LaunchDaemons/com.apple.syslogd.plist
 ```
 
-**Update PreBoot Volume**:</br>
-`sudo diskutil apfs updatePreboot /`
-
-#### Hackintosh specific:
-
-
-
-</details>
-
-
-
-
-
-
-
-<details>
-<summary><strong>Make dock animation faster and without delay</strong></summary>
-
-Run these lines in terminal:
+**Make dock animation faster and without delay**:
 ```
 defaults write com.apple.dock autohide-delay -float 0
 defaults write com.apple.dock autohide-time-modifier -float 0.5
 killall Dock
 ```
+
+**Show all Files in Finder**:
+```
+defaults write com.apple.finder AppleShowAllFiles TRUE
+killall Finder
+```
+
+**Show User Library in Big Sur**:
+```
+setfile -a v ~/Library
+chflags nohidden ~/Library
+```
+
+**Sidecar**:
+```
+defaults write com.apple.sidecar.display AllowAllDevices -bool true
+defaults write com.apple.sidecar.display hasShownPref -bool true
+```
+
+**Update PreBoot Volume**:
+```
+sudo diskutil apfs updatePreboot /
+```
+
+#### --> Hackintosh specific
+
+**Check working `XCPM` configuration**:
+```
+sysctl machdep.xcpm.mode
+   // If it returns '1', then it means the XCPM is active.
+```
+
+**Check if the `X86PlatformPlugin.kext` is loaded**:
+```
+kextstat|grep -y x86plat
+```
+
+**Check loaded/injected kexts**:
+```
+kextstat -kl | awk '!/com\.apple/{printf "%s %s\n", $6, $7}'
+```
+
+**Debug ACPI Hotpatches**:
+```
+log show --predicate "processID == 0" --start $(date "+%Y-%m-%d") --debug | grep "ACPI"
+```
+
+**Save last boot info:**
+```
+log show --predicate 'process == "kernel"' --style syslog --source --debug --last boot > sys_log.txt
+```
+
 </details>
-
-
-
-
-
-
-
-
-
-
-
 
 ## Update tracker
 
@@ -569,28 +578,6 @@ Proper `SSDT-XHC.aml` is used for USB Host Controller (XHCI-Device-ID: `<2f 9d 0
 A very minimal set of boot arguments has been achieved for actual `config.plist`:
 1. `igfxrpsc=1` enables **RPS** control patch and improves **IGPU performance**
 2. `itlwm_cc=IT` changes/enables the country code to **IT-Italy** for `AirportItlwm.kext`
-</details>
-
-<details>
-<summary><strong>Power Management</strong></summary>
-
-Verify working `XCPM` configuration by typing the commands below:
-```
-sysctl machdep.xcpm.mode
-   // If it returns '1', then it means the XCPM is active.
-```
-Verify if the `X86PlatformPlugin.kext` is loaded:
-```
-kextstat|grep -y x86plat
-```
-Verify loaded/injected kexts in macOS system:
-```
-kextstat -kl | awk '!/com\.apple/{printf "%s %s\n", $6, $7}'
-```
-Saving last boot info:
-```
-log show --predicate 'process == "kernel"' --style syslog --source --debug --last boot > sys_log.txt
-```
 </details>
 
 <details>
