@@ -9,15 +9,18 @@ English
     - Update `SSDT-ARPT.aml`: more robust macOS system check
     - Update `SSDT-INIT.aml`: using `TBTS` variable for fixing Windows 10 dual-booting issue
     - Update `SSDT-NMVE.aml`: more robust macOS system check
-    - Update `SSDT-PM.aml`: new frequency vectors data for CPU according to `SMBIOS` set to `MacBookPro16,3`
+    - Update `SSDT-PM.aml`:
+        - New frequency vectors data for CPU according to `SMBIOS` set to `MacBookPro16,3`
+        - Modified structure for `PMCR` device using as Hardware ID `APP9876` according to `SMBIOS` set to `MacBookPro16,3`
     - Update `SSDT-XHC.aml`: using `TBTS` variable for fixing Windows 10 dual-booting issue
+    - Update `SSDT-VDEV.aml`: added `BUS1` device for `SMBUS` Controller (macOS-native approach)
 
     **OpenCore**
     - Update `config.plist`:
         - Improved PCI Devices information coherence
         - Updated `SMBIOS` info to `MacBookPro16,3`:
-            - lesser battery drain (as reported by Wattagio app) during boot phase
-            - please, remember to **update your Device details** under `PlatformInfo -> Generic` section for proper **iServices** behaviour
+            - Lesser battery drain (as reported by Wattagio app) during boot phase
+            - Please, remember to **update your Device details** under `PlatformInfo -> Generic` section for proper **iServices** behaviour
 
     Added a new section in `Readme.md` for resuming some useful **Terminal Commands** for macOS or Hackintosh environment.
 
