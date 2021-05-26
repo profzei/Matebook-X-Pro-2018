@@ -311,39 +311,22 @@ For a detailed guide on how to undervolt our MBXP using `VoltageShift` from the 
 
 
 ## Optional Settings
-<details>
-<summary><strong>Monitor temperatures and power consumption with HWMonitor</strong></summary>
-
-[**HWMonitor**](https://github.com/kzlekk/HWSensors/releases) is relatively old and no longer supported, but it gets the job done.
-
-</details>
-
-<details>
-<summary><strong>Make dock animation faster and without delay</strong></summary>
-
-Run these lines in terminal:
-```
-defaults write com.apple.dock autohide-delay -float 0
-defaults write com.apple.dock autohide-time-modifier -float 0.5
-killall Dock
-```
-</details>
-
 <details>  
-<summary><strong>Remove Eject icon from macOS menu bar</strong></summary>
+<summary><strong>Add custom shortcuts to F7, F9 & F10 hotkeys</strong></summary>
 
-Apple no longer sells any Mac with a built-in optical drive, but many users still rely on CDs, DVDs, and Blu-ray discs for both work and entertainment.
+With the latest update and inclusion of the new `SSDT-KBD.aml` we are now able to reconfigure the shortcuts to custom settings.
 
-**How do I get rid of this icon?**
-- Press and hold the `Apple/Command` key
-- Click and drag the `Eject` menu icon off the menu bar
-- Once you start dragging the `Eject` icon, you can release the `Apple/Command` key
-- When you see a small "x" icon appear, then release the mouse button: it will remove the `Eject` icon from your menu bar.
+For a detailed guide on how to enable original `F7`, `F9` & `F10` hotkeys using native **Automator** app, please see [Wiki section](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Add-custom-shortcuts-to-Fn-hotkeys).
 
-**How to add Eject icon to menu bar**
-- From the macOS desktop, make sure *Finder* is the active application and then select `Go -> Go to Folder` from the menu bar. Alternatively, you can use the keyboard shortcut `Shift-Command-G`
-- Enter the following location: `/System/Library/CoreServices/Menu Extras/`
-- Find and double-click on `Eject.menu`
+Otherwise, you can follow these suggestions [credit **@R-Teer**]:
+- There are various freeware software tools to achive this such as [Karabiner Elements](https://karabiner-elements.pqrs.org/) or [Ukelele](https://software.sil.org/ukelele/).
+- Personally I use the application [BetterTouchTool](https://folivora.ai/), which is paid but incredibly useful and allows custom trackpad gestures amongst other features.
+- My current settings are as follows:
+
+<p align="center">
+<img src="Wiki/Images/Screenshot%202021-02-01%20at%2014.55.54.png" alt="BetterTouchTool Settings" />
+</p>
+
 </details>
 
 <details>  
@@ -365,6 +348,13 @@ defaults delete com.apple.dock springboard-columns
 defaults write com.apple.dock ResetLaunchPad -bool TRUE;killall Dock
 ```
 (**Warning**: the last command also will remove any custom folders you have created)
+</details>
+
+
+<details>
+<summary><strong>Monitor temperatures and power consumption with HWMonitor</strong></summary>
+
+[**HWMonitor**](https://github.com/kzlekk/HWSensors/releases) is relatively old and no longer supported, but it gets the job done.
 </details>
 
 <details>  
@@ -432,6 +422,22 @@ The colors for each position are placed as `FB` format; below is the list which 
 The colors mentioned above are ANSI colors, but according to the version of your macOS or terminal, they may differ a little.
 </details>
 
+<details>  
+<summary><strong>Remove Eject icon from macOS menu bar</strong></summary>
+
+Apple no longer sells any Mac with a built-in optical drive, but many users still rely on CDs, DVDs, and Blu-ray discs for both work and entertainment.
+
+**How do I get rid of this icon?**
+- Press and hold the `Apple/Command` key
+- Click and drag the `Eject` menu icon off the menu bar
+- Once you start dragging the `Eject` icon, you can release the `Apple/Command` key
+- When you see a small "x" icon appear, then release the mouse button: it will remove the `Eject` icon from your menu bar.
+
+**How to add Eject icon to menu bar**
+- From the macOS desktop, make sure *Finder* is the active application and then select `Go -> Go to Folder` from the menu bar. Alternatively, you can use the keyboard shortcut `Shift-Command-G`
+- Enter the following location: `/System/Library/CoreServices/Menu Extras/`
+- Find and double-click on `Eject.menu`
+</details>
 
 <details>  
 <summary><strong>Dual Booting: fix Windows time</strong></summary>
@@ -446,23 +452,71 @@ That will make Windows use universal time instead of local time.
 Then update your clock via the built-in internet time setting to update the time.
 </details>
 
-<details>  
-<summary><strong>Add custom shortcuts to F7, F9 & F10 hotkeys</strong></summary>
+<details>
+<summary><strong>Terminal Commands</strong></summary>
 
-With the latest update and inclusion of the new `SSDT-KBD.aml` we are now able to reconfigure the shortcuts to custom settings.
+#### macOS specific:
 
-For a detailed guide on how to enable original `F7`, `F9` & `F10` hotkeys using native **Automator** app, please see [Wiki section](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Add-custom-shortcuts-to-Fn-hotkeys).
+**Disable Gatekeeper:**</br>
+`sudo spctl --master-disable`
 
-Otherwise, you can follow these suggestions [credit **@R-Teer**]:
-- There are various freeware software tools to achive this such as [Karabiner Elements](https://karabiner-elements.pqrs.org/) or [Ukelele](https://software.sil.org/ukelele/).
-- Personally I use the application [BetterTouchTool](https://folivora.ai/), which is paid but incredibly useful and allows custom trackpad gestures amongst other features.
-- My current settings are as follows:
+**Disable Logging:**</br>
+`sudo rm /System/Library/LaunchDaemons/com.apple.syslogd.plist`
 
-<p align="center">
-<img src="Wiki/Images/Screenshot%202021-02-01%20at%2014.55.54.png" alt="BetterTouchTool Settings" />
-</p>
+**Show all Files in Finder**:</br>
+```
+defaults write com.apple.finder AppleShowAllFiles TRUE
+killall Finder
+```
+
+**Show User Library in Big Sur**:</br>
+```
+setfile -a v ~/Library
+chflags nohidden ~/Library
+```
+
+**Sidecar**:</br>
+```
+defaults write com.apple.sidecar.display AllowAllDevices -bool true
+defaults write com.apple.sidecar.display hasShownPref -bool true
+```
+
+**Update PreBoot Volume**:</br>
+`sudo diskutil apfs updatePreboot /`
+
+#### Hackintosh specific:
+
+
 
 </details>
+
+
+
+
+
+
+
+<details>
+<summary><strong>Make dock animation faster and without delay</strong></summary>
+
+Run these lines in terminal:
+```
+defaults write com.apple.dock autohide-delay -float 0
+defaults write com.apple.dock autohide-time-modifier -float 0.5
+killall Dock
+```
+</details>
+
+
+
+
+
+
+
+
+
+
+
 
 ## Update tracker
 
