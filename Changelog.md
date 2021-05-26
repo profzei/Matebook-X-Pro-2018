@@ -3,6 +3,8 @@
 English
 - **05-26-2021**
 
+    Update to macOS Big Sur 11.4 (20F71)
+
     **Update**
     - Update `SSDT-ARPT.aml`: more robust macOS system check
     - Update `SSDT-INIT.aml`: using `TBTS` variable for fixing Windows 10 dual-booting issue
@@ -16,6 +18,8 @@ English
         - Updated `SMBIOS` info to `MacBookPro16,3`:
             - lesser battery drain (as reported by Wattagio app) during boot phase
             - please, remember to **update your Device details** under `PlatformInfo -> Generic` section for proper **iServices** behaviour
+
+    Added a new section in `Readme.md` for resuming some useful **Terminal Commands** for macOS or Hackintosh environment.
 
 - **05-16-2021**
 
