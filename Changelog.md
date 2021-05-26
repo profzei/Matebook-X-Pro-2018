@@ -1,6 +1,22 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **05-26-2021**
+
+    **Update**
+    - Update `SSDT-ARPT.aml`: more robust macOS system check
+    - Update `SSDT-INIT.aml`: using `TBTS` variable for fixing Windows 10 dual-booting issue
+    - Update `SSDT-NMVE.aml`: more robust macOS system check
+    - Update `SSDT-PM.aml`: new frequency vectors data for CPU according to `SMBIOS` set to `MacBookPro16,3`
+    - Update `SSDT-XHC.aml`: using `TBTS` variable for fixing Windows 10 dual-booting issue
+
+    **OpenCore**
+    - Update `config.plist`:
+        - Improved PCI Devices information coherence
+        - Updated `SMBIOS` info to `MacBookPro16,3`:
+            - lesser battery drain (as reported by Wattagio app) during boot phase
+            - please, remember to **update your Device details** under `PlatformInfo -> Generic` section for proper **iServices** behaviour
+
 - **05-16-2021**
 
     **OpenCore**
@@ -833,7 +849,7 @@ English
 	- Add [config] attribute `acpi-wake-type` to the USB Controller in Device `PciRoot(0x0)/Pci(0x14,0x0)` to fix sleep when lid is closed (during sleep state both CapsLock and Fn leds are off; display wakes up properly)
 	- Set [config] `AppleIntelCPUPM` value to `false` since this parameter affects only pre-Haswell CPUs
 	- Set [config] `KernelPM` value to `true`: this parameter is needed for proper CPU Power Management if CFG-Lock can't be disabled in BIOS for Haswell and newer CPUs
-	- Set [config] `HWPEnable` value to `true`: with an SMBIOS like MacBookPro14,x which supports HWP technology (i.e. Intel SpeedShift), CPU handles pstate management by itself (CPU itself automatically shift to higher and lower pstates depending on CPU demand instead of requiring the OS to do it)
+	- Set [config] `HWPEnable` value to `true`: with an `SMBIOS` like MacBookPro14,x which supports HWP technology (i.e. Intel SpeedShift), CPU handles pstate management by itself (CPU itself automatically shift to higher and lower pstates depending on CPU demand instead of requiring the OS to do it)
 
 - **05-10-2020**
     - Add `SSDT-TPD0.aml` to enable APIC interrupt mode: it uses VoodooInput bundled inside VoodooI2C (no need for external kext)
