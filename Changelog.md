@@ -7,7 +7,7 @@ English
     - Update [kext] stripped `AirportItlwm_Big_Sur` v. 2.0.0 beta (commit 4590cd1)
     - Update [kext] stripped `AirportItlwm_Catalina` v. 2.0.0 beta (commit 4590cd1)
     - Update [kext] stripped `IntelBluetoothFirmware` v. 1.1.3 beta (commit ed27c85)
-    - Update [kext] stripped `IntelBluetoothInjector` v. 1.1.3 (commit ed27c85)
+    - Update [kext] stripped `IntelBluetoothInjector` v. 1.1.3 beta (commit ed27c85)
 
     **OpenCore**
     - Update [driver] `HfsPlus.efi` from latest fw (IM201 and IM161)

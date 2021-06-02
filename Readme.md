@@ -26,7 +26,7 @@
 
 ### DISCLAIMER
 
-- Read the entire README before you start.
+- For best results, read the entire README before you start and follow the install instruction throughly.
 - I am not responsible for any damages you may cause.
 - Should you find an error or improve anything — whether in the config or in the documentation — please consider opening an issue or pull request.
 - **Complete EFI packs** are available in the [**Releases**](https://github.com/profzei/Matebook-X-Pro-2018/releases) page (please, refer to the rightside menu).
@@ -46,13 +46,15 @@ If you find my work useful, please consider **donating via PayPal**. [![donate](
 This repo contains information for getting macOS working on a **Huawei MateBook X Pro (2018 Edition)** laptop.
 
 This is intended to create a "fully" functional (as far as possible) hackintosh for the Huawei Matebook X Pro.
-If you would like to get started with creating a hackintosh on your MBXP but have non experience, I would highly recomend following [**Dortania's OpenCore Install guide**](https://dortania.github.io/OpenCore-Install-Guide/) and then returning here for troubleshooting.
+If you would like to get started with creating a hackintosh on your MBXP but have non experience, I would highly recommend following [**Dortania's OpenCore Install guide**](https://dortania.github.io/OpenCore-Install-Guide/) and then returning here for troubleshooting.
 With each new release of macOS we need to resolve each new "minor issue" we run into. The installation is not perfect yet since it's a continuos work-in-progress, but I'm glad to say that **I learned a lot** in the meantime. All of the steps I made to get to this point were a result of countless hours of reading along with trial and error. I am by no means an expert so any help to get this project functional is very appreciated!
+
+### Summary
 
 - The **compatibility** is **very good** for the most part, most of the stuff works like it would on a real MacBook, including camera, audio, touchpad, iCloud services.
 - The **experience** is **pleasant**, as the laptop is smooth and responsive under macOS Big Sur/Catalina.
 - **Battery life** is **quite great** (from personal experience it **lasts from 8 to 10 hours** for light works depending on its age with a behaviour very similar to Windows 10 as shown in the macOS menu bar screenshots below).
-- The **Intel WiFi** card is soldered onto the motherboard, which means it can't be replaced with a Broadcom one, but the Intel card is now **functional albeit not operating at full speeds** (however it is fine for most use cases). With the latest `AirportItlwm.kext` even Handoff and Continuity features are working, but with a very limited support for AirDrop and Apple Watch unlocking (see [Changelog for OpenIntelWireless release v. 1.2.0 stable](https://github.com/OpenIntelWireless/itlwm/releases)).
+- The **Intel WiFi** card is soldered onto the motherboard, which means it can't be replaced with a Broadcom one, but the Intel card is now **functional albeit not operating at full speeds** (however it is fine for most use cases). With the latest `AirportItlwm.kext` even **Handoff** and **Continuity** features are working, but with a very limited support for AirDrop and Apple Watch unlocking (see [Changelog for OpenIntelWireless release v. 1.2.0 stable](https://github.com/OpenIntelWireless/itlwm/releases)).
 For any issues about `AirportItlwm.kext` please refer first to [**OpenIntelWireless Troubleshooting page**](https://openintelwireless.github.io/itlwm/Troubleshooting.html#kernel-extension-loading-status) and then to [**OpenIntelWireless Gitter Page**](https://gitter.im/OpenIntelWireless/itlwm?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 <p align="center">
@@ -102,7 +104,7 @@ For privacy reasons, all SMBIOS information has been wiped out in the configurat
 
 ## Changelog
 
-#### 2021 - May - 30
+#### 2021 - June - 02
 See [**Current status**](Changelog.md)
 
 ## Status
@@ -139,7 +141,7 @@ The solution proposed so far by `VoodooI2C` developers is only a workaround and 
 </details>
 
 <details>
-<summary><strong>Catalina support for AirportItlwm</strong></summary>
+<summary><strong>Catalina (or Mojave) support for AirportItlwm</strong></summary>
 
 If you use this release in **macOS Catalina** you need to make the following changes in the `config.plist` to make `AirportItlwm.kext` support active:
 - `DmgLoading` set to `Signed`
@@ -173,7 +175,7 @@ Steps for enabling support for Thunderbolt controller (`\_SB.PCI0.RP09`):
 </details>
 
 <details>
-<summary><strong>What's not working</strong></summary>
+<summary><strong>What's not working: incompatible Hardware</strong></summary>
 
 - [ ] **Discrete graphics card** (NVIDIA GeForce MX150) is not working, since macOS doesn't support Optimus technology
 	- Have used `SSDT-DDGPU.aml` to disable it in order to save power.
@@ -518,6 +520,16 @@ kextstat -kl | awk '!/com\.apple/{printf "%s %s\n", $6, $7}'
 **Debug ACPI Hotpatches**:
 ```
 log show --predicate "processID == 0" --start $(date "+%Y-%m-%d") --debug | grep "ACPI"
+```
+
+**Debug Sleep/Wake-up issues**
+- Clean all the logs: `sudo log erase --all`
+- Enter sleep mode: `pmset sleepnow`
+- Wait a few minutes so the logs can collect some data and then wake up the machine
+- Run `log show --style syslog | fgrep "[powerd:sleepWake]"`
+```
+pmset -g assertions
+pmset -g
 ```
 
 **Save last boot info:**
