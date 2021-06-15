@@ -1,6 +1,6 @@
 # macOS  on Huawei Matebook X Pro 2018
 <p align="center">
-<img src="Wiki/Images/matebook-x-pro-big-sur.png" alt="Huawei Big Sur 11.0" />
+<img src="Wiki/Images/matebook-x-pro-monterey.png" alt="Huawei Big Sur 11.0" />
 </p>
 <p align="center">
 <a href="https://consumer.huawei.com/it/support/laptops/matebook-x-pro/" target="_blank"><img src="https://img.shields.io/badge/Model-MACH_W29-orange.svg" /></a>
@@ -12,17 +12,19 @@
 
 
 #### This repo is currently compatible with macOS Big Sur, Catalina and OpenCore 0.6.9
-|     macOS Big Sur      |     macOS Catalina     |       macOS Mojave       |
-|------------------------|------------------------|--------------------------|
-|     11.4   (20F71)     |     10.15.7  (19H15)   |       10.14.6  (18G87)   |
-|     11.3.1 (20E241)    |     10.15.6  (19G2021) |       10.14.5  (18F132)  |
-|     11.3   (20E232)    |     10.15.5  (19F101)  |       10.14.4  (18E226)  |
-|     11.2.3 (20D91)     |     10.15.4  (19E287)  |       10.14.3  (18D42)   |
-|     11.2.2 (20D80)     |     10.15.3  (19D76)   |       10.14.2  (18C54)   |
-|     11.2.1 (20D74)     |     10.15.2  (19C57)   |       10.14.1  (18B75)   |
-|     11.2   (20D64)     |     10.15.1  (19B88)   |       10.14    (18A389)  |
-|     11.1   (20C69)     |     10.15    (19A583)  |                          |
-|     11.0.1 (20B29)     |                        |                          |
+|     Monterey (beta)     |     macOS Big Sur      |     macOS Catalina     |       macOS Mojave       |
+|-------------------------|------------------------|------------------------|--------------------------|
+|     12.0 (21A5248p)     |     11.4   (20F71)     |     10.15.7  (19H15)   |       10.14.6  (18G87)   |
+|                         |     11.3.1 (20E241)    |     10.15.6  (19G2021) |       10.14.5  (18F132)  |
+|                         |     11.3   (20E232)    |     10.15.5  (19F101)  |       10.14.4  (18E226)  |
+|                         |     11.2.3 (20D91)     |     10.15.4  (19E287)  |       10.14.3  (18D42)   |
+|                         |     11.2.2 (20D80)     |     10.15.3  (19D76)   |       10.14.2  (18C54)   |
+|                         |     11.2.1 (20D74)     |     10.15.2  (19C57)   |       10.14.1  (18B75)   |
+|                         |     11.2   (20D64)     |     10.15.1  (19B88)   |       10.14    (18A389)  |
+|                         |     11.1   (20C69)     |     10.15    (19A583)  |                          |
+|                         |     11.0.1 (20B29)     |                        |                          |
+
+**Support for macOS Monterey is on the way!** 
 
 ### DISCLAIMER
 
@@ -104,7 +106,7 @@ For privacy reasons, all SMBIOS information has been wiped out in the configurat
 
 ## Changelog
 
-#### 2021 - June - 02
+#### 2021 - June - 15
 See [**Current status**](Changelog.md)
 
 ## Status

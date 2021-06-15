@@ -1,6 +1,22 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **06-15-2021**
+
+    **macOS Monterey Beta**
+    Initial support for macOS Monterey Beta (21A5248p):
+    - Reference for a partial (almost all) working config could be found in [r/hackintosh](https://www.reddit.com/r/hackintosh/comments/nx3ha5/just_imagine_the_macbook_with_minimal_bezels_and/) and in [r/MatebookXPro](https://www.reddit.com/r/MatebookXPro/comments/nx38ga/got_macos_monterey_up_and_running_on_the_matebook/); what was not working?
+        - `AirportItlwm.kext` needed to be changed with `itlwm.kext` + `HeliPort` app
+        - Bluetooth support was totally broken in macOS Monterey Beta 1
+    - Now some more steps have been performed for a wider hardware support:
+        - add `-lilubetaall` in `NVRAM -> boot-args` section in `config.plist`
+        - `AirportItlwm.kext` is **now working** on macOS Monterey Beta 1:
+            - Make sure AirportItlwm Monterey [**v. 2.0.0 beta**](https://github.com/OpenIntelWireless/itlwm/releases) is used
+        - **Bluetooth** is **now working** on macOS Monterey Beta 1:
+            - Make sure `IntelBluetoothFirmware.kext` [**v. 1.1.3**](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases) or newer is used
+            - Exclude the injection of `IntelBluetoothInjector.kext`
+            - Include `BlueToolFixup.kext` from [acidanthera/BrcmPatchRAM](https://github.com/acidanthera/BrcmPatchRAM)
+
 - **05-30-2021**
 
     **Update**
