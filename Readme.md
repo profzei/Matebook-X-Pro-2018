@@ -143,12 +143,18 @@ The solution proposed so far by `VoodooI2C` developers is only a workaround and 
 </details>
 
 <details>
+<summary><strong>Notes: Bios version</strong></summary>
+
+If your BIOS version is `> 1.30` then edit `config.plist` disabling `SSDT-BIOS.aml` in `ACPI -> Add` section:
+- method `_QBF` (related to battery thermal management) is added only for BIOS versions up to `1.30` since it was introduced by **Huawei** starting from v. `1.33`. 
+</details>
+
+<details>
 <summary><strong>Catalina (or Mojave) support for AirportItlwm</strong></summary>
 
 If you use this release in **macOS Catalina** you need to make the following changes in the `config.plist` to make `AirportItlwm.kext` support active:
 - `DmgLoading` set to `Signed`
 - `SecureBootModel` set to `Default`
-
 </details>
 
 <details>
@@ -173,7 +179,6 @@ Steps for enabling support for Thunderbolt controller (`\_SB.PCI0.RP09`):
 - enable all `SSDT-TB-DSB*.aml`
 - enable `TB3: _GPE.NTFY,1,S to XTFY` binary patch
 - enable `TB3: RP9._INI,0,N to XINI` binary patch
-
 </details>
 
 <details>
