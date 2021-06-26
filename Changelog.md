@@ -1,6 +1,14 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **06-26-2021**
+
+    **Update**
+    - Update [kext] stripped `AirportItlwm_Big_Sur` v. 2.0.0 beta (commit 93bf81f)
+    - Update [kext] stripped `AirportItlwm_Catalina` v. 2.0.0 beta (commit 93bf81f)
+    - Update [kext] stripped `IntelBluetoothFirmware` v. 2.0.0 beta (commit beb5224)
+    - Update [kext] stripped `IntelBluetoothInjector` v. 2.0.0 beta (commit beb5224)
+
 - **06-15-2021**
 
     **macOS Monterey Beta**
