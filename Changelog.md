@@ -1,6 +1,33 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **06-30-2021**
+
+    **Update**
+    - Update [kext] `OpenCore` v. 0.7.0
+    - Update [kext] `AppleALC` v. 1.6.1
+    - Update [kext] `NVMeFix` v. 1.0.8
+    - Update [kext] `RestrictEvents` v. 1.0.2
+    - Update [kext] `VirtualSMC` + plugins v. 1.2.4
+    - Update [kext] `WhateverGreen` v. 1.5.0
+    - Update [kext] stripped `AirportItlwm_Big_Sur` v. 2.0.0 beta (commit 3e63230)
+    - Update [kext] stripped `AirportItlwm_Catalina` v. 2.0.0 beta (commit 3e63230)
+    - Update `OcBinaryData` structure to support `OpenCanopy`
+
+    **OpenCore**    
+    - Update `config.plist` to support `OpenCore` v. 0.7.0:
+        - Added `Booter -> Quirks -> ForceBooterSignature` key and set its value to `false`
+        - Added `Kernel -> Quirks -> ProvideCurrentCpuInfo` key and set its value to `false`
+        - Set `Misc -> Boot -> PickerVariant` key value to `Default` (previous value was `Auto`)
+        - Set `Misc -> Boot -> PollAppleHotKeys` key value to `true` (previous value was `false`)
+        - Added `Misc -> Security -> AllowToggleSip` key and set its value to `true` (enabled entry for disabling and enabling **System Integrity Protection** in `OpenCore` picker)
+        - Added `Misc -> Tools -> Flavour` key for each entry
+        - Added `NVRAM -> StartupMute` key and set its (data) value to `0x00` (which means startup chime sound unmuted)
+        - Replaced `PlatformInfo -> Generic -> AdviseWindows` with `PlatformInfo -> Generic -> AdviseFeatures` to support APFS and set its value to `true`
+        - Changed type for `UEFI -> Output -> GopPassThrough` from boolean (value `false`) to string (value `Disabled`)
+        - Added `UEFI -> ProtocolOverrides -> AppleEg2Info` key and set its value to `false`
+    - Update `OC -> Resources -> Image` folder for supporting **@R-Teer** OpenCanopy theme for our Huawei MateBook X Pro  
+
 - **06-26-2021**
 
     **Update**
