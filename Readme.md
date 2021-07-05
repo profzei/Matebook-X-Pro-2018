@@ -222,6 +222,8 @@ Suggested configuration:
 <details>
 <summary><strong>Enable Apple Services</strong></summary>
 
+If **Serial numbers** have been correctly generated, these services (iMessage, FaceTime, ...) should work for you. If not, [clean up](https://dortania.github.io/OpenCore-Post-Install/universal/iservices.html#clean-out-old-attempts) and generate new serial number for your **SMBIOS**.
+
 Default **SMBIOS** settings of this repo is `MacBookPro16,3` ~~`MacBookPro14,1`~~ ~~`MacBookPro15,2`~~
 1. Launch `Terminal` app
 2. Copy the following script, paste it into the `Terminal` window, then press `Enter`
