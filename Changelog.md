@@ -1,6 +1,17 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **07-08-2021**
+
+    **Update**
+    - Update [kext] stripped `AirportItlwm_Big_Sur` v. 2.0.0 beta (commit 22a83ab)
+    - Update [kext] stripped `AirportItlwm_Catalina` v. 2.0.0 beta (commit 22a83ab)
+    - Update [kext] stripped `AirportItlwm_Monterey` v. 2.0.0 beta (commit 22a83ab)
+
+    **USB Installation**
+    - Created `EFI` folder for a clean USB installation for **macOS Big Sur** 11.4 (this means it is not needed installing Catalina and then upgrading to Big Sur)
+    - Created `EFI` folder for a clean USB installation for **macOS Monterey** Beta 2 (this means it is not needed installing Big Sur and then upgrading to Monterey)
+
 - **06-30-2021**
 
     **Update**

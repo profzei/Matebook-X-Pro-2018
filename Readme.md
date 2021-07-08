@@ -106,7 +106,7 @@ For privacy reasons, all SMBIOS information has been wiped out in the configurat
 
 ## Changelog
 
-#### 2021 - June - 30
+#### 2021 - July - 08
 See [**Current status**](Changelog.md)
 
 ## Status
@@ -487,7 +487,7 @@ killall Dock
 
 **Show all Files in Finder**:
 ```
-defaults write com.apple.finder AppleShowAllFiles TRUE
+defaults write com.apple.finder AppleShowAllFiles -bool true
 killall Finder
 ```
 
