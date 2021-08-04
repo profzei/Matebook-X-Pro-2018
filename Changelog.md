@@ -1,6 +1,28 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **08-04-2021**
+
+    **Update**
+    - Update [kext] `AppleALC` v. 1.6.3
+    - Update [kext] `CPUFriend` v. 1.2.4
+    - Update [kext] `Lilu` v. 1.5.5
+    - Update [kext] `HibernationFixup` v. 1.4.2
+    - Update [kext] `NVMeFix` v. 1.0.9
+    - Update [kext] `RestrictEvents` v. 1.0.3
+    - Update [kext] `VirtualSMC` + plugins v. 1.2.6
+    - Update [kext] `VoodooPS2Controller` v. 2.2.4
+    - Update [kext] `WhateverGreen` v. 1.5.2
+    - Update [kext] stripped `AirportItlwm_Big_Sur` v. 2.0.0 beta (commit df328b2)
+    - Update [kext] stripped `AirportItlwm_Catalina` v. 2.0.0 beta (commit df328b2)
+    - Update [kext] stripped `AirportItlwm_Monterey` v. 2.0.0 beta (commit df328b2)
+    - Update [kext] stripped `IntelBluetoothFirmware` v. 2.0.0 RC2 (commit dbe8fcc)
+    - Update [kext] stripped `IntelBluetoothInjector` v. 2.0.0 RC2 (commit dbe8fcc)
+
+    **USB Installation**
+    - Updated `EFI` folder for a clean USB installation for **macOS Big Sur** 11.5.1
+    - Updated `config-install.plist` to support `OpenCore` v. 0.7.1 requirements
+
 - **07-08-2021**
 
     **Update**
