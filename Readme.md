@@ -11,11 +11,11 @@
 </p>
 
 
-#### This repo is currently compatible with macOS Monterey, Big Sur, Catalina and OpenCore 0.7.0
+#### This repo is currently compatible with macOS Monterey, Big Sur, Catalina and OpenCore 0.7.1
 |     Monterey (beta)     |     macOS Big Sur      |     macOS Catalina     |       macOS Mojave       |
 |-------------------------|------------------------|------------------------|--------------------------|
-|     12.0 (21A5268h)     |     11.5.1 (20G80)     |     10.15.7  (19H15)   |       10.14.6  (18G87)   |
-|     12.0 (21A5248p)     |     11.5   (20G71)     |     10.15.6  (19G2021) |       10.14.5  (18F132)  |
+|     12.0 (21A5294g)     |     11.5.1 (20G80)     |     10.15.7  (19H15)   |       10.14.6  (18G87)   |
+|                         |     11.5   (20G71)     |     10.15.6  (19G2021) |       10.14.5  (18F132)  |
 |                         |     11.4   (20F71)     |     10.15.5  (19F101)  |       10.14.4  (18E226)  |
 |                         |     11.3.1 (20E241)    |     10.15.4  (19E287)  |       10.14.3  (18D42)   |
 |                         |     11.3   (20E232)    |     10.15.3  (19D76)   |       10.14.2  (18C54)   |
@@ -26,7 +26,26 @@
 |                         |     11.1   (20C69)     |                        |                          |
 |                         |     11.0.1 (20B29)     |                        |                          |
 
-**Support for macOS Monterey is on the way!** 
+<details>
+<summary><strong>Support for macOS Monterey is on the way!</strong></summary>
+
+For testing **macOS Monterey**:
+- download latest beta from [https://mrmacintosh.com](https://mrmacintosh.com/macos-12-monterey-full-installer-database-download-directly-from-apple/)
+- check the `InstallAssistant.pkg` integrity running the following in `Terminal` app:
+```
+openssl dgst -sha256 InstallAssistant.pkg
+```
+- finally, follow Dortania's steps for [making the installer in macOS](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/mac-install.html#setting-up-the-installer) running in `Terminal` app:
+```
+sudo /Applications/Install\ macOS\ Monterey\ beta.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume
+```
+- download from this repo proper `config-install.plist`
+
+<p align="center">
+<img src="Wiki/Images/MontereyInstallation1.png" width="90%" alt="" />
+</p>
+
+</details>
 
 ### DISCLAIMER
 
@@ -108,7 +127,7 @@ For privacy reasons, all SMBIOS information has been wiped out in the configurat
 
 ## Changelog
 
-#### 2021 - August - 04
+#### 2021 - August - 05
 See [**Current status**](Changelog.md)
 
 ## Status
@@ -194,7 +213,7 @@ Steps for enabling support for Thunderbolt controller (`\_SB.PCI0.RP09`):
 </details>
 
 ## Bootloader Firmware
-- Default bootloader: `OpenCore 0.7.0` [Official release](https://github.com/acidanthera/OpenCorePkg/releases). See more info in [Wiki section](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Converting-from-Clover-to-OpenCore) about migration.
+- Default bootloader: `OpenCore 0.7.1` [Official release](https://github.com/acidanthera/OpenCorePkg/releases). See more info in [Wiki section](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Converting-from-Clover-to-OpenCore) about migration.
 - No longer maintained: Clover `r5118` [Official release](https://github.com/CloverHackyColor/CloverBootloader/releases) ~~`r5103` [Dids release](https://github.com/Dids/clover-builder/releases)~~
 
 <details>
@@ -555,7 +574,7 @@ log show --predicate 'process == "kernel"' --style syslog --source --debug --las
 | Item | Version | Remark |
 | :--- | :--- | :--- |
 | MacOS | 11.5.1 | |
-| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.7.0 | Default Bootloader|
+| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.7.1 | Default Bootloader|
 | [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.5.5 | Kext/process/framework/library patcher |
 | [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.5.2 | Handle Graphics card |
 | [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.6.3 | Handle/fix onboard audio |

@@ -1,7 +1,22 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **08-05-2021**
+
+    **Update**
+    - Update `OpenCore` v. 0.7.1
+
+    **OpenCore**
+    - Update `config.plist` to support `OpenCore` v. 0.7.1
+
+    **USB Installation**
+    - Updated `EFI` folder for a clean USB installation for **macOS Monterey** 12.0 Beta 4 (21A5294g)
+
+    Added a new section in `Readme.md` for **macOS Monterey** beta installation
+
 - **08-04-2021**
+
+    Update to macOS Big Sur 11.5.1 (20G80)
 
     **Update**
     - Update [kext] `AppleALC` v. 1.6.3
@@ -37,7 +52,7 @@ English
 - **06-30-2021**
 
     **Update**
-    - Update [kext] `OpenCore` v. 0.7.0
+    - Update `OpenCore` v. 0.7.0
     - Update [kext] `AppleALC` v. 1.6.1
     - Update [kext] `NVMeFix` v. 1.0.8
     - Update [kext] `RestrictEvents` v. 1.0.2
@@ -151,6 +166,7 @@ English
     Update to macOS Big Sur 11.3.1 (20E241)
 
     **Update**
+    - Update `OpenCore` v. 0.6.9
     - Update [kext] `AppleALC` v. 1.6.0
     - Update [kext] `Lilu` v. 1.5.3
     - Update [kext] `NVMeFix` v. 1.0.7
@@ -217,10 +233,10 @@ English
 
     **Update**
     - Update `OpenCore` v. 0.6.7
-    - Update `AppleALC` v. 1.5.8
-    - Update `VirtualSMC` v. 1.2.1
-    - Update `VoodooPS2Controller` v. 2.2.2
-    - Update `WhateverGreen` v. 1.4.8
+    - Update [kext] `AppleALC` v. 1.5.8
+    - Update [kext] `VirtualSMC` v. 1.2.1
+    - Update [kext] `VoodooPS2Controller` v. 2.2.2
+    - Update [kext] `WhateverGreen` v. 1.4.8
 
     **OpenCore**
     - Update `config.plist` to support OpenCore v. 0.6.7:
