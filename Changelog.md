@@ -1,13 +1,37 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **08-06-2021**
+
+    **Update**
+    - Update `OpenCore` v. 0.7.2
+
+    **OpenCore**
+    - Update `config.plist` to support `OpenCore` v. 0.7.2:
+        - Added `UEFI -> AppleInput -> GraphicsInputMirroring` key and set its value to `true`
+        - Added `NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82 -> ForceDisplayRotationInEFI` key and set its value to `0`
+        - Added `NVRAM -> Delete -> 7C436110-AB2A-4BBB-A880-FE41995C9F82 -> ForceDisplayRotationInEFI` key
+
+    **Note**: `OpenCore` v. 0.7.1 - 0.7.2 brings fewer changes than we have seen in previous versions: major modifications are in regards to security improvements i.e. changes in Apple Secure Boot model and APFS driver.
+
+    In `config.plist`:
+    - `UEFI -> AppleInput -> GraphicsInputMirroring` boolean value: this is to prevent keyboard input from not working in graphics-based applications such as Windows BitLocker that use non-Apple key input methods even when an AppleEvent key handler (e.g. `CrScreenshotDxe.efi`) is active (reference on [OpenCore bug tracker](https://github.com/acidanthera/bugtracker/issues/1716))
+    - from `OpenCore` v. 0.7.2+ there is in `UEFI -> APFS` section an increased default APFS `MinDate` and `MinVersion` value to **macOS Big Sur** for better security:
+        - setting `UEFI -> APFS -> MinDate` to `0` (default) value means that the minimum allowed APFS driver date to be loaded is 2021/01/01 atm
+        - setting `UEFI -> APFS -> MinVersione` to `0` (default) value means that minimum allowed APFS driver version to be loaded is related to macOS Big Sur
+    These are the suggested values if you are using macOS Big Sur or Monterey.
+
+    Check Dortania's Configuration doc for older macOS versions. To make sure APFS driver loads on macOS Catalina and earlier, you could set (even if it is deprecated...) `UEFI -> APFS -> MinDate` to `-1` value & `UEFI -> APFS -> MinVersione` to `-1` value respectively: in this way this check is disabled.
+
 - **08-05-2021**
 
     **Update**
     - Update `OpenCore` v. 0.7.1
 
     **OpenCore**
-    - Update `config.plist` to support `OpenCore` v. 0.7.1
+    - Update `config.plist` to support `OpenCore` v. 0.7.1:
+        - Added `ACPI -> Quirks -> SyncTableIds` key and set its value to `false`
+        - Added `Kernel -> Scheme -> CustomKernel` key and set its value to `false`
 
     **USB Installation**
     - Updated `EFI` folder for a clean USB installation for **macOS Monterey** 12.0 Beta 4 (21A5294g)
