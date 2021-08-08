@@ -1,6 +1,17 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **08-07-2021**
+
+    **Update**
+    - Update `SSDT-RMNE.aml`: changed (fake) MAC Address with an OUI that corresponds to a real Apple, Inc. interface (for reference see [Apple OUI ID](https://ouilookup.com/vendor/apple)) to improve feedback on security checks
+    - Update `SSDT-VDEV.aml`: 
+        - changed `MEM2` device scope (macOS-native approach)
+        - added `XSPI` device according to `SMBIOS MacBookPro16,1` (macOS-native approach)
+
+    **OpenCore**
+    - Update `config.plist`: updated `PlatformInfo -> Generic -> ROM` value according to Apple OUI set in `SSDT-RMNE.aml`
+
 - **08-06-2021**
 
     **Update**

@@ -11,7 +11,7 @@
 </p>
 
 
-#### This repo is currently compatible with macOS Monterey, Big Sur, Catalina and OpenCore 0.7.1
+#### This repo is currently compatible with macOS Monterey, Big Sur, Catalina and OpenCore 0.7.2
 |     Monterey (beta)     |     macOS Big Sur      |     macOS Catalina     |       macOS Mojave       |
 |-------------------------|------------------------|------------------------|--------------------------|
 |     12.0 (21A5294g)     |     11.5.1 (20G80)     |     10.15.7  (19H15)   |       10.14.6  (18G87)   |
@@ -127,7 +127,7 @@ For privacy reasons, all SMBIOS information has been wiped out in the configurat
 
 ## Changelog
 
-#### 2021 - August - 05
+#### 2021 - August - 08
 See [**Current status**](Changelog.md)
 
 ## Status
@@ -213,7 +213,7 @@ Steps for enabling support for Thunderbolt controller (`\_SB.PCI0.RP09`):
 </details>
 
 ## Bootloader Firmware
-- Default bootloader: `OpenCore 0.7.1` [Official release](https://github.com/acidanthera/OpenCorePkg/releases). See more info in [Wiki section](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Converting-from-Clover-to-OpenCore) about migration.
+- Default bootloader: `OpenCore 0.7.2` [Official release](https://github.com/acidanthera/OpenCorePkg/releases). See more info in [Wiki section](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Converting-from-Clover-to-OpenCore) about migration.
 - No longer maintained: Clover `r5118` [Official release](https://github.com/CloverHackyColor/CloverBootloader/releases) ~~`r5103` [Dids release](https://github.com/Dids/clover-builder/releases)~~
 
 <details>
@@ -574,7 +574,7 @@ log show --predicate 'process == "kernel"' --style syslog --source --debug --las
 | Item | Version | Remark |
 | :--- | :--- | :--- |
 | MacOS | 11.5.1 | |
-| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.7.1 | Default Bootloader|
+| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.7.2 | Default Bootloader|
 | [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.5.5 | Kext/process/framework/library patcher |
 | [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.5.2 | Handle Graphics card |
 | [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.6.3 | Handle/fix onboard audio |
