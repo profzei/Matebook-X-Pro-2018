@@ -1,6 +1,15 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **08-16-2021**
+
+    **Eureka!: BIOS Secure Boot enabled for OpenCore**
+    - Implemented procedure to start `OpenCore` when **Secure Boot** option is **enabled** in `BIOS`: this procedure allows/preserves **dual booting** with **Windows 10** (and, in the future, with **Windows 11**)
+    - Created two shell scripts (to try) to simplify/automate the necessary sequence of steps.
+    - Tested on macOS Monterey 12.0 Beta 4 (21A5294g)
+
+    Update (flawlessly) to **macOS Monterey** 12.0 Beta 5 (21A5304g) with Bios Secure Boot enabled.
+
 - **08-07-2021**
 
     **Update**
