@@ -16,18 +16,18 @@
 
 |     Monterey (beta)     |     macOS Big Sur      |     macOS Catalina     |       macOS Mojave       |
 | :--- | :--- | :--- | :--- |
-|     12.0 (21A5304g)     |     11.5.1 (20G80)     |     10.15.7  (19H15)   |       10.14.6  (18G87)   |
-|                         |     11.5   (20G71)     |     10.15.6  (19G2021) |       10.14.5  (18F132)  |
-|                         |     11.4   (20F71)     |     10.15.5  (19F101)  |       10.14.4  (18E226)  |
-|                         |     11.3.1 (20E241)    |     10.15.4  (19E287)  |       10.14.3  (18D42)   |
-|                         |     11.3   (20E232)    |     10.15.3  (19D76)   |       10.14.2  (18C54)   |
-|                         |     11.2.3 (20D91)     |     10.15.2  (19C57)   |       10.14.1  (18B75)   |
-|                         |     11.2.2 (20D80)     |     10.15.1  (19B88)   |       10.14    (18A389)  |
-|                         |     11.2.1 (20D74)     |     10.15    (19A583)  |                          |
+|     12.0 (21A5304g)     |     11.5.2 (20G95)     |     10.15.7  (19H15)   |       10.14.6  (18G87)   |
+|                         |     11.5.1 (20G80)     |     10.15.6  (19G2021) |       10.14.5  (18F132)  |
+|                         |     11.5   (20G71)     |     10.15.5  (19F101)  |       10.14.4  (18E226)  |
+|                         |     11.4   (20F71)     |     10.15.4  (19E287)  |       10.14.3  (18D42)   |
+|                         |     11.3.1 (20E241)    |     10.15.3  (19D76)   |       10.14.2  (18C54)   |
+|                         |     11.3   (20E232)    |     10.15.2  (19C57)   |       10.14.1  (18B75)   |
+|                         |     11.2.3 (20D91)     |     10.15.1  (19B88)   |       10.14    (18A389)  |
+|                         |     11.2.2 (20D80)     |     10.15    (19A583)  |                          |
+|                         |     11.2.1 (20D74)     |                        |                          |
 |                         |     11.2   (20D64)     |                        |                          |
 |                         |     11.1   (20C69)     |                        |                          |
-|                         |     11.0.1 (20B29)     |                        |                          |
-
+|                         |     11.0.1 (20B29)     
 </div>
 
 <details>
@@ -581,9 +581,11 @@ log show --predicate 'process == "kernel"' --style syslog --source --debug --las
 
 ## Update tracker
 
+<div align="center">
+
 | Item | Version | Remark |
 | :--- | :--- | :--- |
-| MacOS | 11.5.1 | |
+| MacOS | 11.5.2 | |
 | [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.7.2 | Default Bootloader|
 | [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.5.5 | Kext/process/framework/library patcher |
 | [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.5.2 | Handle Graphics card |
@@ -604,6 +606,7 @@ log show --predicate 'process == "kernel"' --style syslog --source --debug --las
 | [USBInjectAll](https://github.com/daliansky/OS-X-USB-Inject-All/releases) | 0.7.6 | Inject USB ports |
 | [VoltageShift](https://github.com/sicreative/VoltageShift) | 1.25 | Undervoltage tool |
 
+</div>
 
 ## Dev. Notes
 
