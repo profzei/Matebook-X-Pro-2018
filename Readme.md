@@ -13,6 +13,7 @@
 
 #### This repo is currently compatible with macOS Monterey, Big Sur, Catalina and OpenCore 0.7.2
 <div align="center">
+
 |     Monterey (beta)     |     macOS Big Sur      |     macOS Catalina     |       macOS Mojave       |
 | :--- | :--- | :--- | :--- |
 |     12.0 (21A5304g)     |     11.5.1 (20G80)     |     10.15.7  (19H15)   |       10.14.6  (18G87)   |
@@ -26,6 +27,7 @@
 |                         |     11.2   (20D64)     |                        |                          |
 |                         |     11.1   (20C69)     |                        |                          |
 |                         |     11.0.1 (20B29)     |                        |                          |
+
 </div>
 
 <details>
