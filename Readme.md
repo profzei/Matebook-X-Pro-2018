@@ -12,8 +12,9 @@
 
 
 #### This repo is currently compatible with macOS Monterey, Big Sur, Catalina and OpenCore 0.7.2
+<div align="center">
 |     Monterey (beta)     |     macOS Big Sur      |     macOS Catalina     |       macOS Mojave       |
-|-------------------------|------------------------|------------------------|--------------------------|
+| :--- | :--- | :--- | :--- |
 |     12.0 (21A5304g)     |     11.5.1 (20G80)     |     10.15.7  (19H15)   |       10.14.6  (18G87)   |
 |                         |     11.5   (20G71)     |     10.15.6  (19G2021) |       10.14.5  (18F132)  |
 |                         |     11.4   (20F71)     |     10.15.5  (19F101)  |       10.14.4  (18E226)  |
@@ -25,6 +26,7 @@
 |                         |     11.2   (20D64)     |                        |                          |
 |                         |     11.1   (20C69)     |                        |                          |
 |                         |     11.0.1 (20B29)     |                        |                          |
+</div>
 
 <details>
 <summary><strong>Support for macOS Monterey is on the way!</strong></summary>
@@ -119,6 +121,8 @@ For privacy reasons, all SMBIOS information has been wiped out in the configurat
 |:---:|:---:|
 | System configuration | **GPU** - **OpenCL** Performance **4731** |
 
+Compare with [these](https://browser.geekbench.com/v5/cpu/search?utf8=✓&q=MacBook+Pro+2018+i7+13-inch).
+
 <p align="center">
 <img src="Wiki/Images/LiteOn_AmorphousDiskMark.png" width="50%" alt="" />
 </p>
@@ -127,7 +131,7 @@ For privacy reasons, all SMBIOS information has been wiped out in the configurat
 
 ## Changelog
 
-#### 2021 - August - 16
+#### 2021 - August - 19
 See [**Current status**](Changelog.md)
 
 ## Status
