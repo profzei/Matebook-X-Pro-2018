@@ -102,6 +102,8 @@ For privacy reasons, all SMBIOS information has been wiped out in the configurat
 
 ## Configuration
 
+<div align="center">
+
 | Specifications      | Details                                          |
 | :--- | :--- |
 | Computer model      | Huawei Matebook X Pro 2018 Space Gray            |
@@ -113,6 +115,8 @@ For privacy reasons, all SMBIOS information has been wiped out in the configurat
 | Sound Card          | Realtek ALC256                                   |
 | Wireless Card       | Intel Dual Band Wireless-AC 8265/8275            |
 | Bluetooth Card      | Intel Bluetooth 8265/8275                        |
+
+</div>
 
 **Device Firmware** Bios version: `1.28`
 
