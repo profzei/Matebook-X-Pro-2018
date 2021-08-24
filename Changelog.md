@@ -1,6 +1,27 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **08-24-2021**
+
+    **Update**
+    - Update `SSDT-PM.aml`: added `ACST` and `APSS` methods for `Processor Objects`
+
+    **OpenCore**
+    - Update `config.plist` with initial support for Intel DPTF framework for performance tuning: now, in `PCI Devices` section, the driver for `Signal Processing Controller for Intel(R) Xeon E3-1200 v5/E3-1500 v5/6th Gen Core Processor Thermal Solution` is loaded.
+
+    With the changes made, using `Intel Power Gadget`, it is noted that the value of consumption (`CPU Total Package` as reported by `HWMonitor`), in idle conditions, passes from about 1.40-1.50 W (as reported [here](https://github.com/profzei/Matebook-X-Pro-2018/issues/181)) to about 1.10-1.20 W:
+    - these tests were performed on **macOS Monterey Beta 5**: for this version it is not possible to test `AirportItlwm.kext v. 1.3.0`
+    - these tests were performed **without** enabling **undervolting** yet
+
+- **08-23-2021**
+
+    **Update**
+    - Update [kext] stripped `AirportItlwm_Big_Sur` v. 2.1.0 beta (commit 7d722e4)
+    - Update [kext] stripped `AirportItlwm_Catalina` v. 2.1.0 beta (commit 7d722e4)
+    - Update [kext] stripped `AirportItlwm_Monterey` v. 2.1.0 beta (commit 7d722e4)
+    - Update [kext] stripped `IntelBluetoothFirmware` v. 2.1.0 beta (commit b66baff)
+    - Update [kext] stripped `IntelBluetoothInjector` v. 2.1.0 beta (commit b66baff)
+
 - **08-16-2021**
 
     **Eureka!: BIOS Secure Boot enabled for OpenCore**

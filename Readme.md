@@ -11,7 +11,7 @@
 </p>
 
 
-#### This repo is currently compatible with macOS Monterey, Big Sur, Catalina and OpenCore 0.7.2
+#### This repository is currently compatible with macOS Monterey, Big Sur, Catalina and OpenCore 0.7.2
 <div align="center">
 
 |     Monterey (beta)     |     macOS Big Sur      |     macOS Catalina     |       macOS Mojave       |
@@ -51,30 +51,37 @@ sudo /Applications/Install\ macOS\ Monterey\ beta.app/Contents/Resources/createi
 
 </details>
 
+If you find my work useful:
+* please consider **giving** it **a star** to make it more visible.
+* please consider **donating via PayPal**. [![donate](https://img.shields.io/badge/-buy%20me%20a%20coffee-orange)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=TSJHK3C2BSQN6&currency_code=EUR)
+
+
 ### DISCLAIMER
 
 - For best results, read the entire README before you start and follow the install instruction throughly.
 - I am not responsible for any damages you may cause.
+- **This is not a support forum**.
 - Should you find an error or improve anything — whether in the config or in the documentation — please consider opening an issue or pull request.
 - **Complete EFI packs** are available in the [**Releases**](https://github.com/profzei/Matebook-X-Pro-2018/releases) page (please, refer to the rightside menu).
-- Please **do not clone or download** the main branch for daily use: it may include **unstable code** just because it is my repository.
-- **EFI** is configured with **Big Sur** in mind: if you are using it on **Catalina** (or Mojave), read the whole guide to make the necessary changes.
+- Please **do not clone or download** the main branch for daily use: it may include **unstable code** or **very old code** just because it is my repository.
+- **EFI** is configured with **Monterey** or **Big Sur** in mind: if you are using it on **Catalina** (or Mojave), read the whole guide to make the necessary changes.
+- **EFI** is configured for macOS installation **on internal NVMe SSD** both in dual-boot configuration with Windows and as a single OS (macOS installation on external SSDs are not taken into account) 
 
 <p align="center">
 <img src="Wiki/Images/Disclaimer.png" width="70%" alt="Disclaimer" />
 </p>
 
-If you find this bootloader configuration useful, consider **giving** it **a star** to make it more visible.
+**This repository is for personal purposes only.**
 
-If you find my work useful, please consider **donating via PayPal**. [![donate](https://img.shields.io/badge/-buy%20me%20a%20coffee-orange)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=TSJHK3C2BSQN6&currency_code=EUR)
 
 ## Introduction
 
-This repo contains information for getting macOS working on a **Huawei MateBook X Pro (2018 Edition)** laptop.
+This repo contains the files needed for getting macOS working on a **Huawei MateBook X Pro (2018 Edition)** laptop with OpenCore.
+* This is intended to create a "fully" functional (as far as possible) hackintosh for the Huawei Matebook X Pro.
+* The project can be considered **stable**.
+* With each new release of macOS we need to resolve each new "minor issue" we run into. All of the steps I made to get to this point were a result of countless hours of reading along with trial and error, however I'm glad to say that **I learned a lot** in the meantime. I am by no means an expert so any effective help (suggestions, observations, ...) to tune this project is very appreciated!
+* If you would like to get started with creating a hackintosh on your MBXP but have non experience, I would highly recommend following [**Dortania's OpenCore Install guide**](https://dortania.github.io/OpenCore-Install-Guide/) and then returning here for troubleshooting or last improvements.
 
-This is intended to create a "fully" functional (as far as possible) hackintosh for the Huawei Matebook X Pro.
-If you would like to get started with creating a hackintosh on your MBXP but have non experience, I would highly recommend following [**Dortania's OpenCore Install guide**](https://dortania.github.io/OpenCore-Install-Guide/) and then returning here for troubleshooting.
-With each new release of macOS we need to resolve each new "minor issue" we run into. The installation is not perfect yet since it's a continuos work-in-progress, but I'm glad to say that **I learned a lot** in the meantime. All of the steps I made to get to this point were a result of countless hours of reading along with trial and error. I am by no means an expert so any help to get this project functional is very appreciated!
 
 ### Summary
 
@@ -88,7 +95,6 @@ For any issues about `AirportItlwm.kext` please refer first to [**OpenIntelWirel
 <img src="Wiki/Images/ScreenMenuBar03.png" width="90%" alt="MBXP Battery Menu bar" />
 </p>
 
-**This repository is for personal purposes**
 
 ### Generate your own SMBIOS Information
 
@@ -137,7 +143,7 @@ Compare with [these](https://browser.geekbench.com/v5/cpu/search?utf8=✓&q=MacB
 
 ## Changelog
 
-#### 2021 - August - 19
+#### 2021 - August - 24
 See [**Current status**](Changelog.md)
 
 ## Status
@@ -593,8 +599,8 @@ log show --predicate 'process == "kernel"' --style syslog --source --debug --las
 | [CodecCommander](https://github.com/Sniki/EAPD-Codec-Commander/releases) | 2.7.2 | Fix headphone audio switch |
 | [CPUFriend](https://github.com/acidanthera/CPUFriend/releases) | 1.2.4 | Power management |
 | [HibernationFixup](https://github.com/acidanthera/HibernationFixup/releases) | 1.4.2 | Handle hibernate status |
-| [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases) | 2.0.0 beta | Handle Bluetooth |
-| [AirportItlwm](https://github.com/OpenIntelWireless/itlwm/releases) | 2.0.0 beta| Handle native Wi-Fi card |
+| [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases) | 2.1.0 beta | Handle Bluetooth |
+| [AirportItlwm](https://github.com/OpenIntelWireless/itlwm/releases) | 2.1.0 beta| Handle native Wi-Fi card |
 | [NullEthernet](https://bitbucket.org/RehabMan/OS-X-Null-Ethernet/downloads/) | 1.0.6 | Fake Ethernet card |
 | [NoTouchID](https://github.com/al3xtjames/NoTouchID/releases) | 1.0.4 | Disable TouchID|
 | [NVMeFix](https://github.com/acidanthera/NVMeFix/releases) | 1.0.9 | Fix for NVMe SSDs |
