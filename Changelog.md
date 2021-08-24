@@ -7,7 +7,9 @@ English
     - Update `SSDT-PM.aml`: added `ACST` and `APSS` methods for `Processor Objects`
 
     **OpenCore**
-    - Update `config.plist` with initial support for Intel DPTF framework for performance tuning: now, in `PCI Devices` section, the driver for `Signal Processing Controller for Intel(R) Xeon E3-1200 v5/E3-1500 v5/6th Gen Core Processor Thermal Solution` is loaded.
+    - Update `config.plist` with initial support for Intel DPTF framework for performance tuning:
+        - now, in `PCI Devices` section, the driver for `Signal Processing Controller for Intel(R) Xeon E3-1200 v5/E3-1500 v5/6th Gen Core Processor Thermal Solution` is loaded
+        - now `IETM` and `B0D4` devices are correctly attached as reported by `IORegistryExplorer`
 
     With the changes made, using `Intel Power Gadget`, it is noted that the value of consumption (`CPU Total Package` as reported by `HWMonitor`), in idle conditions, passes from about 1.40-1.50 W (as reported [here](https://github.com/profzei/Matebook-X-Pro-2018/issues/181)) to about 1.10-1.20 W:
     - these tests were performed on **macOS Monterey Beta 5**: for this version it is not possible to test `AirportItlwm.kext v. 1.3.0`
