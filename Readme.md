@@ -16,7 +16,7 @@
 
 |     Monterey (beta)     |     macOS Big Sur      |     macOS Catalina     |       macOS Mojave       |
 | :--- | :--- | :--- | :--- |
-|     12.0 (21A5304g)     |     11.5.2 (20G95)     |     10.15.7  (19H15)   |       10.14.6  (18G87)   |
+|     12.0 (21A5506j)     |     11.5.2 (20G95)     |     10.15.7  (19H15)   |       10.14.6  (18G87)   |
 |                         |     11.5.1 (20G80)     |     10.15.6  (19G2021) |       10.14.5  (18F132)  |
 |                         |     11.5   (20G71)     |     10.15.5  (19F101)  |       10.14.4  (18E226)  |
 |                         |     11.4   (20F71)     |     10.15.4  (19E287)  |       10.14.3  (18D42)   |
@@ -143,7 +143,7 @@ Compare with [these](https://browser.geekbench.com/v5/cpu/search?utf8=✓&q=MacB
 
 ## Changelog
 
-#### 2021 - August - 24
+#### 2021 - September - 02
 See [**Current status**](Changelog.md)
 
 ## Status
@@ -177,6 +177,53 @@ See [**Current status**](Changelog.md)
 1. **Intel Bluetooth** could not support some Bluetooth devices like some Bluetooth mouse since it is only a firmware injector; please, report any issues not here but only on [**OpenIntelWireless/IntelBluetoothFirmware Gitter Chat**](https://gitter.im/OpenIntelWireless/IntelBluetoothFirmware?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 2. **Touchscreen support is disabled by default** since [release v. 1.8.0](https://github.com/profzei/Matebook-X-Pro-2018/releases). Why? It seems that all `VoodooI2C` versions after 2.4 are affected to a greater or lesser extent by `Multi_GPI0` issues.
 The solution proposed so far by `VoodooI2C` developers is only a workaround and not a real fix: proposing to use the `GPI0` pinning for touchpad and polling method for touchscreen is not a real fix because this approach increases interrupts and causes a degrade in battery life. This being the case and not needing to use the touchscreen in my daily work, for the moment I have disabled this function pending improvements that can only come from `VoodooI2C` developers.
+</details>
+
+<details>
+<summary><strong>Notes: NVMe SSD support</strong></summary>
+
+1. Very rarely some users reported the following kernel panic after sleep:
+```
+panic(cpu 0 caller 0xffffff800b6ce860): nvme: "Fatal error occurred. CSTS=0xffffffff
+...
+```
+It's certainly a `NVMe` error, but it is not due to **EFI** released in the present repo:
+- it may be due to the power management of **your NVMe device** (mine is a **LiteON SSD PCIe NVMe 512 GB [CA3-8D512]**)
+- reference to this issue is in **acidanthera/bugtracker#1193** [IGP causes NVMe Kernel Panic CSTS=0xffffffff](https://github.com/acidanthera/bugtracker/issues/1193)
+In case you run into such an issue, it is recommended adding `forceRenderStandby=0` boot-args in your `config.plist` to disable `RC6 Render Standby`.
+2. If your laptop has a **Samsung PM981 NVMe SSD** or **any unsupported SSD** listed in [dortania/bugtracker#192](https://github.com/dortania/bugtracker/issues/192), then it's obviously **not supported here**. I have no way to make my **EFI** work on broken `IONVME` compatibility SSDs.
+Obvious solutions:
+- buy another (internal) NVMe SSD
+- or install macOS on an external SSD drive
+Even if your macOS installed on an external SSD drive, you need to add a new ACPI patch to **disable** PM981 (or other **non-supported NVMe** SSDs) **detection on macOS**:
+```
+DefinitionBlock ("", "SSDT", 2, "HUAWEI", "_DRP05", 0)
+{
+	External (OSDW, MethodObj)
+
+    External (_SB_.PCI0.RP05, DeviceObj)
+
+    Scope (\_SB.PCI0.RP05)
+    {
+        OperationRegion (DE01, PCI_Config, 0x50, One)
+        Field (DE01, AnyAcc, NoLock, Preserve)
+        {
+                ,   1, 
+                ,   3, 
+            DDDD,   1
+        }
+    }
+
+    Scope (\)
+    {
+        If (OSDW ())
+        {
+            \_SB.PCI0.RP05.DDDD = One
+        }
+    }
+}
+``` 
+
 </details>
 
 <details>

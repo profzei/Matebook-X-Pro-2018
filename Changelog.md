@@ -1,6 +1,56 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **09-02-2021**
+    
+    **Update**
+    - Update [kext] stripped `AirportItlwm_Big_Sur` v. 2.1.0 beta (commit 6dbf9d3)
+    - Update [kext] stripped `AirportItlwm_Catalina` v. 2.1.0 beta (commit 6dbf9d3)
+    - Update [kext] stripped `AirportItlwm_Monterey` v. 2.1.0 beta (commit 6dbf9d3)
+    - Update [kext] stripped `IntelBluetoothFirmware` v. 2.1.0 beta (commit 06f9d25)
+    - Update [kext] stripped `IntelBluetoothInjector` v. 2.1.0 beta (commit 06f9d25)
+
+    Added a new section in `Readme.md` for **NVMe SSD compatibility support** (Reference to [issue #171](https://github.com/profzei/Matebook-X-Pro-2018/issues/171)).
+
+- **09-01-2021**
+
+    **Update**
+    - Update `SSDT-PNLF.aml`: `OperationRegion` for `PNLF` device is set according to [acidanthera/OpenCorePkg@43cbf70](https://github.com/acidanthera/OpenCorePkg/commit/43cbf701b33fc7ab9929051e86f30b4dad263f5c) model
+
+- **08-31-2021**
+
+    Update (flawlessly) to **macOS Monterey** 12.0 Beta 6 (21A5506j) with Bios Secure Boot enabled.
+
+    Since **macOS Monterey** 12.0 Beta 5 the only way to be able to use **Bluetooth** seems changing `SMBIOS` from (new) `MacBookPro16,3` to (old) `MacBookPro14,1` or `MacBookPro15,2` ([Reference issue#182](https://github.com/profzei/Matebook-X-Pro-2018/issues/182#issuecomment-909834358) credit to **@samwzlim**). From now on I choose to use `MacBookPro15,2` to give our build more longevity for future updates...
+    Therefore, please, remember to **update your Device details** under `PlatformInfo -> Generic` section for proper **iServices** behaviour!
+
+
+    **Update**
+    - Update `SSDT-PM.aml`: reflecting changes introduced with **SMBIOS** `MacBookPro15,2`
+
+- **08-30-2021**
+
+    **Update**
+    - Update `SSDT-BIOS.aml`: implemented a more general approach regardless of the BIOS version 
+
+    **OpenCore**
+    - Update `config.plist`: removed for `PciRoot(0x0)/Pci(0x2,0x0)` the key `force-online` (which was set to `<data>AQAAAA==</data>`). Why?
+        - With latest `WhateverGreen` releases our available connector types are 1 LVDS (internal monitor) and 2 DP; using an external monitor connected with a USB C-type to DP cable I verified the correct recognition and functioning of my BenQ PD2500Q even after the system wake-up. This `force-online` key could instead be useful for connections using a USB-C type to HDMI cable.
+        - Eliminating this key reduces tons of warning messages like `[IGFB] [ERROR] [AGDC] Failed with status -536870212 for stream access aux` in system log during boot phase: that warning is correct/normal since it reports that the display is not connected for the remaining ports (i.e. `FB1` and `FB2` in our case using only `FB0` i.e. internal display); eliminating those warnings reduces log-file size (in debug-mode) from 2.6 to 1.6 MB thus reducing slightly boot loading time. [Reference](https://github.com/acidanthera/bugtracker/issues/1318)
+
+- **08-29-2021**
+
+    **Update**
+    - Update `SSDT-ARPT.aml`: removed `_STA` methods according to `SMBIOS MacBookPro16,1` (macOS-native approach)
+    - Update `SSDT-DTB3.aml`:
+        - fixed some weird ACPI errors during boot phase
+        - implemented a better condition for Thunderbolt device's power management
+        - more robust macOS system check
+    - Update `SSDT-NVME.aml`: more robust macOS system check
+
+    **OpenCore**
+    - Update `config.plist`: added `pci-aspm-default` key (set to value `02000000` for `L1` mode) for forcing proper power management
+
 - **08-24-2021**
 
     **Update**
