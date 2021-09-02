@@ -190,11 +190,13 @@ panic(cpu 0 caller 0xffffff800b6ce860): nvme: "Fatal error occurred. CSTS=0xffff
 It's certainly a `NVMe` error, but it is not due to **EFI** released in the present repo:
 - it may be due to the power management of **your NVMe device** (mine is a **LiteON SSD PCIe NVMe 512 GB [CA3-8D512]**)
 - reference to this issue is in **acidanthera/bugtracker#1193** [IGP causes NVMe Kernel Panic CSTS=0xffffffff](https://github.com/acidanthera/bugtracker/issues/1193)
+
 In case you run into such an issue, it is recommended adding `forceRenderStandby=0` boot-args in your `config.plist` to disable `RC6 Render Standby`.
 2. If your laptop has a **Samsung PM981 NVMe SSD** or **any unsupported SSD** listed in [dortania/bugtracker#192](https://github.com/dortania/bugtracker/issues/192), then it's obviously **not supported here**. I have no way to make my **EFI** work on broken `IONVME` compatibility SSDs.
 Obvious solutions:
 - buy another (internal) NVMe SSD
 - or install macOS on an external SSD drive
+
 Even if your macOS installed on an external SSD drive, you need to add a new ACPI patch to **disable** PM981 (or other **non-supported NVMe** SSDs) **detection on macOS**:
 ```
 DefinitionBlock ("", "SSDT", 2, "HUAWEI", "_DRP05", 0)

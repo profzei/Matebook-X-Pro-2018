@@ -22,6 +22,7 @@ English
     Update (flawlessly) to **macOS Monterey** 12.0 Beta 6 (21A5506j) with Bios Secure Boot enabled.
 
     Since **macOS Monterey** 12.0 Beta 5 the only way to be able to use **Bluetooth** seems changing `SMBIOS` from (new) `MacBookPro16,3` to (old) `MacBookPro14,1` or `MacBookPro15,2` ([Reference issue#182](https://github.com/profzei/Matebook-X-Pro-2018/issues/182#issuecomment-909834358) credit to **@samwzlim**). From now on I choose to use `MacBookPro15,2` to give our build more longevity for future updates...
+    
     Therefore, please, remember to **update your Device details** under `PlatformInfo -> Generic` section for proper **iServices** behaviour!
 
 
