@@ -629,6 +629,8 @@ pmset -g assertions
 pmset -g
 ```
 
+Check sleep log: `pmset -g log | egrep '\b(Sleep|Wake|Start)\s{2,}'`
+
 **Save last boot info:**
 ```
 log show --predicate 'process == "kernel"' --style syslog --source --debug --last boot > sys_log.txt

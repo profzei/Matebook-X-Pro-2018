@@ -1,6 +1,36 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **09-19-2021**
+
+    Added a new section in [Wiki](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Unlock-0xE2-MSR/) with a guide about how to **unlock CFG** on Matebook X Pro [**credit @ldan93**]
+
+- **09-11-2021**
+
+    **Update**
+    - Update `OC/Resources` folder content:
+        - added `ExtOther.icns` and `Background.icns` for fixing two annoying warnings (visible only with OpenCore Debug), the latter due to our non-standard 3000x2000 screen resolution ([Reference for generate custom .icns files](https://dortania.github.io/OpenCore-Legacy-Patcher/ICNS.html))
+        - changed custom `Left.icns`, `Lock.icns`, `Password.icns`, `Restart.icns`, `Right.icns`, `Selected.icns`, `Selector.icns`, `SetDefaults.icns`, `Shutdown.icns` with default ones
+
+    **OpenCore**
+    - Update `config.plist`:
+        - Set `Misc -> Boot -> HideAuxiliary` key value to `true` (previous value was `false`) for a cleaner boot picker
+
+- **09-05-2021**
+
+    **Update**
+    - Update `SSDT-ARPT.aml`
+    - Update `SSDT-PWRB.aml`: according to SMBIOS `MacBookPro14,1` and `MacBookPro15,x` `power-button-usage` and `power-button-usagepage` properties have been added to its `_DSM` method on hardware check basis 
+    - Add `SSDT-SPI1.aml` to handle `Intel(R) Low Power Subsystem SPI Host Controller - 9D2A` according to SMBIOS `MacBookPro14,1` and `MacBookPro15,x`:
+        - `gspi-channel-number`, `gspi-channels-count`, `gspi-sys-clock-period`, `gspi-pin-cs`, `gspi-pin-clk`, `gspi-pin-mosi`, `gspi-pin-miso` properties implemented in its `_DSM` method
+
+    **OpenCore**
+    - Update `config.plist`:
+        - Improved `ALSD.S3PT,0,N to ALSD.X3PT,0,N` binary patch (fixed collisiong with `\_SB.PCI0.LPCB.EC0.SEN3._PSV` method)
+        - Added `compatible` key for `PciRoot(0x0)/Pci(0x1e,0x3)` with value `pci8086,7270` (pair with `SSDT-SPI1.aml`)
+
+    Added new instructions for toggle Wi-Fi device during sleep/wake-up cycle in [**Wiki** section](https://github.com/profzei/Matebook-X-Pro-2018/wiki)
+
 - **09-02-2021**
     
     **Update**
