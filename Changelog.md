@@ -1,6 +1,10 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **09-20-2021**
+
+    Published [guide](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Enable-BIOS-Secure-Boot-with-OpenCore) in Wiki for **enabling UEFI Secure Boot** for our Matebook X Pro: procedure should be repeated for every OpenCore update!
+
 - **09-19-2021**
 
     Added a new section in [Wiki](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Unlock-0xE2-MSR/) with a guide about how to **unlock CFG** on Matebook X Pro [**credit @ldan93**]
