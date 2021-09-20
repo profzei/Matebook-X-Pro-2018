@@ -1,6 +1,12 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **09-21-2021**
+
+    Downloaded macOS Big Sur 11.6 (20G165):
+        - removed macOS Monterey beta 6
+        - cleaned `config.plist` for installation
+
 - **09-20-2021**
 
     Published [guide](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Enable-BIOS-Secure-Boot-with-OpenCore) in Wiki for **enabling UEFI Secure Boot** for our Matebook X Pro: procedure should be repeated for every OpenCore update!
