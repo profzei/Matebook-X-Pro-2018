@@ -1,6 +1,31 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **09-22-2021**
+
+    **Update**
+    - Update `OpenCore` v. 0.7.3
+    - Update [kext] `AppleALC` v. 1.6.4
+    - Update [kext] `Lilu` v. 1.5.6
+    - Update [kext] `HibernationFixup` v. 1.4.3
+    - Update [kext] `RestrictEvents` v. 1.0.4
+    - Update [kext] `VirtualSMC` + plugins v. 1.2.3
+    - Update [kext] `WhateverGreen` v. 1.5.3
+    - Update [kext] stripped `AirportItlwm_Big_Sur` v. 2.1.0 beta (commit cc7a63b)
+    - Update [kext] stripped `AirportItlwm_Catalina` v. 2.1.0 beta (commit cc7a63b)
+    - Update [kext] stripped `AirportItlwm_Monterey` v. 2.1.0 beta (commit cc7a63b)
+    - Update [kext] stripped `IntelBluetoothFirmware` v. 2.0.1
+    - Update [kext] stripped `IntelBluetoothInjector` v. 2.0.1
+
+    **OpenCore**
+    - Update `config.plist` to support `OpenCore` v. 0.7.3:
+        - Added `rps-control` key for `PciRoot(0x0)/Pci(0x2,0x0)` device
+        - Removed `NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82 -> boot-args -> igfxrpsc=1` option
+        - Updated `UEFI -> Drivers` structure section for enabling `HfsPlus.efi`, `OpenRuntime.efi`, `OpenCanopy.efi` and `AudioDxe.efi` in this order
+        - Added `UEFI -> Quirks -> ForceOcWriteFlash` key and set its value to `false`
+
+    Installed macOS Big Sur 11.6 (20G165)
+
 - **09-21-2021**
 
     Downloaded macOS Big Sur 11.6 (20G165):
