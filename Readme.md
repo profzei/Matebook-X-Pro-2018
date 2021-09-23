@@ -313,7 +313,7 @@ Suggested configuration:
 
 If **Serial numbers** have been correctly generated, these services (iMessage, FaceTime, ...) should work for you. If not, [clean up](https://dortania.github.io/OpenCore-Post-Install/universal/iservices.html#clean-out-old-attempts) and generate new serial number for your **SMBIOS**.
 
-Default **SMBIOS** settings of this repo is `MacBookPro16,3` ~~`MacBookPro14,1`~~ ~~`MacBookPro15,2`~~
+Default **SMBIOS** settings of this repo is `MacBookPro15,2` ~~`MacBookPro14,1`~~ ~~`MacBookPro16,3`~~
 1. Launch `Terminal` app
 2. Copy the following script, paste it into the `Terminal` window, then press `Enter`
    ```bash
@@ -322,7 +322,7 @@ Default **SMBIOS** settings of this repo is `MacBookPro16,3` ~~`MacBookPro14,1`~
 3. Type `2`, then press `Enter`
 4. Drag your `config.plist` inside the `Terminal` window
 5. Type `3`, then press `Enter`
-6. Type `MacBookPro16,3`, then press `Enter`
+6. Type `MacBookPro15,2`, then press `Enter`
 </details>
 
 <details>
