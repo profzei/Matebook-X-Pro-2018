@@ -1,6 +1,13 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **09-30-2021**
+
+    Updated notes about **Release v. 3.0.0** warning users about [issue #186](https://github.com/profzei/Matebook-X-Pro-2018/issues/186)
+
+    **Update**
+    - Add [kext] `LiteOn_NVMe` for changing in `System Report -> NVMExpress` section `Generic SSD Controller` into `Apple SSD Controller` for my Lite-On controller type 
+
 - **09-22-2021**
 
     **Update**
