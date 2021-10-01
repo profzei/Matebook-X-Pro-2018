@@ -144,7 +144,7 @@ Compare with [these](https://browser.geekbench.com/v5/cpu/search?utf8=✓&q=MacB
 
 ## Changelog
 
-#### 2021 - September - 30
+#### 2021 - October - 01
 See [**Current status**](Changelog.md)
 
 ## Status
@@ -311,18 +311,26 @@ Suggested configuration:
 <details>
 <summary><strong>Enable Apple Services</strong></summary>
 
-If **Serial numbers** have been correctly generated, these services (iMessage, FaceTime, ...) should work for you. If not, [clean up](https://dortania.github.io/OpenCore-Post-Install/universal/iservices.html#clean-out-old-attempts) and generate new serial number for your **SMBIOS**.
+To use iMessage and other Apple services, you need to generate **your own** serial numbers. This can be done using [CorpNewt's GenSMBIOS](https://github.com/corpnewt/GenSMBIOS):
+- If **Serial numbers** have been correctly generated, these services (iMessage, FaceTime, ...) should work for you
+- If not, [clean up](https://dortania.github.io/OpenCore-Post-Install/universal/iservices.html#clean-out-old-attempts) and generate new serial number for your **SMBIOS**.
 
-Default **SMBIOS** settings of this repo is `MacBookPro16,3` ~~`MacBookPro14,1`~~ ~~`MacBookPro15,2`~~
+Default **SMBIOS** settings of this repo is `MacBookPro15,2` ~~`MacBookPro14,1`~~ ~~`MacBookPro16,3`~~
 1. Launch `Terminal` app
 2. Copy the following script, paste it into the `Terminal` window, then press `Enter`
    ```bash
    git clone https://github.com/corpnewt/GenSMBIOS && cd GenSMBIOS && ./GenSMBIOS.command 
    ```
-3. Type `2`, then press `Enter`
-4. Drag your `config.plist` inside the `Terminal` window
-5. Type `3`, then press `Enter`
-6. Type `MacBookPro16,3`, then press `Enter`
+3. Type `1` for downloading/updating `MacSerial` script
+4. Type `3`, then press `Enter`
+5. Type `MacBookPro15,2 10`, then press `Enter`
+6. Then, go [Apple Check Coverage page](https://checkcoverage.apple.com/) to check your generated serial numbers. If the website tells you that the serial number is **not valid**, that is fine. Otherwise, you have to generate a new set.
+7. Next you will have to copy the following values to your `config.plist`:
+   - Serial Number -> `PlatformInfo/Generic/SystemSerialNumber`
+   - Board Number -> `PlatformInfo/Generic/MLB`
+   - SmUUID -> `PlatformInfo/Generic/SystemUUID`. Reboot and Apple services should work.
+8. If they don't, follow this [in-depth guide](https://dortania.github.io/OpenCore-Post-Install/universal/iservices.html). It goes deeper into clearing **Keychain** (missing this step might cause major issues), and much more.
+
 </details>
 
 <details>
@@ -653,7 +661,7 @@ log show --predicate 'process == "kernel"' --style syslog --source --debug --las
 | [CodecCommander](https://github.com/Sniki/EAPD-Codec-Commander/releases) | 2.7.2 | Fix headphone audio switch |
 | [CPUFriend](https://github.com/acidanthera/CPUFriend/releases) | 1.2.4 | Power management |
 | [HibernationFixup](https://github.com/acidanthera/HibernationFixup/releases) | 1.4.3 | Handle hibernate status |
-| [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases) | 2.1.0 beta | Handle Bluetooth |
+| [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases) | 2.0.1 | Handle Bluetooth |
 | [AirportItlwm](https://github.com/OpenIntelWireless/itlwm/releases) | 2.1.0 beta| Handle native Wi-Fi card |
 | [NullEthernet](https://bitbucket.org/RehabMan/OS-X-Null-Ethernet/downloads/) | 1.0.6 | Fake Ethernet card |
 | [NoTouchID](https://github.com/al3xtjames/NoTouchID/releases) | 1.0.4 | Disable TouchID|
