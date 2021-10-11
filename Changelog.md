@@ -1,6 +1,10 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **10-11-2021**
+
+    Improved sleep settings: auto switch from standby-sleep to hibernation-sleep (WIP: testing is going on but it seems to be working 'till now...)
+
 - **10-01-2021**
 
     **Update**
