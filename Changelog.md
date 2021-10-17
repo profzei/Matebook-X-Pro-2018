@@ -1,7 +1,23 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
-- **15-11-2021**
+- **10-17-2021**
+
+    **Update**
+    - Update `OpenCore` v. 0.7.4
+    - Update [kext] `AppleALC` v. 1.6.5
+    - Update [kext] `HibernationFixup` v. 1.4.4
+    - Update [kext] `RestrictEvents` v. 1.0.5
+    - Update [kext] `VoodooPS2Controller` v. 2.2.6
+    - Update [kext] `WhateverGreen` v. 1.5.4
+    - Update [kext] stripped `AirportItlwm_Big_Sur` v. 2.1.0 beta (commit 2e06227)
+    - Update [kext] stripped `AirportItlwm_Catalina` v. 2.1.0 beta (commit 2e06227)
+    - Update [kext] stripped `AirportItlwm_Monterey` v. 2.1.0 beta (commit 2e06227)
+
+    **OpenCore**
+    - Update `config.plist` to support `OpenCore` v. 0.7.4
+
+- **10-15-2021**
 
     Added detailed description in `Readme` file for sleep settings related to auto switch from standby-sleep to hibernation-sleep
 
@@ -32,7 +48,7 @@ English
     - Update [kext] `Lilu` v. 1.5.6
     - Update [kext] `HibernationFixup` v. 1.4.3
     - Update [kext] `RestrictEvents` v. 1.0.4
-    - Update [kext] `VirtualSMC` + plugins v. 1.2.3
+    - Update [kext] `VirtualSMC` + plugins v. 1.2.7
     - Update [kext] `WhateverGreen` v. 1.5.3
     - Update [kext] stripped `AirportItlwm_Big_Sur` v. 2.1.0 beta (commit cc7a63b)
     - Update [kext] stripped `AirportItlwm_Catalina` v. 2.1.0 beta (commit cc7a63b)
