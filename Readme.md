@@ -433,7 +433,7 @@ On a **MacBook** there are some stages of sleep:
 - **Hibernation**: all power is off and all state has been written to a disk image (`/private/var/vm/sleepimage`); you know this has happened if when you open the lid you see `OpenCanopy` boot picker, and then see a progress bar while it is loading state from disk.
 
 <p align="center">
-<img src="Wiki/Images/Sleep_macOS.png" width="100%" alt="Sleep stages for macOS" />
+<img src="Wiki/Images/Sleep_macOS.png" width="75%" alt="Sleep stages for macOS" />
 </p>
 
 We could summarize **sleep settings** as the following:
