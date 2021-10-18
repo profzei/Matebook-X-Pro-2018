@@ -1,6 +1,10 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **10-18-2021**
+
+    Added a new Wiki section for [installing macOS](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Installing-macOS)
+
 - **10-17-2021**
 
     **Update**

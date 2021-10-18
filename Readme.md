@@ -11,7 +11,7 @@
 </p>
 
 
-#### This repository is currently compatible with macOS Monterey, Big Sur, Catalina and OpenCore 0.7.3
+#### This repository is currently compatible with macOS Monterey, Big Sur, Catalina and OpenCore 0.7.4
 <div align="center">
 
 |     Monterey (beta)     |     macOS Big Sur      |     macOS Catalina     |       macOS Mojave       |
@@ -66,7 +66,8 @@ If you find my work useful:
 - **Complete EFI packs** are available in the [**Releases**](https://github.com/profzei/Matebook-X-Pro-2018/releases) page (please, refer to the rightside menu).
 - Please **do not clone or download** the main branch for daily use: it may include **unstable code** or **very old code** just because it is my repository.
 - **EFI** is configured with **Monterey** or **Big Sur** in mind: if you are using it on **Catalina** (or Mojave), read the whole guide to make the necessary changes.
-- **EFI** is configured for macOS installation **on internal NVMe SSD** both in dual-boot configuration with Windows and as a single OS (macOS installation on external SSDs are not taken into account) 
+- **EFI** is configured for loading macOS **from internal NVMe SSD** both in dual-boot configuration with Windows and as a single OS (macOS installation on external SSDs are not taken into account)
+- **EFI** is not suitable, as it is, to be used **for installing macOS**: please refer to Wiki section for a [**detailed guide for installing macOS**](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Installing-macOS).  
 
 <p align="center">
 <img src="Wiki/Images/Disclaimer.png" width="70%" alt="Disclaimer" />
@@ -89,8 +90,9 @@ This repo contains the files needed for getting macOS working on a **Huawei Mate
 - The **compatibility** is **very good** for the most part, most of the stuff works like it would on a real MacBook, including camera, audio, touchpad, iCloud services.
 - The **experience** is **pleasant**, as the laptop is smooth and responsive under macOS Big Sur/Catalina.
 - **Battery life** is **quite great** (from personal experience it **lasts from 8 to 10 hours** for light works depending on its age with a behaviour very similar to Windows 10 as shown in the macOS menu bar screenshots below).
-- The **Intel WiFi** card is soldered onto the motherboard, which means it can't be replaced with a Broadcom one, but the Intel card is now **functional albeit not operating at full speeds** (however it is fine for most use cases). With the latest `AirportItlwm.kext` even **Handoff** and **Continuity** features are working, but with a very limited support for AirDrop and Apple Watch unlocking (see [Changelog for OpenIntelWireless release v. 1.2.0 stable](https://github.com/OpenIntelWireless/itlwm/releases)).
-For any issues about `AirportItlwm.kext` please refer first to [**OpenIntelWireless Troubleshooting page**](https://openintelwireless.github.io/itlwm/Troubleshooting.html#kernel-extension-loading-status) and then to [**OpenIntelWireless Gitter Page**](https://gitter.im/OpenIntelWireless/itlwm?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+- The **Intel WiFi** card is soldered onto the motherboard, which means it can't be replaced with a Broadcom one, but the Intel card is now **functional albeit not operating at full speeds** (however it is fine for most use cases).
+    * With the latest `AirportItlwm.kext` even **Handoff** and **Continuity** features are working, but with a very limited support for AirDrop and Apple Watch unlocking (see [Changelog for OpenIntelWireless release v. 1.2.0 stable](https://github.com/OpenIntelWireless/itlwm/releases)).
+    * For any issues about `AirportItlwm.kext` please refer first to [**OpenIntelWireless Troubleshooting page**](https://openintelwireless.github.io/itlwm/Troubleshooting.html#kernel-extension-loading-status) and then to [**OpenIntelWireless Gitter Page**](https://gitter.im/OpenIntelWireless/itlwm?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 <p align="center">
 <img src="Wiki/Images/ScreenMenuBar03.png" width="90%" alt="MBXP Battery Menu bar" />
@@ -100,8 +102,8 @@ For any issues about `AirportItlwm.kext` please refer first to [**OpenIntelWirel
 ### Generate your own SMBIOS Information
 
 For privacy reasons, all SMBIOS information has been wiped out in the configuration file `EFI/OC/config.plist`. You need to generate your unique `SMBIOS` info by yourself (recommend to use [**CorpNewt's GenSMBIOS**](https://github.com/corpnewt/GenSMBIOS)), and inject them into your `config.plist`.
-- With every **EFI update** you retrieve from [here](https://github.com/profzei/Matebook-X-Pro-2018/releases), please, remember to transfer your Device details under `PlatformInfo -> Generic` in your `config.plist`.
-- For more details on **dual booting settings**, please, see also below [**OpenCore**](https://github.com/profzei/Matebook-X-Pro-2018#bootloader-firmware) notes.
+- With every **EFI update** you retrieve from [here](https://github.com/profzei/Matebook-X-Pro-2018/releases), please, remember to transfer **your Device details** under `PlatformInfo -> Generic` in your `config.plist`.
+- For more details on **dual booting settings**, please, see also below [**OpenCore and Windows Activation**](https://github.com/profzei/Matebook-X-Pro-2018#status) notes.
 
 <p align="center">
 <img src="Wiki/Images/AboutThisMac.png" width="70%" alt="About this Mac" />
@@ -144,7 +146,7 @@ Compare with [these](https://browser.geekbench.com/v5/cpu/search?utf8=✓&q=MacB
 
 ## Changelog
 
-#### 2021 - October - 11
+#### 2021 - October - 17
 See [**Current status**](Changelog.md)
 
 ## Status
@@ -172,13 +174,19 @@ See [**Current status**](Changelog.md)
 - [x] HD Camera
 - [x] NVRAM native support
 
+#### BIOS Settings
+
+- [x] `Main` -> `Thunderbolt Device` -> `Security Level` -> **No Security**
+- [x] `Main` -> `Advanced` -> `PXE Device Enable` -> **Disable**
+- [x] `Main` -> `Advanced` -> `Fingerprint Enable` -> **Disable**
+
 <details>
 <summary><strong>Notes</strong></summary>
 
 1. **Intel Bluetooth** could not support some Bluetooth devices like some Bluetooth mouse since it is only a firmware injector; please, report any issues not here but only on [**OpenIntelWireless/IntelBluetoothFirmware Gitter Chat**](https://gitter.im/OpenIntelWireless/IntelBluetoothFirmware?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 2. **Touchscreen support is disabled by default** since [release v. 1.8.0](https://github.com/profzei/Matebook-X-Pro-2018/releases). Why? It seems that all `VoodooI2C` versions after 2.4 are affected to a greater or lesser extent by `Multi_GPI0` issues.
 The solution proposed so far by `VoodooI2C` developers is only a workaround and not a real fix: proposing to use the `GPI0` pinning for touchpad and polling method for touchscreen is not a real fix because this approach increases interrupts and causes a degrade in battery life. This being the case and not needing to use the touchscreen in my daily work, for the moment I have disabled this function pending improvements that can only come from `VoodooI2C` developers.
-3. If you would like to **increase benchmark values** for your Intel UHD 620 Graphics card, you need to set `rps-control` key in `DeviceProperties -> PciRoot(0x0)/Pci(0x2,0x0)`:
+3. If you would like to **increase benchmark values** for your Intel UHD 620 Graphics card, you need to set `rps-control` key in `DeviceProperties -> PciRoot(0x0)/Pci(0x2,0x0)`, but keep in mind that `rps-control` property has been removed to lower down **GFX Request**:
 
 ```xml
 ...
@@ -199,12 +207,11 @@ The solution proposed so far by `VoodooI2C` developers is only a workaround and 
 </dict>
 ...
 ```
-Keep in mind that `rps-control` property has been removed to lower down **GFX Request**.
 
 </details>
 
 <details>
-<summary><strong>Notes: Support for external Display</strong></summary>
+<summary><strong>Notes: external Display support</strong></summary>
 
 Intel UHD 620 Graphics card works well with external display from both USB type-C ports.
 - Suggestion: prefer **USB type-C to DisplayPort** cable over USB type-C to HDMI one where possible
@@ -260,7 +267,7 @@ Obvious solutions:
 
 Even if your macOS installed on an external SSD drive, you need to add a new ACPI patch to **disable** PM981 (or other **non-supported NVMe** SSDs) **detection on macOS**:
 
-```xml
+```asl
 DefinitionBlock ("", "SSDT", 2, "HUAWEI", "_DRP05", 0)
 {
 	External (OSDW, MethodObj)
@@ -305,7 +312,7 @@ If your BIOS version is `> 1.30` then edit `config.plist` disabling `SSDT-BIOS.a
 </details>
 
 <details>
-<summary><strong>Catalina (or Mojave) support for AirportItlwm</strong></summary>
+<summary><strong>Notes: AirportItlwm support in macOS Catalina (or Mojave)</strong></summary>
 
 If you use this release in **macOS Catalina** you need to make the following changes in the `config.plist` to make `AirportItlwm.kext` support active:
 - `DmgLoading` set to `Signed`
@@ -313,7 +320,7 @@ If you use this release in **macOS Catalina** you need to make the following cha
 </details>
 
 <details>
-<summary><strong>Thunderbolt support</strong></summary>
+<summary><strong>Notes: Thunderbolt support</strong></summary>
 
 As reported in [NotebookCheck review](https://www.notebookcheck.net/Huawei-has-pulled-a-Dell-the-MateBook-X-Pro-uses-a-gimped-Thunderbolt-3-port.316550.0.html) our Matebook X pro (2018) is utilizing only half the PCIe lanes for its single Thunderbolt 3 port (TB). Thus, its PCIe x2 Thunderbolt 3 port is only capable of providing a maximum of 20 Gbps instead of 40 Gbps when compared to a standard Thunderbolt 3 port with PCIe x4 lanes.
 
@@ -337,7 +344,7 @@ Steps for enabling support for Thunderbolt controller (`\_SB.PCI0.RP09`):
 </details>
 
 <details>
-<summary><strong>What's not working: Incompatible Hardware</strong></summary>
+<summary><strong>What's not working due to Incompatible Hardware</strong></summary>
 
 - [ ] **Discrete graphics card** (NVIDIA GeForce MX150) is not working, since macOS doesn't support Optimus technology
 	- Have used `SSDT-DDGPU.aml` to disable it in order to save power.
@@ -346,12 +353,18 @@ Steps for enabling support for Thunderbolt controller (`\_SB.PCI0.RP09`):
 	- Have used `SSDT-XHC.aml` to disable it (in order to save some power).
 </details>
 
+
 ## Bootloader Firmware
-- Default bootloader: `OpenCore 0.7.3` [Official release](https://github.com/acidanthera/OpenCorePkg/releases).
+- Default bootloader: `OpenCore 0.7.4` [Official release](https://github.com/acidanthera/OpenCorePkg/releases).
     - Support macOS 10.14 ~ latest macOS release
     - As theme for `OpenCanopy`, a cleaner version with custom graphics has been provided by [**@R-Teer**](https://github.com/R-Teer)
     - See more info in [Wiki section](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Converting-from-Clover-to-OpenCore) about migration from Clover.
 - No longer maintained: Clover `r5118` [Official release](https://github.com/CloverHackyColor/CloverBootloader/releases) ~~`r5103` [Dids release](https://github.com/Dids/clover-builder/releases)~~
+
+
+## Install Settings
+
+If you try to use [**latest EFI Release**](https://github.com/profzei/Matebook-X-Pro-2018/releases) for installing macOS onto your Matebook X Pro, you'll realize it didn't work... Why? Because our EFI is very fine tuned to overcome some InsydeH2O firmware's limits and therefore it is not suitable for installation process as it is. Please refer to Wiki section for a [**detailed guide for installing macOS**](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Installing-macOS).
 
 
 ## Post - Install Settings
@@ -390,16 +403,53 @@ Default **SMBIOS** settings of this repo is `MacBookPro15,2` ~~`MacBookPro14,1`~
    - Serial Number -> `PlatformInfo/Generic/SystemSerialNumber`
    - Board Number -> `PlatformInfo/Generic/MLB`
    - SmUUID -> `PlatformInfo/Generic/SystemUUID`. Reboot and Apple services should work.
-8. If they don't, follow this [in-depth guide](https://dortania.github.io/OpenCore-Post-Install/universal/iservices.html). It goes deeper into clearing **Keychain** (missing this step might cause major issues), and much more.
+
+```xml
+<key>PlatformInfo</key>
+<dict>
+    ...
+    <key>MLB</key>
+    <string>M0000000000000001</string>
+    ...
+    <key>SystemSerialNumber</key>
+    <string>W00000000001</string>
+    ...
+    <key>SystemUUID</key>
+    <string>00000000-0000-0000-0000-000000000000</string>
+    ...
+</dict>
+```
+
+8. If they don't work, follow this [in-depth guide](https://dortania.github.io/OpenCore-Post-Install/universal/iservices.html). It goes deeper into clearing **Keychain** (missing this step might cause major issues), and much more.
 
 </details>
 
 <details>
 <summary><strong>Sleep & Hibernation settings</strong></summary>
 
-**Sleep** function works flawlessly (both via software and via clamshell) like **hibernation** (suspend to disk or S4 sleep). In order to get automatic sleep working properly like real Macs, the following settings are mandatory: 
+On a **MacBook** there are some stages of sleep:
+- **Sleep** or memory sleep: this is what happens when you let the computer idle for some time (power to display is turned off);
+- **Standby** or Safe Sleep: memory state is written to RAM and after a certain period memory power could be turned off;
+- **Hibernation**: all power is off and all state has been written to a disk image (`/private/var/vm/sleepimage`); you know this has happened if when you open the lid you see `OpenCanopy` boot picker, and then see a progress bar while it is loading state from disk.
+
+<p align="center">
+<img src="Wiki/Images/Sleep_macOS.png" width="100%" alt="Sleep stages for macOS" />
+</p>
+
+We could summarize **sleep settings** as the following:
+1. if `sleep == 0`, the computer will not sleep or hibernate any more
+    - For MacBooks, the effective setting automatically changes whenever the charger is plugged in:
+        * Normally, `sleep` minutes are simply equal to `displaysleep` minutes, which you can set in `System Preferences -> Energy Saver`
+        * But under the `Power Adapter` tab, checking `Prevent computer from sleeping automatically when the display is off` option will override sleep minutes to 0
+2. if `standby == 1` **and** `hibernatemode == 3`, the computer will **wait** another `standbydelay` seconds before really entering **hibernation**
+3. `autopoweroff` is just an extra implementation to fulfill regulatory requirement and has the same impact equivalent to **2)**
+4. either **2)** or **3)** takes effect if one of them is reached at first
+5. if `standby == 1` **and** `hibernatemode == 25`, the computer will enter **hibernation immediately** after `sleep` minutes.
+
+For our Huawei Matebook X Pro **sleep/standby** function works flawlessly (both via software and via clamshell) like **hibernation** (suspend to disk or S4 sleep). 
+
+In order to get automatic sleep working properly like real Macs, the following settings are **mandatory**: 
 ```
-sudo pmset -a standby 0
 sudo pmset -a powernap 0 
 sudo pmset -a proximitywake 0
 sudo pmset -a tcpkeepalive 0
@@ -410,8 +460,6 @@ sudo pmset -a womp 0
 - `tcpkeepalive` has resolved periodic wake events after setting up iCloud.
 - `womp` is wake on lan.
 
-Default macOS setting is **hibernatemode 3** i.e. **sleep mode**.
-
 **After every update, ALL these settings should be reapplied manually!**
 
 Suggested configuration in `System Preferences -> Bluetooth -> Advanced` for **Bluetooth devices** for avoiding random wake events during sleep:
@@ -420,7 +468,28 @@ Suggested configuration in `System Preferences -> Bluetooth -> Advanced` for **B
 <img src="Wiki/Images/ScreenBluetooth.png" width="80%" alt="Bluetooth settings" />
 </p>
 
-**Hibernation mode** can be enabled only via console command `sudo pmset -a hibernatemode 25` and is fully supported by Matebook X Pro (obviously using `HibernationFixup` kext). If, however, you would like to disable it, then
+Default macOS setting for MacBooks is **hibernatemode 3** i.e. **sleep mode**:
+- `standby` causes kernel power management to automatically hibernate a machine after it has slept for a specified time period
+- `standbydelay` specifies the delay, in seconds, before writing the hibernation image to disk and powering off memory for `standby`
+
+Concretely, the way I like to configure **my** Matebook X Pro is for it to do **first** a standby-only sleep, so that it quickly goes to sleep, with the chance of a very quick wake-up phase, and **then**, if I leave the laptop sleeping for a certain number of hours (say in my case 1 hour), it could write the RAM contents to disk and power off the computer, so as to save battery in case of an extended sleep (entering therefore hibernation phase). 
+
+In order to get this configuration, I suggest the following settings:
+- add to `config.plist` in `NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82 -> boot-args` section the value `hbfx-ahbm=129` which controls auto-hibernation feature introduced by `HibernationFixup` kext (in particular it is an arithmetic sum of `EnableAutoHibernation` = 1 and `DisableStimulusDarkWakeActivityTickle` = 128 flags) [Reference](https://github.com/acidanthera/HibernationFixup) for deeper insight
+- run in Terminal
+```
+sudo pmset -a standby 1 
+sudo pmset -a hibernatemode 3
+sudo pmset -a standbydelaylow 3600
+sudo pmset -a standbydelayhigh 3600
+```
+- reboot your laptop
+
+**Note**: Keep in mind that, with the above settings, after 3600 seconds the laptop wake up itself only partially (display remains off) for switching from standby sleep to hibernation sleep: it is standard behaviour since all Macs use **maintenance wake** (dark wake - display remains off) to switch laptop from regular sleep into hibernation. It is not an issue! [Reference](https://github.com/acidanthera/bugtracker/issues/1810#issuecomment-939727817) 
+
+**Note**: **Hibernation mode** can be enabled only via console command `sudo pmset -a hibernatemode 25` and is fully supported by Matebook X Pro (obviously using `HibernationFixup` kext). 
+
+If, however, you would like to disable it, then
 ```
 sudo pmset -a hibernatemode 0
 sudo pmset -a autopoweroff 0
@@ -429,7 +498,9 @@ sudo touch /private/var/vm/sleepimage
 sudo chflags uchg /private/var/vm/sleepimage
 ```
 
-You can verify your power settings by typing in terminal `sudo pmset -g live` . If you ever want to reset these settings: `sudo pmset -a restoredefaults`
+You can verify your power settings by typing in terminal `sudo pmset -g live` .
+
+If you ever want to reset these settings: `sudo pmset -a restoredefaults`
 
 About power consumption, [HWMonitor](https://github.com/kzlekk/HWSensors/releases) reports for the idle state both before and after sleep phase the same value for "CPU package total" (0.65-0.70 W). Sleep discharge rate is about 1% every 4:30 hours (during night).
 </details>
@@ -715,22 +786,22 @@ log show --predicate 'process == "kernel"' --style syslog --source --debug --las
 | Item | Version | Remark |
 | :--- | :--- | :--- |
 | MacOS | 11.6 | |
-| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.7.3 | Default Bootloader|
+| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.7.4 | Default Bootloader|
 | [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.5.6 | Kext/process/framework/library patcher |
-| [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.5.3 | Handle Graphics card |
-| [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.6.4 | Handle/fix onboard audio |
+| [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.5.4 | Handle Graphics card |
+| [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.6.5 | Handle/fix onboard audio |
 | [CodecCommander](https://github.com/Sniki/EAPD-Codec-Commander/releases) | 2.7.2 | Fix headphone audio switch |
 | [CPUFriend](https://github.com/acidanthera/CPUFriend/releases) | 1.2.4 | Power management |
-| [HibernationFixup](https://github.com/acidanthera/HibernationFixup/releases) | 1.4.3 | Handle hibernate status |
+| [HibernationFixup](https://github.com/acidanthera/HibernationFixup/releases) | 1.4.4 | Handle hibernate status |
 | [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases) | 2.0.1 | Handle Bluetooth |
 | [AirportItlwm](https://github.com/OpenIntelWireless/itlwm/releases) | 2.1.0 beta| Handle native Wi-Fi card |
 | [NullEthernet](https://bitbucket.org/RehabMan/OS-X-Null-Ethernet/downloads/) | 1.0.6 | Fake Ethernet card |
 | [NoTouchID](https://github.com/al3xtjames/NoTouchID/releases) | 1.0.4 | Disable TouchID|
 | [NVMeFix](https://github.com/acidanthera/NVMeFix/releases) | 1.0.9 | Fix for NVMe SSDs |
-| [RestrictEvents](https://github.com/acidanthera/RestrictEvents/releases) | 1.0.4 | Block unwanted processes |
+| [RestrictEvents](https://github.com/acidanthera/RestrictEvents/releases) | 1.0.5 | Block unwanted processes |
 | [VoodooI2C](https://github.com/alexandred/VoodooI2C/releases) | 2.5.2 | Handle I2C device |
 | [VoodooI2CHID](https://github.com/alexandred/VoodooI2C/releases) | 2.5.2 | Touchpad I2C satellite |
-| [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases) | 2.2.4 | Enable keyboard, alternative trackpad driver |
+| [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases) | 2.2.6 | Enable keyboard, alternative trackpad driver |
 | [VirtualSMC + plugins](https://github.com/acidanthera/VirtualSMC/releases) | 1.2.7 | SMC chip emulation |
 | [USBInjectAll](https://github.com/daliansky/OS-X-USB-Inject-All/releases) | 0.7.6 | Inject USB ports |
 | [VoltageShift](https://github.com/sicreative/VoltageShift) | 1.25 | Undervoltage tool |
