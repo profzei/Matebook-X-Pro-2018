@@ -13,10 +13,10 @@ English
         - **For any issues related to Bluetooth on Monterey early installations**, please, report them to [**acidanthera/bugtracker**](https://github.com/acidanthera/bugtracker)
 
     **OpenCore**
-    Update `config.plist` for helping people with Huawei Matebook X Pro **lacking a discrete nVIDIA GPU**:
-    - Removed `pci-aspm-default` property for `PciRoot(0x0)/Pci(0x1c,0x0)`
-    - Removed `pci-aspm-default` property for `PciRoot(0x0)/Pci(0x1c,0x4)`
-    - Removed `pci-aspm-default` property for `PciRoot(0x0)/Pci(0x1d,0x0)`
+    - Update `config.plist` for helping people with Huawei Matebook X Pro **lacking a discrete nVIDIA GPU**:
+        - Removed `pci-aspm-default` property for `PciRoot(0x0)/Pci(0x1c,0x0)`
+        - Removed `pci-aspm-default` property for `PciRoot(0x0)/Pci(0x1c,0x4)`
+        - Removed `pci-aspm-default` property for `PciRoot(0x0)/Pci(0x1d,0x0)`
 
     Updated `Readme` file on homepage:
     - Updated **Notes: Bios version** section
