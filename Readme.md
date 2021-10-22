@@ -146,7 +146,7 @@ Compare with [these](https://browser.geekbench.com/v5/cpu/search?utf8=✓&q=MacB
 
 ## Changelog
 
-#### 2021 - October - 17
+#### 2021 - October - 22
 See [**Current status**](Changelog.md)
 
 ## Status
@@ -300,8 +300,9 @@ DefinitionBlock ("", "SSDT", 2, "HUAWEI", "_DRP05", 0)
 <details>
 <summary><strong>Notes: Bios version</strong></summary>
 
-If your BIOS version is `> 1.30` then edit `config.plist` disabling `SSDT-BIOS.aml` in `ACPI -> Add` section:
-- method `_QBF` (related to battery thermal management) is added only for BIOS versions up to `1.30` since it was introduced by **Huawei** starting from v. `1.33`. 
+Starting from BIOS version `1.33` and newer, **Huawei** added to default `DSDT.aml` a new method, called `_QBF`, related to **battery thermal management**.
+
+As default, in `config.plist` in `ACPI -> Add` section it has been added `SSDT-BIOS.aml` (as enabled) for introducing method `_QBF` also for BIOS versions up to `1.30`: proper BIOS version check has been implemented.
 </details>
 
 <details>
@@ -364,7 +365,11 @@ Steps for enabling support for Thunderbolt controller (`\_SB.PCI0.RP09`):
 
 ## Install Settings
 
-If you try to use [**latest EFI Release**](https://github.com/profzei/Matebook-X-Pro-2018/releases) for installing macOS onto your Matebook X Pro, you'll realize it didn't work... Why? Because our EFI is very fine tuned to overcome some InsydeH2O firmware's limits and therefore it is not suitable for installation process as it is. Please refer to Wiki section for a [**detailed guide for installing macOS**](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Installing-macOS).
+If you try to use [**latest EFI Release**](https://github.com/profzei/Matebook-X-Pro-2018/releases) for installing macOS onto your Matebook X Pro, you'll realize it didn't work... **Why**?
+
+Because our EFI is very fine tuned to overcome some InsydeH2O firmware's limits and therefore it is not suitable for installation process as it is.
+
+Please refer to Wiki section for a [**detailed guide for installing macOS**](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Installing-macOS).
 
 
 ## Post - Install Settings
@@ -525,6 +530,40 @@ Suggested configuration for **Battery** and **Power Adapter** settings in `Syste
 <img src="Wiki/Images/ScreenPowerAdapter.png" width="80%" alt="Power Adapter settings" />
 </p>
 
+It is also suggested to force `pci-aspm-default` property for activating on macOS **Active-State Power Management** for `PCIe` devices like:
+- `PciRoot(0x0)/Pci(0x1c,0x0)` which is PCI-Express bus for **nVIDIA card**
+- `PciRoot(0x0)/Pci(0x1c,0x4)` which is PCI-Express bus for **NVMe SSD** (LiteOn in my case...)
+- `PciRoot(0x0)/Pci(0x1d,0x0)` which is PCI-Express bus for **Thunderbolt Controller**
+and therefore optimize power consumption for these buses.
+
+We need to point out that macOS is obviously designed for working well/optimally only on Mac hardware, so in our hackintoshes it could be advisable to force a such property whenever possible...
+
+```xml
+<key>PciRoot(0x0)/Pci(0x1c,0x0)</key>
+    <dict>
+        ...
+        <key>pci-aspm-default</key>
+        <data>AgAAAA==</data>
+        ...
+    </dict>
+    ...
+<key>PciRoot(0x0)/Pci(0x1c,0x4)</key>
+    <dict>
+        ...
+        <key>pci-aspm-default</key>
+        <data>AgAAAA==</data>
+        ...
+    </dict>
+    ...
+<key>PciRoot(0x0)/Pci(0x1d,0x0)</key>
+    <dict>
+        ...
+        <key>pci-aspm-default</key>
+        <data>AgAAAA==</data>
+        ...
+    </dict>
+```
+**This feature is working well on my system**. It has not been inserted as default in `config.plist` for helping people to install [EFI releases](https://github.com/profzei/Matebook-X-Pro-2018/releases) on Huawei Matebook X Pro **lacking a discrete nVIDIA GPU** (typically with i5 architecture and Intel only GPU). [Reference](https://github.com/profzei/Matebook-X-Pro-2018/issues/186#issuecomment-947863820)
 </details>
 
 <details>

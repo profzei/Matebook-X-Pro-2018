@@ -1,6 +1,29 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **22-10-2021**
+
+    **Update**
+    - Update [kext] `BlueToolFixup` v. 2.6.1 beta (commit 44c3025):
+        - Apple added a USB vendor id check in Monterey Beta 10+ releases and considers non-Brcm and non-CSR dongles as unsupported devices
+        - This new version disables the `bluetoothd`'s vendor id check introduced in Monterey Beta 10+
+        - Known issues not fixed yet by **developers**:
+            - once Bluetooth is turned off, it cannot be turned on again until a restart, similar to previous Monterey beta versions [Reference](https://github.com/profzei/Matebook-X-Pro-2018/issues/186#issuecomment-949618728)
+            - still need to kill `bluetoothd` after S4 sleep for it to work
+        - **For any issues related to Bluetooth on Monterey early installations**, please, report them to [**acidanthera/bugtracker**](https://github.com/acidanthera/bugtracker)
+
+    **OpenCore**
+    Update `config.plist` for helping people with Huawei Matebook X Pro **lacking a discrete nVIDIA GPU**:
+    - Removed `pci-aspm-default` property for `PciRoot(0x0)/Pci(0x1c,0x0)`
+    - Removed `pci-aspm-default` property for `PciRoot(0x0)/Pci(0x1c,0x4)`
+    - Removed `pci-aspm-default` property for `PciRoot(0x0)/Pci(0x1d,0x0)`
+
+    Updated `Readme` file on homepage:
+    - Updated **Notes: Bios version** section
+    - Updated **Power Management settings** section adding `pci-aspm-default` stuff for **PCIe devices**
+
+    Updated **Release Notes** for [**EFI v3.1.0**](https://github.com/profzei/Matebook-X-Pro-2018/releases/tag/v3.1.0)
+
 - **10-18-2021**
 
     Added a new Wiki section for [installing macOS](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Installing-macOS)
