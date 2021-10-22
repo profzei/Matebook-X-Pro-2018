@@ -493,7 +493,7 @@ sudo pmset -a standbydelayhigh 3600
 **Note**: Keep in mind that, with the above settings, after 3600 seconds the laptop wake up itself only partially (display remains off) for switching from standby sleep to hibernation sleep: it is standard behaviour since all Macs use **maintenance wake** (dark wake - display remains off) to switch laptop from regular sleep into hibernation. It is not an issue! [Reference](https://github.com/acidanthera/bugtracker/issues/1810#issuecomment-939727817) 
 
 <p align="center">
-<img src="Wiki/Images/Sleep_hibernatemode3.png" width="90%" alt="macOS hibernatemode3" />
+<img src="Wiki/Images/Sleep_hibernatemode3.png" width="100%" alt="macOS hibernatemode3" />
 </p>
 
 **Note**: **Hibernation mode** can be enabled only via console command `sudo pmset -a hibernatemode 25` and is fully supported by Matebook X Pro (obviously using `HibernationFixup` kext). 
