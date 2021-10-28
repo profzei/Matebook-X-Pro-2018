@@ -6,7 +6,9 @@ English
     **Update to macOS Monterey 12.0.1 (21A559)**
 
     As reported in date 10-22-2021 you need to update kext `BlueToolFixup` to v. 2.6.1 beta ([commit 44c3025](https://github.com/profzei/Matebook-X-Pro-2018/issues/186#issuecomment-948783116)) for partially fixing **Bluetooth**.
+
     Atm, all non-Brcm chipsets are considered by macOS Monterey as `THIRD_PARTY_DONGLE`s: this explains why atm once Bluetooth is turned off, it cannot be turned on again until a restart or proper killing `bluetoothd`.
+    
     We need to wait for a fix from **OpenCore Team** and/or **OpenIntelWireless** one-single-man-Team!
 
 - **10-22-2021**
