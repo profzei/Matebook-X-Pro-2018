@@ -4,14 +4,14 @@
 </p>
 <p align="center">
 <a href="https://consumer.huawei.com/it/support/laptops/matebook-x-pro/" target="_blank"><img src="https://img.shields.io/badge/Model-MACH_W29-orange.svg" /></a>
-<a href="https://consumer.huawei.com/it/support/laptops/matebook-x-pro/" target="_blank"><img src="https://img.shields.io/badge/BIOS-1.28-red.svg" /></a>
+<a href="https://consumer.huawei.com/it/support/laptops/matebook-x-pro/" target="_blank"><img src="https://img.shields.io/badge/BIOS-1.37-red.svg" /></a>
 <a href="LICENSE" target="_blank"><img src="https://img.shields.io/badge/License-MIT-purple.svg" /></a>
 <a href="https://github.com/profzei/Matebook-X-Pro-2018/releases" target="_blank"><img src="https://img.shields.io/badge/Download-Releases-blue.svg" /></a>
 <a href="https://github.com/profzei/Matebook-X-Pro-2018/wiki" target="_blank"><img src="https://img.shields.io/badge/Support-Wiki-green.svg" /></a>
 </p>
 
 
-#### This repository is currently compatible with macOS Monterey, Big Sur, Catalina and OpenCore 0.7.4
+#### This repository is currently compatible with macOS Monterey, Big Sur, Catalina and OpenCore 0.7.5
 <div align="center">
 
 |     Monterey (beta)     |     macOS Big Sur      |     macOS Catalina     |       macOS Mojave       |
@@ -66,7 +66,6 @@ If you find my work useful:
 - **This is not a support forum**.
 - Should you find an error or improve anything — whether in the config or in the documentation — please consider opening an issue or pull request.
 - **Complete EFI packs** are available in the [**Releases**](https://github.com/profzei/Matebook-X-Pro-2018/releases) page (please, refer to the rightside menu).
-- Please **do not clone or download** the main branch for daily use: it may include **unstable code** or **very old code** just because it is my repository.
 - **EFI** is configured with **Monterey** or **Big Sur** in mind: if you are using it on **Catalina** (or Mojave), read the whole guide to make the necessary changes.
 - **EFI** is configured for loading macOS **from internal NVMe SSD** both in dual-boot configuration with Windows and as a single OS (macOS installation on external SSDs are not taken into account)
 - **EFI** is not suitable, as it is, to be used **for installing macOS**: please refer to Wiki section for a [**detailed guide for installing macOS**](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Installing-macOS).  
@@ -129,7 +128,7 @@ For privacy reasons, all SMBIOS information has been wiped out in the configurat
 
 </div>
 
-**Device Firmware** Bios version: `1.28`
+**Device Firmware** Bios version: `1.37`
 
 <details>
 <summary><strong>Benchmarks</strong></summary>
@@ -148,7 +147,7 @@ Compare with [these](https://browser.geekbench.com/v5/cpu/search?utf8=✓&q=MacB
 
 ## Changelog
 
-#### 2021 - October - 26
+#### 2021 - November - 03
 See [**Current status**](Changelog.md)
 
 ## Status
@@ -358,7 +357,7 @@ Steps for enabling support for Thunderbolt controller (`\_SB.PCI0.RP09`):
 
 
 ## Bootloader Firmware
-- Default bootloader: `OpenCore 0.7.4` [Official release](https://github.com/acidanthera/OpenCorePkg/releases).
+- Default bootloader: `OpenCore 0.7.5` [Official release](https://github.com/acidanthera/OpenCorePkg/releases).
     - Support macOS 10.14 ~ latest macOS release
     - As theme for `OpenCanopy`, a cleaner version with custom graphics has been provided by [**@R-Teer**](https://github.com/R-Teer)
     - See more info in [Wiki section](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Converting-from-Clover-to-OpenCore) about migration from Clover.
@@ -615,6 +614,17 @@ Otherwise, you can follow these suggestions [credit **@R-Teer**]:
 </details>
 
 <details>  
+<summary><strong>Fix keyboard layout</strong></summary>
+
+If you have a keyboard that is not identified correctly, i.e. some keys are swapped (common if you don't have a US layout), you can force macOS to re-detect keyboard layout by deleting the .plist file where settings are stored running the following command:
+```
+sudo rm /Library/Preferences/com.apple.keyboardtype.plist
+```
+Then reboot: macOS will prompt a guided process to identify your keyboard.
+
+</details>
+
+<details>  
 <summary><strong>Increase Launchpad icons number</strong></summary>
 
 By default (for a 13 inch MacBook Pro), the Launchpad shows the icons in 5×7 format.
@@ -830,23 +840,24 @@ log show --predicate 'process == "kernel"' --style syslog --source --debug --las
 
 | Item | Version | Remark |
 | :--- | :--- | :--- |
-| MacOS | 11.6 | |
-| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.7.4 | Default Bootloader|
-| [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.5.6 | Kext/process/framework/library patcher |
-| [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.5.4 | Handle Graphics card |
-| [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.6.5 | Handle/fix onboard audio |
+| MacOS | 12.0.1 | |
+| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.7.5 | Default Bootloader|
+| [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.5.7 | Kext/process/framework/library patcher |
+| [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.5.5 | Handle Graphics card |
+| [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.6.6 | Handle/fix onboard audio |
 | [CodecCommander](https://github.com/Sniki/EAPD-Codec-Commander/releases) | 2.7.2 | Fix headphone audio switch |
 | [CPUFriend](https://github.com/acidanthera/CPUFriend/releases) | 1.2.4 | Power management |
-| [HibernationFixup](https://github.com/acidanthera/HibernationFixup/releases) | 1.4.4 | Handle hibernate status |
+| [HibernationFixup](https://github.com/acidanthera/HibernationFixup/releases) | 1.4.5 | Handle hibernate status |
 | [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases) | 2.0.1 | Handle Bluetooth |
-| [AirportItlwm](https://github.com/OpenIntelWireless/itlwm/releases) | 2.1.0 beta| Handle native Wi-Fi card |
+| [AirportItlwm](https://github.com/OpenIntelWireless/itlwm/releases) | 2.1.0 beta | Handle native Wi-Fi card |
+| [BlueToolFixup](https://github.com/acidanthera/BrcmPatchRAM/releases) | 2.6.1 | Fix Bluetooth for macOS 12+ |
 | [NullEthernet](https://bitbucket.org/RehabMan/OS-X-Null-Ethernet/downloads/) | 1.0.6 | Fake Ethernet card |
 | [NoTouchID](https://github.com/al3xtjames/NoTouchID/releases) | 1.0.4 | Disable TouchID|
 | [NVMeFix](https://github.com/acidanthera/NVMeFix/releases) | 1.0.9 | Fix for NVMe SSDs |
 | [RestrictEvents](https://github.com/acidanthera/RestrictEvents/releases) | 1.0.5 | Block unwanted processes |
 | [VoodooI2C](https://github.com/alexandred/VoodooI2C/releases) | 2.5.2 | Handle I2C device |
 | [VoodooI2CHID](https://github.com/alexandred/VoodooI2C/releases) | 2.5.2 | Touchpad I2C satellite |
-| [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases) | 2.2.6 | Enable keyboard, alternative trackpad driver |
+| [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases) | 2.2.7 | Enable keyboard, alternative trackpad driver |
 | [VirtualSMC + plugins](https://github.com/acidanthera/VirtualSMC/releases) | 1.2.7 | SMC chip emulation |
 | [USBInjectAll](https://github.com/daliansky/OS-X-USB-Inject-All/releases) | 0.7.6 | Inject USB ports |
 | [VoltageShift](https://github.com/sicreative/VoltageShift) | 1.25 | Undervoltage tool |

@@ -1,6 +1,29 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **11-03-2021**
+
+    Installed **BIOS v. 1.37**
+
+    **Update**
+    - Update `OpenCore` v. 0.7.5
+    - Update [kext] `AppleALC` v. 1.6.6
+    - Update [kext] `BlueToolFixup` v. 2.6.1: introduced some fixes for Intel Bluetooth on macOS Monterey
+    - Update [kext] `HibernationFixup` v. 1.4.5
+    - Update [kext] `Lilu` v. 1.5.7
+    - Update [kext] `VoodooPS2Controller` v. 2.2.7
+    - Update [kext] `WhateverGreen` v. 1.5.5
+    - Update [kext] stripped `AirportItlwm_Big_Sur` v. 2.1.0 beta (commit bf320b3): implemented Bluetooth/WiFi coex, making `iwm` Bluetooth more stable
+    - Update [kext] stripped `AirportItlwm_Catalina` v. 2.1.0 beta (commit bf320b3): implemented Bluetooth/WiFi coex, making `iwm` Bluetooth more stable
+    - Update [kext] stripped `AirportItlwm_Monterey` v. 2.1.0 beta (commit bf320b3): implemented Bluetooth/WiFi coex, making `iwm` Bluetooth more stable
+    - Update [driver] `HfsPlus.efi` (commit 29b2391): driver from MacOS Monterey 12.0.1 (IM201 and MP61)
+
+
+    **OpenCore**
+    - Update `config.plist` to support `OpenCore` v. 0.7.5:
+        - Added `Booter -> Quirks -> ResizeAppleGpuBars` key and set its value to `-1` (failsafe)
+        - Added `UEFI -> Quirks -> ResizeGpuBars` key and set its value to `-1` (failsafe)
+
 - **10-26-2021**
 
     **Update to macOS Monterey 12.0.1 (21A559)**
