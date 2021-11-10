@@ -841,18 +841,18 @@ log show --predicate 'process == "kernel"' --style syslog --source --debug --las
 | Item | Version | Remark |
 | :--- | :--- | :--- |
 | MacOS | 12.0.1 | |
-| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.7.5 | Default Bootloader|
+| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.7.5 | Default Bootloader |
 | [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.5.7 | Kext/process/framework/library patcher |
 | [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.5.5 | Handle Graphics card |
 | [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.6.6 | Handle/fix onboard audio |
 | [CodecCommander](https://github.com/Sniki/EAPD-Codec-Commander/releases) | 2.7.2 | Fix headphone audio switch |
 | [CPUFriend](https://github.com/acidanthera/CPUFriend/releases) | 1.2.4 | Power management |
 | [HibernationFixup](https://github.com/acidanthera/HibernationFixup/releases) | 1.4.5 | Handle hibernate status |
-| [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases) | 2.0.1 | Handle Bluetooth |
+| [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases) | 2.1.0 beta | Handle Bluetooth |
 | [AirportItlwm](https://github.com/OpenIntelWireless/itlwm/releases) | 2.1.0 beta | Handle native Wi-Fi card |
 | [BlueToolFixup](https://github.com/acidanthera/BrcmPatchRAM/releases) | 2.6.1 | Fix Bluetooth for macOS 12+ |
 | [NullEthernet](https://bitbucket.org/RehabMan/OS-X-Null-Ethernet/downloads/) | 1.0.6 | Fake Ethernet card |
-| [NoTouchID](https://github.com/al3xtjames/NoTouchID/releases) | 1.0.4 | Disable TouchID|
+| [NoTouchID](https://github.com/al3xtjames/NoTouchID/releases) | 1.0.4 | Disable TouchID |
 | [NVMeFix](https://github.com/acidanthera/NVMeFix/releases) | 1.0.9 | Fix for NVMe SSDs |
 | [RestrictEvents](https://github.com/acidanthera/RestrictEvents/releases) | 1.0.5 | Block unwanted processes |
 | [VoodooI2C](https://github.com/alexandred/VoodooI2C/releases) | 2.5.2 | Handle I2C device |

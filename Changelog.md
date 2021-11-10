@@ -1,6 +1,15 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **11-10-2021**
+
+    **Update**
+    - Update [kext] stripped `AirportItlwm_Big_Sur` v. 2.1.0 beta (commit 576b9e1): `iwm` support for LDPC in 11n/11ac mode
+    - Update [kext] stripped `AirportItlwm_Catalina` v. 2.1.0 beta (commit 576b9e1)
+    - Update [kext] stripped `AirportItlwm_Monterey` v. 2.1.0 beta (commit 576b9e1)
+    - Update [kext] stripped `IntelBluetoothFirmware` v. 2.1.0 beta (commit a9217e8): updated firmware for Intel Bluetooth 8265 (Build `REL1221` Release version `22.50.0.4`)
+    - Update [kext] stripped `IntelBluetoothInjector` v. 2.1.0 beta (commit a9217e8)
+
 - **11-03-2021**
 
     Installed **BIOS v. 1.37**
@@ -14,8 +23,8 @@ English
     - Update [kext] `VoodooPS2Controller` v. 2.2.7
     - Update [kext] `WhateverGreen` v. 1.5.5
     - Update [kext] stripped `AirportItlwm_Big_Sur` v. 2.1.0 beta (commit bf320b3): implemented Bluetooth/WiFi coex, making `iwm` Bluetooth more stable
-    - Update [kext] stripped `AirportItlwm_Catalina` v. 2.1.0 beta (commit bf320b3): implemented Bluetooth/WiFi coex, making `iwm` Bluetooth more stable
-    - Update [kext] stripped `AirportItlwm_Monterey` v. 2.1.0 beta (commit bf320b3): implemented Bluetooth/WiFi coex, making `iwm` Bluetooth more stable
+    - Update [kext] stripped `AirportItlwm_Catalina` v. 2.1.0 beta (commit bf320b3)
+    - Update [kext] stripped `AirportItlwm_Monterey` v. 2.1.0 beta (commit bf320b3)
     - Update [driver] `HfsPlus.efi` (commit 29b2391): driver from MacOS Monterey 12.0.1 (IM201 and MP61)
 
 
