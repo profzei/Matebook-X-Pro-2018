@@ -1,6 +1,18 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **11-28-2021**
+
+    **Update**
+    - Update [kext] stripped `AirportItlwm_Big_Sur` v. 2.1.0 beta (commit 3ee6b6a)
+    - Update [kext] stripped `AirportItlwm_Catalina` v. 2.1.0 beta (commit 3ee6b6a)
+    - Update [kext] stripped `AirportItlwm_Monterey` v. 2.1.0 beta (commit 3ee6b6a)
+    - Update [kext] `VoodooI2C` v. 2.6.6 beta (commit 4d9670f): testing purposes
+
+    **OpenCore**
+    - Update `config.plist`:
+        - Removed ThunderboltUUID stuff (testing purposes)
+
 - **11-10-2021**
 
     **Update**
