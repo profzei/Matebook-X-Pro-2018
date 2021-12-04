@@ -1,6 +1,17 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **12-03-2021**
+
+    **Update**
+    - Update [kext] stripped `AirportItlwm_Big_Sur` v. 2.1.0 beta (commit fe0249f)
+    - Update [kext] stripped `AirportItlwm_Catalina` v. 2.1.0 beta (commit fe0249f)
+    - Update [kext] stripped `AirportItlwm_Monterey` v. 2.1.0 beta (commit fe0249f)
+
+    **OpenCore**
+    - Update `config.plist`:
+        - Enabled `UEFI -> Quirks -> EnableVectorAcceleration` key to `true` value (its previous value was `false`)
+
 - **11-28-2021**
 
     **Update**
