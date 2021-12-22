@@ -14,16 +14,17 @@
 #### This repository is currently compatible with macOS Monterey, Big Sur, Catalina and OpenCore 0.7.5
 <div align="center">
 
-|     Monterey (beta)     |     macOS Big Sur      |     macOS Catalina     |       macOS Mojave       |
+|     Monterey     |     macOS Big Sur      |     macOS Catalina     |       macOS Mojave       |
 | :--- | :--- | :--- | :--- |
-|     12.0.1 (21A559)     |     11.6.1 (20G224)    |     10.15.7  (19H15)   |       10.14.6  (18G87)   |
-|                         |     11.6   (20G165)    |     10.15.6  (19G2021) |       10.14.5  (18F132)  |
-|                         |     11.5.2 (20G95)     |     10.15.5  (19F101)  |       10.14.4  (18E226)  |
-|                         |     11.5.1 (20G80)     |     10.15.4  (19E287)  |       10.14.3  (18D42)   |
-|                         |     11.5   (20G71)     |     10.15.3  (19D76)   |       10.14.2  (18C54)   |
-|                         |     11.4   (20F71)     |     10.15.2  (19C57)   |       10.14.1  (18B75)   |
-|                         |     11.3.1 (20E241)    |     10.15.1  (19B88)   |       10.14    (18A389)  |
-|                         |     11.3   (20E232)    |     10.15    (19A583)  |                          |
+|     12.1   (21C52)      |     11.6.2 (20G314)    |     10.15.7  (19H15)   |       10.14.6  (18G87)   |
+|     12.0.1 (21A559)     |     11.6.1 (20G224)    |     10.15.6  (19G2021) |       10.14.5  (18F132)  |
+|                         |     11.6   (20G165)    |     10.15.5  (19F101)  |       10.14.4  (18E226)  |
+|                         |     11.5.2 (20G95)     |     10.15.4  (19E287)  |       10.14.3  (18D42)   |
+|                         |     11.5.1 (20G80)     |     10.15.3  (19D76)   |       10.14.2  (18C54)   |
+|                         |     11.5   (20G71)     |     10.15.2  (19C57)   |       10.14.1  (18B75)   |
+|                         |     11.4   (20F71)     |     10.15.1  (19B88)   |       10.14    (18A389)  |
+|                         |     11.3.1 (20E241)    |     10.15    (19A583)  |                          |
+|                         |     11.3   (20E232)    |                        |                          |
 |                         |     11.2.3 (20D91)     |                        |                          |
 |                         |     11.2.2 (20D80)     |                        |                          |
 |                         |     11.2.1 (20D74)     |                        |                          |
@@ -31,28 +32,9 @@
 |                         |     11.1   (20C69)     |                        |                          |
 |                         |     11.0.1 (20B29)     |                        |                          |
 
+
 </div>
 
-<details>
-<summary><strong>Support for macOS Monterey is on the way!</strong></summary>
-
-For testing **macOS Monterey**:
-- download latest beta from [https://mrmacintosh.com](https://mrmacintosh.com/macos-12-monterey-full-installer-database-download-directly-from-apple/)
-- check the `InstallAssistant.pkg` integrity running the following in `Terminal` app:
-```
-openssl dgst -sha256 InstallAssistant.pkg
-```
-- finally, follow Dortania's steps for [making the installer in macOS](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/mac-install.html#setting-up-the-installer) running in `Terminal` app:
-```
-sudo /Applications/Install\ macOS\ Monterey\ beta.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume
-```
-- download from this repo proper `config-install.plist`
-
-<p align="center">
-<img src="Wiki/Images/MontereyInstallation1.png" width="90%" alt="" />
-</p>
-
-</details>
 
 If you find my work useful:
 * please consider **giving** it **a star** to make it more visible.
