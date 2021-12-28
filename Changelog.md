@@ -1,6 +1,11 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **12-28-2021**
+    - Update [kext] stripped `AirportItlwm_Big_Sur` v. 2.1.0 RC1 (commit 9d89dce)
+    - Update [kext] stripped `AirportItlwm_Catalina` v. 2.1.0 RC1 (commit 9d89dce)
+    - Update [kext] stripped `AirportItlwm_Monterey` v. 2.1.0 RC1 (commit 9d89dce)
+
 - **12-17-2021**
     - Update [kext] stripped `AirportItlwm_Big_Sur` v. 2.1.0 beta (commit 2a84895)
     - Update [kext] stripped `AirportItlwm_Catalina` v. 2.1.0 beta (commit 2a84895)
