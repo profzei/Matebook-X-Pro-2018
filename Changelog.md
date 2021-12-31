@@ -1,6 +1,20 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **12-31-2021**
+    - Update [kext] stripped `AirportItlwm_Big_Sur` v. 2.1.0 RC2 (commit 7a0c3fd)
+    - Update [kext] stripped `AirportItlwm_Catalina` v. 2.1.0 RC2 (commit 7a0c3fd)
+    - Update [kext] stripped `AirportItlwm_Monterey` v. 2.1.0 RC2 (commit 7a0c3fd)
+    - Remove [kext] `VoodooI2CHID`: testing purposes
+    - Add [kext] `VoodooRMI` v. 1.3.5 (commit ca8f233): testing purposes
+    - Remove [kext] `IntelBluetoothFirmware`: testing purposes
+    - Remove [kext] `IntelBluetoothInjector`: testing purposes
+    - Add [kext] `IntelBluetoothFamily` v. 1.0.0 alpha (commit 0dfad64)
+    - Add [kext] `IOBluetoothFixup` v. 1.0.1 alpha (commit 986b980)
+    - Add [kext] `OpenFirmwareManager` v. 1.0.0 stable (commit 4911823)
+
+    [AppleBluetooth](https://github.com/AppleBluetooth) is an amazing project (still in its early stage) which utilizes Apple's native Bluetooth stack thanks to **@CharlieJiangXXX**'s reverse-engineering efforts: there is **no support for macOS Monterey**
+
 - **12-28-2021**
     - Update [kext] stripped `AirportItlwm_Big_Sur` v. 2.1.0 RC1 (commit 9d89dce)
     - Update [kext] stripped `AirportItlwm_Catalina` v. 2.1.0 RC1 (commit 9d89dce)
