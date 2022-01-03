@@ -1,7 +1,27 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **01-03-2022**
+    
+    **Update**
+    - Update [kext] stripped `AirportItlwm_Big_Sur` v. 2.1.0 stable (commit 2156b3d)
+    - Update [kext] stripped `AirportItlwm_Catalina` v. 2.1.0 stable (commit 2156b3d)
+    - Update [kext] stripped `AirportItlwm_Monterey` v. 2.1.0 stable (commit 2156b3d)
+
+    **Testing**
+    - Testing new CPU power management:
+        - replacing actual (sofisticated) `SSDT-PM.aml` with its basic version
+        - using latest [kext] `CPUFriend`
+        - implementing "by-hand" [kext] `CPUFriendDataProvider`
+        - (positive point) minimal lesser battery drain during idle
+        - (negative point) maybe after wake-up process Intel GPU drain during idle is a little higher (?): more tests are needed...
+    - Dropping original `DMAR.aml` (DMA Remapping Table) and replacing it with a purged version determines:
+        - (positive point) lesser battery drain during idle
+        - (negative point) during the so-called "sleep process" standby phase is reduced to zero seconds since it is immediately followed by hibernation phase (even if `standby == 1` and `hibernatemode == 3` flags are set) 
+
 - **12-31-2021**
+
+    **Update**
     - Update [kext] stripped `AirportItlwm_Big_Sur` v. 2.1.0 RC2 (commit 7a0c3fd)
     - Update [kext] stripped `AirportItlwm_Catalina` v. 2.1.0 RC2 (commit 7a0c3fd)
     - Update [kext] stripped `AirportItlwm_Monterey` v. 2.1.0 RC2 (commit 7a0c3fd)
@@ -16,11 +36,15 @@ English
     [AppleBluetooth](https://github.com/AppleBluetooth) is an amazing project (still in its early stage) which utilizes Apple's native Bluetooth stack thanks to **@CharlieJiangXXX**'s reverse-engineering efforts: there is **no support for macOS Monterey**
 
 - **12-28-2021**
+
+    **Update**
     - Update [kext] stripped `AirportItlwm_Big_Sur` v. 2.1.0 RC1 (commit 9d89dce)
     - Update [kext] stripped `AirportItlwm_Catalina` v. 2.1.0 RC1 (commit 9d89dce)
     - Update [kext] stripped `AirportItlwm_Monterey` v. 2.1.0 RC1 (commit 9d89dce)
 
 - **12-17-2021**
+
+    **Update**
     - Update [kext] stripped `AirportItlwm_Big_Sur` v. 2.1.0 beta (commit 2a84895)
     - Update [kext] stripped `AirportItlwm_Catalina` v. 2.1.0 beta (commit 2a84895)
     - Update [kext] stripped `AirportItlwm_Monterey` v. 2.1.0 beta (commit 2a84895)
