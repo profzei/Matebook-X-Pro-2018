@@ -1,6 +1,16 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **01-16-2022**
+    
+    **Update**
+    - Update [kext] stripped `AirportItlwm_Big_Sur` v. 2.2.0 alpha (commit 829bd91)
+    - Update [kext] stripped `AirportItlwm_Catalina` v. 2.2.0 alpha (commit 829bd91
+    - Update [kext] stripped `AirportItlwm_Monterey` v. 2.2.0 alpha (commit 829bd91)
+
+    **Testing**
+    - Testing new Thunderbolt support since I was gifted by an OWC Envoy Express
+
 - **01-03-2022**
     
     **Update**
