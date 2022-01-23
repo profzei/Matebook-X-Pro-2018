@@ -1,11 +1,30 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **01-22-2022**
+
+    **Update**
+    - Update [kext] stripped `AirportItlwm_Big_Sur` v. 2.2.0 alpha (commit 43e1209)
+    - Update [kext] stripped `AirportItlwm_Catalina` v. 2.2.0 alpha (commit 43e1209)
+    - Update [kext] stripped `AirportItlwm_Monterey` v. 2.2.0 alpha (commit 43e1209)
+
+    **Testing**
+    - Some improvement in testing Thunderbolt interface; with the same config we face two different conditions:
+        - First (device attached during cold boot):
+            - Thunderbolt drivers are loaded and displayed correctly in the `System Information -> Thunderbolt` section
+            - Thunderbolt controller + Thunderbolt USB extensible controller + OWC interface are displayed in the `System Information -> PCI` section
+            - OWC Envoy Express is now properly mounted (OWC volume is displayed on Desktop)
+            - OWC Envoy Express is resumed from sleep
+        - Second (device attached during cold boot):
+            - Thunderbolt controller + Thunderbolt USB extensible controller + OWC interface are displayed in the `System Information -> PCI` section
+            - nothing else...
+        It may be due to a timing race condition... or to a not properly configured thunderbolt tree...
+
 - **01-16-2022**
     
     **Update**
     - Update [kext] stripped `AirportItlwm_Big_Sur` v. 2.2.0 alpha (commit 829bd91)
-    - Update [kext] stripped `AirportItlwm_Catalina` v. 2.2.0 alpha (commit 829bd91
+    - Update [kext] stripped `AirportItlwm_Catalina` v. 2.2.0 alpha (commit 829bd91)
     - Update [kext] stripped `AirportItlwm_Monterey` v. 2.2.0 alpha (commit 829bd91)
 
     **Testing**

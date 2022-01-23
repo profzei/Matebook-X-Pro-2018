@@ -129,7 +129,7 @@ Compare with [these](https://browser.geekbench.com/v5/cpu/search?utf8=✓&q=MacB
 
 ## Changelog
 
-#### 2022 - January - 16
+#### 2022 - January - 23
 See [**Current status**](Changelog.md)
 
 ## Status
