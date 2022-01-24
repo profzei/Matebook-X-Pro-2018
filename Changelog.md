@@ -1,6 +1,18 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **01-24-2022**
+
+    **Testing**
+    - Improved `DSB1` branch on Thunderbolt interface + fixed `USBCompanion` personalities:
+        - with device attached during cold boot, we get 100% probability for the following:
+            - Thunderbolt drivers are loaded and displayed correctly in the `System Information -> Thunderbolt` section
+            - Thunderbolt controller + Thunderbolt USB extensible controller + OWC interface are displayed in the `System Information -> PCI` section
+            - OWC Envoy Express is properly mounted (OWC volume is displayed on Desktop) [expected performance is achieved with Read speed around 1370 MB/s and Write speed around 1300 MB/s measured with AmorphousDiskMark]
+            - OWC Envoy Express supports sleep 
+            - OWC Envoy Express is properly resumed from sleep
+        - hot-plug is not working yet...
+
 - **01-22-2022**
 
     **Update**
@@ -18,6 +30,7 @@ English
         - Second (device attached during cold boot):
             - Thunderbolt controller + Thunderbolt USB extensible controller + OWC interface are displayed in the `System Information -> PCI` section
             - nothing else...
+        
         It may be due to a timing race condition... or to a not properly configured thunderbolt tree...
 
 - **01-16-2022**
