@@ -1,6 +1,21 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **01-26-2022**
+
+    **Testing**
+    - Improved config for Thunderbolt interface:
+        - now if no TB nor USB3 device is attached then laptop is able to resume not only from sleep but also from hibernation state (no more kernel panic due to thunderbolt power on failed)
+
+- **01-25-2022**
+
+    **Testing**
+    - With actual config, if USB3 device is attached during cold boot, then 
+        - Thunderbolt XHC Controller is properly loaded (it is displayed in the `System Information -> PCI` section)
+        - USB3 device is displayed as a child in the USB 3.1 Bus branch in the `System Information -> USB` section
+        - USB3 device is properly attached on `DSB2 -> XHC2` branch in IORegistryExplorer
+    - hot-plug is not working yet... maybe it is BIOS settings related...
+
 - **01-24-2022**
 
     **Testing**
