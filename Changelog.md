@@ -1,6 +1,12 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **02-05-2022**
+
+    **Testing**
+    - Improved config for Thunderbolt interface:
+        - some DSB are checked to be unuseful i.e. minimal config found
+
 - **01-26-2022**
 
     **Testing**
