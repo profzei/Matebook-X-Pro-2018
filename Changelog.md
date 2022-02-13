@@ -1,16 +1,27 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
-- **02-05-2022**
+- **02-13-2022**
 
     **Testing**
-    - Improved config for Thunderbolt interface:
+    - Improved config for Thunderbolt controller:
+        - drivers are properly loaded even with cold boot without any device attached to Thunderbolt controller
+
+- **02-05-2022**
+
+    **Update**
+    - Update [kext] stripped `AirportItlwm_Big_Sur` v. 2.2.0 alpha (commit 29e863e)
+    - Update [kext] stripped `AirportItlwm_Catalina` v. 2.2.0 alpha (commit 29e863e)
+    - Update [kext] stripped `AirportItlwm_Monterey` v. 2.2.0 alpha (commit 29e863e)
+
+    **Testing**
+    - Improved config for Thunderbolt controller:
         - some DSB are checked to be unuseful i.e. minimal config found
 
 - **01-26-2022**
 
     **Testing**
-    - Improved config for Thunderbolt interface:
+    - Improved config for Thunderbolt controller:
         - now if no TB nor USB3 device is attached then laptop is able to resume not only from sleep but also from hibernation state (no more kernel panic due to thunderbolt power on failed)
 
 - **01-25-2022**
