@@ -11,6 +11,11 @@
 </p>
 
 
+
+## ⚠️Shame for ~~@tlefko and its Matebook-X-Pro-2018-Monterey~~ since they steal all my EFI work!⚠️
+
+
+
 #### This repository is currently compatible with macOS Monterey, Big Sur, Catalina and OpenCore 0.7.5
 <div align="center">
 
