@@ -12,19 +12,24 @@
 
 
 
-## ⚠️Shame for ~~@tlefko and its Matebook-X-Pro-2018-Monterey~~ since they steal all my EFI work!⚠️
+## ⚠️⚠️Shame for ~~@tlefko and its Matebook-X-Pro-2018-Monterey~~ and its fellows!⚠️⚠️
+
+
+- I'm sorry but I decided to remove all my releases: in this way I wanted to make it easier for people who have already copied what is on this site stating they made 'significant and unquestionable original changes' (instead of collaborating by suggesting pull requests)!
+- I'll update this repo but only as my personal online report for how well this laptop could be turned as a full working hackintosh with full support for Thunderbolt devices
+- **I thank all those who have supported me during these two years of work**, but seeing so many people copying (and then apologizing when confronted with a fait accompli!) templates + all the content of the related pages (even putting a link for a possible donation for their hard work!) + all the content of the ACPI folder of the EFI releases, **has deeply disgusted me**!
 
 
 
-#### This repository is currently compatible with macOS Monterey, Big Sur, Catalina and OpenCore 0.7.5
+#### This repository is currently compatible with macOS Monterey, Big Sur, Catalina and OpenCore 0.7.8
 <div align="center">
 
 |     Monterey     |     macOS Big Sur      |     macOS Catalina     |       macOS Mojave       |
 | :--- | :--- | :--- | :--- |
-|     12.1   (21C52)      |     11.6.2 (20G314)    |     10.15.7  (19H15)   |       10.14.6  (18G87)   |
-|     12.0.1 (21A559)     |     11.6.1 (20G224)    |     10.15.6  (19G2021) |       10.14.5  (18F132)  |
-|                         |     11.6   (20G165)    |     10.15.5  (19F101)  |       10.14.4  (18E226)  |
-|                         |     11.5.2 (20G95)     |     10.15.4  (19E287)  |       10.14.3  (18D42)   |
+|     12.2.1 (21D62)      |     11.6.2 (20G314)    |     10.15.7  (19H15)   |       10.14.6  (18G87)   |
+|     12.2   (21D48)      |     11.6.1 (20G224)    |     10.15.6  (19G2021) |       10.14.5  (18F132)  |
+|     12.1   (21C52)      |     11.6   (20G165)    |     10.15.5  (19F101)  |       10.14.4  (18E226)  |
+|     12.0.1 (21A559)     |     11.5.2 (20G95)     |     10.15.4  (19E287)  |       10.14.3  (18D42)   |
 |                         |     11.5.1 (20G80)     |     10.15.3  (19D76)   |       10.14.2  (18C54)   |
 |                         |     11.5   (20G71)     |     10.15.2  (19C57)   |       10.14.1  (18B75)   |
 |                         |     11.4   (20F71)     |     10.15.1  (19B88)   |       10.14    (18A389)  |
@@ -344,7 +349,7 @@ Steps for enabling support for Thunderbolt controller (`\_SB.PCI0.RP09`):
 
 
 ## Bootloader Firmware
-- Default bootloader: `OpenCore 0.7.5` [Official release](https://github.com/acidanthera/OpenCorePkg/releases).
+- Default bootloader: `OpenCore 0.7.8` [Official release](https://github.com/acidanthera/OpenCorePkg/releases).
     - Support macOS 10.14 ~ latest macOS release
     - As theme for `OpenCanopy`, a cleaner version with custom graphics has been provided by [**@R-Teer**](https://github.com/R-Teer)
     - See more info in [Wiki section](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Converting-from-Clover-to-OpenCore) about migration from Clover.
@@ -827,8 +832,8 @@ log show --predicate 'process == "kernel"' --style syslog --source --debug --las
 
 | Item | Version | Remark |
 | :--- | :--- | :--- |
-| MacOS | 12.0.1 | |
-| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.7.5 | Default Bootloader |
+| MacOS | 12.2.1 | |
+| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.7.8 | Default Bootloader |
 | [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.5.7 | Kext/process/framework/library patcher |
 | [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.5.5 | Handle Graphics card |
 | [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.6.6 | Handle/fix onboard audio |
