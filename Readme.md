@@ -20,6 +20,8 @@
 - **I thank all those who have supported me during these two years of work**, but seeing so many people copying (and then apologizing when confronted with a fait accompli!) templates + all the content of the related pages (even putting a link for a possible donation for their hard work!) + all the content of the ACPI folder of the EFI releases, **has deeply disgusted me**!
 
 
+-----
+
 
 #### This repository is currently compatible with macOS Monterey, Big Sur, Catalina and OpenCore 0.7.8
 <div align="center">
