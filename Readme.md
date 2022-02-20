@@ -12,7 +12,7 @@
 
 
 
-## ⚠️⚠️Shame for ~~@tlefko and its Matebook-X-Pro-2018-Monterey~~ and its fellows!⚠️⚠️
+## ⚠️⚠️ Advertisement ⚠️⚠️
 
 
 - I'm sorry but I decided to remove all my releases: in this way I wanted to make it easier for people who have already copied what is on this site stating they made 'significant and unquestionable original changes' (instead of collaborating by suggesting pull requests)!
@@ -28,22 +28,23 @@
 
 |     Monterey     |     macOS Big Sur      |     macOS Catalina     |       macOS Mojave       |
 | :--- | :--- | :--- | :--- |
-|     12.2.1 (21D62)      |     11.6.2 (20G314)    |     10.15.7  (19H15)   |       10.14.6  (18G87)   |
-|     12.2   (21D48)      |     11.6.1 (20G224)    |     10.15.6  (19G2021) |       10.14.5  (18F132)  |
-|     12.1   (21C52)      |     11.6   (20G165)    |     10.15.5  (19F101)  |       10.14.4  (18E226)  |
-|     12.0.1 (21A559)     |     11.5.2 (20G95)     |     10.15.4  (19E287)  |       10.14.3  (18D42)   |
-|                         |     11.5.1 (20G80)     |     10.15.3  (19D76)   |       10.14.2  (18C54)   |
-|                         |     11.5   (20G71)     |     10.15.2  (19C57)   |       10.14.1  (18B75)   |
-|                         |     11.4   (20F71)     |     10.15.1  (19B88)   |       10.14    (18A389)  |
-|                         |     11.3.1 (20E241)    |     10.15    (19A583)  |                          |
+|     12.2.1 (21D62)      |     11.6.4 (20G417)    |     10.15.7  (19H15)   |       10.14.6  (18G87)   |
+|     12.2   (21D48)      |     11.6.3 (20G415)    |     10.15.6  (19G2021) |       10.14.5  (18F132)  |
+|     12.1   (21C52)      |     11.6.2 (20G314)    |     10.15.5  (19F101)  |       10.14.4  (18E226)  |
+|     12.0.1 (21A559)     |     11.6.1 (20G224)    |     10.15.4  (19E287)  |       10.14.3  (18D42)   |
+|                         |     11.6   (20G165)    |     10.15.3  (19D76)   |       10.14.2  (18C54)   |
+|                         |     11.5.2 (20G95)     |     10.15.2  (19C57)   |       10.14.1  (18B75)   |
+|                         |     11.5.1 (20G80)     |     10.15.1  (19B88)   |       10.14    (18A389)  |
+|                         |     11.5   (20G71)     |     10.15    (19A583)  |                          |
+|                         |     11.4   (20F71)     |                        |                          |
+|                         |     11.3.1 (20E241)    |                        |                          |
 |                         |     11.3   (20E232)    |                        |                          |
 |                         |     11.2.3 (20D91)     |                        |                          |
-|                         |     11.2.2 (20D80)     |                        |                          |
+|                         |     11.2.2 (20D80)     |                        |                          | 
 |                         |     11.2.1 (20D74)     |                        |                          |
 |                         |     11.2   (20D64)     |                        |                          |
 |                         |     11.1   (20C69)     |                        |                          |
 |                         |     11.0.1 (20B29)     |                        |                          |
-
 
 </div>
 
@@ -141,7 +142,7 @@ Compare with [these](https://browser.geekbench.com/v5/cpu/search?utf8=✓&q=MacB
 
 ## Changelog
 
-#### 2022 - February - 13
+#### 2022 - February - 20
 See [**Current status**](Changelog.md)
 
 ## Status
@@ -323,20 +324,36 @@ As reported in [NotebookCheck review](https://www.notebookcheck.net/Huawei-has-p
 The connector type is Usb-C and it can do multiple protocols (TB, USB 2/3/3.1, DP, etc...) with different backing controllers. The problem on Hackintoshes is mostly about TB on Usb-C, because the firmware and power management of Apple's TB-controllers works entirely different than those for other OS'es. So even if it's the same hardware found on Windows laptops, they don't "just work" because of the different firmware.
 
 The ACPI-part for handling Thunderbolt 3 port and its power management has been implemented:
-- it enables not only the PCIe-to-PCIe-bridge mode of the TB controller but also the native drivers which make it possible to completely poweroff the controller after using the TB port, saving battery life and prevent the controller from preventing the CPU goes into deeper C-State
+- it enables not only the `PCIe-to-PCIe` bridge-mode of the TB controller but also the **native drivers** which make it possible to completely poweroff the controller after using the TB port, saving battery life and prevent the controller from preventing the CPU goes into deeper C-State
 - the ICM is disabled on boot to let OSX' drivers take over the job
-- the TB port works when any device is plugged into it at the boot time: this means no hot-plug
-- it's largely untested since I don't have any TB 3 devices.
+- the TB port works when any device is plugged into it at the boot time: this means **no hot-plug**
+- the TB 3 XHC Controller is working fine when any device is plugged into it at boot time
+- the TB drivers are loaded even if no device is plugged into it at boot time
+- the TB 3 XHC Controller bus is loaded even if no device is plugged into it at boot time
+
+
+<p align="center">
+<img src="Wiki/Images/TB3_01.png" width="75%" alt="Thunderbolt Controller: drivers loaded" />
+</p>
+
+<p align="center">
+<img src="Wiki/Images/TB3_02.png" width="75%" alt="Thunderbolt Controller: PCI section" />
+</p>
+
+<p align="center">
+<img src="Wiki/Images/TB3_03.png" width="75%" alt="Thunderbolt Controller with OWC Envoy Express" />
+</p>
+
+
+Since I was given an **OWC Envoy Express** Thunderbolt 3 Controller **is enabled** in my default `config.plist`.
+
+Steps for disabling support for Thunderbolt controller (`\_SB.PCI0.RP09`):
+- disable `SSDT-JHL6240-AR2.aml`
+- enable `SSDT-DTB3.aml`
+- disable all `TB3: *` binary patches
+
 
 For reference, see [Thunderbolt 3 Fix](https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3) and [ThunderboltPatcher](https://github.com/osy86/ThunderboltPatcher) for related attempts to fix TB by patching its firmware.
-
-Due to lack of Thunderbolt devices my interest in this feature is very marginal; therefore, in my default `config.plist`, **Thunderbolt controller has been left disabled**.
-
-Steps for enabling support for Thunderbolt controller (`\_SB.PCI0.RP09`):
-- disable `SSDT-DTB3.aml`
-- enable all `SSDT-TB-DSB*.aml`
-- enable `TB3: _GPE.NTFY,1,S to XTFY` binary patch
-- enable `TB3: RP9._INI,0,N to XINI` binary patch
 </details>
 
 <details>

@@ -1,6 +1,16 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **02-20-2022**
+
+    **Testing**
+    - Improved config for Thunderbolt controller:
+        - only partial hotplug achieved:
+            - Thunderbolt structure is properly updated
+            - new attached device (in my case `pci1cc1,5766@0`) is visible in Thunderbolt structure
+            - but `IONVMeController` is not loaded for my external OWC Envoy Express
+        - honestly I'm out of ideas... Everything is working very smoothly (native mode) if device is plugged in before pressing power button!
+
 - **02-13-2022**
 
     **Testing**
