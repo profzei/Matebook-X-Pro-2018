@@ -23,7 +23,7 @@
 -----
 
 
-#### This repository is currently compatible with macOS Monterey, Big Sur, Catalina and OpenCore 0.7.8
+#### This repository is currently compatible with macOS Monterey, Big Sur, Catalina and OpenCore 0.7.9
 <div align="center">
 
 |     Monterey     |     macOS Big Sur      |     macOS Catalina     |       macOS Mojave       |
@@ -142,7 +142,7 @@ Compare with [these](https://browser.geekbench.com/v5/cpu/search?utf8=✓&q=MacB
 
 ## Changelog
 
-#### 2022 - February - 20
+#### 2022 - March - 09
 See [**Current status**](Changelog.md)
 
 ## Status
@@ -353,6 +353,16 @@ Steps for disabling support for Thunderbolt controller (`\_SB.PCI0.RP09`):
 - disable all `TB3: *` binary patches
 
 
+Real-time power management for Thunderbolt controller with Discrete GPU (NVIDIA GeForce MX150) removed at PCI level are shown:
+
+<p align="center">
+<img src="Wiki/Images/TB3_DGPU_PM_01.png" width="75%" alt="Thunderbolt Controller with disabled Discrete GPU at PCI level" />
+</p>
+
+<p align="center">
+<img src="Wiki/Images/TB3_DGPU_PM_02.png" width="75%" alt="Thunderbolt Controller with disabled Discrete GPU at PCI level" />
+</p>
+
 For reference, see [Thunderbolt 3 Fix](https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3) and [ThunderboltPatcher](https://github.com/osy86/ThunderboltPatcher) for related attempts to fix TB by patching its firmware.
 </details>
 
@@ -360,7 +370,14 @@ For reference, see [Thunderbolt 3 Fix](https://osy.gitbook.io/hac-mini-guide/det
 <summary><strong>What's not working due to Incompatible Hardware</strong></summary>
 
 - [ ] **Discrete graphics card** (NVIDIA GeForce MX150) is not working, since macOS doesn't support Optimus technology
-	- Have used `SSDT-DDGPU.aml` to disable it in order to save power.
+	- ~~Have used `SSDT-DDGPU.aml` to disable it in order to save power.~~
+    - Removed it at PCI level reducing time for putting machine to sleep and for resuming it from sleep (i.e. laptop is more reactive during these phases!)
+    - `PCI0.RP01` is not present anymore in IORegistryExplorer tree (this is proof for having disabled GPU at PCI level!)
+
+<p align="center">
+<img src="Wiki/Images/DGPU_PCI_level.png" width="75%" alt="Discrete GPU removedat PCI level" />
+</p>
+
 - [ ] **Fingerprint sensor** is not working
 	- Fingerprint readers on Macbooks are managed by T2 chip which has not been very throughly reverse engineered yet
 	- Have used `SSDT-XHC.aml` to disable it (in order to save some power).
@@ -852,7 +869,7 @@ log show --predicate 'process == "kernel"' --style syslog --source --debug --las
 | Item | Version | Remark |
 | :--- | :--- | :--- |
 | MacOS | 12.2.1 | |
-| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.7.8 | Default Bootloader |
+| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.7.9 | Default Bootloader |
 | [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.5.7 | Kext/process/framework/library patcher |
 | [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.5.5 | Handle Graphics card |
 | [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.6.6 | Handle/fix onboard audio |
