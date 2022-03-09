@@ -356,11 +356,11 @@ Steps for disabling support for Thunderbolt controller (`\_SB.PCI0.RP09`):
 Real-time power management for Thunderbolt controller with Discrete GPU (NVIDIA GeForce MX150) removed at PCI level are shown:
 
 <p align="center">
-<img src="Wiki/Images/TB3_DGPU_PM_01.png" width="75%" alt="Thunderbolt Controller with disabled Discrete GPU at PCI level" />
+<img src="Wiki/Images/TB3_DGPU_PM_01.png" width="90%" alt="Thunderbolt Controller with disabled Discrete GPU at PCI level" />
 </p>
 
 <p align="center">
-<img src="Wiki/Images/TB3_DGPU_PM_02.png" width="75%" alt="Thunderbolt Controller with disabled Discrete GPU at PCI level" />
+<img src="Wiki/Images/TB3_DGPU_PM_02.png" width="90%" alt="Thunderbolt Controller with disabled Discrete GPU at PCI level" />
 </p>
 
 For reference, see [Thunderbolt 3 Fix](https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3) and [ThunderboltPatcher](https://github.com/osy86/ThunderboltPatcher) for related attempts to fix TB by patching its firmware.
