@@ -1,6 +1,24 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **03-09-2022**
+
+    **Update**
+    - Update `OpenCore` v. 0.7.9
+    - Update all kexts
+
+    **OpenCore**
+    - Update `config.plist` to support `OpenCore` v. 0.7.9
+    - Added binary patches useful for debugging
+
+- **02-26-2022**
+
+    **Testing**
+    - Discrete Graphics card NVIDIA GeForce MX150 totally disabled at PCI level (total new approach!):
+        - `PCI0.RP01` is not present anymore in IORegistryExplorer tree
+        - this introduces no (new) issues during sleep/wake-up phase (i.e. sleep and wake-up work flawlessly as usual)
+        - reduced time for putting our machine to sleep and for resuming it from sleep (i.e. machine is more reactive during these phases!)
+
 - **02-20-2022**
 
     **Testing**
