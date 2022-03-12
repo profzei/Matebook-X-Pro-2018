@@ -142,7 +142,7 @@ Compare with [these](https://browser.geekbench.com/v5/cpu/search?utf8=✓&q=MacB
 
 ## Changelog
 
-#### 2022 - March - 09
+#### 2022 - March - 12
 See [**Current status**](Changelog.md)
 
 ## Status
@@ -372,7 +372,7 @@ For reference, see [Thunderbolt 3 Fix](https://osy.gitbook.io/hac-mini-guide/det
 - [ ] **Discrete graphics card** (NVIDIA GeForce MX150) is not working, since macOS doesn't support Optimus technology
 	- ~~Have used `SSDT-DDGPU.aml` to disable it in order to save power.~~
     - Removed it at PCI level reducing time for putting machine to sleep and for resuming it from sleep (i.e. laptop is more reactive during these phases!)
-    - `PCI0.RP01` is not present anymore in IORegistryExplorer tree (this is proof for having disabled GPU at PCI level!)
+    - `\_SB.PCI0.RP01` is not present anymore in IORegistryExplorer tree (this is proof for having disabled GPU at PCI level!)
 
 <p align="center">
 <img src="Wiki/Images/DGPU_PCI_level.png" width="75%" alt="Discrete GPU removedat PCI level" />

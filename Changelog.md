@@ -1,6 +1,11 @@
 # Huawei Matebook X Pro (2018) Changelog
 
 English
+- **03-12-2022**
+
+    **Update**
+    - Reduced number of interrupts: (little) improvement for battery
+
 - **03-09-2022**
 
     **Update**
@@ -15,7 +20,7 @@ English
 
     **Testing**
     - Discrete Graphics card NVIDIA GeForce MX150 totally disabled at PCI level (total new approach!):
-        - `PCI0.RP01` is not present anymore in IORegistryExplorer tree
+        - `\_SB.PCI0.RP01` is not present anymore in IORegistryExplorer tree
         - this introduces no (new) issues during sleep/wake-up phase (i.e. sleep and wake-up work flawlessly as usual)
         - reduced time for putting our machine to sleep and for resuming it from sleep (i.e. machine is more reactive during these phases!)
 
