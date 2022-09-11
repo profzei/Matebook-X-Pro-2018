@@ -85,7 +85,7 @@ Compare with [these](https://browser.geekbench.com/v5/cpu/search?utf8=✓&q=MacB
 See [**Current status »**](Changelog.md)
 
 <p align="center">
-<img src="Wiki/Images/AboutThisMac.png" width="70%" alt="About this Mac" />
+<img src="Wiki/Images/AboutThisMac.png" width="50%" alt="About this Mac" />
 </p>
 
 
