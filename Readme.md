@@ -1,6 +1,6 @@
 # macOS  on Huawei Matebook X Pro 2018
 <p align="center">
-<img src="Wiki/Images/matebook-x-pro-monterey.png" alt="Huawei Big Sur 11.0" />
+<img src="Wiki/Images/matebook-x-pro-monterey.png" alt="Huawei macOS Ventura" />
 </p>
 <p align="center">
 <a href="https://consumer.huawei.com/it/support/laptops/matebook-x-pro/" target="_blank"><img src="https://img.shields.io/badge/Model-MACH_W29-orange.svg" /></a>
@@ -15,6 +15,7 @@
 ## ⚠️⚠️ Advertisement ⚠️⚠️
 
 
+> **Warning**
 - I'm sorry but I decided to remove all my releases: in this way I wanted to make it easier for people who have already copied what is on this site stating they made 'significant and unquestionable original changes' (instead of collaborating by suggesting pull requests)!
 - I'll update this repo but only as my personal online report for how well this laptop could be turned as a full working hackintosh with full support for Thunderbolt devices
 - **I thank all those who have supported me during these two years of work**, but seeing so many people copying (and then apologizing when confronted with a fait accompli!) templates + all the content of the related pages (even putting a link for a possible donation for their hard work!) + all the content of the ACPI folder of the EFI releases, **has deeply disgusted me**!
@@ -23,89 +24,27 @@
 -----
 
 
-#### This repository is currently compatible with macOS Monterey, Big Sur, Catalina and OpenCore 0.7.9
+#### This repository is currently compatible with macOS Ventura, Monterey, Big Sur and OpenCore 0.8.4
 <div align="center">
 
-|     Monterey     |     macOS Big Sur      |     macOS Catalina     |       macOS Mojave       |
-| :--- | :--- | :--- | :--- |
-|     12.2.1 (21D62)      |     11.6.4 (20G417)    |     10.15.7  (19H15)   |       10.14.6  (18G87)   |
-|     12.2   (21D48)      |     11.6.3 (20G415)    |     10.15.6  (19G2021) |       10.14.5  (18F132)  |
-|     12.1   (21C52)      |     11.6.2 (20G314)    |     10.15.5  (19F101)  |       10.14.4  (18E226)  |
-|     12.0.1 (21A559)     |     11.6.1 (20G224)    |     10.15.4  (19E287)  |       10.14.3  (18D42)   |
-|                         |     11.6   (20G165)    |     10.15.3  (19D76)   |       10.14.2  (18C54)   |
-|                         |     11.5.2 (20G95)     |     10.15.2  (19C57)   |       10.14.1  (18B75)   |
-|                         |     11.5.1 (20G80)     |     10.15.1  (19B88)   |       10.14    (18A389)  |
-|                         |     11.5   (20G71)     |     10.15    (19A583)  |                          |
-|                         |     11.4   (20F71)     |                        |                          |
-|                         |     11.3.1 (20E241)    |                        |                          |
-|                         |     11.3   (20E232)    |                        |                          |
-|                         |     11.2.3 (20D91)     |                        |                          |
-|                         |     11.2.2 (20D80)     |                        |                          | 
-|                         |     11.2.1 (20D74)     |                        |                          |
-|                         |     11.2   (20D64)     |                        |                          |
-|                         |     11.1   (20C69)     |                        |                          |
-|                         |     11.0.1 (20B29)     |                        |                          |
+|    macOS    |   |   Status   |
+| :--- | :--- | :--- |
+|   <a href="https://developer.apple.com/documentation/macos-release-notes/" target="_blank"><img src="https://img.shields.io/badge/macOS-Ventura-orange.svg" /></a>    |   `Stable` 13 beta (22A5331f)                 |   `Currently maintained`   |
+|   <a href="https://developer.apple.com/documentation/macos-release-notes/" target="_blank"><img src="https://img.shields.io/badge/macOS-Monterey-brightgreen.svg" /></a>   |   `Stable` 12.0.1 (21A559)  »  12.5.1 (21G83) |   `Compatible`             |
+|   <a href="https://developer.apple.com/documentation/macos-release-notes/" target="_blank"><img src="https://img.shields.io/badge/macOS-Big_Sur-brightgreen.svg" /></a>    |   `Stable` 11.0.1 (20B29)  »  11.6.8 (20G730) |   `Compatible`             |
+|   <a href="https://developer.apple.com/documentation/macos-release-notes/" target="_blank"><img src="https://img.shields.io/badge/macOS-Catalina-brightgreen.svg" /></a>   |   `Stable` 10.15 (19A583)  »  10.15.7 (19H15) |   `Compatible`             |
+|   <a href="https://developer.apple.com/documentation/macos-release-notes/" target="_blank"><img src="https://img.shields.io/badge/macOS-Mojave-red.svg" /></a>     |   `Stable` 10.14 (18A389)  »  10.14.6 (18G87) |   `No longer maintained`   |
 
 </div>
 
 
 If you find my work useful:
-* please consider **giving** it **a star** to make it more visible.
+* please consider **giving** it **a star** ⭐️ to make it more visible.
 * please consider **donating via PayPal**. [![donate](https://img.shields.io/badge/-buy%20me%20a%20coffee-orange)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=TSJHK3C2BSQN6&currency_code=EUR)
 
 
-### DISCLAIMER
 
-- For best results, read the entire README before you start and follow the install instruction throughly.
-- I am not responsible for any damages you may cause.
-- **This is not a support forum**.
-- Should you find an error or improve anything — whether in the config or in the documentation — please consider opening an issue or pull request.
-- **Complete EFI packs** are available in the [**Releases**](https://github.com/profzei/Matebook-X-Pro-2018/releases) page (please, refer to the rightside menu).
-- **EFI** is configured with **Monterey** or **Big Sur** in mind: if you are using it on **Catalina** (or Mojave), read the whole guide to make the necessary changes.
-- **EFI** is configured for loading macOS **from internal NVMe SSD** both in dual-boot configuration with Windows and as a single OS (macOS installation on external SSDs are not taken into account)
-- **EFI** is not suitable, as it is, to be used **for installing macOS**: please refer to Wiki section for a [**detailed guide for installing macOS**](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Installing-macOS).  
-
-<p align="center">
-<img src="Wiki/Images/Disclaimer.png" width="70%" alt="Disclaimer" />
-</p>
-
-**This repository is for personal purposes only.**
-
-
-## Introduction
-
-This repo contains the files needed for getting macOS working on a **Huawei MateBook X Pro (2018 Edition)** laptop with OpenCore.
-* This is intended to create a "fully" functional (as far as possible) hackintosh for the Huawei Matebook X Pro.
-* The project can be considered **stable**.
-* With each new release of macOS we need to resolve each new "minor issue" we run into. All of the steps I made to get to this point were a result of countless hours of reading along with trial and error, however I'm glad to say that **I learned a lot** in the meantime. I am by no means an expert so any effective help (suggestions, observations, ...) to tune this project is very appreciated!
-* If you would like to get started with creating a hackintosh on your MBXP but have non experience, I would highly recommend following [**Dortania's OpenCore Install guide**](https://dortania.github.io/OpenCore-Install-Guide/) and then returning here for troubleshooting or last improvements.
-
-
-### Summary
-
-- The **compatibility** is **very good** for the most part, most of the stuff works like it would on a real MacBook, including camera, audio, touchpad, iCloud services.
-- The **experience** is **pleasant**, as the laptop is smooth and responsive under macOS Big Sur/Catalina.
-- **Battery life** is **quite great** (from personal experience it **lasts from 8 to 10 hours** for light works depending on its age with a behaviour very similar to Windows 10 as shown in the macOS menu bar screenshots below).
-- The **Intel WiFi** card is soldered onto the motherboard, which means it can't be replaced with a Broadcom one, but the Intel card is now **functional albeit not operating at full speeds** (however it is fine for most use cases).
-    * With the latest `AirportItlwm.kext` even **Handoff** and **Continuity** features are working, but with a very limited support for AirDrop and Apple Watch unlocking (see [Changelog for OpenIntelWireless release v. 1.2.0 stable](https://github.com/OpenIntelWireless/itlwm/releases)).
-    * For any issues about `AirportItlwm.kext` please refer first to [**OpenIntelWireless Troubleshooting page**](https://openintelwireless.github.io/itlwm/Troubleshooting.html#kernel-extension-loading-status) and then to [**OpenIntelWireless Gitter Page**](https://gitter.im/OpenIntelWireless/itlwm?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-<p align="center">
-<img src="Wiki/Images/ScreenMenuBar03.png" width="90%" alt="MBXP Battery Menu bar" />
-</p>
-
-
-### Generate your own SMBIOS Information
-
-For privacy reasons, all SMBIOS information has been wiped out in the configuration file `EFI/OC/config.plist`. You need to generate your unique `SMBIOS` info by yourself (recommend to use [**CorpNewt's GenSMBIOS**](https://github.com/corpnewt/GenSMBIOS)), and inject them into your `config.plist`.
-- With every **EFI update** you retrieve from [here](https://github.com/profzei/Matebook-X-Pro-2018/releases), please, remember to transfer **your Device details** under `PlatformInfo -> Generic` in your `config.plist`.
-- For more details on **dual booting settings**, please, see also below [**OpenCore and Windows Activation**](https://github.com/profzei/Matebook-X-Pro-2018#status) notes.
-
-<p align="center">
-<img src="Wiki/Images/AboutThisMac.png" width="70%" alt="About this Mac" />
-</p>
-
-## Configuration
+## Configuration 💻
 
 <div align="center">
 
@@ -142,8 +81,65 @@ Compare with [these](https://browser.geekbench.com/v5/cpu/search?utf8=✓&q=MacB
 
 ## Changelog
 
-#### 2022 - March - 12
-See [**Current status**](Changelog.md)
+#### 2022 - September - 11
+See [**Current status »**](Changelog.md)
+
+<p align="center">
+<img src="Wiki/Images/AboutThisMac.png" width="70%" alt="About this Mac" />
+</p>
+
+
+
+### DISCLAIMER ⚠️
+
+- For best results, **read the entire README** before you start and follow the install instruction throughly.
+- I am not responsible for any damages you may cause.
+- **This is not a support forum**.
+- Should you find an error or improve anything — whether in the config or in the documentation — please consider opening an issue or pull request.
+- **Complete EFI packs** are available in the [**Releases »**](https://github.com/profzei/Matebook-X-Pro-2018/releases) page (please, refer to the rightside menu).
+- **EFI** is configured with **Ventura**, **Monterey** or **Big Sur** in mind: if you are using it on **Catalina** (or Mojave), read the whole guide to make the necessary changes.
+- **EFI** is configured for loading macOS **from internal NVMe SSD** both in dual-boot configuration with Windows and as a single OS (macOS installation on external SSDs are not taken into account)
+- **EFI** is not suitable, as it is, to be used **for installing macOS**: please refer to Wiki section for a [**detailed guide for installing macOS »**](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Installing-macOS).  
+
+<p align="center">
+<img src="Wiki/Images/Disclaimer.png" width="70%" alt="Disclaimer" />
+</p>
+
+**This repository is for personal purposes only.**
+
+
+
+## Introduction
+
+This repo contains the files needed for getting macOS working on a **Huawei MateBook X Pro (2018 Edition)** laptop with OpenCore.
+* This is intended to create a "fully" functional (as far as possible) hackintosh for the Huawei Matebook X Pro.
+* The project can be considered **stable**.
+* With each new release of macOS we need to resolve each new "minor issue" we run into. All of the steps I made to get to this point were a result of countless hours of reading along with trial and error, however I'm glad to say that **I learned a lot** in the meantime. I am by no means an expert so any effective help (suggestions, observations, ...) to tune this project is very appreciated!
+* If you would like to get started with creating a hackintosh on your MBXP but have non experience, I would highly recommend following [**Dortania's OpenCore Install guide »**](https://dortania.github.io/OpenCore-Install-Guide/) and then returning here for troubleshooting or last improvements.
+
+
+### Summary
+
+- The **compatibility** is **very good** for the most part, most of the stuff works like it would on a real MacBook, including camera, audio, touchpad, iCloud services.
+- The **experience** is **pleasant**, as the laptop is smooth and responsive under macOS Big Sur/Catalina.
+- **Battery life** is **quite great** (from personal experience it **lasts from 8 to 10 hours** for light works depending on its age with a behaviour very similar to Windows 10 as shown in the macOS menu bar screenshots below).
+- The **Intel WiFi** card is soldered onto the motherboard, which means it can't be replaced with a Broadcom one, but the Intel card is now **functional** (it is fine for most use cases).
+    * With the latest `AirportItlwm.kext` even **Handoff** and **Continuity** features are working, but with a very limited support for AirDrop and Apple Watch unlocking (see [Changelog for OpenIntelWireless](https://github.com/OpenIntelWireless/itlwm/releases)).
+    * For any issues about `AirportItlwm.kext` please refer first to [**OpenIntelWireless Troubleshooting page**](https://openintelwireless.github.io/itlwm/Troubleshooting.html#kernel-extension-loading-status) and then to [**OpenIntelWireless Gitter Page**](https://gitter.im/OpenIntelWireless/itlwm?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
+<p align="center">
+<img src="Wiki/Images/ScreenMenuBar03.png" width="90%" alt="MBXP Battery Menu bar" />
+</p>
+
+
+
+### Generate your own SMBIOS Information
+
+For privacy reasons, all SMBIOS information has been wiped out in the configuration file `EFI/OC/config.plist`. You need to generate your unique `SMBIOS` info by yourself (recommend to use [**CorpNewt's GenSMBIOS**](https://github.com/corpnewt/GenSMBIOS)), and inject them into your `config.plist`.
+- With every **EFI update** you retrieve from [here](https://github.com/profzei/Matebook-X-Pro-2018/releases), please, remember to transfer **your Device details** under `PlatformInfo -> Generic` in your `config.plist`.
+- For more details on **dual booting settings**, please, see also below [**OpenCore and Windows Activation**](https://github.com/profzei/Matebook-X-Pro-2018#status) notes.
+
+
 
 ## Status
 
@@ -385,8 +381,8 @@ For reference, see [Thunderbolt 3 Fix](https://osy.gitbook.io/hac-mini-guide/det
 
 
 ## Bootloader Firmware
-- Default bootloader: `OpenCore 0.7.8` [Official release](https://github.com/acidanthera/OpenCorePkg/releases).
-    - Support macOS 10.14 ~ latest macOS release
+- Default bootloader: `OpenCore 0.8.4` [Official release](https://github.com/acidanthera/OpenCorePkg/releases).
+    - Support macOS 10.15 ~ latest macOS release
     - As theme for `OpenCanopy`, a cleaner version with custom graphics has been provided by [**@R-Teer**](https://github.com/R-Teer)
     - See more info in [Wiki section](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Converting-from-Clover-to-OpenCore) about migration from Clover.
 - No longer maintained: Clover `r5118` [Official release](https://github.com/CloverHackyColor/CloverBootloader/releases) ~~`r5103` [Dids release](https://github.com/Dids/clover-builder/releases)~~
@@ -868,25 +864,25 @@ log show --predicate 'process == "kernel"' --style syslog --source --debug --las
 
 | Item | Version | Remark |
 | :--- | :--- | :--- |
-| MacOS | 12.2.1 | |
-| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.7.9 | Default Bootloader |
-| [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.5.7 | Kext/process/framework/library patcher |
-| [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.5.5 | Handle Graphics card |
-| [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.6.6 | Handle/fix onboard audio |
+| MacOS | 13 | |
+| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.8.4| Default Bootloader |
+| [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.6.2 | Kext/process/framework/library patcher |
+| [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.6.1 | Handle Graphics card |
+| [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.7.4 | Handle/fix onboard audio |
 | [CodecCommander](https://github.com/Sniki/EAPD-Codec-Commander/releases) | 2.7.2 | Fix headphone audio switch |
 | [CPUFriend](https://github.com/acidanthera/CPUFriend/releases) | 1.2.4 | Power management |
-| [HibernationFixup](https://github.com/acidanthera/HibernationFixup/releases) | 1.4.5 | Handle hibernate status |
-| [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases) | 2.1.0 stable | Handle Bluetooth |
-| [AirportItlwm](https://github.com/OpenIntelWireless/itlwm/releases) | 2.1.0 stable | Handle native Wi-Fi card |
-| [BlueToolFixup](https://github.com/acidanthera/BrcmPatchRAM/releases) | 2.6.1 | Fix Bluetooth for macOS 12+ |
+| [HibernationFixup](https://github.com/acidanthera/HibernationFixup/releases) | 1.4.6 | Handle hibernate status |
+| [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases) | 2.2.0 stable | Handle Bluetooth |
+| [AirportItlwm](https://github.com/OpenIntelWireless/itlwm/releases) | 2.2.0 alpha | Handle native Wi-Fi card |
+| [BlueToolFixup](https://github.com/acidanthera/BrcmPatchRAM/releases) | 2.6.3 | Fix Bluetooth for macOS 12+ |
 | [NullEthernet](https://bitbucket.org/RehabMan/OS-X-Null-Ethernet/downloads/) | 1.0.6 | Fake Ethernet card |
 | [NoTouchID](https://github.com/al3xtjames/NoTouchID/releases) | 1.0.4 | Disable TouchID |
 | [NVMeFix](https://github.com/acidanthera/NVMeFix/releases) | 1.0.9 | Fix for NVMe SSDs |
-| [RestrictEvents](https://github.com/acidanthera/RestrictEvents/releases) | 1.0.5 | Block unwanted processes |
-| [VoodooI2C](https://github.com/alexandred/VoodooI2C/releases) | 2.5.2 | Handle I2C device |
-| [VoodooI2CHID](https://github.com/alexandred/VoodooI2C/releases) | 2.5.2 | Touchpad I2C satellite |
-| [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases) | 2.2.7 | Enable keyboard, alternative trackpad driver |
-| [VirtualSMC + plugins](https://github.com/acidanthera/VirtualSMC/releases) | 1.2.7 | SMC chip emulation |
+| [RestrictEvents](https://github.com/acidanthera/RestrictEvents/releases) | 1.0.8 | Block unwanted processes |
+| [VoodooI2C](https://github.com/alexandred/VoodooI2C/releases) | 2.7 | Handle I2C device |
+| [VoodooI2CHID](https://github.com/alexandred/VoodooI2C/releases) | 2.7 | Touchpad I2C satellite |
+| [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases) | 2.2.9 | Enable keyboard, alternative trackpad driver |
+| [VirtualSMC + plugins](https://github.com/acidanthera/VirtualSMC/releases) | 1.3.0 | SMC chip emulation |
 | [USBInjectAll](https://github.com/daliansky/OS-X-USB-Inject-All/releases) | 0.7.6 | Inject USB ports |
 | [VoltageShift](https://github.com/sicreative/VoltageShift) | 1.25 | Undervoltage tool |
 
