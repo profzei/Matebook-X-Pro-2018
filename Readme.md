@@ -24,7 +24,7 @@
 -----
 
 
-#### This repository is currently compatible with macOS Ventura, Monterey, Big Sur and OpenCore 0.8.4
+#### This repository is currently compatible with macOS Ventura, Monterey, Big Sur and OpenCore 0.8.5
 <div align="center">
 
 |    macOS    |   |   Status   |
@@ -381,7 +381,7 @@ For reference, see [Thunderbolt 3 Fix](https://osy.gitbook.io/hac-mini-guide/det
 
 
 ## Bootloader Firmware
-- Default bootloader: `OpenCore 0.8.4` [Official release](https://github.com/acidanthera/OpenCorePkg/releases).
+- Default bootloader: `OpenCore 0.8.5` [Official release](https://github.com/acidanthera/OpenCorePkg/releases).
     - Support macOS 10.15 ~ latest macOS release
     - As theme for `OpenCanopy`, a cleaner version with custom graphics has been provided by [**@R-Teer**](https://github.com/R-Teer)
     - See more info in [Wiki section](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Converting-from-Clover-to-OpenCore) about migration from Clover.
@@ -865,7 +865,7 @@ log show --predicate 'process == "kernel"' --style syslog --source --debug --las
 | Item | Version | Remark |
 | :--- | :--- | :--- |
 | MacOS | 13 | |
-| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.8.4| Default Bootloader |
+| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.8.5| Default Bootloader |
 | [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.6.2 | Kext/process/framework/library patcher |
 | [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.6.1 | Handle Graphics card |
 | [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.7.4 | Handle/fix onboard audio |
@@ -881,7 +881,7 @@ log show --predicate 'process == "kernel"' --style syslog --source --debug --las
 | [RestrictEvents](https://github.com/acidanthera/RestrictEvents/releases) | 1.0.8 | Block unwanted processes |
 | [VoodooI2C](https://github.com/alexandred/VoodooI2C/releases) | 2.7 | Handle I2C device |
 | [VoodooI2CHID](https://github.com/alexandred/VoodooI2C/releases) | 2.7 | Touchpad I2C satellite |
-| [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases) | 2.2.9 | Enable keyboard, alternative trackpad driver |
+| [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases) | 2.3.1 | Enable keyboard, alternative trackpad driver |
 | [VirtualSMC + plugins](https://github.com/acidanthera/VirtualSMC/releases) | 1.3.0 | SMC chip emulation |
 | [USBInjectAll](https://github.com/daliansky/OS-X-USB-Inject-All/releases) | 0.7.6 | Inject USB ports |
 | [VoltageShift](https://github.com/sicreative/VoltageShift) | 1.25 | Undervoltage tool |

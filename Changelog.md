@@ -2,6 +2,26 @@
 
 English
 
+- **10-05-2022**
+
+    Update to **macOS Ventura beta (22A5365d)**
+
+    **Update**
+    - Update `OpenCore` v. 0.8.5
+    - Update [kext] `VoodooPS2Controller` v. 2.3.1
+    - Update [kext] stripped `AirportItlwm_Big_Sur` v. 2.2.0 beta (commit ee56708)
+    - Update [kext] stripped `AirportItlwm_Catalina` v. 2.2.0 beta (commit ee56708)
+    - Update [kext] stripped `AirportItlwm_Monterey` v. 2.2.0 beta (commit ee56708)
+    - Update [kext] stripped `AirportItlwm_Ventura` v. 2.2.0 beta (commit ee56708)
+
+    **OpenCore**
+    - No change needed for `config.plist` to support `OpenCore` v. 0.8.5
+    - Reduced warning messages number for Intel(R) UHD Graphics 620 in system log during boot phase: they are correct/normal, however eliminating those warnings reduces log-file size thus reducing slightly boot loading time.
+
+- **09-22-2022**
+
+    Update to **macOS Ventura beta (22A5352e)**
+
 - **09-11-2022**
 
     Update to **macOS Ventura beta (22A5342f)**
