@@ -16,7 +16,7 @@ English
 
     **OpenCore**
     - No change needed for `config.plist` to support `OpenCore` v. 0.8.5
-    - Reduced warning messages number for Intel(R) UHD Graphics 620 in system log during boot phase: they are correct/normal, however eliminating those warnings reduces log-file size thus reducing slightly boot loading time.
+    - Reduced warning messages number for `Intel(R) UHD Graphics 620` in system log during boot phase: they are correct/normal, however eliminating those warnings reduces log-file size thus reducing slightly boot loading time.
 
 - **09-22-2022**
 
