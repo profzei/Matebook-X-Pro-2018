@@ -2,6 +2,15 @@
 
 English
 
+- **10-13-2022**
+
+    Update to **macOS Ventura beta (22A5373b)**
+
+    **Update**
+    - Update `SSDT-DGPU4.aml`: added more checks since discrete Graphics card NVIDIA GeForce MX150 could be totally disabled at PCI level
+    - Update `SSDT-INIT-AR2.aml`: added more checks since discrete Graphics card NVIDIA GeForce MX150 could be totally disabled at PCI level
+    - Update `SSDT-PSWK2.aml`: added more checks since discrete Graphics card NVIDIA GeForce MX150 could be totally disabled at PCI level
+
 - **10-05-2022**
 
     Update to **macOS Ventura beta (22A5365d)**

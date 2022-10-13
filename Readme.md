@@ -1,6 +1,6 @@
 # macOS  on Huawei Matebook X Pro 2018
 <p align="center">
-<img src="Wiki/Images/matebook-x-pro-monterey.png" alt="Huawei macOS Ventura" />
+<img src="Wiki/Images/matebook-x-pro-ventura.png" alt="Huawei macOS Ventura" />
 </p>
 <p align="center">
 <a href="https://consumer.huawei.com/it/support/laptops/matebook-x-pro/" target="_blank"><img src="https://img.shields.io/badge/Model-MACH_W29-orange.svg" /></a>
@@ -29,7 +29,7 @@
 
 |    macOS    |   |   Status   |
 | :--- | :--- | :--- |
-|   <a href="https://developer.apple.com/documentation/macos-release-notes/" target="_blank"><img src="https://img.shields.io/badge/macOS-Ventura-orange.svg" /></a>    |   `Stable` 13 beta (22A5365d)                 |   `Currently maintained`   |
+|   <a href="https://developer.apple.com/documentation/macos-release-notes/" target="_blank"><img src="https://img.shields.io/badge/macOS-Ventura-orange.svg" /></a>    |   `Stable` 13 beta (22A5373b)                 |   `Currently maintained`   |
 |   <a href="https://developer.apple.com/documentation/macos-release-notes/" target="_blank"><img src="https://img.shields.io/badge/macOS-Monterey-brightgreen.svg" /></a>   |   `Stable` 12.0.1 (21A559)  »  12.5.1 (21G83) |   `Compatible`             |
 |   <a href="https://developer.apple.com/documentation/macos-release-notes/" target="_blank"><img src="https://img.shields.io/badge/macOS-Big_Sur-brightgreen.svg" /></a>    |   `Stable` 11.0.1 (20B29)  »  11.6.8 (20G730) |   `Compatible`             |
 |   <a href="https://developer.apple.com/documentation/macos-release-notes/" target="_blank"><img src="https://img.shields.io/badge/macOS-Catalina-brightgreen.svg" /></a>   |   `Stable` 10.15 (19A583)  »  10.15.7 (19H15) |   `Compatible`             |
@@ -81,7 +81,7 @@ Compare with [these](https://browser.geekbench.com/v5/cpu/search?utf8=✓&q=MacB
 
 ## Changelog
 
-#### 2022 - October - 05
+#### 2022 - October - 13
 See [**Current status »**](Changelog.md)
 
 <p align="center">
