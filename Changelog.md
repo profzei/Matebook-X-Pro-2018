@@ -2,6 +2,10 @@
 
 English
 
+- **10-21-2022**
+
+    Update to **macOS Ventura RC2 (22A380)**
+
 - **10-19-2022**
 
     Update to **macOS Ventura RC (22A379)**: Apple announced the official release date of Ventura - October 24th. No issues for my daily workflow.
