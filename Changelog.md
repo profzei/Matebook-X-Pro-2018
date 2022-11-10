@@ -2,6 +2,13 @@
 
 English
 
+- **11-10-2022**
+
+    Update to **macOS Ventura 13.0.1 (22A400)**
+
+    **OpenCore**
+    - Fixed (annoying) flick visible on screen from phase 1 to phase 2 during cold boot
+
 - **10-21-2022**
 
     Update to **macOS Ventura RC2 (22A380)**
