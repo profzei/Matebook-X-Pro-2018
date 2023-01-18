@@ -2,6 +2,45 @@
 
 English
 
+- **01-18-2023**
+
+    **Update**
+    - Update `OpenCore` v. 0.8.8
+    - Update [kext] `AppleALC` v. 1.7.8
+    - Update [kext] `Lilu` v. 1.6.3
+    - Update [kext] `VoodooI2C` & its satellite v. 2.7.1
+    - Update [kext] `VoodooInput` (dependency for `VoodooI2C` compilation) v. 1.1.3
+    - Update [kext] `VoodooPS2Controller` v. 2.3.3
+    - Update [kext] `WhateverGreen` v. 1.6.3
+    - Update [kext] stripped `AirportItlwm_Big_Sur` v. 2.2.0 beta (commit e0f745e)
+    - Update [kext] stripped `AirportItlwm_Monterey` v. 2.2.0 beta (commit e0f745e)
+    - Update [kext] stripped `AirportItlwm_Ventura` v. 2.2.0 beta (commit e0f745e)
+    - Update [driver] `HfsPlus.efi` (commit c2a9898): fix W^X for firmware drivers for ExFAT and HFS+
+    - Update [driver] `HfsPlus.efi` (commit c2a9898): fix W^X for firmware drivers for ExFAT and HFS+
+
+    **OpenCore**
+    - Update `config.plist` to support `OpenCore` v. 0.8.8
+    - Update for not showing `EFI` partition folder in pickup boot menu since now the magic Acidanthera sequence from OpenCore (v. `0.8.8+`) files is removed (dual boot with Windows is preserved with no issues)
+
+- **12-26-2022**
+
+    Update to **macOS Ventura 13.1 (22C65)**
+
+    **Update**
+    - Update `OpenCore` v. 0.8.7
+    - Update [kext] `AppleALC` v. 1.7.7
+    - Update [kext] `BlueToolFixup` v. 2.6.4
+    - Update [kext] `HibernationFixup` v. 1.4.7
+    - Update [kext] `VoodooPS2Controller` v. 2.3.2
+    - Update [kext] `WhateverGreen` v. 1.6.2
+    - Update [kext] stripped `AirportItlwm_Big_Sur` v. 2.2.0 beta (commit acc7ff9): some little fixes added to default code
+    - Update [kext] stripped `AirportItlwm_Monterey` v. 2.2.0 beta (commit acc7ff9): some little fixes added to default code
+    - Update [kext] stripped `AirportItlwm_Ventura` v. 2.2.0 beta (commit acc7ff9): some little fixes added to default code
+    - Update [kext] stripped `IntelBluetoothFirmware` v. 2.3.0 beta (commit 693f2dc)
+
+    **OpenCore**
+    - Update `config.plist` to support `OpenCore` v. 0.8.7
+
 - **11-10-2022**
 
     Update to **macOS Ventura 13.0.1 (22A400)**

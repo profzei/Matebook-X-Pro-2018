@@ -24,12 +24,12 @@
 -----
 
 
-#### This repository is currently compatible with macOS Ventura, Monterey, Big Sur and OpenCore 0.8.5
+#### This repository is currently compatible with macOS Ventura, Monterey, Big Sur and OpenCore 0.8.8
 <div align="center">
 
 |    macOS    |   |   Status   |
 | :--- | :--- | :--- |
-|   <a href="https://developer.apple.com/documentation/macos-release-notes/" target="_blank"><img src="https://img.shields.io/badge/macOS-Ventura-orange.svg" /></a>    |   `Stable` 13 (22A380)  »  13.0.1 (22A400) |   `Currently maintained`   |
+|   <a href="https://developer.apple.com/documentation/macos-release-notes/" target="_blank"><img src="https://img.shields.io/badge/macOS-Ventura-orange.svg" /></a>    |   `Stable` 13 (22A380)  »  13.1 (22C65) |   `Currently maintained`   |
 |   <a href="https://developer.apple.com/documentation/macos-release-notes/" target="_blank"><img src="https://img.shields.io/badge/macOS-Monterey-brightgreen.svg" /></a>   |   `Stable` 12.0.1 (21A559)  »  12.5.1 (21G83) |   `Compatible`             |
 |   <a href="https://developer.apple.com/documentation/macos-release-notes/" target="_blank"><img src="https://img.shields.io/badge/macOS-Big_Sur-brightgreen.svg" /></a>    |   `Stable` 11.0.1 (20B29)  »  11.6.8 (20G730) |   `Compatible`             |
 |   <a href="https://developer.apple.com/documentation/macos-release-notes/" target="_blank"><img src="https://img.shields.io/badge/macOS-Catalina-brightgreen.svg" /></a>   |   `Stable` 10.15 (19A583)  »  10.15.7 (19H15) |   `Compatible`             |
@@ -81,7 +81,7 @@ Compare with [these](https://browser.geekbench.com/v5/cpu/search?utf8=✓&q=MacB
 
 ## Changelog
 
-#### 2022 - November - 10
+#### 2023 - January - 18
 See [**Current status »**](Changelog.md)
 
 <p align="center">
@@ -381,7 +381,7 @@ For reference, see [Thunderbolt 3 Fix](https://osy.gitbook.io/hac-mini-guide/det
 
 
 ## Bootloader Firmware
-- Default bootloader: `OpenCore 0.8.5` [Official release](https://github.com/acidanthera/OpenCorePkg/releases).
+- Default bootloader: `OpenCore 0.8.8` [Official release](https://github.com/acidanthera/OpenCorePkg/releases).
     - Support macOS 10.15 ~ latest macOS release
     - As theme for `OpenCanopy`, a cleaner version with custom graphics has been provided by [**@R-Teer**](https://github.com/R-Teer)
     - See more info in [Wiki section](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Converting-from-Clover-to-OpenCore) about migration from Clover.
@@ -864,24 +864,24 @@ log show --predicate 'process == "kernel"' --style syslog --source --debug --las
 
 | Item | Version | Remark |
 | :--- | :--- | :--- |
-| MacOS | 13.0.1 | |
-| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.8.5| Default Bootloader |
-| [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.6.2 | Kext/process/framework/library patcher |
-| [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.6.1 | Handle Graphics card |
-| [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.7.4 | Handle/fix onboard audio |
+| MacOS | 13.1 | |
+| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.8.8| Default Bootloader |
+| [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.6.3 | Kext/process/framework/library patcher |
+| [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.6.3 | Handle Graphics card |
+| [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.7.8 | Handle/fix onboard audio |
 | [CodecCommander](https://github.com/Sniki/EAPD-Codec-Commander/releases) | 2.7.2 | Fix headphone audio switch |
-| [CPUFriend](https://github.com/acidanthera/CPUFriend/releases) | 1.2.4 | Power management |
-| [HibernationFixup](https://github.com/acidanthera/HibernationFixup/releases) | 1.4.6 | Handle hibernate status |
+| [CPUFriend](https://github.com/acidanthera/CPUFriend/releases) | 1.2.6 | Power management |
+| [HibernationFixup](https://github.com/acidanthera/HibernationFixup/releases) | 1.4.7 | Handle hibernate status |
 | [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases) | 2.2.0 stable | Handle Bluetooth |
 | [AirportItlwm](https://github.com/OpenIntelWireless/itlwm/releases) | 2.2.0 alpha | Handle native Wi-Fi card |
-| [BlueToolFixup](https://github.com/acidanthera/BrcmPatchRAM/releases) | 2.6.3 | Fix Bluetooth for macOS 12+ |
+| [BlueToolFixup](https://github.com/acidanthera/BrcmPatchRAM/releases) | 2.6.4 | Fix Bluetooth for macOS 12+ |
 | [NullEthernet](https://bitbucket.org/RehabMan/OS-X-Null-Ethernet/downloads/) | 1.0.6 | Fake Ethernet card |
 | [NoTouchID](https://github.com/al3xtjames/NoTouchID/releases) | 1.0.4 | Disable TouchID |
-| [NVMeFix](https://github.com/acidanthera/NVMeFix/releases) | 1.0.9 | Fix for NVMe SSDs |
-| [RestrictEvents](https://github.com/acidanthera/RestrictEvents/releases) | 1.0.8 | Block unwanted processes |
-| [VoodooI2C](https://github.com/alexandred/VoodooI2C/releases) | 2.7 | Handle I2C device |
-| [VoodooI2CHID](https://github.com/alexandred/VoodooI2C/releases) | 2.7 | Touchpad I2C satellite |
-| [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases) | 2.3.1 | Enable keyboard, alternative trackpad driver |
+| [NVMeFix](https://github.com/acidanthera/NVMeFix/releases) | 1.1.0 | Fix for NVMe SSDs |
+| [RestrictEvents](https://github.com/acidanthera/RestrictEvents/releases) | 1.0.9 | Block unwanted processes |
+| [VoodooI2C](https://github.com/alexandred/VoodooI2C/releases) | 2.7.1 | Handle I2C device |
+| [VoodooI2CHID](https://github.com/alexandred/VoodooI2C/releases) | 2.7.1 | Touchpad I2C satellite |
+| [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases) | 2.3.3 | Enable keyboard, alternative trackpad driver |
 | [VirtualSMC + plugins](https://github.com/acidanthera/VirtualSMC/releases) | 1.3.0 | SMC chip emulation |
 | [USBInjectAll](https://github.com/daliansky/OS-X-USB-Inject-All/releases) | 0.7.6 | Inject USB ports |
 | [VoltageShift](https://github.com/sicreative/VoltageShift) | 1.25 | Undervoltage tool |
