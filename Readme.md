@@ -29,11 +29,11 @@
 
 |    macOS    |   |   Status   |
 | :--- | :--- | :--- |
-|   <a href="https://developer.apple.com/documentation/macos-release-notes/" target="_blank"><img src="https://img.shields.io/badge/macOS-Ventura-orange.svg" /></a>    |   `Stable` 13 (22A380)  »  13.1 (22C65) |   `Currently maintained`   |
-|   <a href="https://developer.apple.com/documentation/macos-release-notes/" target="_blank"><img src="https://img.shields.io/badge/macOS-Monterey-brightgreen.svg" /></a>   |   `Stable` 12.0.1 (21A559)  »  12.5.1 (21G83) |   `Compatible`             |
-|   <a href="https://developer.apple.com/documentation/macos-release-notes/" target="_blank"><img src="https://img.shields.io/badge/macOS-Big_Sur-brightgreen.svg" /></a>    |   `Stable` 11.0.1 (20B29)  »  11.6.8 (20G730) |   `Compatible`             |
-|   <a href="https://developer.apple.com/documentation/macos-release-notes/" target="_blank"><img src="https://img.shields.io/badge/macOS-Catalina-brightgreen.svg" /></a>   |   `Stable` 10.15 (19A583)  »  10.15.7 (19H15) |   `Compatible`             |
-|   <a href="https://developer.apple.com/documentation/macos-release-notes/" target="_blank"><img src="https://img.shields.io/badge/macOS-Mojave-red.svg" /></a>     |   `Stable` 10.14 (18A389)  »  10.14.6 (18G87) |   `No longer maintained`   |
+|   <img src="Wiki/Images/assets_ventura.png" width=25 hspace=2 /> <a href="https://developer.apple.com/documentation/macos-release-notes/" target="_blank"><img src="https://img.shields.io/badge/macOS-Ventura-orange.svg" /></a>    |   `Stable` 13 (22A380)  »  13.1 (22C65) |   `Currently maintained`   |
+|   <img src="Wiki/Images/assets_monterey.png" width=25 hspace=2 /> <a href="https://developer.apple.com/documentation/macos-release-notes/" target="_blank"><img src="https://img.shields.io/badge/macOS-Monterey-brightgreen.svg" /></a>   |   `Stable` 12.0.1 (21A559)  »  12.5.1 (21G83) |   `Compatible`   |
+|   <img src="Wiki/Images/assets_big_sur.png" width=25 hspace=2 /> <a href="https://developer.apple.com/documentation/macos-release-notes/" target="_blank"><img src="https://img.shields.io/badge/macOS-Big_Sur-brightgreen.svg" /></a>    |   `Stable` 11.0.1 (20B29)  »  11.6.8 (20G730) |   `Compatible`   |
+|   <img src="Wiki/Images/assets_catalina.png" width=25 hspace=2 /> <a href="https://developer.apple.com/documentation/macos-release-notes/" target="_blank"><img src="https://img.shields.io/badge/macOS-Catalina-brightgreen.svg" /></a>   |   `Stable` 10.15 (19A583)  »  10.15.7 (19H15) |   `Compatible`   |
+|   <img src="Wiki/Images/assets_mojave.png" width=25 hspace=2 /> <a href="https://developer.apple.com/documentation/macos-release-notes/" target="_blank"><img src="https://img.shields.io/badge/macOS-Mojave-red.svg" /></a>     |   `Stable` 10.14 (18A389)  »  10.14.6 (18G87) |   `No longer maintained`   |
 
 </div>
 
