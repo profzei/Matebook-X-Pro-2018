@@ -2,6 +2,10 @@
 
 English
 
+- **01-25-2023**
+
+    Update to **macOS Ventura 13.2 (22D49)**
+
 - **01-18-2023**
 
     **Update**
