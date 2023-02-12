@@ -2,6 +2,13 @@
 
 English
 
+- **02-11-2023**
+
+    **OpenCore**
+    - Update [kext] stripped `AirportItlwm_Big_Sur` v. 2.2.0 beta (commit ddd2768)
+    - Update [kext] stripped `AirportItlwm_Monterey` v. 2.2.0 beta (commit ddd2768)
+    - Update [kext] stripped `AirportItlwm_Ventura` v. 2.2.0 beta (commit ddd2768)    
+
 - **01-25-2023**
 
     Update to **macOS Ventura 13.2 (22D49)**
@@ -20,7 +27,7 @@ English
     - Update [kext] stripped `AirportItlwm_Monterey` v. 2.2.0 beta (commit e0f745e)
     - Update [kext] stripped `AirportItlwm_Ventura` v. 2.2.0 beta (commit e0f745e)
     - Update [driver] `HfsPlus.efi` (commit c2a9898): fix W^X for firmware drivers for ExFAT and HFS+
-    - Update [driver] `HfsPlus.efi` (commit c2a9898): fix W^X for firmware drivers for ExFAT and HFS+
+    - Update [driver] `ExFatDxe.efi` (commit c2a9898): fix W^X for firmware drivers for ExFAT and HFS+
 
     **OpenCore**
     - Update `config.plist` to support `OpenCore` v. 0.8.8

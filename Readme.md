@@ -81,7 +81,7 @@ Compare with [these](https://browser.geekbench.com/v5/cpu/search?utf8=✓&q=MacB
 
 ## Changelog
 
-#### 2023 - January - 25
+#### 2023 - February - 12
 See [**Current status »**](Changelog.md)
 
 <p align="center">
