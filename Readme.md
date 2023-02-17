@@ -29,7 +29,7 @@
 
 |    macOS    |   |   Status   |
 | :--- | :--- | :--- |
-|   <img src="Wiki/Images/assets_ventura.png" width=25 hspace=2 /> <a href="https://developer.apple.com/documentation/macos-release-notes/" target="_blank"><img src="https://img.shields.io/badge/macOS-Ventura-orange.svg" /></a>    |   `Stable` 13 (22A380)  »  13.2 (22D49) |   `Currently maintained`   |
+|   <img src="Wiki/Images/assets_ventura.png" width=25 hspace=2 /> <a href="https://developer.apple.com/documentation/macos-release-notes/" target="_blank"><img src="https://img.shields.io/badge/macOS-Ventura-orange.svg" /></a>    |   `Stable` 13 (22A380)  »  13.2.1 (22D69) |   `Currently maintained`   |
 |   <img src="Wiki/Images/assets_monterey.png" width=25 hspace=2 /> <a href="https://developer.apple.com/documentation/macos-release-notes/" target="_blank"><img src="https://img.shields.io/badge/macOS-Monterey-brightgreen.svg" /></a>   |   `Stable` 12.0.1 (21A559)  »  12.5.1 (21G83) |   `Compatible`   |
 |   <img src="Wiki/Images/assets_big_sur.png" width=25 hspace=2 /> <a href="https://developer.apple.com/documentation/macos-release-notes/" target="_blank"><img src="https://img.shields.io/badge/macOS-Big_Sur-brightgreen.svg" /></a>    |   `Stable` 11.0.1 (20B29)  »  11.6.8 (20G730) |   `Compatible`   |
 |   <img src="Wiki/Images/assets_catalina.png" width=25 hspace=2 /> <a href="https://developer.apple.com/documentation/macos-release-notes/" target="_blank"><img src="https://img.shields.io/badge/macOS-Catalina-brightgreen.svg" /></a>   |   `Stable` 10.15 (19A583)  »  10.15.7 (19H15) |   `Compatible`   |
@@ -81,7 +81,7 @@ Compare with [these](https://browser.geekbench.com/v5/cpu/search?utf8=✓&q=MacB
 
 ## Changelog
 
-#### 2023 - February - 12
+#### 2023 - February - 17
 See [**Current status »**](Changelog.md)
 
 <p align="center">
@@ -864,7 +864,7 @@ log show --predicate 'process == "kernel"' --style syslog --source --debug --las
 
 | Item | Version | Remark |
 | :--- | :--- | :--- |
-| MacOS | 13.2 | |
+| MacOS | 13.2.1 | |
 | [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.8.8| Default Bootloader |
 | [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.6.3 | Kext/process/framework/library patcher |
 | [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.6.3 | Handle Graphics card |
