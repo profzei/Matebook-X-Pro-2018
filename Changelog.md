@@ -2,13 +2,25 @@
 
 English
 
+- **02-19-2023**
+
+    **Update**
+    - Update `OpenCore` v. 0.8.9
+    - Update [kext] `AppleALC` v. 1.7.9
+    - Update [kext] `HibernationFixup` v. 1.4.8
+    - Update [kext] `VoodooI2C` & its satellite `VoodooI2CHID` v. 2.8
+    - Update [kext] `WhateverGreen` v. 1.6.4
+
+    **OpenCore**
+    - Update `config.plist` to support `OpenCore` v. 0.8.9
+
 - **02-17-2023**
 
-    Update to **macOS Ventura 13.2.1 (22D69)**
+    Update to **macOS Ventura 13.2.1 (22D68)**
 
 - **02-11-2023**
 
-    **OpenCore**
+    **Update**
     - Update [kext] stripped `AirportItlwm_Big_Sur` v. 2.2.0 beta (commit ddd2768)
     - Update [kext] stripped `AirportItlwm_Monterey` v. 2.2.0 beta (commit ddd2768)
     - Update [kext] stripped `AirportItlwm_Ventura` v. 2.2.0 beta (commit ddd2768)    
