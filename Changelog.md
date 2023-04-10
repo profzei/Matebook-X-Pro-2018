@@ -2,6 +2,32 @@
 
 English
 
+- **04-10-2023**
+
+    **Very important announcement**: without the need to mess with hidden BIOS options nor to inject modified firmware into the appropriate chipset, I was able to both (seemingly) stably **load the native macOS drivers for the Thunderbolt controller** and get **the Thunderbolt hotplug working without the need to plug in a device at boot!**
+
+    What has been achieved so far:
+    - [x] Loading native macOS drivers for Thunderbolt Controller
+    - [x] Booting with Thunderbolt device connected
+    - [x] Thunderbolt Hotplug with Cold Boot
+    - [x] Thunderbolt Hotplug with Warm Boot
+    - [x] **Thunderbolt Hotplug with no Device Connected at Boot**
+    - [x] Sequence of multiple Thunderbolt Hotplug/unplug during same working session
+    - [x] Sleep with Thunderbolt Device Connected
+    - [x] Wake with Thunderbolt Device Connected
+    - [x] Shutdown with Thunderbolt Device Connected
+
+    What still needs to be done:
+    - [ ] Thunderbolt Auto Reconnect after Sleep (after wake OCW disk is still attached but it is not user accessible...)
+    - [ ] quantifying battery drain
+    - [ ] updating Thunderbolt notes on `Readme` file
+
+    Since everything else is working wonderfully, perhaps this could be the last substantial upgrade to the configuration!
+
+- **03-28-2023**
+
+    Update to **macOS Ventura 13.3 (22E252)**
+
 - **02-19-2023**
 
     **Update**
