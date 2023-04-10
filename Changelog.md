@@ -18,7 +18,7 @@ English
     - [x] Shutdown with Thunderbolt Device Connected
 
     What still needs to be done:
-    - [ ] Thunderbolt Auto Reconnect after Sleep (after wake OCW disk is still attached but it is not user accessible...)
+    - [ ] Thunderbolt Auto Reconnect after Sleep (after wake, my external `OWC` disk is still attached/visible, but it is not user accessible...)
     - [ ] quantifying battery drain
     - [ ] updating Thunderbolt notes on `Readme` file
 
