@@ -15,6 +15,7 @@
 ## ⚠️⚠️ Advertisement ⚠️⚠️
 
 > **Announcement - April 2023**
+
 My config supports native macOS loading drivers for our Thunderbolt 3 controller: **the Thunderbolt hotplug is working without the need to plug in a device at boot!**
 
 What has been achieved so far:
@@ -32,7 +33,10 @@ What still needs to be done: see [Changelog »](Changelog.md)
 
 I published [**a YouTube video**](https://www.youtube.com/watch?v=vpgAqfrBI44) for documenting this success!
 
-{% include youtube.html id="vpgAqfrBI44" %}
+
+<p align="center">
+[<img src="Wiki/Images/Thunderbolt_Hotplug.png" width="70%">](https://www.youtube.com/watch?v=vpgAqfrBI44 "Thunderbolt 3 Hotplug")
+</p>
 
 
 > **Warning**
