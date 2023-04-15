@@ -14,6 +14,26 @@
 
 ## ⚠️⚠️ Advertisement ⚠️⚠️
 
+> **Announcement - April 2023**
+My config supports native macOS loading drivers for our Thunderbolt 3 controller: **the Thunderbolt hotplug is working without the need to plug in a device at boot!**
+
+What has been achieved so far:
+- [x] Loading native macOS drivers for Thunderbolt Controller
+- [x] Booting with Thunderbolt device connected
+- [x] Thunderbolt Hotplug with Cold Boot
+- [x] Thunderbolt Hotplug with Warm Boot
+- [x] **Thunderbolt Hotplug with no Device Connected at Boot**
+- [x] Sequence of multiple Thunderbolt Hotplug/unplug during same working session
+- [x] Sleep with Thunderbolt Device Connected
+- [x] Wake with Thunderbolt Device Connected
+- [x] Shutdown with Thunderbolt Device Connected
+
+What still needs to be done: see [Changelog »](Changelog.md)
+
+I published [**a YouTube video**](https://www.youtube.com/watch?v=vpgAqfrBI44) for documenting this success!
+
+{% include youtube.html id="JLMbpiywVxQ" %}
+
 
 > **Warning**
 - I'm sorry but I decided to remove all my releases: in this way I wanted to make it easier for people who have already copied what is on this site stating they made 'significant and unquestionable original changes' (instead of collaborating by suggesting pull requests)!
