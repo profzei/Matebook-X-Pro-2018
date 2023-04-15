@@ -33,7 +33,7 @@ What still needs to be done: see [Changelog »](Changelog.md)
 
 I published [**a YouTube video**](https://www.youtube.com/watch?v=vpgAqfrBI44) for documenting this success!
 
-<iframe width="70%" src="https://www.youtube.com/embed/vpgAqfrBI44" title="Hackintosh - Thunderbolt Hotplug on laptop: success!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+[![Thunderbolt_Hotplug](Wiki/Images/Thunderbolt_Hotplug.png)](https://www.youtube.com/watch?v=vpgAqfrBI44)
 
 
 > **Warning**
