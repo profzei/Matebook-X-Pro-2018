@@ -32,7 +32,7 @@ What still needs to be done: see [Changelog »](Changelog.md)
 
 I published [**a YouTube video**](https://www.youtube.com/watch?v=vpgAqfrBI44) for documenting this success!
 
-{% include youtube.html id="JLMbpiywVxQ" %}
+{% include youtube.html id="vpgAqfrBI44" %}
 
 
 > **Warning**
