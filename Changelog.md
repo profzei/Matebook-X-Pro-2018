@@ -2,6 +2,18 @@
 
 English
 
+- **04-17-2024**
+
+	**Repository back online**
+	
+	Implemented some minor changes for Thunderbolt interface support (I will list them in the coming days)
+	
+	Update to **macOS Sonoma 14.3.1**: no issues and the user experience is pleasant
+	
+    **Update**
+    - Update `OpenCore` v. 0.9.9
+	- Update all related kexts to their own latest release
+
 - **04-10-2023**
 
     **Very important announcement**: without the need to mess with hidden BIOS options nor to inject modified firmware into the appropriate chipset, I was able to both (seemingly) stably **load the native macOS drivers for the Thunderbolt controller** and get **the Thunderbolt hotplug working without the need to plug in a device at boot!**
