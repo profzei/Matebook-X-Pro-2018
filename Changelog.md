@@ -6,13 +6,24 @@ English
 
 	**Repository back online**
 	
-	Implemented some minor changes for Thunderbolt interface support (I will list them in the coming days)
+	Implemented some minor changes for **Thunderbolt interface support** (I will list them in the coming days)
 	
-	Update to **macOS Sonoma 14.3.1**: no issues and the user experience is pleasant
+	Update to **macOS Sonoma 14.3.1 (23D60)**: no issues and the user experience is pleasant
 	
     **Update**
     - Update `OpenCore` v. 0.9.9
-	- Update all related kexts to their own latest release
+	- Update [kext] `AppleALC` v. 1.8.9
+	- Update [kext] `CPUFriend` v. 1.2.7
+	- Update [kext] `BlueToolFixup` v. 2.6.8
+	- Update [kext] `HibernationFixup` v. 1.4.9
+	- Update [kext] `Lilu` v. 1.6.7
+	- Update [kext] `NVMeFix` v. 1.1.1
+    - Update [kext] `RestrictEvents` v. 1.1.3
+	- Update [kext] `ThermalSolution` v. 1.1
+    - Update [kext] `VirtualSMC` + plugins v. 1.3.2
+	- Update [kext] `WhateverGreen` v. 1.6.6
+    - Update [kext] stripped `AirportItlwm_Sonoma` v. 2.3.0 alpha (commit e886ebb)
+    - Update [kext] stripped `IntelBluetoothFirmware` v. 2.4.0 stable (commit b9127f5): added some changes to default code for improving LE devices support
 
 - **04-10-2023**
 

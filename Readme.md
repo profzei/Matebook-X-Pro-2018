@@ -900,7 +900,7 @@ log show --predicate 'process == "kernel"' --style syslog --source --debug --las
 | [HibernationFixup](https://github.com/acidanthera/HibernationFixup/releases) | 1.4.9 | Handle hibernate status |
 | [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases) | 2.4.0 | Handle Bluetooth |
 | [AirportItlwm](https://github.com/OpenIntelWireless/itlwm/releases) | 2.3.0 alpha | Handle native Wi-Fi card |
-| [BlueToolFixup](https://github.com/acidanthera/BrcmPatchRAM/releases) | 2.6.4 | Fix Bluetooth for macOS 12+ |
+| [BlueToolFixup](https://github.com/acidanthera/BrcmPatchRAM/releases) | 2.6.8 | Fix Bluetooth for macOS 12+ |
 | [NullEthernet](https://bitbucket.org/RehabMan/OS-X-Null-Ethernet/downloads/) | 1.0.6 | Fake Ethernet card |
 | [NoTouchID](https://github.com/al3xtjames/NoTouchID/releases) | 1.0.4 | Disable TouchID |
 | [NVMeFix](https://github.com/acidanthera/NVMeFix/releases) | 1.1.1 | Fix for NVMe SSDs |
@@ -1038,3 +1038,13 @@ And to everyone else who supports and uses my repo.
 
 - [Gnodipac886's MatebookXPro-hackintosh repo](https://github.com/gnodipac886/MatebookXPro-hackintosh): this project was *initially* based on the hard work done by Gnodipac886 guy, but *now* it can be considered as a different project due to **many and original very significant personal improvements in ALL the sections**.
 </details>
+
+## License
+This repo is licensed under the [APACHE-2.0 License](https://github.com/profzei/Matebook-X-Pro-2018/blob/master/LICENSE)
+
+OpenCore is licensed under the [BSD-3-Clause License](https://github.com/acidanthera/OpenCorePkg/blob/master/LICENSE.txt)
+
+<br>
+<p align="center">
+	<a href="https://github.com/profzei/Matebook-X-Pro-2018/blob/master/LICENSE"><img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=APACHE-2.0&logoColor=d9e0ee&colorA=363a4f&colorB=b7bdf8"/></a>
+</p>
