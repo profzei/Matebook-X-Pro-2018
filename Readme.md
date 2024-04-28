@@ -1,6 +1,6 @@
 # macOS  on Huawei Matebook X Pro 2018
 <p align="center">
-<img src="Wiki/Images/matebook-x-pro-ventura.png" alt="Huawei macOS Ventura" />
+<img src="Wiki/Images/matebook-x-pro-sonoma.png" alt="Huawei macOS Sonoma" />
 </p>
 <p align="center">
 <a href="https://consumer.huawei.com/it/support/laptops/matebook-x-pro/" target="_blank"><img src="https://img.shields.io/badge/Model-MACH_W29-orange.svg" /></a>
@@ -147,7 +147,7 @@ This repo contains the files needed for getting macOS working on a **Huawei Mate
 ### Summary
 
 - The **compatibility** is **very good** for the most part, most of the stuff works like it would on a real MacBook, including camera, audio, touchpad, iCloud services.
-- The **experience** is **pleasant**, as the laptop is smooth and responsive under macOS Big Sur/Catalina.
+- The **experience** is **pleasant**, as the laptop is smooth and responsive under macOS Ventura.
 - **Battery life** is **quite great** (from personal experience it **lasts from 8 to 10 hours** for light works depending on its age with a behaviour very similar to Windows 10 as shown in the macOS menu bar screenshots below).
 - The **Intel WiFi** card is soldered onto the motherboard, which means it can't be replaced with a Broadcom one, but the Intel card is now **functional** (it is fine for most use cases).
     * With the latest `AirportItlwm.kext` even **Handoff** and **Continuity** features are working, but with a very limited support for AirDrop and Apple Watch unlocking (see [Changelog for OpenIntelWireless](https://github.com/OpenIntelWireless/itlwm/releases)).
