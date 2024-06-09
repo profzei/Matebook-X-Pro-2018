@@ -541,6 +541,12 @@ sudo pmset -a standbydelayhigh 3600
 ```
 - reboot your laptop
 
+The following image is a screenshot about my current settings:
+
+<p align="center">
+<img src="Wiki/Images/Sleep_settings.png" width="100%" alt="macOS pmset current settings" />
+</p>
+
 **Note**: Keep in mind that, with the above settings, after 3600 seconds the laptop wake up itself only partially (display remains off) for switching from standby sleep to hibernation sleep: it is standard behaviour since all Macs use **maintenance wake** (dark wake - display remains off) to switch laptop from regular sleep into hibernation. It is not an issue! [Reference](https://github.com/acidanthera/bugtracker/issues/1810#issuecomment-939727817) 
 
 <p align="center">
