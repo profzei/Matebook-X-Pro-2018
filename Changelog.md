@@ -2,6 +2,13 @@
 
 English
 
+- **06-09-2024**
+
+	Update to **macOS Sonoma 14.5 (23F79)**: during the update process, change in `config.plist` of your `EFI/OC` boot folder the entry `Misc -> Security -> SecureBootModel` from `Default` to `Disabled`; this fixes a known issue where macOS 14.4+ upgrade (or new install) will start to install, but will constantly reboot after the first (install-driven) reboot.
+	
+    **Update**
+    - Update `OpenCore` v. 1.0.0
+
 - **04-17-2024**
 
 	**Repository back online**

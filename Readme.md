@@ -5,7 +5,7 @@
 <p align="center">
 <a href="https://consumer.huawei.com/it/support/laptops/matebook-x-pro/" target="_blank"><img src="https://img.shields.io/badge/Model-MACH_W29-orange.svg" /></a>
 <a href="https://consumer.huawei.com/it/support/laptops/matebook-x-pro/" target="_blank"><img src="https://img.shields.io/badge/BIOS-1.37-red.svg" /></a>
-<a href="LICENSE" target="_blank"><img src="https://img.shields.io/badge/License-MIT-purple.svg" /></a>
+<a href="LICENSE" target="_blank"><img src="https://img.shields.io/badge/License-APACHE-2.0-purple.svg" /></a>
 <a href="https://github.com/profzei/Matebook-X-Pro-2018/releases" target="_blank"><img src="https://img.shields.io/badge/Download-Releases-blue.svg" /></a>
 <a href="https://github.com/profzei/Matebook-X-Pro-2018/wiki" target="_blank"><img src="https://img.shields.io/badge/Support-Wiki-green.svg" /></a>
 </p>
@@ -49,7 +49,7 @@ I published [**a YouTube video**](https://www.youtube.com/watch?v=vpgAqfrBI44) f
 -----
 
 
-#### This repository is currently compatible with macOS Sonoma, Ventura, Monterey, Big Sur and OpenCore 0.9.9
+#### This repository is currently compatible with macOS Sonoma, Ventura, Monterey, Big Sur and OpenCore 1.0.0
 <div align="center">
 
 |    macOS    |   |   Status   |
@@ -107,7 +107,7 @@ Compare with [these](https://browser.geekbench.com/v5/cpu/search?utf8=✓&q=MacB
 
 ## Changelog
 
-#### 2024 - April - 17
+#### 2024 - June - 09
 See [**Current status »**](Changelog.md)
 
 <p align="center">
@@ -407,7 +407,7 @@ For reference, see [Thunderbolt 3 Fix](https://osy.gitbook.io/hac-mini-guide/det
 
 
 ## Bootloader Firmware
-- Default bootloader: `OpenCore 0.9.9` [Official release](https://github.com/acidanthera/OpenCorePkg/releases).
+- Default bootloader: `OpenCore 1.0.0` [Official release](https://github.com/acidanthera/OpenCorePkg/releases).
     - Support macOS 10.15 ~ latest macOS release
     - As theme for `OpenCanopy`, a cleaner version with custom graphics has been provided by [**@R-Teer**](https://github.com/R-Teer)
     - See more info in [Wiki section](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Converting-from-Clover-to-OpenCore) about migration from Clover.
@@ -890,8 +890,8 @@ log show --predicate 'process == "kernel"' --style syslog --source --debug --las
 
 | Item | Version | Remark |
 | :--- | :--- | :--- |
-| MacOS | 14.3.1 | |
-| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.9.9| Default Bootloader |
+| MacOS | 14.5 | |
+| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 1.0.0| Default Bootloader |
 | [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.6.7 | Kext/process/framework/library patcher |
 | [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.6.6 | Handle Graphics card |
 | [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.8.9 | Handle/fix onboard audio |
