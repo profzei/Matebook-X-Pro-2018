@@ -12,7 +12,7 @@ English
 > - Since **macOS Sequoia** dropped support for `MacBookAir8,2` (MacBook Air 2018), I **switched back** to `MacBookPro15,2`.
 
 	
-	**Update**
+**Update**
 	- Update [kext] `BlueToolFixup` v. 2.6.9 beta
 	- Update [kext] `IntelBluetoothFirmware` v. 2.5.0 beta (for macOS Sequoia support)
 	- Update [kext] `VoodooI2C` & its satellite `VoodooI2CHID` v. 2.9 beta: added confidence bit for palm rejection [Reference](https://github.com/VoodooI2C/VoodooI2C/pull/547)
@@ -33,9 +33,9 @@ English
 
 	Update to **macOS Sonoma 14.6.1 (23G93)**
 	
-	> [!IMPORTANT]
-	>
-	> Change `Misc -> Security -> SecureBootModel` from `Default` to `Disabled` prior to updating to macOS 14.4+ (or new install). You can re-enable it afterwards; otherwise the update fails!
+> [!IMPORTANT]
+>
+> Change `Misc -> Security -> SecureBootModel` from `Default` to `Disabled` prior to updating to macOS 14.4+ (or new install). You can re-enable it afterwards; otherwise the update fails!
 	
     **Update**
     - Update `OpenCore` v. 1.0.1
@@ -55,9 +55,9 @@ English
 
 	Update to **macOS Sonoma 14.5 (23F79)**
 
-	> [!IMPORTANT]
-	>
-	> During the update process, change in `config.plist` of your `EFI/OC` boot folder the entry `Misc -> Security -> SecureBootModel` from `Default` to `Disabled`; this fixes a known issue where macOS 14.4+ upgrade (or new install) will start to install, but will constantly reboot after the first (install-driven) reboot.
+> [!IMPORTANT]
+>
+> During the update process, change in `config.plist` of your `EFI/OC` boot folder the entry `Misc -> Security -> SecureBootModel` from `Default` to `Disabled`; this fixes a known issue where macOS 14.4+ upgrade (or new install) will start to install, but will constantly reboot after the first (install-driven) reboot.
 	
     **Update**
     - Update `OpenCore` v. 1.0.0
