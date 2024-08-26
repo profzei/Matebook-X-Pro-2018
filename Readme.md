@@ -49,7 +49,7 @@ I published [**a YouTube video**](https://www.youtube.com/watch?v=vpgAqfrBI44) f
 -----
 
 
-#### This repository is currently compatible with macOS Sonoma, Ventura, Monterey, Big Sur and OpenCore 1.0.0
+#### This repository is currently compatible with macOS Sequoia, Sonoma, Ventura, Monterey, Big Sur and OpenCore 1.0.1
 <div align="center">
 
 |    macOS    |   |   Status   |
@@ -107,7 +107,7 @@ Compare with [these](https://browser.geekbench.com/v5/cpu/search?utf8=✓&q=MacB
 
 ## Changelog
 
-#### 2024 - June - 09
+#### 2024 - August - 25
 See [**Current status »**](Changelog.md)
 
 <p align="center">
@@ -407,7 +407,7 @@ For reference, see [Thunderbolt 3 Fix](https://osy.gitbook.io/hac-mini-guide/det
 
 
 ## Bootloader Firmware
-- Default bootloader: `OpenCore 1.0.0` [Official release](https://github.com/acidanthera/OpenCorePkg/releases).
+- Default bootloader: `OpenCore 1.0.1` [Official release](https://github.com/acidanthera/OpenCorePkg/releases).
     - Support macOS 10.15 ~ latest macOS release
     - As theme for `OpenCanopy`, a cleaner version with custom graphics has been provided by [**@R-Teer**](https://github.com/R-Teer)
     - See more info in [Wiki section](https://github.com/profzei/Matebook-X-Pro-2018/wiki/Converting-from-Clover-to-OpenCore) about migration from Clover.
@@ -896,25 +896,25 @@ log show --predicate 'process == "kernel"' --style syslog --source --debug --las
 
 | Item | Version | Remark |
 | :--- | :--- | :--- |
-| MacOS | 14.5 | |
-| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 1.0.0| Default Bootloader |
-| [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.6.7 | Kext/process/framework/library patcher |
-| [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.6.6 | Handle Graphics card |
-| [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.8.9 | Handle/fix onboard audio |
+| MacOS | 14.6.1 | |
+| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 1.0.1| Default Bootloader |
+| [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.6.8 | Kext/process/framework/library patcher |
+| [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.6.7 | Handle Graphics card |
+| [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.9.1 | Handle/fix onboard audio |
 | [CodecCommander](https://github.com/Sniki/EAPD-Codec-Commander/releases) | 2.7.2 | Fix headphone audio switch |
-| [CPUFriend](https://github.com/acidanthera/CPUFriend/releases) | 1.2.7 | Power management |
-| [HibernationFixup](https://github.com/acidanthera/HibernationFixup/releases) | 1.4.9 | Handle hibernate status |
+| [CPUFriend](https://github.com/acidanthera/CPUFriend/releases) | 1.2.8 | Power management |
+| [HibernationFixup](https://github.com/acidanthera/HibernationFixup/releases) | 1.5.1 | Handle hibernate status |
 | [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases) | 2.4.0 | Handle Bluetooth |
-| [AirportItlwm](https://github.com/OpenIntelWireless/itlwm/releases) | 2.3.0 alpha | Handle native Wi-Fi card |
+| [AirportItlwm](https://github.com/OpenIntelWireless/itlwm/releases) | 2.3.0 | Handle native Wi-Fi card |
 | [BlueToolFixup](https://github.com/acidanthera/BrcmPatchRAM/releases) | 2.6.8 | Fix Bluetooth for macOS 12+ |
 | [NullEthernet](https://bitbucket.org/RehabMan/OS-X-Null-Ethernet/downloads/) | 1.0.6 | Fake Ethernet card |
 | [NoTouchID](https://github.com/al3xtjames/NoTouchID/releases) | 1.0.4 | Disable TouchID |
 | [NVMeFix](https://github.com/acidanthera/NVMeFix/releases) | 1.1.1 | Fix for NVMe SSDs |
-| [RestrictEvents](https://github.com/acidanthera/RestrictEvents/releases) | 1.1.3 | Block unwanted processes |
-| [VoodooI2C](https://github.com/alexandred/VoodooI2C/releases) | 2.8 | Handle I2C device |
-| [VoodooI2CHID](https://github.com/alexandred/VoodooI2C/releases) | 2.8 | Touchpad I2C satellite |
-| [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases) | 2.3.3 | Enable keyboard, alternative trackpad driver |
-| [VirtualSMC + plugins](https://github.com/acidanthera/VirtualSMC/releases) | 1.3.2 | SMC chip emulation |
+| [RestrictEvents](https://github.com/acidanthera/RestrictEvents/releases) | 1.1.4 | Block unwanted processes |
+| [VoodooI2C](https://github.com/alexandred/VoodooI2C/releases) | 2.9 | Handle I2C device |
+| [VoodooI2CHID](https://github.com/alexandred/VoodooI2C/releases) | 2.9 | Touchpad I2C satellite |
+| [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases) | 2.3.5 | Enable keyboard, alternative trackpad driver |
+| [VirtualSMC + plugins](https://github.com/acidanthera/VirtualSMC/releases) | 1.3.3 | SMC chip emulation |
 | [USBInjectAll](https://github.com/daliansky/OS-X-USB-Inject-All/releases) | 0.7.7 | Inject USB ports |
 | [VoltageShift](https://github.com/sicreative/VoltageShift) | 1.25 | Undervoltage tool |
 
