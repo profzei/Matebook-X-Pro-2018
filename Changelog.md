@@ -6,17 +6,17 @@ English
 
 	Update to **macOS Sequoia 15.0 (24A5327a)** Beta 7
 	
-> [!IMPORTANT]
->
-> - Change `Misc -> Security -> SecureBootModel` from `Default` to `Disabled` prior to updating to **macOS Sequoia**. You can re-enable it afterwards; otherwise the update (or new install) fails!
-> - Since **macOS Sequoia** dropped support for `MacBookAir8,2` (MacBook Air 2018), I **switched back** to `MacBookPro15,2`.
-
-	
-**Update**
+	**Update**
 	- Update [kext] `BlueToolFixup` v. 2.6.9 beta
 	- Update [kext] `IntelBluetoothFirmware` v. 2.5.0 beta (for macOS Sequoia support)
 	- Update [kext] `VoodooI2C` & its satellite `VoodooI2CHID` v. 2.9 beta: added confidence bit for palm rejection [Reference](https://github.com/VoodooI2C/VoodooI2C/pull/547)
 	- Update [kext] `VoodooInput` v. 1.1.5: since **macOS Sequoia** dropped the IOKit personalities for the older SPI touchpads (including the one used by `VoodooInput`), now it is used `MacbookAir10,1` ID instead of SPI touchpad ID on macOS 12+
+
+
+> [!IMPORTANT]
+>
+> - Change `Misc -> Security -> SecureBootModel` from `Default` to `Disabled` prior to updating to **macOS Sequoia**. You can re-enable it afterwards; otherwise the update (or new install) fails!
+> - Since **macOS Sequoia** dropped support for `MacBookAir8,2` (MacBook Air 2018), I **switched back** to `MacBookPro15,2`.
 
 	
 > [!CAUTION]
@@ -33,10 +33,6 @@ English
 
 	Update to **macOS Sonoma 14.6.1 (23G93)**
 	
-> [!IMPORTANT]
->
-> Change `Misc -> Security -> SecureBootModel` from `Default` to `Disabled` prior to updating to macOS 14.4+ (or new install). You can re-enable it afterwards; otherwise the update fails!
-	
     **Update**
     - Update `OpenCore` v. 1.0.1
     - Update [kext] stripped `AppleALC` v. 1.9.1
@@ -51,16 +47,24 @@ English
     - Update [kext] stripped `AirportItlwm_Sonoma` v. 2.3.0 stable
     - Update [kext] stripped `IntelBluetoothFirmware` v. 2.4.0 stable (with some changes to default code for improving LE devices support)
 
+	
+> [!IMPORTANT]
+>
+> Change `Misc -> Security -> SecureBootModel` from `Default` to `Disabled` prior to updating to macOS 14.4+ (or new install). You can re-enable it afterwards; otherwise the update fails!
+    
+
 - **06-09-2024**
 
 	Update to **macOS Sonoma 14.5 (23F79)**
+	
+    **Update**
+    - Update `OpenCore` v. 1.0.0
+
 
 > [!IMPORTANT]
 >
 > During the update process, change in `config.plist` of your `EFI/OC` boot folder the entry `Misc -> Security -> SecureBootModel` from `Default` to `Disabled`; this fixes a known issue where macOS 14.4+ upgrade (or new install) will start to install, but will constantly reboot after the first (install-driven) reboot.
-	
-    **Update**
-    - Update `OpenCore` v. 1.0.0
+
 
 - **04-17-2024**
 
