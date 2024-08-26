@@ -6,25 +6,28 @@ English
 
 	Update to **macOS Sequoia 15.0 (24A5327a)** Beta 7
 	
-	> [!IMPORTANT]
-	>
-	> - Change `Misc -> Security -> SecureBootModel` from `Default` to `Disabled` prior to updating to **macOS Sequoia**. You can re-enable it afterwards; otherwise the update (or new install) fails!
-	> - Since **macOS Sequoia** dropped support for `MacBookAir8,2` (MacBook Air 2018), I **switched back** to `MacBookPro15,2`.
+> [!IMPORTANT]
+>
+> - Change `Misc -> Security -> SecureBootModel` from `Default` to `Disabled` prior to updating to **macOS Sequoia**. You can re-enable it afterwards; otherwise the update (or new install) fails!
+> - Since **macOS Sequoia** dropped support for `MacBookAir8,2` (MacBook Air 2018), I **switched back** to `MacBookPro15,2`.
+
 	
 	**Update**
 	- Update [kext] `BlueToolFixup` v. 2.6.9 beta
 	- Update [kext] `IntelBluetoothFirmware` v. 2.5.0 beta (for macOS Sequoia support)
 	- Update [kext] `VoodooI2C` & its satellite `VoodooI2CHID` v. 2.9 beta: added confidence bit for palm rejection [Reference](https://github.com/VoodooI2C/VoodooI2C/pull/547)
 	- Update [kext] `VoodooInput` v. 1.1.5: since **macOS Sequoia** dropped the IOKit personalities for the older SPI touchpads (including the one used by `VoodooInput`), now it is used `MacbookAir10,1` ID instead of SPI touchpad ID on macOS 12+
+
 	
-	> [!CAUTION]
-	> 
-	> After upgrading to **macOS Sequoia Beta 7**, the current state is the following:
-	> - its installation is less problematic than previous versions of macOS that required deeper changes to `OpenCore` and kexts;
-	> - the system feels snappier and more responsive than latest macOS Sonoma release;
-	> - disabled [kext] `AirportItlwm` and enabled [kext] `itlwm` (+ `Heliport` app): atm there is no support for [kext] `AirportItlwm` while latest `itlwm` is working fine;
-	> - Bluetooth support seems to be broken (i.e. device is not recognized): atm [kext] `IntelBluetoothFirmware` v. 2.5.0 beta seems working fine only on specific devices and/or on specific Beta releases...
-	> - sleep is not working... (the screen goes black but the PC stays on): I'm waiting for Release Candidate support (this issue could be related to beta stage)
+> [!CAUTION]
+> 
+> After upgrading to **macOS Sequoia Beta 7**, the current state is the following:
+> - its installation is less problematic than previous versions of macOS that required deeper changes to `OpenCore` and kexts;
+> - the system feels snappier and more responsive than latest macOS Sonoma release;
+> - disabled [kext] `AirportItlwm` and enabled [kext] `itlwm` (+ `Heliport` app): atm there is no support for [kext] `AirportItlwm` while latest `itlwm` is working fine;
+> - Bluetooth support seems to be broken (i.e. device is not recognized): atm [kext] `IntelBluetoothFirmware` v. 2.5.0 beta seems working fine only on specific devices and/or on specific Beta releases...
+> - sleep is not working... (the screen goes black but the PC stays on): I'm waiting for Release Candidate support (this issue could be related to beta stage)
+
 
 - **08-24-2024**
 
