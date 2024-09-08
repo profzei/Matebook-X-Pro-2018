@@ -2,6 +2,19 @@
 
 English
 
+- **09-07-2024**
+
+	Update to **macOS Sequoia 15.0 (24A5331b)** Beta 8
+	
+	
+> [!IMPORTANT]
+>
+> - `hibernatemode 0` is working fine (i.e. standard sleep);
+> - `hibernatemode 25` is working fine (i.e. standard hibernation);
+> - `hibernatemode 3` is **not** working fine (i.e. MacBook sleep + hibernation);
+> - Bluetooth is still broken: `IntelBluetoothFirmware`, `BlueToolFixup` and `IntelBTPatcher` kexts are all loaded correctly but there is no device nor related information in `System Information -> Bluetooth` section (while **Bluetooth USB Host Controller** is correctly loaded in `System Information -> USB` section).
+
+
 - **08-25-2024**
 
 	Update to **macOS Sequoia 15.0 (24A5327a)** Beta 7
