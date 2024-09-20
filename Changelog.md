@@ -11,10 +11,10 @@ English
 	
 	**OpenCore**
     - Update `config.plist`:
-        - Added `NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82 -> bluetoothExternalDongleFailed` entry (see for [reference](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/issues/486#issuecomment-2356055645))
-		- Added `NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82 -> bluetoothInternalControllerInfo` entry (see for [reference](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/issues/486#issuecomment-2356055645))
-        - Added `NVRAM -> Delete -> 7C436110-AB2A-4BBB-A880-FE41995C9F82 -> bluetoothExternalDongleFailed` entry (see for [reference](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/issues/486#issuecomment-2356055645))
-		- Added `NVRAM -> Delete -> 7C436110-AB2A-4BBB-A880-FE41995C9F82 -> bluetoothInternalControllerInfo` entry (see for [reference](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/issues/486#issuecomment-2356055645))
+        - Added `NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82 -> bluetoothExternalDongleFailed` [entry](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/issues/486#issuecomment-2356055645)
+		- Added `NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82 -> bluetoothInternalControllerInfo` [entry](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/issues/486#issuecomment-2356055645)
+        - Added `NVRAM -> Delete -> 7C436110-AB2A-4BBB-A880-FE41995C9F82 -> bluetoothExternalDongleFailed` [entry](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/issues/486#issuecomment-2356055645)
+		- Added `NVRAM -> Delete -> 7C436110-AB2A-4BBB-A880-FE41995C9F82 -> bluetoothInternalControllerInfo` [entry](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/issues/486#issuecomment-2356055645)
 
 
 > [!IMPORTANT]
