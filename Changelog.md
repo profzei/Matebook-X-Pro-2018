@@ -2,6 +2,26 @@
 
 English
 
+- **09-20-2024**
+
+	Update to **macOS Sequoia 15.0 (24A335)**
+	
+	**Update**
+	- Bluetooth is working fine: atm I'm using [these kexts](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/issues/486#issuecomment-2356055645) for `BlueToolFixup`, `IntelBluetoothFirmware` and `IntelBTPatcher`.
+	
+	**OpenCore**
+    - Update `config.plist`:
+        - Added `NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82 -> bluetoothExternalDongleFailed` entry (see for [reference](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/issues/486#issuecomment-2356055645))
+		- Added `NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82 -> bluetoothInternalControllerInfo` entry (see for [reference](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/issues/486#issuecomment-2356055645))
+        - Added `NVRAM -> Delete -> 7C436110-AB2A-4BBB-A880-FE41995C9F82 -> bluetoothExternalDongleFailed` entry (see for [reference](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/issues/486#issuecomment-2356055645))
+		- Added `NVRAM -> Delete -> 7C436110-AB2A-4BBB-A880-FE41995C9F82 -> bluetoothInternalControllerInfo` entry (see for [reference](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/issues/486#issuecomment-2356055645))
+
+
+> [!IMPORTANT]
+>
+> - Change `Misc -> Security -> SecureBootModel` from `Default` to `Disabled` prior to updating to **macOS Sequoia**. You can re-enable it afterwards; otherwise the update (or new install) fails!
+
+
 - **09-07-2024**
 
 	Update to **macOS Sequoia 15.0 (24A5331b)** Beta 8

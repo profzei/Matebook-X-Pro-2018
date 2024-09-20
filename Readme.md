@@ -54,7 +54,8 @@ I published [**a YouTube video**](https://www.youtube.com/watch?v=vpgAqfrBI44) f
 
 |    macOS    |   |   Status   |
 | :--- | :--- | :--- |
-|   <img src="Wiki/Images/assets_sonoma.png" width=25 hspace=2 /> <a href="https://developer.apple.com/documentation/macos-release-notes/" target="_blank"><img src="https://img.shields.io/badge/macOS-Sonoma-orange.svg" /></a>    |   `Stable` 14.3.1 (23D60)  »  latest |   `Currently maintained`   |
+|   <img src="Wiki/Images/assets_sequoia.png" width=25 hspace=2 /> <a href="https://developer.apple.com/documentation/macos-release-notes/" target="_blank"><img src="https://img.shields.io/badge/macOS-Sequoia-orange.svg" /></a>    |   `Stable` 15.0 (24A335)  »  latest |   `Currently maintained`   |
+|   <img src="Wiki/Images/assets_sonoma.png" width=25 hspace=2 /> <a href="https://developer.apple.com/documentation/macos-release-notes/" target="_blank"><img src="https://img.shields.io/badge/macOS-Sonoma-brightgreen.svg" /></a>    |   `Stable` 14.3.1 (23D60)  »  latest |   `Compatible`   |
 |   <img src="Wiki/Images/assets_ventura.png" width=25 hspace=2 /> <a href="https://developer.apple.com/documentation/macos-release-notes/" target="_blank"><img src="https://img.shields.io/badge/macOS-Ventura-brightgreen.svg" /></a>    |   `Stable` 13 (22A380)  »  13.6.6 (22G630) |   `Compatible`   |
 |   <img src="Wiki/Images/assets_monterey.png" width=25 hspace=2 /> <a href="https://developer.apple.com/documentation/macos-release-notes/" target="_blank"><img src="https://img.shields.io/badge/macOS-Monterey-brightgreen.svg" /></a>   |   `Stable` 12.0.1 (21A559)  »  12.5.1 (21G83) |   `Compatible`   |
 |   <img src="Wiki/Images/assets_big_sur.png" width=25 hspace=2 /> <a href="https://developer.apple.com/documentation/macos-release-notes/" target="_blank"><img src="https://img.shields.io/badge/macOS-Big_Sur-brightgreen.svg" /></a>    |   `Stable` 11.0.1 (20B29)  »  11.6.8 (20G730) |   `Compatible`   |
@@ -107,7 +108,7 @@ Compare with [these](https://browser.geekbench.com/v5/cpu/search?utf8=✓&q=MacB
 
 ## Changelog
 
-#### 2024 - September - 07
+#### 2024 - September - 20
 See [**Current status »**](Changelog.md)
 
 <p align="center">
@@ -896,7 +897,7 @@ log show --predicate 'process == "kernel"' --style syslog --source --debug --las
 
 | Item | Version | Remark |
 | :--- | :--- | :--- |
-| MacOS | 14.6.1 | |
+| MacOS | 15.0 | |
 | [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 1.0.1| Default Bootloader |
 | [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.6.8 | Kext/process/framework/library patcher |
 | [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.6.7 | Handle Graphics card |
