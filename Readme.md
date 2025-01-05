@@ -16,40 +16,8 @@
 
 </div>
 
-## ⚠️⚠️ Advertisement ⚠️⚠️
 
-> **Announcement - April 2023**
-
-My config supports native macOS loading drivers for our Thunderbolt 3 controller: **the Thunderbolt hotplug is working without the need to plug in a device at boot!**
-
-What has been achieved so far:
-- [x] Loading native macOS drivers for Thunderbolt Controller
-- [x] Booting with Thunderbolt device connected
-- [x] Thunderbolt Hotplug with Cold Boot
-- [x] Thunderbolt Hotplug with Warm Boot
-- [x] **Thunderbolt Hotplug with no Device Connected at Boot**
-- [x] Sequence of multiple Thunderbolt Hotplug/unplug during same working session
-- [x] Sleep with Thunderbolt Device Connected
-- [x] Wake with Thunderbolt Device Connected
-- [x] Shutdown with Thunderbolt Device Connected
-
-What still needs to be done: see [Changelog »](Changelog.md)
-
-I published [**a YouTube video**](https://www.youtube.com/watch?v=vpgAqfrBI44) for documenting this success!
-
-[![Thunderbolt_Hotplug](Wiki/Images/Thunderbolt_Hotplug.png)](https://www.youtube.com/watch?v=vpgAqfrBI44)
-
-
-> **Warning**
-- I'm sorry but I decided to remove all my releases: in this way I wanted to make it easier for people who have already copied what is on this site stating they made 'significant and unquestionable original changes' (instead of collaborating by suggesting pull requests)!
-- I'll update this repo but only as my personal online report for how well this laptop could be turned as a full working hackintosh with full support for Thunderbolt devices
-- **I thank all those who have supported me during these two years of work**, but seeing so many people copying (and then apologizing when confronted with a fait accompli!) templates + all the content of the related pages (even putting a link for a possible donation for their hard work!) + all the content of the ACPI folder of the EFI releases, **has deeply disgusted me**!
-
-
------
-
-
-#### This repository is currently compatible with macOS Sequoia, Sonoma, Ventura, Monterey, Big Sur and OpenCore 1.0.1
+#### This repository is currently compatible with macOS Sequoia, Sonoma, Ventura, Monterey, Big Sur and OpenCore 1.0.3
 <div align="center">
 
 |    macOS    |   |   Status   |
@@ -69,6 +37,98 @@ If you find my work useful:
 * please consider **giving** it **a star** ⭐️ to make it more visible.
 * please consider **donating via PayPal**. [![donate](https://img.shields.io/badge/-buy%20me%20a%20coffee-orange)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=TSJHK3C2BSQN6&currency_code=EUR)
 
+
+## InsydeH20 BIOS: How to unlock Advanced Menu
+
+<p align="center">
+<img src="Wiki/Images/BiosAdvancedMenu.png" alt="BIOS Advanced Menu" />
+</p>
+
+
+The use of [**RU.efi**](http://ruexe.blogspot.com/) or [**setup_var.efi**](https://github.com/datasone/setup_var.efi) to edit **hidden BIOS parameters** has long been known. However, there is another way of doing this, which allows you to access **all the BIOS settings**, even on a graphical level!
+
+>[!IMPORTANT]
+>You **do not need** to flash your BIOS!
+
+So, how does it work? It is a mod that **only works in run-time mode**.
+
+What does this mean in practice? It means that the user can access and change **all possible BIOS options**, and the **settings remain saved** and **stay in effect**, but to access the full BIOS interface, the same procedure has to be repeated each time.
+
+What does this procedure involve?
+1. Format a USB key to FAT32 file system
+2. Create the following folder structure:
+```
+\
+    SREP_Config.cfg
+    EFI\boot\BOOTX64.efi
+```
+3. Boot the USB drive (i.e. boot PC, repeatedly press `F10` key and select EFI USB drive from menu)
+
+>[!NOTE]
+>- `SREP_Config.cfg` file allows to switch Huawei's BIOS default main page with InsydeH2O's BIOS default main page 
+>- `BOOTX64.efi` file is the renamed SREP binary i.e. the so-called [**Smokeless Runtime EFI Patcher**](https://github.com/alt-0191/Lenovo-UEFI-Unlocker).
+>
+
+<details>
+<summary><strong>SREP_Config.cfg code</strong></summary>
+
+```ASM
+Op Loaded
+SetupUtilityApp
+
+Op Patch
+Pattern
+80fb01750c
+80fb01740c
+Op End
+
+Op LoadFromFV
+SetupUtilityApp
+Op Exec
+```
+
+</details>
+
+>[!IMPORTANT]
+>- You only need to download [**BIOS_Unlock.zip**](Wiki/Bios/BIOS_Unlock.zip) and unzip it to a FAT32 formatted USB key (follow instructions above)
+>- This mod is compatible with different BIOS versions: I tested it with 1.29, 1.30, 1.36 and 1.37 releases.
+>
+
+If you find this guide useful:
+* please consider **adding** this site **a star** ⭐️ to make it more visible
+* please consider **donating via PayPal**  [![donate](https://img.shields.io/badge/-buy%20me%20a%20coffee-orange)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=TSJHK3C2BSQN6&currency_code=EUR)
+
+
+## ⚠️⚠️ Advertisement ⚠️⚠️
+
+>[!ANNOUNCEMENT]
+>**April 2023**
+>My config supports native macOS loading drivers for our Thunderbolt 3 controller: **the Thunderbolt hotplug is working without the need to plug in a device at boot!**
+>
+
+What has been achieved so far:
+- [x] Loading native macOS drivers for Thunderbolt Controller
+- [x] Booting with Thunderbolt device connected
+- [x] Thunderbolt Hotplug with Cold Boot
+- [x] Thunderbolt Hotplug with Warm Boot
+- [x] **Thunderbolt Hotplug with no Device Connected at Boot**
+- [x] Sequence of multiple Thunderbolt Hotplug/unplug during same working session
+- [x] Sleep with Thunderbolt Device Connected
+- [x] Wake with Thunderbolt Device Connected
+- [x] Shutdown with Thunderbolt Device Connected
+
+What still needs to be done: see [Changelog »](Changelog.md)
+
+I published [**a YouTube video**](https://www.youtube.com/watch?v=vpgAqfrBI44) for documenting this success!
+
+[![Thunderbolt_Hotplug](Wiki/Images/Thunderbolt_Hotplug.png)](https://www.youtube.com/watch?v=vpgAqfrBI44)
+
+
+>[!WARNING]
+>- I'm sorry but I decided to remove all my releases: in this way I wanted to make it easier for people who have already copied what is on this site stating they made 'significant and unquestionable original changes' (instead of collaborating by suggesting pull requests)!
+>- I'll update this repo but only as my personal online report for how well this laptop could be turned as a full working hackintosh with full support for Thunderbolt devices
+>- **I thank all those who have supported me during these two years of work**, but seeing so many people copying (and then apologizing when confronted with a fait accompli!) templates + all the content of the related pages (even putting a link for a possible donation for their hard work!) + all the content of the ACPI folder of the EFI releases, **has deeply disgusted me**!
+>
 
 
 ## Configuration 💻
@@ -108,7 +168,7 @@ Compare with [these](https://browser.geekbench.com/v5/cpu/search?utf8=✓&q=MacB
 
 ## Changelog
 
-#### 2024 - September - 20
+#### 2025 - January - 05
 See [**Current status »**](Changelog.md)
 
 <p align="center">
@@ -897,8 +957,8 @@ log show --predicate 'process == "kernel"' --style syslog --source --debug --las
 
 | Item | Version | Remark |
 | :--- | :--- | :--- |
-| MacOS | 15.0 | |
-| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 1.0.1| Default Bootloader |
+| MacOS | 15.2 | |
+| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 1.0.3| Default Bootloader |
 | [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.6.8 | Kext/process/framework/library patcher |
 | [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.6.7 | Handle Graphics card |
 | [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.9.1 | Handle/fix onboard audio |
