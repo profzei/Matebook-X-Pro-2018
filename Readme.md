@@ -101,8 +101,8 @@ If you find this guide useful:
 
 ## ⚠️⚠️ Advertisement ⚠️⚠️
 
->[!ANNOUNCEMENT]
->**April 2023**
+>[!NOTE]
+>**Announcement - April 2023**
 >My config supports native macOS loading drivers for our Thunderbolt 3 controller: **the Thunderbolt hotplug is working without the need to plug in a device at boot!**
 >
 
