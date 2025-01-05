@@ -2,6 +2,12 @@
 
 English
 
+- **01-05-2025**
+
+> [!IMPORTANT]
+> Added a new guide for **unlocking InsydeH2O's BIOS Advanced Menu** 
+>
+
 - **09-20-2024**
 
 	Update to **macOS Sequoia 15.0 (24A335)**
